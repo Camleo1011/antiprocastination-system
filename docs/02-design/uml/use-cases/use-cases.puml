@@ -1,0 +1,202 @@
+@startuml use-cases
+' ==============================================================
+' CONTROL DE VERSIONES
+' Archivo  : use-cases.puml
+' Versión  : 0.1      Fecha: 2026-11-11      Autor: Equipo FocusStrike
+' Fuente   : docs/01-analysis/SRS.md (SRS 0.1), secciones 2.3 y 3.7 (34 CU)
+' Cambio   : Línea base
+' ==============================================================
+left to right direction
+skinparam shadowing false
+skinparam packageStyle rectangle
+skinparam usecase {
+  BackgroundColor #FFFFFF
+  BorderColor #333333
+}
+title Diagrama de Casos de Uso — Focus Strike (SRS 0.1 · diagrama v0.1)
+
+' ===== Actores humanos =====
+actor "Visitante" as Visitante
+actor "Usuario (cliente)" as Cliente
+actor "Responsable del despliegue" as Resp
+
+' Niveles del administrador (BR-021): cada nivel hereda las funciones
+' del inferior. NO hay generalización hacia Usuario (roles excluyentes).
+actor "Administrador soporte" as AdmSoporte
+actor "Administrador moderador" as AdmModerador
+actor "Administrador super" as AdmSuper
+AdmModerador --|> AdmSoporte
+AdmSuper --|> AdmModerador
+
+' ===== Actores técnicos =====
+actor "Sistema\n(temporizadores y procesos)" as Sistema <<técnico>>
+actor "Motor LLM" as LLM <<técnico>>
+actor "Servicio de correo" as Correo <<técnico>>
+actor "Servicio de notificaciones push" as Push <<técnico>>
+
+rectangle "Focus Strike" {
+
+  package "AUT: Identidad y autenticación" {
+    usecase "CU-001 Registrar Usuario" as CU001
+    usecase "CU-002 Iniciar Sesión" as CU002
+    usecase "CU-003 Recuperar Contraseña" as CU003
+    usecase "CU-004 Cerrar Sesión" as CU004
+  }
+
+  package "META: Metas y desglose" {
+    usecase "CU-005 Crear Meta" as CU005
+    usecase "CU-006 Desglosar Meta con IA\n(más de 1 día)" as CU006
+    usecase "CU-007 Obtener Recomendaciones IA\n(promedio diario > 12 h)" as CU007
+    usecase "CU-008a Editar Meta" as CU008a
+    usecase "CU-008b Eliminar Meta" as CU008b
+    usecase "CU-009 Iniciar Submeta\n(Reloj Global)" as CU009
+    usecase "CU-022 Consultar Meta" as CU022
+    usecase "CU-025 Sugerir Fechas de\nTrabajo con IA" as CU025
+    usecase "CU-032 Definir Desglose Manual\nde una Meta Multidía" as CU032
+  }
+
+  package "AGEN / POM: Agenda y Pomodoro" {
+    usecase "CU-010 Consultar Agenda" as CU010
+    usecase "CU-011 Consultar Detalle de Submeta" as CU011
+    usecase "CU-024 Consultar Inicio" as CU024
+    usecase "CU-012 Usar Sesión Pomodoro" as CU012
+  }
+
+  package "EVID / PUNT: Evidencias y puntuación" {
+    usecase "CU-013 Cargar Evidencia\n(post-80 %, 1.º o 2.º envío)" as CU013
+    usecase "CU-014 Evaluar Evidencia\ncon LLM (asíncrono)" as CU014
+    usecase "CU-015 Rectificar Evidencia\n(segundo envío)" as CU015
+    usecase "CU-023 Consultar Estado de\nEvaluación y Reintentar" as CU023
+    usecase "CU-016 Asignar Puntuación\ny Cerrar Submeta" as CU016
+  }
+
+  package "PER / RANK / LOGR / NOT: Perfil y servicios" {
+    usecase "CU-017 Consultar Perfil,\nRacha y Logros" as CU017
+    usecase "CU-031 Consultar Calendario\nde Actividad" as CU031
+    usecase "CU-018 Ver Ranking Global" as CU018
+    usecase "CU-027 Configurar Preferencias\nde Cuenta" as CU027
+    usecase "CU-026 Otorgar Logro" as CU026
+    usecase "CU-028 Enviar Notificaciones Push" as CU028
+  }
+
+  package "ADM: Administración" {
+    usecase "CU-019 Administrar Usuarios" as CU019
+    usecase "CU-020 Bloquear/Desbloquear\nUsuario" as CU020
+    usecase "CU-021 Consultar Métricas, Evidencias\ny Ranking (Administrador)" as CU021
+    usecase "CU-030 Cerrar Submeta con Evaluación\nen Error Persistente" as CU030
+    usecase "CU-029 Inicializar el Primer\nAdministrador Super" as CU029
+  }
+
+  package "Mantenimiento" {
+    usecase "CU-033 Limpiar Archivos de\nEvidencia sin Registro" as CU033
+  }
+}
+
+' ===== Visitante =====
+Visitante --> CU001
+Visitante --> CU002
+Visitante --> CU003
+
+' ===== Usuario (cliente) =====
+Cliente --> CU004
+Cliente --> CU005
+Cliente --> CU006
+Cliente --> CU007
+Cliente --> CU008a
+Cliente --> CU008b
+Cliente --> CU009
+Cliente --> CU010
+Cliente --> CU011
+Cliente --> CU012
+Cliente --> CU013
+Cliente --> CU015
+Cliente --> CU017
+Cliente --> CU018
+Cliente --> CU022
+Cliente --> CU023
+Cliente --> CU024
+Cliente --> CU025
+Cliente --> CU027
+Cliente --> CU031
+Cliente --> CU032
+
+' ===== Administrador por nivel (BR-021) =====
+' soporte: solo lectura de cuentas, evidencias y ranking; también cierra sesión
+AdmSoporte --> CU004
+AdmSoporte --> CU019
+AdmSoporte --> CU021
+' moderador: bloquear/desbloquear y cerrar submetas con Error de 48 h
+AdmModerador --> CU020
+AdmModerador --> CU030
+' super: administradores, eliminación de cuentas, métricas del LLM
+AdmSuper --> CU019
+AdmSuper --> CU021
+
+' ===== Responsable del despliegue =====
+Resp --> CU029
+
+' ===== Sistema (actor técnico) =====
+Sistema --> CU009
+Sistema --> CU014
+Sistema --> CU016
+Sistema --> CU026
+Sistema --> CU028
+Sistema --> CU029
+Sistema --> CU033
+
+' ===== Motor LLM, correo y push =====
+CU006 --> LLM
+CU007 --> LLM
+CU014 --> LLM
+CU025 --> LLM
+CU003 --> Correo
+CU002 --> Correo
+CU028 --> Push
+
+' ===== include / extend =====
+' include: la inclusión es siempre parte del caso base
+CU013 ..> CU014 : <<include>>
+CU014 ..> CU016 : <<include>>
+CU015 ..> CU013 : <<include>>
+CU023 ..> CU014 : <<include>>
+CU009 ..> CU026 : <<include>>
+CU016 ..> CU026 : <<include>>
+CU026 ..> CU028 : <<include>>
+CU014 ..> CU028 : <<include>>
+
+' extend: la flecha va del caso que extiende al caso base
+CU006 ..> CU005 : <<extend>>\n(más de 1 día, IA)
+CU007 ..> CU005 : <<extend>>\n(promedio > 12 h)
+CU025 ..> CU005 : <<extend>>\n(solo días y rango)
+CU032 ..> CU005 : <<extend>>\n(más de 1 día, manual)
+CU006 ..> CU008a : <<extend>>\n(edición cambia el desglose)
+CU007 ..> CU008a : <<extend>>
+CU032 ..> CU008a : <<extend>>
+CU015 ..> CU016 : <<extend>>\n(1.er dictamen\nIncoherente o Inválida)
+CU030 ..> CU016 : <<extend>>\n(Error durante 48 h)
+CU031 ..> CU017 : <<extend>>
+
+note right of AdmSoporte
+  Niveles del Administrador (BR-021).
+  Cada nivel hereda del inferior.
+  No hay generalización hacia Usuario (cliente):
+  los roles son excluyentes (RF-ADM-006).
+  CU-019: soporte consulta; moderador crea y edita cuentas
+  cliente; super gestiona administradores, niveles y eliminación.
+  CU-021: evidencias y ranking, los tres niveles; métricas de uso
+  de la aplicación, super y moderador (soporte: 403); métricas del LLM, solo super.
+  CU-004 lo usan los tres niveles.
+end note
+
+note bottom of CU029
+  Semilla del primer super por variables de entorno
+  (RF-ADM-017). Idempotente: se omite solo si ya existe
+  un super, bloqueado o no.
+end note
+
+note bottom of CU009
+  Disparo manual: Usuario (cliente).
+  Disparo automático: Sistema (RF-META-013).
+end note
+
+@enduml

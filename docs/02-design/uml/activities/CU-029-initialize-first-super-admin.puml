@@ -1,0 +1,65 @@
+@startuml CU-029-initialize-first-super-admin
+' ==============================================================
+' CONTROL DE VERSIONES
+' Archivo  : CU-029-initialize-first-super-admin.puml
+' Versión  : 0.1      Fecha: 2026-11-11      Autor: Equipo FocusStrike
+' Fuente   : docs/01-analysis/SRS.md (SRS 0.1), sección 3.7, CU-029
+' Cambio   : Línea base
+' ==============================================================
+title Actividades — CU-029 Inicializar el Primer Administrador Super\n(SRS 0.1 · diagrama v0.1)
+|Responsable del despliegue|
+start
+:Definir en variables de entorno el correo y la contraseña iniciales;
+:Arrancar el despliegue;
+note right: RF-ADM-017
+
+|Sistema|
+if (¿Están definidas las variables de entorno?) then (no)
+  :Dejar un aviso en el log; el sistema funciona sin administradores hasta que se definan;
+  note right: Flujo alterno 1a. Excepción de BR-021 para el arranque inicial.
+  stop
+else (sí)
+endif
+|Base de datos|
+:Verificar si existe algún administrador de nivel super, bloqueado o no;
+note right: Los administradores moderador o soporte no cuentan.
+|Sistema|
+if (¿Ya existe un administrador super (bloqueado o no)?) then (sí)
+  :No crear ninguna cuenta; proceso idempotente;
+  note right: Flujo alterno 2a. Resultado omitido_ya_existe_super.
+  stop
+else (no)
+  if (¿Existen administradores moderador o soporte?) then (sí)
+    :Continuar para crear el super; no modificar las demás cuentas;
+    note right: Flujo alterno 2b
+  else (no)
+  endif
+endif
+:Validar la política de contraseña;
+note right: RF-AUT-011
+if (¿La contraseña cumple la política?) then (no)
+  :No crear la cuenta y dejar un aviso en el log;
+  note right: Flujo alterno 3a
+  stop
+else (sí)
+endif
+:Calcular el hash de la contraseña (bcrypt costo 12 o más, o argon2id);
+note right: RNF-005. El script no contiene credenciales.
+|Base de datos|
+if (¿El correo ya pertenece a una cuenta?) then (sí)
+  |Sistema|
+  :No modificar esa cuenta ni crear otra; dejar un aviso en el log;
+  note right: Flujo alterno 3b. RF-ADM-017. Resultado omitido_correo_existente.
+  stop
+else (no)
+endif
+:Invocar sp_inicializar_primer_super y crear la cuenta con rol administrador, nivel super;
+note right: RF-ADM-014. Sin pantalla ni endpoint público.
+|Sistema|
+:Registrar el resultado en el log;
+
+|Responsable del despliegue|
+:Iniciar sesión con la cuenta (CU-002) y gestionar cuentas (CU-019);
+stop
+
+@enduml

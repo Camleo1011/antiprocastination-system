@@ -1,0 +1,45 @@
+@startuml CU-026-grant-achievement
+' ==============================================================
+' CONTROL DE VERSIONES
+' Archivo  : CU-026-grant-achievement.puml
+' Versión  : 0.1      Fecha: 2026-11-11      Autor: Equipo FocusStrike
+' Fuente   : docs/01-analysis/SRS.md (SRS 0.1), sección 3.7, CU-026
+' Cambio   : Línea base
+' ==============================================================
+title Actividades — CU-026 Otorgar Logro\n(SRS 0.1 · diagrama v0.1)
+|Sistema|
+start
+:Recibir un evento evaluable: inicio de submeta, cierre de submeta, racha o puntaje acumulado;
+|Base de datos|
+:Consultar el catálogo de logros y los logros del usuario;
+note right: RF-LOGR-001, BR-020
+|Sistema|
+:Evaluar las condiciones del catálogo;
+note right: Impecable y racha perfecta solo cuentan con Excelente en el primer envío del periodo inicial (BR-033).
+if (¿Se cumple alguna condición?) then (no)
+  stop
+else (sí)
+endif
+if (¿El usuario ya tiene el logro?) then (sí)
+  :No volver a otorgarlo;
+  note right: Flujo alterno 2a
+  stop
+else (no)
+endif
+|Base de datos|
+:Otorgar el logro con su fecha, una sola vez por usuario (sp_otorgar_logro);
+note right: RF-LOGR-002
+|Sistema|
+:Disparar la notificación push (CU-028);
+|Usuario (cliente)|
+:Refrescar la interfaz;
+|Sistema|
+:Consultar los logros obtenidos desde el último instante visto por el cliente (?desde=);
+note right: RF-LOGR-004. Sin estado «visto» ni columna en el servidor.
+|Base de datos|
+:Listar los logros del usuario con fecha de obtención posterior a ese instante;
+|Usuario (cliente)|
+:Ver el aviso del logro obtenido; el cliente conserva el nuevo instante visto;
+stop
+
+@enduml

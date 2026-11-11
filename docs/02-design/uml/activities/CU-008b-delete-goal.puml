@@ -1,0 +1,54 @@
+@startuml CU-008b-delete-goal
+' ==============================================================
+' CONTROL DE VERSIONES
+' Archivo  : CU-008b-delete-goal.puml
+' Versión  : 0.1      Fecha: 2026-11-11      Autor: Equipo FocusStrike
+' Fuente   : docs/01-analysis/SRS.md (SRS 0.1), sección 3.7, CU-008b
+' Cambio   : Línea base
+' ==============================================================
+title Actividades — CU-008b Eliminar Meta\n(SRS 0.1 · diagrama v0.1)
+|Usuario (cliente)|
+start
+:Seleccionar eliminar una meta propia;
+
+|Sistema|
+:Solicitar confirmación de eliminación;
+
+|Usuario (cliente)|
+if (¿Confirma la eliminación?) then (no)
+  :Cancelar;
+  note right: Flujo alterno 3a. No se elimina nada.
+  stop
+else (sí)
+  :Enviar la confirmación explícita (confirmar=true);
+endif
+
+|Sistema|
+if (¿La solicitud lleva la confirmación explícita confirmar=true?) then (no)
+  :Responder HTTP 422; no eliminar nada;
+  note right: Flujo alterno 3b. RF-META-002c.
+  stop
+else (sí)
+endif
+
+|Base de datos|
+:Eliminar la meta, sus submetas, evidencias y evaluaciones;
+note right
+  RF-META-002c. Los registros de uso del LLM
+  se conservan sin vínculo con la meta.
+end note
+
+|Sistema|
+:Eliminar los archivos de evidencia del almacén;
+note right: RF-EVID-017
+if (¿Falló el borrado de algún archivo?) then (sí)
+  :Completar la eliminación de la meta y registrar el fallo en el log;
+  note right: Flujo alterno 4a. La limpieza programada (CU-033) lo elimina. RF-EVID-018
+else (no)
+endif
+
+|Usuario (cliente)|
+:Ver la agenda sin la meta; el puntaje del perfil no cambia;
+stop
+
+@enduml

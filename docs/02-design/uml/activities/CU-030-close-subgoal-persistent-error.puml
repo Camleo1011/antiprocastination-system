@@ -1,0 +1,60 @@
+@startuml CU-030-close-subgoal-persistent-error
+' ==============================================================
+' CONTROL DE VERSIONES
+' Archivo  : CU-030-close-subgoal-persistent-error.puml
+' Versión  : 0.1      Fecha: 2026-11-11      Autor: Equipo FocusStrike
+' Fuente   : docs/01-analysis/SRS.md (SRS 0.1), sección 3.7, CU-030
+' Cambio   : Línea base
+' ==============================================================
+title Actividades — CU-030 Cerrar Submeta con Evaluación en Error Persistente (Administrador)\n(SRS 0.1 · diagrama v0.1)
+|Administrador|
+start
+:Abrir el listado de evaluaciones en Error persistente;
+note right: RF-ADM-018
+
+|Sistema|
+if (¿Nivel soporte?) then (sí)
+  :Responder HTTP 403;
+  note right: Flujo alterno 1a. BR-021
+  stop
+else (no)
+endif
+|Base de datos|
+:Listar las evaluaciones con 48 horas o más en Error (v_evaluaciones_error_48h);
+|Administrador|
+:Seleccionar una evaluación y consultar su submeta, evidencias y puntaje provisional;
+:Solicitar el cierre y confirmar;
+
+|Sistema|
+if (¿La evaluación lleva menos de 48 horas en Error?) then (sí)
+  :Responder HTTP 409; no cerrar;
+  note right: Flujo alterno 4a. RF-ADM-019
+  stop
+elseif (¿Se resolvió la evaluación o se cerró la submeta mientras tanto?) then (sí)
+  :Responder HTTP 409 sin cambios;
+  note right: Flujo alterno 4b
+  stop
+else (no)
+endif
+
+|Base de datos|
+:Iniciar la transacción: finalizar la submeta con el puntaje provisional como final,\nregistrar el administrador y la fecha del cierre, y sumar el puntaje al acumulado;
+note right: RF-PUNT-008, RF-PUNT-014 (sp_cerrar_submeta_admin)
+if (¿Falló la transacción?) then (sí)
+  :Revertir estado y puntaje; reintentar sin duplicar puntos;
+  note right: Flujo alterno 5a
+  stop
+else (no)
+endif
+
+|Sistema|
+:Impedir reintentar la evaluación de la submeta cerrada;
+note right: RF-EVID-008, RF-PUNT-011
+:No contar el cierre como acierto en el primer envío, no alterar la racha perfecta\ny no activar el día activo;
+note right: BR-033, BR-009
+
+|Administrador|
+:Ver la submeta finalizada;
+stop
+
+@enduml

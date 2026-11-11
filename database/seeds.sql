@@ -1,0 +1,16 @@
+-- ============================================================================
+-- Focus Strike — Datos de prueba (seeds)
+-- | Versión | Fecha      | Autor              | Cambio                |
+-- |---------|------------|--------------------|-----------------------|
+-- | 0.1     | 2026-11-11 | Equipo FocusStrike | Archivo inicial vacío |
+-- ----------------------------------------------------------------------------
+-- PROPÓSITO
+--   Datos sintéticos para desarrollo y demostraciones. Nunca cargar datos personales reales.
+--   Ejecutar DESPUÉS de database/schema.sql:
+--     mariadb -u fs_seed -p db_focus_strike < database/seeds.sql
+--   El primer superadministrador NO se crea aquí: el despliegue lo crea a partir de las
+--   variables FOCUSSTRIKE_ADMIN_EMAIL, FOCUSSTRIKE_ADMIN_NAME y FOCUSSTRIKE_ADMIN_PASSWORD
+--   del entorno de despliegue.
+-- ----------------------------------------------------------------------------
+-- PENDIENTE: definir los datos de ejemplo (clientes, metas, submetas) cuando inicie el desarrollo.
+-- ============================================================================

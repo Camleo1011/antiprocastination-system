@@ -1,0 +1,369 @@
+@startuml clases_v0_1_dominio
+title FocusStrike - Diagrama de clases v0.1 (1/3): capa de dominio
+
+' | Versión | Fecha      | Autor              | Cambio     |
+' |---------|------------|--------------------|------------|
+' | 0.1     | 2026-11-11 | Equipo FocusStrike | Línea base |
+'
+' ÍNDICE DEL DIAGRAMA DE CLASES (3 archivos, mismo prefijo):
+'   class-diagram.puml                  dominio: entidades, enumeraciones, políticas puras (este archivo)
+'   class-diagram-application.puml       controladores (EP), servicios de aplicación (CU), trabajos del worker (JOB)
+'   class-diagram-infrastructure.puml  repositorios (SQL/procedimientos), puertos y adaptadores, excepciones -> HTTP
+'
+' CONVENCIONES
+'   - Identificadores en inglés (código), documentación en español. Cada entidad declara su tabla con <<tabla nombre>>
+'     y el concepto del modelo de dominio con la línea ".. concepto: X ..".
+'   - Atributo = traducción literal de la columna del SQL (p. ej. id_usuario -> id_user). Visibilidad: - privado, + público.
+'   - Las entidades son objetos de valor/datos (dataclasses inmutables); las reglas de integridad (BR-013, BR-014,
+'     BR-021, BR-029...) viven en la BD (RNF-014, ADR-003) y NO se duplican aquí. Las políticas de este archivo
+'     solo calculan lo que la aplicación debe enviar a la BD (p. ej. porcentaje y ventana con el mismo instante).
+'   - Patrones: Value Object (enumeraciones, TimeWindow), Policy/Strategy (políticas puras), Repository (archivo 3).
+
+hide empty members
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam classAttributeIconSize 0
+skinparam class {
+  BackgroundColor #FFFFFF
+  BorderColor #333333
+}
+skinparam class<<politica>> {
+  BackgroundColor #FFF3CD
+}
+skinparam class<<enum>> {
+  BackgroundColor #F1FAEE
+}
+
+package "Dominio - cuentas y sesión" {
+  abstract class Account <<tabla usuario>> {
+    .. concepto: Cuenta ..
+    -id_user: int
+    -name: str
+    -email: str
+    -password_hash: str
+    -accumulated_score: int
+    -admin_blocked: bool
+    -role: Role
+    -failed_attempts: int
+    -blocked_until: datetime?
+    -registered_at: datetime
+    +is_temporarily_blocked(now: datetime): bool
+  }
+  class Administrator <<tabla administrador>> {
+    .. concepto: Administrador ..
+    -access_level: AccessLevel
+    -assigned_at: datetime
+    +can(action: AdminAction): bool
+  }
+  class Client <<tabla cliente>> {
+    .. concepto: Cliente ..
+    -time_zone: str
+    -push_enabled: bool
+    -ai_consent_at: datetime?
+    -zone_pending_detection: bool
+    .. columna fecha_confirmacion_mayoria_edad; NULL = declaracion pendiente (RF-AUT-018) ..
+    -adult_confirmed_at: datetime?
+    +has_ai_consent(): bool
+    +is_adult_declaration_pending(): bool
+  }
+  class PushSubscription <<tabla suscripcion_push>> {
+    .. concepto: SuscripcionPush ..
+    -id_subscription: int
+    -endpoint: str
+    -p256dh_key: str
+    -auth_key: str
+    -created_at: datetime
+    -valid: bool
+  }
+  class SessionToken <<tabla token_sesion>> {
+    .. concepto: Sesion ..
+    -id_token: int
+    -token_hash: str
+    -issued_at: datetime
+    -expires_at: datetime
+    -revoked: bool
+    +is_active(now: datetime): bool
+  }
+  class RecoveryCode <<tabla codigo_recuperacion>> {
+    .. concepto: CodigoRecuperacion ..
+    -id_code: int
+    -code_hash: str
+    -generated_at: datetime
+    -expires_at: datetime
+    -used: bool
+  }
+  Account <|-- Administrator
+  Account <|-- Client
+  Account "1" -- "0..*" SessionToken
+  Account "1" -- "0..*" RecoveryCode
+  Client "1" -- "0..*" PushSubscription
+}
+
+package "Dominio - metas y ejecución" {
+  class ActiveDay <<tabla dia_activo>> {
+    .. concepto: DiaActivo ..
+    -id_user: int
+    -date: date
+    -first_manual_start: datetime?
+    -started_subgoals_total: int
+  }
+  class Goal <<tabla meta>> {
+    .. concepto: Meta ..
+    -id_goal: int
+    -id_user: int
+    -name: str
+    -description: str?
+    -category: GoalCategory
+    -kind: GoalKind
+    -days: int
+    -total_hours: int
+    -start_date: date
+    -end_date: date
+    -start_time: time
+    -end_time: time
+    -requires_evidence: bool
+    -start_mode: StartMode
+    -planning_mode: PlanningMode
+    -breakdown_mode: BreakdownMode?
+    -ai_advice: str?
+    -state: WorkState
+    -created_at: datetime
+  }
+  class Subgoal <<tabla submeta>> {
+    .. concepto: Submeta ..
+    -id_subgoal: int
+    -id_goal: int
+    -scheduled_date: date
+    -start_time: time
+    -end_time: time
+    -actual_start: datetime?
+    -actual_end: datetime?
+    -state: WorkState
+    -score: int?
+    -name: str?
+    -ai_description: str?
+    -closed_by_admin: bool
+    -id_closing_admin: int?
+    -admin_closed_at: datetime?
+    +stipulated_seconds(): int
+  }
+  class AiRecommendation <<tabla recomendacion_ia>> {
+    .. concepto: RecomendacionIA ..
+    -id_recommendation: int
+    -id_goal: int
+    -habit_suggestion: str
+    -schedule_proposal: str
+    -decision: RecommendationDecision?
+    -decided_at: datetime?
+  }
+  class PomodoroSession <<tabla sesion_pomodoro>> {
+    .. concepto: SesionPomodoro ..
+    -id_session: int
+    -started_at: datetime
+    -duration_minutes: int
+    -state: PomodoroState
+    -id_user: int
+    -id_subgoal: int?
+  }
+  Client "1" -- "0..*" Goal
+  Client "1" -- "0..*" ActiveDay
+  Client "1" -- "0..*" PomodoroSession
+  Goal "1" *-- "1..*" Subgoal
+  Goal "1" *-- "0..*" AiRecommendation
+  Subgoal "0..1" -- "0..*" PomodoroSession
+  Administrator "0..1" -- "0..*" Subgoal : cierre\nadministrativo
+}
+
+package "Dominio - evidencias, IA y logros" {
+  class Evidence <<tabla evidencia>> {
+    .. concepto: Evidencia ..
+    -id_evidence: int
+    -id_subgoal: int
+    -id_user: int
+    -relative_path: str
+    -format: EvidenceFormat
+    -size_bytes: int
+    -elapsed_percentage: Decimal
+    -attempt: int
+    -window: Window
+    -uploaded_at: datetime
+  }
+  class Evaluation <<tabla evaluacion>> {
+    .. concepto: Evaluacion ..
+    -id_evaluation: int
+    -id_evidence: int
+    -state: EvaluationState
+    -verdict: Verdict?
+    -awarded_points: int?
+    -justification: str?
+    -evaluated_at: datetime?
+    -last_error_at: datetime?
+    +is_retryable(): bool
+  }
+  class LlmUsage <<tabla uso_llm>> {
+    .. concepto: UsoLLM ..
+    -id_usage: int
+    -at: datetime
+    -operation: LlmOperation
+    -tokens: int
+    -cost: Decimal
+    -latency_ms: int
+    -provider: str
+    -model: str
+    -result: LlmResult
+    -id_user: int?
+    -id_goal: int?
+    -id_evaluation: int?
+  }
+  class Achievement <<tabla logro>> {
+    .. concepto: Logro ..
+    -id_achievement: int
+    -code: str
+    -name: str
+    -description: str
+  }
+  class UserAchievement <<tabla usuario_logro>> {
+    .. concepto: LogroObtenido ..
+    -id_user: int
+    -id_achievement: int
+    -obtained_at: datetime
+  }
+  Subgoal "1" -- "0..2" Evidence
+  Evidence "1" -- "0..1" Evaluation
+  Evaluation "0..1" -- "0..*" LlmUsage
+  Goal "0..1" -- "0..*" LlmUsage
+  Account "0..1" -- "0..*" LlmUsage
+  Client "1" -- "0..*" UserAchievement
+  Achievement "1" -- "0..*" UserAchievement
+  Client "1" -- "0..*" Evidence
+}
+
+package "Dominio - enumeraciones (Value Object)" {
+  enum Role <<enum>> {
+    cliente
+    administrador
+  }
+  enum AccessLevel <<enum>> {
+    soporte
+    moderador
+    super
+  }
+  enum WorkState <<enum>> {
+    pendiente
+    en_curso
+    finalizada
+  }
+  enum EvaluationState <<enum>> {
+    en_evaluacion
+    evaluada
+    error
+  }
+  enum Verdict <<enum>> {
+    excelente
+    incoherente
+    invalida
+  }
+  enum Window <<enum>> {
+    inicial
+    gracia
+  }
+  enum StartMode <<enum>> {
+    manual
+    automatico
+  }
+  enum PlanningMode <<enum>> {
+    fechas_usuario
+    sugerida_ia
+  }
+  enum BreakdownMode <<enum>> {
+    ia
+    manual
+  }
+  enum GoalKind <<enum>> {
+    un_dia
+    multidia
+  }
+  enum GoalCategory <<enum>> {
+    estudio, bienestar, juegos, habitos_vida, deporte...\n(11 valores, BR-024)
+  }
+  enum LlmOperation <<enum>> {
+    desglose
+    recomendacion
+    sugerencia_fechas
+    evaluacion
+  }
+  enum LlmResult <<enum>> {
+    exitosa
+    fallida
+  }
+  enum RecommendationDecision <<enum>> {
+    aceptada
+    modificada
+    rechazada
+  }
+  enum PomodoroState <<enum>> {
+    finalizada
+    abandonada
+  }
+  enum EvidenceFormat <<enum>> {
+    imagen
+    texto
+    excel
+  }
+  enum AdminAction <<enum>> {
+    ver_metricas_app
+    ver_metricas_llm
+    gestionar_clientes
+    gestionar_administradores
+    cambiar_rol
+    cambiar_nivel_acceso
+    bloquear
+    cierre_administrativo
+  }
+}
+
+package "Dominio - políticas puras (sin E/S; objetivo de cobertura >= 70 %, RNF-017)" {
+  class TimeWindow <<politica>> {
+    .. BR-001, BR-003, BR-016, BR-032 ..
+    -actual_start: datetime
+    -stipulated: timedelta
+    +elapsed_percentage(at: datetime): Decimal
+    +window_at(at: datetime): Window?
+    +opens_evidence_at(): datetime
+    +grace_ends_at(): datetime
+  }
+  class LocalTimeResolver <<politica>> {
+    .. BR-027, BR-028, ADR-011 ..
+    +to_local(utc: datetime, zone: str): datetime
+    +to_utc(local: datetime, zone: str): datetime
+    +is_valid_zone(zone: str): bool
+    +local_date(utc: datetime, zone: str): date
+  }
+  class PasswordPolicy <<politica>> {
+    .. RF-AUT-011, RNF-005 ..
+    +validate(plain: str): void
+  }
+  class DailyLoadPolicy <<politica>> {
+    .. BR-011, BR-014, BR-015 ..
+    +hours_per_day(total_hours: int, days: int): Decimal
+    +exceeds_ai_threshold(total_hours: int, days: int): bool
+  }
+  class AutoStartPolicy <<politica>> {
+    .. BR-006, RNF-024 ..
+    +is_due(subgoal: Subgoal, zone: str, now_utc: datetime): bool
+  }
+  class NotificationWindowPolicy <<politica>> {
+    .. BR-022, RF-NOT-003, RF-NOT-004, RF-NOT-005, RNF-023 ..
+    +due_events(subgoal: Subgoal, last_tick: datetime, now: datetime): list
+  }
+  TimeWindow ..> Window
+  LocalTimeResolver ..> Subgoal : usa fecha_programada
+  AutoStartPolicy ..> LocalTimeResolver
+  NotificationWindowPolicy ..> TimeWindow
+}
+
+legend bottom
+|= Versión |= Fecha |= Autor |= Cambio |
+| 0.1 | 2026-11-11 | Equipo FocusStrike | Línea base |
+endlegend
+@enduml

@@ -1,0 +1,73 @@
+@startuml CU-025-suggest-dates-with-ai
+' ==============================================================
+' CONTROL DE VERSIONES
+' Archivo  : CU-025-suggest-dates-with-ai.puml
+' Versión  : 0.1      Fecha: 2026-11-11      Autor: Equipo FocusStrike
+' Fuente   : docs/01-analysis/SRS.md (SRS 0.1), sección 3.7, CU-025
+' Cambio   : Línea base
+' ==============================================================
+title Actividades — CU-025 Sugerir Fechas de Trabajo con IA\n(SRS 0.1 · diagrama v0.1)
+|Usuario (cliente)|
+start
+:Indicar solo el número de días (2 o más) y el rango de fechas;
+note right: Extiende CU-005. RF-META-017
+
+|Sistema|
+if (¿Tiempo total menor que el número de días indicado, o días mayores que los del rango de fechas?) then (sí)
+  :Responder HTTP 422 con el campo y el mínimo requerido; sin invocar al Agente IA;
+  note right: Flujo alterno 1a. BR-014 (10) y (11), RF-META-003
+  |Usuario (cliente)|
+  :Corregir el tiempo total, los días o el rango;
+  stop
+else (no)
+endif
+
+|Sistema|
+if (¿El usuario aceptó el servicio externo de IA?) then (no)
+  :Responder HTTP 403 con el aviso; denegar la sugerencia de fechas;
+  note right: Flujo alterno 2a. RF-IA-011, BR-035, RF-IA-010
+  |Usuario (cliente)|
+  :Elegir las fechas manualmente;
+  note right: RF-META-016
+  stop
+else (sí)
+endif
+
+repeat
+  |Sistema|
+  :Invocar al Agente IA con la descripción como contexto;
+  note right: RF-META-032, RF-META-022
+  |Motor LLM|
+  :Proponer la cantidad pedida de fechas dentro del rango y no anteriores a hoy;
+  |Base de datos|
+  :Registrar el uso del LLM de la llamada;
+  note right: RF-ADM-007
+  |Sistema|
+repeat while (¿El LLM no respondió y quedan reintentos?) is (sí) not (no)
+
+if (¿El LLM no respondió tras los reintentos?) then (sí)
+  :Informar y ofrecer la elección manual de fechas;
+  note right: Flujo alterno 3b
+  stop
+elseif (¿Fechas fuera del rango o en cantidad distinta?) then (sí)
+  :Descartar la respuesta y ofrecer la elección manual;
+  note right: Flujo alterno 3a. RF-META-016, RF-META-032
+  stop
+else (no)
+endif
+:Validar la respuesta y presentar las fechas al usuario;
+
+|Usuario (cliente)|
+if (¿Acepta, modifica o rechaza?) then (rechaza)
+  :Elegir las fechas manualmente;
+  note right: Flujo alterno 5a. RF-META-016
+else (acepta o modifica)
+  note right: RF-META-018
+endif
+:Confirmar las fechas de trabajo;
+
+|Sistema|
+:Volver a CU-005 paso 4 con las fechas confirmadas;
+stop
+
+@enduml

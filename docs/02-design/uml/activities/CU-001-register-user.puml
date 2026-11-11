@@ -1,0 +1,74 @@
+@startuml CU-001-register-user
+' ==============================================================
+' CONTROL DE VERSIONES
+' Archivo  : CU-001-register-user.puml
+' Versión  : 0.1      Fecha: 2026-11-11      Autor: Equipo FocusStrike
+' Fuente   : docs/01-analysis/SRS.md (SRS 0.1), sección 3.7, CU-001
+' Cambio   : Línea base
+' ==============================================================
+title Actividades — CU-001 Registrar Usuario\n(SRS 0.1 · diagrama v0.1)
+|Visitante|
+start
+:Acceder a la vista de registro;
+:Ingresar nombre, correo electrónico y contraseña;
+:Marcar la declaración «Declaro ser mayor de 18 años»;
+note right: RF-AUT-017
+
+|Sistema|
+:Validar formato de los datos, política de contraseña y declaración de mayoría de edad;
+note right: RF-AUT-011, RF-AUT-017
+if (¿Datos completos y válidos?) then (no)
+  :Responder HTTP 422 indicando el campo;
+  note right: Flujo alterno 2a. No se crea la cuenta.
+  |Visitante|
+  :Corregir los datos;
+  stop
+else (sí)
+endif
+|Sistema|
+if (¿La declaración «Declaro ser mayor de 18 años» está marcada (presente y verdadera)?) then (no)
+  :Responder HTTP 422 con el motivo MAYORIA_EDAD_REQUERIDA;
+  note right: Flujo alterno 2b. RF-AUT-017. No se crea la cuenta.
+  |Visitante|
+  :Marcar la declaración para poder registrarse;
+  stop
+else (sí)
+endif
+
+|Base de datos|
+:Consultar si el correo ya está registrado;
+note right: RF-AUT-002
+
+|Sistema|
+if (¿El correo ya existe?) then (sí)
+  :Responder HTTP 409;
+  note right: Flujo alterno 4a. No se crea la cuenta.
+  |Visitante|
+  :Ver el error de correo duplicado;
+  stop
+else (no)
+endif
+
+|Sistema|
+if (¿El navegador informó una zona IANA válida?) then (sí)
+  :Asignar la zona horaria informada;
+else (no)
+  :Asignar America/Bogota;
+  note right: Flujo alterno 5a. RF-AUT-015
+endif
+
+|Base de datos|
+:Crear la cuenta con rol cliente, contraseña cifrada, preferencias por defecto\ny sello de tiempo de la declaración de mayoría de edad;
+note right
+  RF-AUT-001, RF-AUT-013, RF-AUT-017, RNF-005.
+  El sello (cliente.fecha_confirmacion_mayoria_edad, UTC) se guarda al crear la cuenta; no se guarda fecha de nacimiento.
+end note
+
+|Sistema|
+:Confirmar el registro y redirigir al inicio de sesión;
+
+|Visitante|
+:Recibir la confirmación y poder iniciar sesión;
+stop
+
+@enduml

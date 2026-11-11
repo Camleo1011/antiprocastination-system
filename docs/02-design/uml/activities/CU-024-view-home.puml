@@ -1,0 +1,30 @@
+@startuml CU-024-view-home
+' ==============================================================
+' CONTROL DE VERSIONES
+' Archivo  : CU-024-view-home.puml
+' Versión  : 0.1      Fecha: 2026-11-11      Autor: Equipo FocusStrike
+' Fuente   : docs/01-analysis/SRS.md (SRS 0.1), sección 3.7, CU-024
+' Cambio   : Línea base
+' ==============================================================
+title Actividades — CU-024 Consultar Inicio\n(SRS 0.1 · diagrama v0.1)
+|Usuario (cliente)|
+start
+:Entrar al inicio;
+
+|Sistema|
+|Base de datos|
+:Consultar la próxima submeta de hoy, el puntaje acumulado y la racha;
+|Sistema|
+if (¿Hay submetas hoy?) then (sí)
+  :Mostrar la próxima submeta de hoy, el puntaje acumulado y la racha;
+  note right: RF-AGEN-005
+else (no)
+  :Mostrar el mensaje de agenda libre con puntaje y racha;
+  note right: Flujo alterno 1a. RF-AGEN-005
+endif
+
+|Usuario (cliente)|
+:Ver su resumen de inicio;
+stop
+
+@enduml

@@ -1,0 +1,36 @@
+@startuml CU-022-view-goal
+' ==============================================================
+' CONTROL DE VERSIONES
+' Archivo  : CU-022-view-goal.puml
+' Versión  : 0.1      Fecha: 2026-11-11      Autor: Equipo FocusStrike
+' Fuente   : docs/01-analysis/SRS.md (SRS 0.1), sección 3.7, CU-022
+' Cambio   : Línea base
+' ==============================================================
+title Actividades — CU-022 Consultar Meta\n(SRS 0.1 · diagrama v0.1)
+|Usuario (cliente)|
+start
+:Seleccionar una meta;
+
+|Sistema|
+|Base de datos|
+:Buscar la meta del usuario;
+|Sistema|
+if (¿La meta es de otro usuario o no existe?) then (sí)
+  :Responder HTTP 404;
+  note right: Flujo alterno 1a
+  stop
+else (no)
+endif
+:Mostrar los datos de la meta, su descripción, submetas y consejos generales;
+note right: RF-META-002a, RF-META-011
+if (¿Tiene el desglose pendiente?) then (sí)
+  :Mostrar el aviso y la acción de reintentar;
+  note right: Flujo alterno 2a. RF-META-024
+else (no)
+endif
+
+|Usuario (cliente)|
+:Ver el detalle de la meta;
+stop
+
+@enduml

@@ -1,0 +1,44 @@
+@startuml CU-017-view-profile-streak-achievements
+' ==============================================================
+' CONTROL DE VERSIONES
+' Archivo  : CU-017-view-profile-streak-achievements.puml
+' Versión  : 0.1      Fecha: 2026-11-11      Autor: Equipo FocusStrike
+' Fuente   : docs/01-analysis/SRS.md (SRS 0.1), sección 3.7, CU-017
+' Cambio   : Línea base
+' ==============================================================
+title Actividades — CU-017 Consultar Perfil, Racha y Logros\n(SRS 0.1 · diagrama v0.1)
+|Usuario (cliente)|
+start
+:Abrir el perfil;
+
+|Sistema|
+|Base de datos|
+:Consultar nombre, puntaje acumulado, días activos, rachas y logros;
+|Sistema|
+:Mostrar nombre, puntaje acumulado, días activos y posición en el ranking;
+note right: RF-PER-001, RF-PER-004
+if (¿Tiene días activos en los últimos 12 meses?) then (sí)
+  :Mostrar el calendario de 12 meses con los días activos en un único tono de verde;
+  note right: RF-PER-003
+else (no)
+  :Mostrar el calendario sin días verdes y racha 0;
+  note right: Flujo alterno 1a
+endif
+:Mostrar la hora de la primera actividad del día, racha actual, racha máxima y racha perfecta;
+note right: RF-PER-010, RF-PER-007, RF-PER-009, RF-PER-012
+:Mostrar los logros obtenidos y los bloqueados;
+note right: RF-LOGR-003
+
+|Usuario (cliente)|
+if (¿Consulta el detalle de un día?) then (sí)
+  :Continuar en CU-031 Consultar Calendario de Actividad;
+else (no)
+endif
+if (¿Accede al ranking global?) then (sí)
+  :Continuar en CU-018;
+  note right: RF-RANK-002
+else (no)
+endif
+stop
+
+@enduml

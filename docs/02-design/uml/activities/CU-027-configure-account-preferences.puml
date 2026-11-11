@@ -1,0 +1,54 @@
+@startuml CU-027-configure-account-preferences
+' ==============================================================
+' CONTROL DE VERSIONES
+' Archivo  : CU-027-configure-account-preferences.puml
+' Versión  : 0.1      Fecha: 2026-11-11      Autor: Equipo FocusStrike
+' Fuente   : docs/01-analysis/SRS.md (SRS 0.1), sección 3.7, CU-027
+' Cambio   : Línea base
+' ==============================================================
+title Actividades — CU-027 Configurar Preferencias de Cuenta\n(SRS 0.1 · diagrama v0.1)
+|Usuario (cliente)|
+start
+:Abrir las preferencias;
+:Consultar y modificar la zona horaria;
+note right: RF-PER-008
+
+|Sistema|
+if (¿La zona horaria es una zona IANA válida?) then (no)
+  :Responder HTTP 422;
+  note right: Flujo alterno 2a
+  stop
+else (sí)
+endif
+if (¿Cambió la zona y existen metas?) then (sí)
+  :Conservar fecha y hora locales de las submetas pendientes y el instante de lo ocurrido;\nno recalcular los días activos;
+  note right: Flujo alterno 2b. RF-PER-017
+else (no)
+endif
+
+|Usuario (cliente)|
+:Activar o desactivar las notificaciones push;
+note right: RF-NOT-001
+if (¿Activa las notificaciones?) then (sí)
+  :Conceder o denegar el permiso del navegador;
+  if (¿El navegador concedió el permiso?) then (no)
+    |Sistema|
+    :Dejar la preferencia desactivada con aviso;
+    note right: Flujo alterno 4a
+    |Usuario (cliente)|
+  else (sí)
+    |Base de datos|
+    :Registrar la suscripción del dispositivo;
+    note right: RF-NOT-002
+    |Usuario (cliente)|
+  endif
+else (no)
+endif
+
+|Base de datos|
+:Guardar la zona horaria y la preferencia de notificaciones;
+|Usuario (cliente)|
+:Ver las preferencias actualizadas;
+stop
+
+@enduml

@@ -1,0 +1,53 @@
+@startuml CU-021-view-metrics-evidence-ranking
+' ==============================================================
+' CONTROL DE VERSIONES
+' Archivo  : CU-021-view-metrics-evidence-ranking.puml
+' Versión  : 0.1      Fecha: 2026-11-11      Autor: Equipo FocusStrike
+' Fuente   : docs/01-analysis/SRS.md (SRS 0.1), sección 3.7, CU-021
+' Cambio   : Línea base
+' ==============================================================
+title Actividades — CU-021 Consultar Métricas, Evidencias y Ranking (Administrador)\n(SRS 0.1 · diagrama v0.1)
+|Administrador|
+start
+:Abrir el panel de métricas, evidencias y ranking;
+
+|Sistema|
+if (¿Sesión con rol administrador?) then (no)
+  :Responder HTTP 403;
+  note right: RF-ADM-016
+  stop
+else (sí)
+endif
+|Sistema|
+if (¿El nivel es super o moderador?) then (no)
+  :Responder HTTP 403 solo para las métricas de uso de la aplicación;
+  note right: Flujo alterno 1b. Nivel soporte. BR-021
+else (sí)
+  |Base de datos|
+  :Consultar métricas de uso de la aplicación;
+  note right: RF-ADM-002. Sin datos: se muestran en cero (flujo alterno 1a).
+  |Sistema|
+endif
+if (¿El nivel permite métricas del LLM (solo super)?) then (sí)
+  |Base de datos|
+  :Consultar métricas del LLM por operación desde la traza de llamadas;
+  note right: RF-ADM-011, RF-ADM-007. Exclusivo de super (BR-021).
+  |Sistema|
+else (no)
+  :Responder HTTP 403 solo para las métricas del LLM;
+  note right: Flujo alterno 2a. Nivel moderador o soporte. BR-021
+endif
+|Base de datos|
+:Consultar las evidencias de los usuarios con su dictamen y estado;
+note right: RF-ADM-003
+:Consultar el ranking global con las cuentas bloqueadas marcadas;
+note right
+  RF-ADM-005, BR-023. Cualquier nivel. A diferencia del ranking de clientes (CU-018),
+  este incluye a las cuentas bloqueadas, marcadas.
+end note
+
+|Administrador|
+:Ver la información solicitada;
+stop
+
+@enduml

@@ -1,0 +1,46 @@
+@startuml CU-028-send-push-notifications
+' ==============================================================
+' CONTROL DE VERSIONES
+' Archivo  : CU-028-send-push-notifications.puml
+' Versión  : 0.1      Fecha: 2026-11-11      Autor: Equipo FocusStrike
+' Fuente   : docs/01-analysis/SRS.md (SRS 0.1), sección 3.7, CU-028
+' Cambio   : Línea base
+' ==============================================================
+title Actividades — CU-028 Enviar Notificaciones Push\n(SRS 0.1 · diagrama v0.1)
+|Sistema|
+start
+:Detectar un evento notificable;
+note right
+  10 min antes del inicio (RF-NOT-003), 80 % del tiempo (RF-NOT-004),
+  apertura de gracia (RF-NOT-005), evaluación terminada o en Error (RF-NOT-006),
+  logro (RF-NOT-008). BR-022
+end note
+|Base de datos|
+:Consultar la preferencia y la suscripción del usuario;
+note right: RF-NOT-007
+|Sistema|
+if (¿Preferencia activada y suscripción vigente?) then (no)
+  :No enviar nada;
+  note right: Flujo alterno 2a
+  stop
+else (sí)
+endif
+:Enviar la notificación al servicio de notificaciones push en 60 s o menos;
+note right: RNF-023
+
+|Servicio push|
+if (¿Rechaza la suscripción por vencida?) then (sí)
+  |Sistema|
+  |Base de datos|
+  :Eliminar la suscripción;
+  note right: Flujo alterno 3a
+  stop
+else (no)
+  :Entregar el aviso al navegador del usuario;
+endif
+
+|Usuario (cliente)|
+:Recibir el aviso en su dispositivo;
+stop
+
+@enduml

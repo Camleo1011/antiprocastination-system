@@ -1,0 +1,100 @@
+@startuml CU-002-login
+' ==============================================================
+' CONTROL DE VERSIONES
+' Archivo  : CU-002-login.puml
+' Versión  : 0.1      Fecha: 2026-11-11      Autor: Equipo FocusStrike
+' Fuente   : docs/01-analysis/SRS.md (SRS 0.1), sección 3.7, CU-002
+' Cambio   : Línea base
+' ==============================================================
+title Actividades — CU-002 Iniciar Sesión\n(SRS 0.1 · diagrama v0.1)
+|Visitante|
+start
+:Ingresar correo y contraseña;
+
+|Sistema|
+if (¿Cuenta bloqueada por un administrador?) then (sí)
+  :Responder HTTP 403 con aviso;
+  note right: Flujo alterno 2b. BR-012
+  stop
+else (no)
+endif
+if (¿Bloqueo temporal de 15 min vigente?) then (sí)
+  :Responder HTTP 429 con Retry-After sin validar credenciales;
+  note right: Flujo alterno 2a. BR-012, RF-AUT-014
+  stop
+else (no)
+endif
+
+|Base de datos|
+:Consultar la cuenta y verificar la contraseña cifrada;
+
+|Sistema|
+if (¿Credenciales válidas?) then (no)
+  |Base de datos|
+  :Incrementar el contador de intentos fallidos en 1;
+  |Sistema|
+  if (¿Quinto intento fallido consecutivo?) then (sí)
+    |Base de datos|
+    :Bloquear la cuenta 15 min;
+    note right: RF-AUT-014
+    |Servicio de correo|
+    :Enviar aviso de bloqueo al titular;
+    note right: RF-AUT-009
+    |Sistema|
+  else (no)
+  endif
+  :Responder HTTP 401 sin token;
+  note right: Flujo alterno 3a / 3b. RF-AUT-003
+  stop
+else (sí)
+endif
+
+|Base de datos|
+:Reiniciar el contador de intentos fallidos;
+note right: RF-AUT-012
+
+|Sistema|
+if (¿Cuenta cliente en su primer inicio y con America/Bogota por defecto?) then (sí)
+  |Base de datos|
+  :Sustituir la zona por la del navegador, si es válida, y no volver a sobrescribirla;
+  note right: Flujo alterno 5a. RF-AUT-016
+  |Sistema|
+else (no)
+endif
+:Emitir token JWT firmado con expiración de 60 min;
+note right: RF-AUT-003
+
+|Visitante|
+:Almacenar el token y entrar;
+|Sistema|
+if (¿Rol de la cuenta?) then (cliente)
+  if (¿Cuenta cliente sin declaración de mayoría de edad guardada?) then (sí)
+    :Informar que la declaración está pendiente y mostrar la pantalla de declaración;
+    note right
+      Flujo alterno 5b. RF-AUT-018. Cuentas creadas por un administrador
+      o convertidas desde administrador. Hasta que declare, toda función de cliente
+      responde HTTP 403 con el motivo MAYORIA_EDAD_REQUERIDA.
+    end note
+    |Visitante|
+    if (¿Declara «Declaro ser mayor de 18 años»?) then (sí)
+      |Base de datos|
+      :Guardar el sello de tiempo de la declaración (una sola vez);
+      note right: RF-AUT-018. En los inicios siguientes no se vuelve a pedir.
+      |Sistema|
+      :Mostrar el inicio (CU-024);
+    else (no)
+      |Sistema|
+      :Mantener la declaración pendiente; las funciones de cliente siguen en HTTP 403;
+      note right: RF-AUT-018. Puede declarar en cualquier inicio de sesión posterior.
+      stop
+    endif
+  else (no)
+    :Mostrar el inicio (CU-024);
+  endif
+else (administrador)
+  :Mostrar el panel de administración;
+endif
+note right: En cada petición posterior se valida el token (RF-AUT-004).
+stop
+
+@enduml

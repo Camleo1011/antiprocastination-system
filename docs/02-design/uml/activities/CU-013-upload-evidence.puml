@@ -1,0 +1,123 @@
+@startuml CU-013-upload-evidence
+' ==============================================================
+' CONTROL DE VERSIONES
+' Archivo  : CU-013-upload-evidence.puml
+' Versión  : 0.1      Fecha: 2026-11-11      Autor: Equipo FocusStrike
+' Fuente   : docs/01-analysis/SRS.md (SRS 0.1), sección 3.7, CU-013
+' Cambio   : Línea base
+' ==============================================================
+title Actividades — CU-013 Cargar Evidencia (post-80 %, primer o segundo envío)\n(SRS 0.1 · diagrama v0.1)
+|Usuario (cliente)|
+start
+:Intentar cargar la evidencia (primer o segundo envío);
+
+|Sistema|
+if (¿Transcurrió al menos el 80 % del tiempo estipulado?) then (no)
+  :Mantener la carga deshabilitada; el backend responde HTTP 409;
+  note right: Flujo alterno 4a. RF-EVID-001, BR-001. Aplica a ambos envíos.
+  stop
+else (sí)
+endif
+
+if (¿El usuario aceptó el servicio externo de IA?) then (no)
+  :Mostrar el aviso de consentimiento;
+  |Usuario (cliente)|
+  if (¿Acepta el aviso?) then (sí)
+    |Base de datos|
+    :Registrar la aceptación;
+    note right: RF-IA-007
+    |Sistema|
+  else (no)
+    |Sistema|
+    :Responder HTTP 403 con el aviso; no persistir ni llamar al LLM; no consumir envío;
+    note right
+      Flujo alterno 3a. RF-IA-010, RF-IA-011, BR-035.
+      El usuario puede aceptar más tarde.
+    end note
+    stop
+  endif
+else (sí)
+endif
+
+|Usuario (cliente)|
+:Enviar el archivo;
+
+|Sistema|
+:Validar propiedad, requerimiento de evidencia, ventana, máximo de envíos,\nestado del primer envío, formato y tamaño del archivo original;
+note right
+  RF-EVID-002, RF-EVID-003, RF-EVID-004, RF-EVID-012,
+  RF-EVID-013, RF-EVID-014, RF-EVID-015, RF-EVID-016,
+  RF-IA-005, RF-IA-012, RNF-022.
+  Formatos aceptados: png, jpg, jpeg, webp, gif, txt, pdf, docx, doc, xlsx y xls.
+end note
+if (¿Submeta ajena?) then (sí)
+  :Responder HTTP 404;
+  note right: Flujo alterno 4g
+  stop
+elseif (¿La meta no requiere evidencia?) then (sí)
+  :Responder HTTP 409;
+  note right: Flujo alterno 4f
+  stop
+elseif (¿Pasó el fin del tiempo de gracia?) then (sí)
+  :Responder HTTP 409;
+  note right: Flujo alterno 4e
+  stop
+elseif (¿Ya hay 2 envíos?) then (sí)
+  :Responder HTTP 409;
+  note right: Flujo alterno 4d. Máximo 2 envíos (RF-EVID-012).
+  stop
+elseif (¿Segundo envío con el primero En evaluación, en Error o Excelente?) then (sí)
+  :Responder HTTP 409;
+  note right: Flujo alterno 4h. RF-EVID-016
+  stop
+elseif (¿Formato fuera de la lista aceptada (por ejemplo .exe, .zip o .csv) o contenido distinto de la extensión?) then (sí)
+  :Responder HTTP 415; no persistir, no consumir envío y no llamar al LLM;
+  note right: Flujo alterno 4b. RF-EVID-003. El .doc responde 415 si el despliegue no puede convertirlo.
+  stop
+elseif (¿Archivo mayor a 25 MB (26 214 400 bytes, medido sobre el original)?) then (sí)
+  :Responder HTTP 413;
+  note right: Flujo alterno 4c. RF-EVID-004
+  stop
+else (válido)
+endif
+
+:Convertir el archivo antes de evaluarlo cuando corresponde;
+note right
+  RF-EVID-003, RF-IA-005. Se guarda el archivo original; el contenido preparado no se persiste.
+  - png, jpg, jpeg, webp, pdf y txt: sin conversión.
+  - gif (animado o no): imagen PNG de su primer fotograma.
+  - docx, doc, xlsx y xls: texto o Markdown (se pierden las imágenes incrustadas).
+end note
+if (¿Archivo vacío, corrupto, protegido, ilegible o que no se puede convertir?) then (sí)
+  :Responder HTTP 422 con el motivo; no persistir, sin evaluación ni dictamen,\nsin consumir envío, sin día activo y sin llamar al LLM;
+  note right: Flujo alterno 4i. RF-EVID-003, RF-IA-012. El usuario puede subir otro archivo.
+  stop
+else (no)
+endif
+
+|Sistema|
+:Calcular el porcentaje de tiempo transcurrido y la ventana con el instante de recepción,\nla hora de inicio real y el tiempo estipulado T;
+note right: RF-EVID-010, BR-001
+note right: El cliente puede declarar porcentaje y ventana solo como dato informativo; los que valen son los calculados aquí.
+if (¿El cliente declaró porcentaje o ventana y no coinciden con lo calculado (tolerancia de 1 s de T)?) then (sí)
+  :Responder HTTP 409; no persistir;
+  note right: Flujo alterno 4j. RF-EVID-010, BR-001. Sin valores declarados, se acepta.
+  stop
+else (no)
+endif
+
+|Base de datos|
+:Persistir el archivo original con su número de envío y la ventana calculados según el instante de recepción;
+note right: RF-EVID-010
+:Registrar el día activo de la fecha local de recepción;
+note right: RF-PER-002, BR-009 (sp_registrar_dia_activo)
+
+|Sistema|
+:Responder HTTP 202;
+:Continuar en CU-014 Evaluar Evidencia con LLM;
+
+|Usuario (cliente)|
+:Ver la evidencia en estado En evaluación;
+stop
+
+@enduml

@@ -1,0 +1,57 @@
+@startuml CU-015-rectify-evidence
+' ==============================================================
+' CONTROL DE VERSIONES
+' Archivo  : CU-015-rectify-evidence.puml
+' Versión  : 0.1      Fecha: 2026-11-11      Autor: Equipo FocusStrike
+' Fuente   : docs/01-analysis/SRS.md (SRS 0.1), sección 3.7, CU-015
+' Cambio   : Línea base
+' ==============================================================
+title Actividades — CU-015 Rectificar Evidencia (segundo envío)\n(SRS 0.1 · diagrama v0.1)
+|Sistema|
+start
+:Recibir el dictamen Incoherente o Inválida del primer envío;
+note right: Precondición. CU-016 caso 1b habilita este flujo.
+|Base de datos|
+:Calcular el fin de la gracia como el 10 % del tiempo estipulado desde el fin del 100 %;
+note right: RF-PUNT-007
+|Sistema|
+:Habilitar el segundo envío, aunque no se haya llegado al 100 % del tiempo,\nhasta el fin del tiempo de gracia;
+note right: RF-EVID-007, BR-002
+
+|Usuario (cliente)|
+if (¿Envía la segunda evidencia antes del fin de la gracia?) then (no)
+  |Sistema|
+  :Expirar la gracia sin segundo envío;
+  |Base de datos|
+  :Cerrar la submeta con lo acumulado;
+  note right: Flujo alterno 3a. RF-PUNT-006
+  stop
+else (sí)
+endif
+
+|Sistema|
+if (¿Es un tercer envío?) then (sí)
+  :Responder HTTP 409;
+  note right: Flujo alterno 3b. RF-EVID-012
+  stop
+else (no)
+endif
+:Ejecutar CU-013 como segundo envío y registrar la ventana de recepción;
+note right: RF-EVID-010, RF-EVID-016
+if (¿El primer envío se hizo en el tiempo de gracia?) then (sí)
+  :Admitir el segundo envío solo dentro de la gracia restante;
+  note right: Flujo alterno 3c. Vale la mitad (BR-002 e).
+else (no)
+endif
+|Base de datos|
+:Puntuar con la mitad de la tabla del periodo inicial, sea cual sea la ventana;
+note right: RF-PUNT-005
+
+|Sistema|
+:Continuar en CU-014; el dictamen cierra la submeta (CU-016);
+note right: RF-PUNT-013
+|Usuario (cliente)|
+:Ver la rectificación evaluada o la submeta cerrada;
+stop
+
+@enduml

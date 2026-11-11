@@ -1,0 +1,34 @@
+@startuml CU-004-logout
+' ==============================================================
+' CONTROL DE VERSIONES
+' Archivo  : CU-004-logout.puml
+' Versión  : 0.1      Fecha: 2026-11-11      Autor: Equipo FocusStrike
+' Fuente   : docs/01-analysis/SRS.md (SRS 0.1), sección 3.7, CU-004
+' Cambio   : Línea base
+' ==============================================================
+title Actividades — CU-004 Cerrar Sesión\n(SRS 0.1 · diagrama v0.1)
+|Usuario o Administrador|
+start
+:Solicitar cerrar sesión;
+
+|Sistema|
+if (¿El token está vigente?) then (sí)
+  |Base de datos|
+  :Revocar el token;
+  note right: RF-AUT-005
+  |Sistema|
+else (no)
+  :Tratar la sesión como ya cerrada;
+  note right: Flujo alterno 2a. El token expiró.
+endif
+:Redirigir al inicio de sesión;
+note right
+  Las peticiones posteriores con el token
+  revocado reciben HTTP 401.
+end note
+
+|Usuario o Administrador|
+:Ver la pantalla de inicio de sesión;
+stop
+
+@enduml

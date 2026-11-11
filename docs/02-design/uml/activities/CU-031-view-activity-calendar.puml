@@ -1,0 +1,53 @@
+@startuml CU-031-view-activity-calendar
+' ==============================================================
+' CONTROL DE VERSIONES
+' Archivo  : CU-031-view-activity-calendar.puml
+' Versión  : 0.1      Fecha: 2026-11-11      Autor: Equipo FocusStrike
+' Fuente   : docs/01-analysis/SRS.md (SRS 0.1), sección 3.7, CU-031
+' Cambio   : Línea base
+' ==============================================================
+title Actividades — CU-031 Consultar Calendario de Actividad\n(SRS 0.1 · diagrama v0.1)
+|Usuario (cliente)|
+start
+:Consultar el perfil y abrir el calendario de actividad;
+note right: Extiende CU-017.
+
+|Sistema|
+|Base de datos|
+:Calcular, con la zona horaria del usuario, los días de los últimos 12 meses\ny marcar como activos los de inicio manual de submeta o envío de evidencia;
+note right: BR-009, BR-034 (sp_calendario_actividad). RF-PER-002
+|Sistema|
+if (¿Hubo actividad en los últimos 12 meses?) then (no)
+  :Mostrar el calendario sin días verdes y la tabla vacía con un aviso;
+  note right: Flujo alterno 1a
+else (sí)
+  :Mostrar una celda por día: activos en un único tono de verde, los demás sin resaltar;
+  note right: RF-PER-003
+  :Exponer como texto la fecha y la condición de cada celda;
+  note right: Un día activo solo por envío de evidencia se anuncia con 0 submetas. RF-PER-013
+endif
+
+|Usuario (cliente)|
+:Recorrer el calendario con teclado o puntero;
+|Sistema|
+:Mostrar al enfocar un día el detalle accesible con su fecha y su número de submetas;
+note right: RF-PER-011, RF-PER-014, RF-PER-015
+|Usuario (cliente)|
+if (¿Pulsa Escape?) then (sí)
+  |Sistema|
+  :Cerrar el detalle sin mover el foco;
+  note right: Flujo alterno 4a
+  |Usuario (cliente)|
+else (no)
+endif
+if (¿Cambia a la vista de tabla o lista?) then (sí)
+  |Sistema|
+  :Mostrar los días activos y sus contadores;
+  note right: RF-PER-016
+  |Usuario (cliente)|
+else (no)
+endif
+:Conocer su constancia sin depender del color;
+stop
+
+@enduml
