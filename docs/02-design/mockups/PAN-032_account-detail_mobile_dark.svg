@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="375" height="913" viewBox="0 0 375 913" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" data-pan="PAN-032" data-dispositivo="movil" data-tema="oscuro" aria-labelledby="t d">
+<title id="t">PAN-032 — Cuenta: detalle (móvil 375 px, tema oscuro)</title>
+<desc id="d">Mockup de alta fidelidad de Cuenta: detalle. Ruta /admin/cuentas/:id; rol soporte+; CU CU-019, CU-020; EP EP-045. Estado mostrado: sesión de un super sobre una cuenta cliente con datos: Editar, Bloquear y Eliminar disponibles; Cambiar rol deshabilitado con el motivo en texto. Colores, tipografía (Inter), espaciado y radios del sistema de diseño (tema oscuro); texto editable. Soporte ve solo lectura; el moderador solo Editar y Bloquear en clientes y lectura en administradores (BR-021). 409 ULTIMO_SUPER / CUENTA_CON_DATOS como defensa. Regiones ARIA: banner, navigation, main. Orden de foco con Tab (coincide con el orden visual y del DOM): Enlace de salto «Saltar al contenido principal» (visible solo al recibir el foco). 1 Abrir menú de administración; 2 Botón: ‹ Cuentas; 3 Botón: Editar; 4 Botón: Bloquear; 5 Botón: Cambiar rol; 6 Botón: Eliminar cuenta.</desc>
+<defs><pattern id="rayas-gracia" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#2A323D"/><rect width="3" height="6" fill="#F5B93A"/></pattern></defs>
+<rect id="fondo-pagina" width="375" height="913" fill="#161A20"/>
+<g id="barra-superior" data-name="Barra superior de administración" role="banner">
+<rect x="0" y="0" width="375" height="56" fill="#1C2128"/>
+<line x1="0" y1="56" x2="375" y2="56" stroke="#2A323D" stroke-width="1"/>
+<g id="navegacion-admin" data-name="Navegación de administración (cajón)" role="navigation" aria-label="Administración">
+<g id="boton-menu" data-name="Abrir menú de administración" data-interactive="button" data-orden-foco="1">
+<rect x="4" y="6" width="44" height="44" fill="none" data-hit="1"/>
+<g transform="translate(14 16) scale(1)" fill="none" stroke="#F1F3F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></g>
+</g>
+</g>
+<g id="logo-9" data-name="Logotipo FocusStrike" data-exempt="logo">
+<rect x="56" y="12" width="32" height="32" rx="8" fill="#A5B4FC"/>
+<g transform="translate(62.4 18.4) scale(0.8)" fill="none" stroke="#1E1B4B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+</g>
+<g id="insignia-10" data-name="Insignia: Nivel super">
+<rect x="239.83" y="14" width="119.17" height="28" rx="14" fill="#23264A"/>
+<g transform="translate(249.83 20) scale(0.67)" fill="none" stroke="#C7CDFE" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7.5 3v5.5c0 4.5-3.2 8-7.5 9.5-4.3-1.5-7.5-5-7.5-9.5V6z"/></g>
+<text x="271.83" y="32.9" font-size="14" fill="#C7CDFE" font-weight="600">Nivel super</text>
+</g>
+</g>
+<g id="contenido-principal" data-name="Contenido principal (main)" role="main">
+<g id="boton-1" data-name="Botón: ‹ Cuentas" data-interactive="link" data-orden-foco="2">
+<rect x="16" y="76" width="119.03" height="44" fill="none" data-hit="1"/>
+<text x="16" y="103.6" font-size="16" fill="#A5B4FC" font-weight="600">‹ Cuentas</text>
+<line x1="16" y1="106.6" x2="91.87" y2="106.6" stroke="#A5B4FC" stroke-width="1"/>
+</g>
+<text x="16" y="159.4" font-size="24" fill="#F1F3F7" font-weight="600">Ana Gómez</text>
+<g id="insignia-2" data-name="Insignia: Activa">
+<rect x="16" y="174" width="86.07" height="28" rx="14" fill="#12301F"/>
+<g transform="translate(26 180) scale(0.67)" fill="none" stroke="#86D9A4" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M8 12.5l3 3 5-6"/></g>
+<text x="48" y="192.9" font-size="14" fill="#86D9A4" font-weight="600">Activa</text>
+</g>
+<g id="tarjeta-3" data-name="Tarjeta">
+<rect x="16.5" y="218.5" width="342" height="313" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="32" y="251.3" font-size="18" fill="#F1F3F7" font-weight="600">Datos de la cuenta</text>
+<text x="32" y="283.4" font-size="14" fill="#C3CAD6">Nombre</text>
+<text x="162.62" y="285.6" font-size="16" fill="#F1F3F7">Ana Gómez</text>
+<text x="32" y="311.4" font-size="14" fill="#C3CAD6">Correo</text>
+<text x="162.62" y="313.6" font-size="16" fill="#F1F3F7">ana.gomez@correo.com</text>
+<text x="32" y="339.4" font-size="14" fill="#C3CAD6">Rol</text>
+<text x="162.62" y="341.6" font-size="16" fill="#F1F3F7">Cliente</text>
+<text x="32" y="367.4" font-size="14" fill="#C3CAD6">Nivel de acceso</text>
+<text x="162.62" y="369.6" font-size="16" fill="#F1F3F7">—</text>
+<text x="32" y="395.4" font-size="14" fill="#C3CAD6">Puntaje</text>
+<text x="162.62" y="397.6" font-size="16" fill="#F1F3F7">1.240</text>
+<text x="32" y="423.4" font-size="14" fill="#C3CAD6">Zona horaria</text>
+<text x="162.62" y="425.6" font-size="16" fill="#F1F3F7">America/Bogota</text>
+<text x="32" y="451.4" font-size="14" fill="#C3CAD6">Tiene datos</text>
+<text x="162.62" y="453.6" font-size="16" fill="#F1F3F7">Sí (el rol no puede</text>
+<text x="162.62" y="477.6" font-size="16" fill="#F1F3F7">cambiarse)</text>
+<text x="32" y="503.4" font-size="14" fill="#C3CAD6">Registro</text>
+<text x="162.62" y="505.6" font-size="16" fill="#F1F3F7">01/10/2026</text>
+</g>
+<g id="tarjeta-4" data-name="Tarjeta">
+<rect x="16.5" y="548.5" width="342" height="340" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="32" y="581.3" font-size="18" fill="#F1F3F7" font-weight="600">Acciones según tu nivel</text>
+<text x="32" y="613.4" font-size="14" fill="#C3CAD6">«Cambiar rol» está deshabilitado: la cuenta</text>
+<text x="32" y="634.4" font-size="14" fill="#C3CAD6">tiene datos. «Cambiar nivel» no aparece porque</text>
+<text x="32" y="655.4" font-size="14" fill="#C3CAD6">solo aplica a administradores.</text>
+<g id="boton-5" data-name="Botón: Editar" data-interactive="button" data-orden-foco="3">
+<rect x="32" y="673" width="311" height="44" fill="none" data-hit="1"/>
+<rect x="33" y="674" width="309" height="42" rx="8" fill="#1C2128" stroke="#A5B4FC" stroke-width="2"/>
+<text x="187.5" y="700.6" font-size="16" fill="#A5B4FC" font-weight="600" text-anchor="middle">Editar</text>
+</g>
+<g id="boton-6" data-name="Botón: Bloquear" data-interactive="button" data-orden-foco="4">
+<rect x="32" y="725" width="311" height="44" fill="none" data-hit="1"/>
+<rect x="33" y="726" width="309" height="42" rx="8" fill="#1C2128" stroke="#A5B4FC" stroke-width="2"/>
+<text x="187.5" y="752.6" font-size="16" fill="#A5B4FC" font-weight="600" text-anchor="middle">Bloquear</text>
+</g>
+<g id="boton-7" data-name="Botón: Cambiar rol" data-interactive="button" data-orden-foco="5" data-disabled="true">
+<rect x="32" y="777" width="311" height="44" fill="none" data-hit="1"/>
+<rect x="32" y="777" width="311" height="44" rx="8" fill="#1C2128"/>
+<text x="187.5" y="804.6" font-size="16" fill="#6B7385" font-weight="600" text-anchor="middle">Cambiar rol</text>
+</g>
+<g id="boton-8" data-name="Botón: Eliminar cuenta" data-interactive="button" data-orden-foco="6">
+<rect x="32" y="829" width="311" height="44" fill="none" data-hit="1"/>
+<rect x="32" y="829" width="311" height="44" rx="8" fill="#F87171"/>
+<text x="187.5" y="856.6" font-size="16" fill="#3B0A08" font-weight="600" text-anchor="middle">Eliminar cuenta</text>
+</g>
+</g>
+</g>
+</svg>

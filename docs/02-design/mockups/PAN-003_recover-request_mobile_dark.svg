@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="375" height="812" viewBox="0 0 375 812" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" data-pan="PAN-003" data-dispositivo="movil" data-tema="oscuro" aria-labelledby="t d">
+<title id="t">PAN-003 — Recuperar contraseña: solicitar código (móvil 375 px, tema oscuro)</title>
+<desc id="d">Mockup de alta fidelidad de Recuperar contraseña: solicitar código. Ruta /recuperar; rol visitante; CU CU-003; EP EP-007. Estado mostrado: 422 de validación: formato de correo no válido; no se envía nada. Colores, tipografía (Inter), espaciado y radios del sistema de diseño (tema oscuro); texto editable. Respuesta genérica idéntica exista o no el correo (anti-enumeración, RF-AUT-006). Regiones ARIA: banner, main. Orden de foco con Tab (coincide con el orden visual y del DOM): Enlace de salto «Saltar al contenido principal» (visible solo al recibir el foco). 1 Campo: Correo electrónico; 2 Botón: Enviar código; 3 Botón: Volver a iniciar sesión.</desc>
+<defs><pattern id="rayas-gracia" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#2A323D"/><rect width="3" height="6" fill="#F5B93A"/></pattern></defs>
+<rect id="fondo-pagina" width="375" height="812" fill="#0F1114"/>
+<g id="cabecera" data-name="Cabecera" role="banner">
+<rect x="0" y="0" width="375" height="56" fill="#0F1114"/>
+<line x1="0" y1="56" x2="375" y2="56" stroke="#2A323D" stroke-width="1"/>
+<g id="logo-5" data-name="Logotipo FocusStrike" data-exempt="logo">
+<rect x="16" y="12" width="32" height="32" rx="8" fill="#A5B4FC"/>
+<g transform="translate(22.4 18.4) scale(0.8)" fill="none" stroke="#1E1B4B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="58" y="34.3" font-size="18" fill="#F1F3F7" font-weight="700">FocusStrike</text>
+</g>
+</g>
+<g id="contenido-principal" data-name="Contenido principal (main)" role="main">
+<text x="16" y="99.4" font-size="24" fill="#F1F3F7" font-weight="600">Recuperar contraseña</text>
+<text x="16" y="129.4" font-size="14" fill="#C3CAD6">Te enviaremos un código de 6 dígitos, válido 10</text>
+<text x="16" y="150.4" font-size="14" fill="#C3CAD6">minutos, si el correo está registrado.</text>
+<g id="campo-1" data-name="Campo: Correo electrónico">
+<text x="16" y="187.4" font-size="14" fill="#F1F3F7" font-weight="600">Correo electrónico</text>
+<g id="entrada-2" data-name="Entrada" data-interactive="input" data-orden-foco="1">
+<rect x="16" y="197" width="343" height="44" fill="none" data-hit="1"/>
+<rect x="17" y="198" width="341" height="42" rx="8" fill="#1C2128" stroke="#F87171" stroke-width="2"/>
+<text x="28" y="224.6" font-size="16" fill="#F1F3F7">ana.gomez@correo</text>
+</g>
+<g transform="translate(16 247) scale(0.67)" fill="none" stroke="#FCA5A5" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M9 9l6 6M15 9l-6 6"/></g>
+<text x="38" y="260.4" font-size="14" fill="#FCA5A5" font-weight="500">Formato de correo no válido</text>
+</g>
+<g id="boton-3" data-name="Botón: Enviar código" data-interactive="button" data-orden-foco="2">
+<rect x="16" y="282" width="343" height="44" fill="none" data-hit="1"/>
+<rect x="16" y="282" width="343" height="44" rx="8" fill="#A5B4FC"/>
+<text x="187.5" y="309.6" font-size="16" fill="#1E1B4B" font-weight="600" text-anchor="middle">Enviar código</text>
+</g>
+<g id="boton-4" data-name="Botón: Volver a iniciar sesión" data-interactive="link" data-orden-foco="3">
+<rect x="16" y="330" width="214.52" height="44" fill="none" data-hit="1"/>
+<text x="16" y="357.6" font-size="16" fill="#A5B4FC" font-weight="600">Volver a iniciar sesión</text>
+<line x1="16" y1="360.6" x2="183.54" y2="360.6" stroke="#A5B4FC" stroke-width="1"/>
+</g>
+</g>
+</svg>

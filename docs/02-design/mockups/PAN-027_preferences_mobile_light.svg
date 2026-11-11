@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="375" height="970" viewBox="0 0 375 970" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" data-pan="PAN-027" data-dispositivo="movil" data-tema="claro" aria-labelledby="t d">
+<title id="t">PAN-027 — Preferencias de cuenta (móvil 375 px, tema claro)</title>
+<desc id="d">Mockup de alta fidelidad de Preferencias de cuenta. Ruta /preferencias; rol cliente; CU CU-027, CU-028; EP EP-012, EP-013, EP-016, EP-017, EP-018, EP-014, EP-015. Estado mostrado: tras guardar: aviso «Preferencias guardadas» (EP-016). Colores, tipografía (Inter), espaciado y radios del sistema de diseño (tema claro); texto editable. Cambiar la zona horaria no recalcula los días activos pasados (RF-PER-008). El permiso de push lo decide el navegador (RF-NOT-007). Regiones ARIA: banner, navigation, main. Orden de foco con Tab (coincide con el orden visual y del DOM): Enlace de salto «Saltar al contenido principal» (visible solo al recibir el foco). 1 Menú de cuenta; 2 Navegación: Inicio; 3 Navegación: Agenda; 4 Navegación: Metas; 5 Navegación: Ranking; 6 Navegación: Perfil; 7 Campo: Zona horaria; 8 Conmutador: Recibir notificaciones push; 9 Botón: Revisar el aviso de IA; 10 Botón: Guardar preferencias.</desc>
+<defs><pattern id="rayas-gracia" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#E3E8EF"/><rect width="3" height="6" fill="#8A4B00"/></pattern></defs>
+<rect id="fondo-pagina" width="375" height="970" fill="#F5F7FA"/>
+<g id="barra-superior" data-name="Barra superior" role="banner">
+<rect x="0" y="0" width="375" height="56" fill="#FFFFFF"/>
+<line x1="0" y1="56" x2="375" y2="56" stroke="#D7DDE8" stroke-width="1"/>
+<g id="logo-11" data-name="Logotipo FocusStrike" data-exempt="logo">
+<rect x="16" y="12" width="32" height="32" rx="8" fill="#4338CA"/>
+<g transform="translate(22.4 18.4) scale(0.8)" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="58" y="34.3" font-size="18" fill="#1A1D21" font-weight="700">FocusStrike</text>
+</g>
+<g id="avatar-12" data-name="Menú de cuenta" data-interactive="button" data-orden-foco="1">
+<rect x="319" y="6" width="44" height="44" fill="none" data-hit="1"/>
+<circle cx="341" cy="28" r="18" fill="#4338CA"/>
+<text x="341" y="33.6" font-size="16" fill="#FFFFFF" font-weight="700" text-anchor="middle">A</text>
+</g>
+</g>
+<g id="navegacion-inferior" data-name="Navegación inferior" role="navigation">
+<rect x="0" y="906" width="375" height="64" fill="#FFFFFF"/>
+<line x1="0" y1="906" x2="375" y2="906" stroke="#D7DDE8" stroke-width="1"/>
+<g id="nav-13" data-name="Navegación: Inicio" data-interactive="link" data-orden-foco="2">
+<rect x="0" y="906" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(25.5 914) scale(1)" fill="none" stroke="#4B5563" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7"/><path d="M6 10v10h12V10"/></g>
+<text x="37.5" y="956" font-size="14" fill="#4B5563" font-weight="600" text-anchor="middle">Inicio</text>
+</g>
+<g id="nav-14" data-name="Navegación: Agenda" data-interactive="link" data-orden-foco="3">
+<rect x="75" y="906" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(100.5 914) scale(1)" fill="none" stroke="#4B5563" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v14H4z"/><path d="M4 10h16M8 3v4M16 3v4"/></g>
+<text x="112.5" y="956" font-size="14" fill="#4B5563" font-weight="600" text-anchor="middle">Agenda</text>
+</g>
+<g id="nav-15" data-name="Navegación: Metas" data-interactive="link" data-orden-foco="4">
+<rect x="150" y="906" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(175.5 914) scale(1)" fill="none" stroke="#4B5563" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="187.5" y="956" font-size="14" fill="#4B5563" font-weight="600" text-anchor="middle">Metas</text>
+</g>
+<g id="nav-16" data-name="Navegación: Ranking" data-interactive="link" data-orden-foco="5">
+<rect x="225" y="906" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(250.5 914) scale(1)" fill="none" stroke="#4B5563" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v6a4 4 0 01-8 0z"/><path d="M8 6H4v2a3 3 0 003 3M16 6h4v2a3 3 0 01-3 3"/><path d="M12 14v4M8 20h8"/></g>
+<text x="262.5" y="956" font-size="14" fill="#4B5563" font-weight="600" text-anchor="middle">Ranking</text>
+</g>
+<g id="nav-17" data-name="Navegación: Perfil" data-interactive="link" data-orden-foco="6" aria-current="page">
+<rect x="300" y="906" width="75" height="64" fill="none" data-hit="1"/>
+<rect x="306" y="910" width="63" height="56" rx="8" fill="#EEF0FF"/>
+<g transform="translate(325.5 914) scale(1)" fill="none" stroke="#3730A3" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4a4 4 0 100 8 4 4 0 000-8z"/><path d="M4.5 20a7.5 7.5 0 0115 0"/></g>
+<text x="337.5" y="956" font-size="14" fill="#3730A3" font-weight="700" text-anchor="middle">Perfil</text>
+</g>
+</g>
+<g id="contenido-principal" data-name="Contenido principal (main)" role="main">
+<text x="16" y="99.4" font-size="24" fill="#1A1D21" font-weight="600">Preferencias</text>
+<g id="aviso-1" data-name="Aviso: Preferencias guardadas" role="status">
+<rect x="16" y="114" width="343" height="48" rx="8" fill="#1A1D21"/>
+<g transform="translate(30 126) scale(0.92)" fill="none" stroke="#FFFFFF" stroke-width="1.91" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M8 12.5l3 3 5-6"/></g>
+<text x="64" y="143.6" font-size="16" fill="#FFFFFF" font-weight="600">Preferencias guardadas</text>
+</g>
+<g id="tarjeta-2" data-name="Tarjeta">
+<rect x="16" y="179" width="343" height="202" rx="12" fill="#1A1D21" fill-opacity="0.08"/><rect x="16.5" y="178.5" width="342" height="201" rx="12" fill="#FFFFFF" stroke="#D7DDE8" stroke-width="1"/>
+<text x="32" y="211.3" font-size="18" fill="#1A1D21" font-weight="600">Zona horaria</text>
+<g id="campo-3" data-name="Campo: Zona horaria">
+<text x="32" y="243.4" font-size="14" fill="#1A1D21" font-weight="600">Zona horaria</text>
+<g id="entrada-4" data-name="Entrada" data-interactive="input" data-orden-foco="7">
+<rect x="32" y="253" width="311" height="44" fill="none" data-hit="1"/>
+<rect x="33" y="254" width="309" height="42" rx="8" fill="#FFFFFF" stroke="#6B7385" stroke-width="1"/>
+<text x="44" y="280.6" font-size="16" fill="#1A1D21">America/Bogota</text>
+<line x1="313" y1="271" x2="321" y2="279" stroke="#4B5563" stroke-width="2"/>
+<line x1="321" y1="279" x2="329" y2="271" stroke="#4B5563" stroke-width="2"/>
+</g>
+<text x="32" y="316.4" font-size="14" fill="#4B5563">Tu navegador indica America/Bogota. Tus</text>
+<text x="32" y="337.4" font-size="14" fill="#4B5563">submetas pendientes conservan su fecha y</text>
+<text x="32" y="358.4" font-size="14" fill="#4B5563">hora locales.</text>
+</g>
+</g>
+<g id="tarjeta-5" data-name="Tarjeta">
+<rect x="16" y="397" width="343" height="185" rx="12" fill="#1A1D21" fill-opacity="0.08"/><rect x="16.5" y="396.5" width="342" height="184" rx="12" fill="#FFFFFF" stroke="#D7DDE8" stroke-width="1"/>
+<text x="32" y="429.3" font-size="18" fill="#1A1D21" font-weight="600">Notificaciones push</text>
+<g id="conmutador-6" data-name="Conmutador: Recibir notificaciones push" data-interactive="switch" data-orden-foco="8">
+<rect x="32" y="446" width="311" height="44" fill="none" data-hit="1"/>
+<rect x="291" y="456" width="52" height="24" rx="12" fill="#4338CA"/>
+<circle cx="331" cy="468" r="8" fill="#FFFFFF"/>
+<text x="281" y="473" font-size="14" fill="#4B5563" font-weight="600" text-anchor="end">Activadas</text>
+<text x="32" y="473.6" font-size="16" fill="#1A1D21">Recibir</text>
+<text x="32" y="497.6" font-size="16" fill="#1A1D21">notificaciones</text>
+<text x="32" y="521.6" font-size="16" fill="#1A1D21">push</text>
+</g>
+<text x="32" y="517.4" font-size="14" fill="#4B5563">Avisan 10 minutos antes, al llegar al 80 %, al</text>
+<text x="32" y="538.4" font-size="14" fill="#4B5563">entrar en gracia, al terminar la evaluación y al</text>
+<text x="32" y="559.4" font-size="14" fill="#4B5563">obtener un logro.</text>
+</g>
+<g id="tarjeta-7" data-name="Tarjeta">
+<rect x="16" y="598" width="343" height="225" rx="12" fill="#1A1D21" fill-opacity="0.08"/><rect x="16.5" y="597.5" width="342" height="224" rx="12" fill="#FFFFFF" stroke="#D7DDE8" stroke-width="1"/>
+<text x="32" y="630.3" font-size="18" fill="#1A1D21" font-weight="600">Uso de IA</text>
+<g id="insignia-8" data-name="Insignia: Aceptado el 01/11/2026">
+<rect x="32" y="647" width="209.54" height="28" rx="14" fill="#E8F6EE"/>
+<g transform="translate(42 653) scale(0.67)" fill="none" stroke="#0F5132" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M8 12.5l3 3 5-6"/></g>
+<text x="64" y="665.9" font-size="14" fill="#0F5132" font-weight="600">Aceptado el 01/11/2026</text>
+</g>
+<text x="32" y="702.4" font-size="14" fill="#4B5563">Por ahora el consentimiento no se puede</text>
+<text x="32" y="723.4" font-size="14" fill="#4B5563">revocar desde esta pantalla.</text>
+<g id="boton-9" data-name="Botón: Revisar el aviso de IA" data-interactive="button" data-orden-foco="9">
+<rect x="32" y="762" width="311" height="44" fill="none" data-hit="1"/>
+<rect x="33" y="763" width="309" height="42" rx="8" fill="#FFFFFF" stroke="#4338CA" stroke-width="2"/>
+<text x="187.5" y="789.6" font-size="16" fill="#4338CA" font-weight="600" text-anchor="middle">Revisar el aviso de IA</text>
+</g>
+</g>
+<g id="boton-10" data-name="Botón: Guardar preferencias" data-interactive="button" data-orden-foco="10">
+<rect x="16" y="838" width="343" height="44" fill="none" data-hit="1"/>
+<rect x="16" y="838" width="343" height="44" rx="8" fill="#4338CA"/>
+<text x="187.5" y="865.6" font-size="16" fill="#FFFFFF" font-weight="600" text-anchor="middle">Guardar preferencias</text>
+</g>
+</g>
+</svg>

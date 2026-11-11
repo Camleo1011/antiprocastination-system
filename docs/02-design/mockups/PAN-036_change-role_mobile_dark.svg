@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="375" height="838" viewBox="0 0 375 838" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" data-pan="PAN-036" data-dispositivo="movil" data-tema="oscuro" aria-labelledby="t d">
+<title id="t">PAN-036 — Cambiar rol de la cuenta (móvil 375 px, tema oscuro)</title>
+<desc id="d">Mockup de alta fidelidad de Cambiar rol de la cuenta. Ruta (modal); rol super; CU CU-019; EP EP-048. Estado mostrado: super convierte una cuenta cliente sin datos en administrador con nivel soporte; advertencia de consecuencias. Colores, tipografía (Inter), espaciado y radios del sistema de diseño (tema oscuro); texto editable. Solo se ofrece si la cuenta no tiene datos (409 CUENTA_CON_DATOS); exclusivo del super. Regiones ARIA: banner, navigation, main, alertdialog. Orden de foco con Tab (coincide con el orden visual y del DOM): Diálogo abierto: el fondo queda inerte y el foco se atrapa en el diálogo; foco inicial en el botón seguro (Cancelar). 1 Casilla: Administrador; 2 Campo: Nivel de acceso; 3 Botón: Cancelar; 4 Botón: Cambiar rol.</desc>
+<defs><pattern id="rayas-gracia" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#2A323D"/><rect width="3" height="6" fill="#F5B93A"/></pattern></defs>
+<rect id="fondo-pagina" width="375" height="838" fill="#161A20"/>
+<g id="fondo-inerte" data-name="Contenido de la pantalla cubierto por el diálogo" data-inert="true" aria-hidden="true">
+<g id="barra-superior" data-name="Barra superior de administración" role="banner">
+<rect x="0" y="0" width="375" height="56" fill="#1C2128"/>
+<line x1="0" y1="56" x2="375" y2="56" stroke="#2A323D" stroke-width="1"/>
+<g id="navegacion-admin" data-name="Navegación de administración (cajón)" role="navigation" aria-label="Administración">
+<g id="boton-menu" data-name="Abrir menú de administración" data-interactive="button">
+<rect x="4" y="6" width="44" height="44" fill="none" data-hit="1"/>
+<g transform="translate(14 16) scale(1)" fill="none" stroke="#F1F3F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></g>
+</g>
+</g>
+<g id="logo-9" data-name="Logotipo FocusStrike" data-exempt="logo">
+<rect x="56" y="12" width="32" height="32" rx="8" fill="#A5B4FC"/>
+<g transform="translate(62.4 18.4) scale(0.8)" fill="none" stroke="#1E1B4B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+</g>
+<g id="insignia-10" data-name="Insignia: Nivel super">
+<rect x="239.83" y="14" width="119.17" height="28" rx="14" fill="#23264A"/>
+<g transform="translate(249.83 20) scale(0.67)" fill="none" stroke="#C7CDFE" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7.5 3v5.5c0 4.5-3.2 8-7.5 9.5-4.3-1.5-7.5-5-7.5-9.5V6z"/></g>
+<text x="271.83" y="32.9" font-size="14" fill="#C7CDFE" font-weight="600">Nivel super</text>
+</g>
+</g>
+<g id="contenido-principal" data-name="Contenido principal (main)" role="main">
+<g id="boton-1" data-name="Botón: ‹ Cuentas" data-interactive="link">
+<rect x="16" y="76" width="119.03" height="44" fill="none" data-hit="1"/>
+<text x="16" y="103.6" font-size="16" fill="#A5B4FC" font-weight="600">‹ Cuentas</text>
+<line x1="16" y1="106.6" x2="91.87" y2="106.6" stroke="#A5B4FC" stroke-width="1"/>
+</g>
+<text x="16" y="159.4" font-size="24" fill="#F1F3F7" font-weight="600">Tomás Beltrán</text>
+<g id="insignia-2" data-name="Insignia: Activa">
+<rect x="16" y="174" width="86.07" height="28" rx="14" fill="#12301F"/>
+<g transform="translate(26 180) scale(0.67)" fill="none" stroke="#86D9A4" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M8 12.5l3 3 5-6"/></g>
+<text x="48" y="192.9" font-size="14" fill="#86D9A4" font-weight="600">Activa</text>
+</g>
+<g id="tarjeta-3" data-name="Tarjeta">
+<rect x="16.5" y="218.5" width="342" height="313" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="32" y="251.3" font-size="18" fill="#F1F3F7" font-weight="600">Datos de la cuenta</text>
+<text x="32" y="283.4" font-size="14" fill="#C3CAD6">Nombre</text>
+<text x="162.62" y="285.6" font-size="16" fill="#F1F3F7">Tomás Beltrán</text>
+<text x="32" y="311.4" font-size="14" fill="#C3CAD6">Correo</text>
+<text x="162.62" y="313.6" font-size="16" fill="#F1F3F7">tomas.beltran@correo.com</text>
+<text x="32" y="339.4" font-size="14" fill="#C3CAD6">Rol</text>
+<text x="162.62" y="341.6" font-size="16" fill="#F1F3F7">Cliente</text>
+<text x="32" y="367.4" font-size="14" fill="#C3CAD6">Nivel de acceso</text>
+<text x="162.62" y="369.6" font-size="16" fill="#F1F3F7">—</text>
+<text x="32" y="395.4" font-size="14" fill="#C3CAD6">Puntaje</text>
+<text x="162.62" y="397.6" font-size="16" fill="#F1F3F7">0</text>
+<text x="32" y="423.4" font-size="14" fill="#C3CAD6">Zona horaria</text>
+<text x="162.62" y="425.6" font-size="16" fill="#F1F3F7">America/Bogota</text>
+<text x="32" y="451.4" font-size="14" fill="#C3CAD6">Tiene datos</text>
+<text x="162.62" y="453.6" font-size="16" fill="#F1F3F7">No (el rol puede</text>
+<text x="162.62" y="477.6" font-size="16" fill="#F1F3F7">cambiarse)</text>
+<text x="32" y="503.4" font-size="14" fill="#C3CAD6">Registro</text>
+<text x="162.62" y="505.6" font-size="16" fill="#F1F3F7">02/11/2026</text>
+</g>
+<g id="tarjeta-4" data-name="Tarjeta">
+<rect x="16.5" y="548.5" width="342" height="265" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="32" y="581.3" font-size="18" fill="#F1F3F7" font-weight="600">Acciones según tu nivel</text>
+<g id="boton-5" data-name="Botón: Editar" data-interactive="button">
+<rect x="32" y="598" width="311" height="44" fill="none" data-hit="1"/>
+<rect x="33" y="599" width="309" height="42" rx="8" fill="#1C2128" stroke="#A5B4FC" stroke-width="2"/>
+<text x="187.5" y="625.6" font-size="16" fill="#A5B4FC" font-weight="600" text-anchor="middle">Editar</text>
+</g>
+<g id="boton-6" data-name="Botón: Bloquear" data-interactive="button">
+<rect x="32" y="650" width="311" height="44" fill="none" data-hit="1"/>
+<rect x="33" y="651" width="309" height="42" rx="8" fill="#1C2128" stroke="#A5B4FC" stroke-width="2"/>
+<text x="187.5" y="677.6" font-size="16" fill="#A5B4FC" font-weight="600" text-anchor="middle">Bloquear</text>
+</g>
+<g id="boton-7" data-name="Botón: Cambiar rol" data-interactive="button">
+<rect x="32" y="702" width="311" height="44" fill="none" data-hit="1"/>
+<rect x="33" y="703" width="309" height="42" rx="8" fill="#1C2128" stroke="#A5B4FC" stroke-width="2"/>
+<text x="187.5" y="729.6" font-size="16" fill="#A5B4FC" font-weight="600" text-anchor="middle">Cambiar rol</text>
+</g>
+<g id="boton-8" data-name="Botón: Eliminar cuenta" data-interactive="button">
+<rect x="32" y="754" width="311" height="44" fill="none" data-hit="1"/>
+<rect x="32" y="754" width="311" height="44" rx="8" fill="#F87171"/>
+<text x="187.5" y="781.6" font-size="16" fill="#3B0A08" font-weight="600" text-anchor="middle">Eliminar cuenta</text>
+</g>
+</g>
+</g>
+</g>
+<rect x="0" y="0" width="375" height="838" fill="#0F1114" fill-opacity="0.6" id="telon"/>
+<g id="dialogo" data-name="Diálogo: Cambiar el rol de Tomás Beltrán" role="alertdialog" aria-modal="true">
+<rect x="16.5" y="173.5" width="342" height="465" rx="16" fill="#232A33" stroke="#2A323D" stroke-width="1"/>
+<text x="40" y="214.3" font-size="18" fill="#F1F3F7" font-weight="600">Cambiar el rol de Tomás Beltrán</text>
+<text x="40" y="248.6" font-size="16" fill="#F1F3F7">Rol actual: cliente. Rol destino:</text>
+<g id="casilla-11" data-name="Casilla: Administrador" data-interactive="radio" data-orden-foco="1">
+<rect x="40" y="271" width="295" height="44" fill="none" data-hit="1"/>
+<circle cx="52" cy="293" r="11" fill="#1C2128" stroke="#8D97A8" stroke-width="2"/>
+<circle cx="52" cy="293" r="6" fill="#A5B4FC"/>
+<text x="76" y="298.6" font-size="16" fill="#F1F3F7">Administrador</text>
+</g>
+<g id="campo-12" data-name="Campo: Nivel de acceso">
+<text x="40" y="346.4" font-size="14" fill="#F1F3F7" font-weight="600">Nivel de acceso</text>
+<g id="entrada-13" data-name="Entrada" data-interactive="input" data-orden-foco="2">
+<rect x="40" y="356" width="295" height="44" fill="none" data-hit="1"/>
+<rect x="41" y="357" width="293" height="42" rx="8" fill="#1C2128" stroke="#8D97A8" stroke-width="1"/>
+<text x="52" y="383.6" font-size="16" fill="#F1F3F7">Soporte</text>
+<line x1="305" y1="374" x2="313" y2="382" stroke="#C3CAD6" stroke-width="2"/>
+<line x1="313" y1="382" x2="321" y2="374" stroke="#C3CAD6" stroke-width="2"/>
+</g>
+</g>
+<g id="alerta-14" data-name="Alerta: Se eliminarán los datos propios del rol " role="alert">
+<rect x="40" y="416" width="295" height="87" rx="8" fill="#33260A"/>
+<rect x="40" y="416" width="4" height="87" rx="2" fill="#F5B93A"/>
+<g transform="translate(56 428) scale(0.83)" fill="none" stroke="#FCD34D" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5L2.8 19.5h18.4z"/><path d="M12 10v4.5"/><path d="M12 17.2v.1"/></g>
+<text x="88" y="443.4" font-size="14" fill="#F1F3F7">Se eliminarán los datos propios</text>
+<text x="88" y="464.4" font-size="14" fill="#F1F3F7">del rol anterior y se crearán los del</text>
+<text x="88" y="485.4" font-size="14" fill="#F1F3F7">nuevo con valores por defecto.</text>
+</g>
+<g id="boton-15" data-name="Botón: Cancelar" data-interactive="button" data-orden-foco="3">
+<rect x="40" y="519" width="295" height="44" fill="none" data-hit="1"/>
+<rect x="37" y="516" width="301" height="50" rx="11" fill="none" stroke="#A5B4FC" stroke-width="2"/>
+<rect x="41" y="520" width="293" height="42" rx="8" fill="#1C2128" stroke="#A5B4FC" stroke-width="2"/>
+<text x="187.5" y="546.6" font-size="16" fill="#A5B4FC" font-weight="600" text-anchor="middle">Cancelar</text>
+</g>
+<g id="boton-16" data-name="Botón: Cambiar rol" data-interactive="button" data-orden-foco="4">
+<rect x="40" y="571" width="295" height="44" fill="none" data-hit="1"/>
+<rect x="40" y="571" width="295" height="44" rx="8" fill="#F87171"/>
+<text x="187.5" y="598.6" font-size="16" fill="#3B0A08" font-weight="600" text-anchor="middle">Cambiar rol</text>
+</g>
+</g>
+</svg>

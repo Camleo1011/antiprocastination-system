@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" data-pan="PAN-003" data-dispositivo="desktop" data-tema="oscuro" aria-labelledby="t d">
+<title id="t">PAN-003 — Recuperar contraseña: solicitar código (escritorio 1280 px, tema oscuro)</title>
+<desc id="d">Mockup de alta fidelidad de Recuperar contraseña: solicitar código. Ruta /recuperar; rol visitante; CU CU-003; EP EP-007. Estado mostrado: tras enviar: respuesta genérica idéntica exista o no el correo (anti-enumeración), con salida a PAN-004. Colores, tipografía (Inter), espaciado y radios del sistema de diseño (tema oscuro); texto editable. Respuesta genérica idéntica exista o no el correo (anti-enumeración, RF-AUT-006). Regiones ARIA: banner, main. Orden de foco con Tab (coincide con el orden visual y del DOM): Enlace de salto «Saltar al contenido principal» (visible solo al recibir el foco). 1 Campo: Correo electrónico; 2 Botón: Enviar código; 3 Botón: Ya tengo un código; 4 Botón: Volver a iniciar sesión.</desc>
+<defs><pattern id="rayas-gracia" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#2A323D"/><rect width="3" height="6" fill="#F5B93A"/></pattern></defs>
+<rect id="fondo-pagina" width="1280" height="800" fill="#161A20"/>
+<g id="cabecera" data-name="Cabecera" role="banner">
+<g id="logo-8" data-name="Logotipo FocusStrike" data-exempt="logo">
+<rect x="556" y="56" width="32" height="32" rx="8" fill="#A5B4FC"/>
+<g transform="translate(562.4 62.4) scale(0.8)" fill="none" stroke="#1E1B4B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="598" y="78.3" font-size="18" fill="#F1F3F7" font-weight="700">FocusStrike</text>
+</g>
+</g>
+<g id="contenido-principal" data-name="Contenido principal (main)" role="main">
+<g id="tarjeta-1" data-name="Tarjeta">
+<rect x="420.5" y="128.5" width="439" height="495" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="452" y="189.5" font-size="30" fill="#F1F3F7" font-weight="700">Recuperar contraseña</text>
+<text x="452" y="221.4" font-size="14" fill="#C3CAD6">Te enviaremos un código de 6 dígitos, válido 10 minutos,</text>
+<text x="452" y="242.4" font-size="14" fill="#C3CAD6">si el correo está registrado.</text>
+<g id="alerta-2" data-name="Alerta: Si el correo está registrado, te enviamo" role="status">
+<rect x="452" y="264" width="376" height="87" rx="8" fill="#12301F"/>
+<rect x="452" y="264" width="4" height="87" rx="2" fill="#4FBF7B"/>
+<g transform="translate(468 276) scale(0.83)" fill="none" stroke="#86D9A4" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M8 12.5l3 3 5-6"/></g>
+<text x="500" y="291.4" font-size="14" fill="#F1F3F7">Si el correo está registrado, te enviamos un</text>
+<text x="500" y="312.4" font-size="14" fill="#F1F3F7">código de 6 dígitos. Revisa tu bandeja de</text>
+<text x="500" y="333.4" font-size="14" fill="#F1F3F7">entrada; vence en 10 minutos.</text>
+</g>
+<g id="campo-3" data-name="Campo: Correo electrónico">
+<text x="452" y="382.4" font-size="14" fill="#F1F3F7" font-weight="600">Correo electrónico</text>
+<g id="entrada-4" data-name="Entrada" data-interactive="input" data-orden-foco="1">
+<rect x="452" y="392" width="376" height="44" fill="none" data-hit="1"/>
+<rect x="453" y="393" width="374" height="42" rx="8" fill="#1C2128" stroke="#8D97A8" stroke-width="1"/>
+<text x="464" y="419.6" font-size="16" fill="#F1F3F7">ana.gomez@correo.com</text>
+</g>
+</g>
+<g id="boton-5" data-name="Botón: Enviar código" data-interactive="button" data-orden-foco="2">
+<rect x="452" y="452" width="147.19" height="44" fill="none" data-hit="1"/>
+<rect x="452" y="452" width="147.19" height="44" rx="8" fill="#A5B4FC"/>
+<text x="525.59" y="479.6" font-size="16" fill="#1E1B4B" font-weight="600" text-anchor="middle">Enviar código</text>
+</g>
+<g id="boton-6" data-name="Botón: Ya tengo un código" data-interactive="link" data-orden-foco="3">
+<rect x="452" y="500" width="190.1" height="44" fill="none" data-hit="1"/>
+<text x="452" y="527.6" font-size="16" fill="#A5B4FC" font-weight="600">Ya tengo un código</text>
+<line x1="452" y1="530.6" x2="596.09" y2="530.6" stroke="#A5B4FC" stroke-width="1"/>
+</g>
+<g id="boton-7" data-name="Botón: Volver a iniciar sesión" data-interactive="link" data-orden-foco="4">
+<rect x="452" y="548" width="214.52" height="44" fill="none" data-hit="1"/>
+<text x="452" y="575.6" font-size="16" fill="#A5B4FC" font-weight="600">Volver a iniciar sesión</text>
+<line x1="452" y1="578.6" x2="619.54" y2="578.6" stroke="#A5B4FC" stroke-width="1"/>
+</g>
+</g>
+</g>
+</svg>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="375" height="812" viewBox="0 0 375 812" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" data-pan="PAN-034" data-dispositivo="movil" data-tema="claro" aria-labelledby="t d">
+<title id="t">PAN-034 — Cuentas: editar (móvil 375 px, tema claro)</title>
+<desc id="d">Mockup de alta fidelidad de Cuentas: editar. Ruta /admin/cuentas/:id/editar; rol moderador+; CU CU-019; EP EP-046, EP-045. Estado mostrado: edición de una cuenta cliente por un moderador, lista para guardar. Colores, tipografía (Inter), espaciado y radios del sistema de diseño (tema claro); texto editable. El moderador edita solo cuentas cliente (BR-021). Regiones ARIA: banner, navigation, main. Orden de foco con Tab (coincide con el orden visual y del DOM): Enlace de salto «Saltar al contenido principal» (visible solo al recibir el foco). 1 Abrir menú de administración; 2 Botón: ‹ Ana Gómez; 3 Campo: Nombre; 4 Campo: Correo; 5 Botón: Cancelar; 6 Botón: Guardar.</desc>
+<defs><pattern id="rayas-gracia" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#E3E8EF"/><rect width="3" height="6" fill="#8A4B00"/></pattern></defs>
+<rect id="fondo-pagina" width="375" height="812" fill="#F5F7FA"/>
+<g id="barra-superior" data-name="Barra superior de administración" role="banner">
+<rect x="0" y="0" width="375" height="56" fill="#FFFFFF"/>
+<line x1="0" y1="56" x2="375" y2="56" stroke="#D7DDE8" stroke-width="1"/>
+<g id="navegacion-admin" data-name="Navegación de administración (cajón)" role="navigation" aria-label="Administración">
+<g id="boton-menu" data-name="Abrir menú de administración" data-interactive="button" data-orden-foco="1">
+<rect x="4" y="6" width="44" height="44" fill="none" data-hit="1"/>
+<g transform="translate(14 16) scale(1)" fill="none" stroke="#1A1D21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></g>
+</g>
+</g>
+<g id="logo-9" data-name="Logotipo FocusStrike" data-exempt="logo">
+<rect x="56" y="12" width="32" height="32" rx="8" fill="#4338CA"/>
+<g transform="translate(62.4 18.4) scale(0.8)" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+</g>
+<g id="insignia-10" data-name="Insignia: Nivel moderador">
+<rect x="205.25" y="14" width="153.75" height="28" rx="14" fill="#EEF0FF"/>
+<g transform="translate(215.25 20) scale(0.67)" fill="none" stroke="#3730A3" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7.5 3v5.5c0 4.5-3.2 8-7.5 9.5-4.3-1.5-7.5-5-7.5-9.5V6z"/></g>
+<text x="237.25" y="32.9" font-size="14" fill="#3730A3" font-weight="600">Nivel moderador</text>
+</g>
+</g>
+<g id="contenido-principal" data-name="Contenido principal (main)" role="main">
+<g id="boton-1" data-name="Botón: ‹ Ana Gómez" data-interactive="link" data-orden-foco="2">
+<rect x="16" y="76" width="143.29" height="44" fill="none" data-hit="1"/>
+<text x="16" y="103.6" font-size="16" fill="#4338CA" font-weight="600">‹ Ana Gómez</text>
+<line x1="16" y1="106.6" x2="115.15" y2="106.6" stroke="#4338CA" stroke-width="1"/>
+</g>
+<text x="16" y="159.4" font-size="24" fill="#1A1D21" font-weight="600">Editar cuenta</text>
+<text x="16" y="189.4" font-size="14" fill="#4B5563">El cambio de rol y de nivel se hace en otras</text>
+<text x="16" y="210.4" font-size="14" fill="#4B5563">pantallas, solo para el super.</text>
+<g id="region-2" data-name="Editar cuenta" role="form">
+<g id="campo-3" data-name="Campo: Nombre">
+<text x="16" y="247.4" font-size="14" fill="#1A1D21" font-weight="600">Nombre</text>
+<g id="entrada-4" data-name="Entrada" data-interactive="input" data-orden-foco="3">
+<rect x="16" y="257" width="343" height="44" fill="none" data-hit="1"/>
+<rect x="17" y="258" width="341" height="42" rx="8" fill="#FFFFFF" stroke="#6B7385" stroke-width="1"/>
+<text x="28" y="284.6" font-size="16" fill="#1A1D21">Ana Gómez</text>
+</g>
+</g>
+<g id="campo-5" data-name="Campo: Correo">
+<text x="16" y="332.4" font-size="14" fill="#1A1D21" font-weight="600">Correo</text>
+<g id="entrada-6" data-name="Entrada" data-interactive="input" data-orden-foco="4">
+<rect x="16" y="342" width="343" height="44" fill="none" data-hit="1"/>
+<rect x="17" y="343" width="341" height="42" rx="8" fill="#FFFFFF" stroke="#6B7385" stroke-width="1"/>
+<text x="28" y="369.6" font-size="16" fill="#1A1D21">ana.gomez@correo.com</text>
+</g>
+</g>
+</g>
+<g id="boton-7" data-name="Botón: Cancelar" data-interactive="button" data-orden-foco="5">
+<rect x="16" y="402" width="343" height="44" fill="none" data-hit="1"/>
+<rect x="17" y="403" width="341" height="42" rx="8" fill="#FFFFFF" stroke="#4338CA" stroke-width="2"/>
+<text x="187.5" y="429.6" font-size="16" fill="#4338CA" font-weight="600" text-anchor="middle">Cancelar</text>
+</g>
+<g id="boton-8" data-name="Botón: Guardar" data-interactive="button" data-orden-foco="6">
+<rect x="16" y="454" width="343" height="44" fill="none" data-hit="1"/>
+<rect x="16" y="454" width="343" height="44" rx="8" fill="#4338CA"/>
+<text x="187.5" y="481.6" font-size="16" fill="#FFFFFF" font-weight="600" text-anchor="middle">Guardar</text>
+</g>
+</g>
+</svg>

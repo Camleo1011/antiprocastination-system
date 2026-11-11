@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="859" viewBox="0 0 1280 859" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" data-pan="PAN-052" data-dispositivo="desktop" data-tema="claro" aria-labelledby="t d">
+<title id="t">PAN-052 — Error 429: demasiados intentos o solicitudes (escritorio 1280 px, tema claro)</title>
+<desc id="d">Mockup de alta fidelidad de Error 429: demasiados intentos o solicitudes. Ruta (estado en la página); rol todos; CU CU-002, CU-001, CU-003; EP EP-004, EP-003, EP-007, EP-008. Estado mostrado: 429 por 5 intentos fallidos: bloqueo de 15 min con cuenta regresiva, botón deshabilitado y salida a recuperar contraseña. Colores, tipografía (Inter), espaciado y radios del sistema de diseño (tema claro); texto editable. Retry-After se muestra como texto y cuenta regresiva (sin aria-live continuo). Al terminar se habilita el botón y el foco pasa al campo. Regiones ARIA: banner, main. Orden de foco con Tab (coincide con el orden visual y del DOM): Enlace de salto «Saltar al contenido principal» (visible solo al recibir el foco). 1 Campo: Correo electrónico; 2 Campo: Contraseña; 3 Botón: Ingresar; 4 Botón: Recuperar contraseña.</desc>
+<defs><pattern id="rayas-gracia" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#E3E8EF"/><rect width="3" height="6" fill="#8A4B00"/></pattern></defs>
+<rect id="fondo-pagina" width="1280" height="859" fill="#F5F7FA"/>
+<g id="cabecera" data-name="Cabecera" role="banner">
+<g id="logo-10" data-name="Logotipo FocusStrike" data-exempt="logo">
+<rect x="556" y="56" width="32" height="32" rx="8" fill="#4338CA"/>
+<g transform="translate(562.4 62.4) scale(0.8)" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="598" y="78.3" font-size="18" fill="#1A1D21" font-weight="700">FocusStrike</text>
+</g>
+</g>
+<g id="contenido-principal" data-name="Contenido principal (main)" role="main">
+<g id="tarjeta-1" data-name="Tarjeta">
+<rect x="420" y="129" width="440" height="699" rx="12" fill="#1A1D21" fill-opacity="0.08"/><rect x="420.5" y="128.5" width="439" height="698" rx="12" fill="#FFFFFF" stroke="#D7DDE8" stroke-width="1"/>
+<text x="452" y="189.5" font-size="30" fill="#1A1D21" font-weight="700">Iniciar sesión</text>
+<g id="alerta-2" data-name="Alerta: Demasiados intentos" role="alert">
+<rect x="452" y="206" width="376" height="111" rx="8" fill="#FFF4DB"/>
+<rect x="452" y="206" width="4" height="111" rx="2" fill="#B45309"/>
+<g transform="translate(468 218) scale(0.83)" fill="none" stroke="#8A4B00" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5L2.8 19.5h18.4z"/><path d="M12 10v4.5"/><path d="M12 17.2v.1"/></g>
+<text x="500" y="235.6" font-size="16" fill="#8A4B00" font-weight="600">Demasiados intentos</text>
+<text x="500" y="257.4" font-size="14" fill="#1A1D21">Tu cuenta quedó bloqueada 15 minutos por</text>
+<text x="500" y="278.4" font-size="14" fill="#1A1D21">intentos fallidos. Te enviamos un correo con la</text>
+<text x="500" y="299.4" font-size="14" fill="#1A1D21">explicación.</text>
+</g>
+<g id="tarjeta-3" data-name="Tarjeta">
+<rect x="452" y="334" width="376" height="184" rx="12" fill="#1A1D21" fill-opacity="0.08"/><rect x="452.5" y="333.5" width="375" height="183" rx="12" fill="#FFFFFF" stroke="#D7DDE8" stroke-width="1"/>
+<g transform="translate(476 359) scale(0.83)" fill="none" stroke="#8A4B00" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 7v5l3 2"/></g>
+<text x="504" y="374" font-size="16" fill="#8A4B00" font-weight="600">Tiempo restante de bloqueo</text>
+<text x="476" y="432.6" font-size="48" fill="#1A1D21" font-weight="700" font-family="'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" role="timer">14:32</text>
+<text x="476" y="466.4" font-size="14" fill="#4B5563">Se anuncia cada 30 s y al terminar; después</text>
+<text x="476" y="487.4" font-size="14" fill="#4B5563">podrás volver a intentarlo.</text>
+</g>
+<g id="campo-4" data-name="Campo: Correo electrónico">
+<text x="452" y="548.4" font-size="14" fill="#1A1D21" font-weight="600">Correo electrónico</text>
+<g id="entrada-5" data-name="Entrada" data-interactive="input" data-orden-foco="1">
+<rect x="452" y="558" width="376" height="44" fill="none" data-hit="1"/>
+<rect x="453" y="559" width="374" height="42" rx="8" fill="#FFFFFF" stroke="#6B7385" stroke-width="1"/>
+<text x="464" y="585.6" font-size="16" fill="#1A1D21">ana.gomez@correo.com</text>
+</g>
+</g>
+<g id="campo-6" data-name="Campo: Contraseña">
+<text x="452" y="633.4" font-size="14" fill="#1A1D21" font-weight="600">Contraseña</text>
+<g id="entrada-7" data-name="Entrada" data-interactive="input" data-orden-foco="2">
+<rect x="452" y="643" width="376" height="44" fill="none" data-hit="1"/>
+<rect x="453" y="644" width="374" height="42" rx="8" fill="#FFFFFF" stroke="#6B7385" stroke-width="1"/>
+<text x="816" y="669.9" font-size="14" fill="#4338CA" font-weight="600" text-anchor="end">Mostrar</text>
+</g>
+</g>
+<g id="boton-8" data-name="Botón: Ingresar" data-interactive="button" data-orden-foco="3" data-disabled="true">
+<rect x="452" y="703" width="105.8" height="44" fill="none" data-hit="1"/>
+<rect x="452" y="703" width="105.8" height="44" rx="8" fill="#EBEEF3"/>
+<text x="504.9" y="730.6" font-size="16" fill="#8D97A8" font-weight="600" text-anchor="middle">Ingresar</text>
+</g>
+<g id="boton-9" data-name="Botón: Recuperar contraseña" data-interactive="link" data-orden-foco="4">
+<rect x="452" y="751" width="213.33" height="44" fill="none" data-hit="1"/>
+<text x="452" y="778.6" font-size="16" fill="#4338CA" font-weight="600">Recuperar contraseña</text>
+<line x1="452" y1="781.6" x2="618.4" y2="781.6" stroke="#4338CA" stroke-width="1"/>
+</g>
+</g>
+</g>
+</svg>

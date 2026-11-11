@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" data-pan="PAN-024" data-dispositivo="desktop" data-tema="claro" aria-labelledby="t d">
+<title id="t">PAN-024 — Calendario de actividad: detalle y tabla (escritorio 1280 px, tema claro)</title>
+<desc id="d">Mockup de alta fidelidad de Calendario de actividad: detalle y tabla. Ruta /perfil/actividad; rol cliente; CU CU-031, CU-017; EP EP-011. Estado mostrado: pestaña «Tabla» (alternativa accesible del calendario): 5 días activos recientes con submetas iniciadas y evidencias. Colores, tipografía (Inter), espaciado y radios del sistema de diseño (tema claro); texto editable. La tabla es la alternativa accesible al calendario (WCAG 1.4.1, BR-031). El calendario es una sola parada de tabulación con flechas entre celdas. Regiones ARIA: banner, navigation, main. Orden de foco con Tab (coincide con el orden visual y del DOM): Enlace de salto «Saltar al contenido principal» (visible solo al recibir el foco). 1 Navegación: Inicio; 2 Navegación: Agenda; 3 Navegación: Metas; 4 Navegación: Ranking; 5 Navegación: Perfil; 6 Menú de cuenta; 7 Pestaña: Calendario; 8 Pestaña: Tabla; 9 Botón: Anterior; 10 Botón: Siguiente.</desc>
+<defs><pattern id="rayas-gracia" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#E3E8EF"/><rect width="3" height="6" fill="#8A4B00"/></pattern></defs>
+<rect id="fondo-pagina" width="1280" height="800" fill="#F5F7FA"/>
+<g id="cabecera" data-name="Cabecera" role="banner">
+<rect x="0" y="0" width="1280" height="64" fill="#FFFFFF"/>
+<line x1="0" y1="64" x2="1280" y2="64" stroke="#D7DDE8" stroke-width="1"/>
+<g id="logo-8" data-name="Logotipo FocusStrike" data-exempt="logo">
+<rect x="40" y="16" width="32" height="32" rx="8" fill="#4338CA"/>
+<g transform="translate(46.4 22.4) scale(0.8)" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="82" y="38.3" font-size="18" fill="#1A1D21" font-weight="700">FocusStrike</text>
+</g>
+<g id="navegacion-principal" data-name="Navegación principal" role="navigation" aria-label="Principal">
+<g id="nav-9" data-name="Navegación: Inicio" data-interactive="link" data-orden-foco="1">
+<rect x="240" y="10" width="95.76" height="44" fill="none" data-hit="1"/>
+<g transform="translate(252 22) scale(0.83)" fill="none" stroke="#4B5563" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7"/><path d="M6 10v10h12V10"/></g>
+<text x="280" y="37.6" font-size="16" fill="#4B5563" font-weight="600">Inicio</text>
+</g>
+<g id="nav-10" data-name="Navegación: Agenda" data-interactive="link" data-orden-foco="2">
+<rect x="339.76" y="10" width="110.68" height="44" fill="none" data-hit="1"/>
+<g transform="translate(351.76 22) scale(0.83)" fill="none" stroke="#4B5563" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v14H4z"/><path d="M4 10h16M8 3v4M16 3v4"/></g>
+<text x="379.76" y="37.6" font-size="16" fill="#4B5563" font-weight="600">Agenda</text>
+</g>
+<g id="nav-11" data-name="Navegación: Metas" data-interactive="link" data-orden-foco="3">
+<rect x="454.44" y="10" width="101.01" height="44" fill="none" data-hit="1"/>
+<g transform="translate(466.44 22) scale(0.83)" fill="none" stroke="#4B5563" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="494.44" y="37.6" font-size="16" fill="#4B5563" font-weight="600">Metas</text>
+</g>
+<g id="nav-12" data-name="Navegación: Ranking" data-interactive="link" data-orden-foco="4">
+<rect x="559.45" y="10" width="115.26" height="44" fill="none" data-hit="1"/>
+<g transform="translate(571.45 22) scale(0.83)" fill="none" stroke="#4B5563" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v6a4 4 0 01-8 0z"/><path d="M8 6H4v2a3 3 0 003 3M16 6h4v2a3 3 0 01-3 3"/><path d="M12 14v4M8 20h8"/></g>
+<text x="599.45" y="37.6" font-size="16" fill="#4B5563" font-weight="600">Ranking</text>
+</g>
+<g id="nav-13" data-name="Navegación: Perfil" data-interactive="link" data-orden-foco="5" aria-current="page">
+<rect x="678.71" y="10" width="94.06" height="44" fill="none" data-hit="1"/>
+<rect x="678.71" y="10" width="94.06" height="44" rx="8" fill="#EEF0FF"/>
+<g transform="translate(690.71 22) scale(0.83)" fill="none" stroke="#3730A3" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4a4 4 0 100 8 4 4 0 000-8z"/><path d="M4.5 20a7.5 7.5 0 0115 0"/></g>
+<text x="718.71" y="37.6" font-size="16" fill="#3730A3" font-weight="700">Perfil</text>
+</g>
+</g>
+<text x="1192" y="37" font-size="14" fill="#4B5563" font-weight="600" text-anchor="end">Ana Gómez</text>
+<g id="avatar-14" data-name="Menú de cuenta" data-interactive="button" data-orden-foco="6">
+<rect x="1200" y="10" width="44" height="44" fill="none" data-hit="1"/>
+<circle cx="1222" cy="32" r="18" fill="#4338CA"/>
+<text x="1222" y="37.6" font-size="16" fill="#FFFFFF" font-weight="700" text-anchor="middle">A</text>
+</g>
+</g>
+<g id="contenido-principal" data-name="Contenido principal (main)" role="main">
+<text x="40" y="125.5" font-size="30" fill="#1A1D21" font-weight="700">Calendario de actividad</text>
+<g id="pestanas-1" data-name="Pestañas" role="tablist">
+<g id="pestana-2" data-name="Pestaña: Calendario" data-interactive="button" data-orden-foco="7" role="tab" aria-selected="false">
+<rect x="40" y="142" width="200" height="44" fill="none" data-hit="1"/>
+<text x="140" y="170" font-size="16" fill="#4B5563" font-weight="600" text-anchor="middle">Calendario</text>
+</g>
+<g id="pestana-3" data-name="Pestaña: Tabla" data-interactive="button" data-orden-foco="8" role="tab" aria-selected="true">
+<rect x="240" y="142" width="200" height="44" fill="none" data-hit="1"/>
+<text x="340" y="170" font-size="16" fill="#3730A3" font-weight="700" text-anchor="middle">Tabla</text>
+</g>
+<line x1="40" y1="186" x2="1240" y2="186" stroke="#D7DDE8" stroke-width="1"/>
+<rect x="240" y="183" width="200" height="3" fill="#4338CA"/>
+</g>
+<text x="40" y="220.4" font-size="14" fill="#4B5563">Un día es activo cuando inicias una submeta tú o envías una evidencia. El inicio automático y los cierres del sistema no cuentan.</text>
+<g id="tabla-4" data-name="Días activos de los últimos 12 meses" role="table">
+<g id="tarjeta-5" data-name="Tarjeta">
+<rect x="40" y="243" width="1200" height="350" rx="12" fill="#1A1D21" fill-opacity="0.08"/><rect x="40.5" y="242.5" width="1199" height="349" rx="12" fill="#FFFFFF" stroke="#D7DDE8" stroke-width="1"/>
+<rect x="41" y="243" width="1198" height="44" rx="12" fill="#EBEEF3"/>
+<text x="56" y="271" font-size="14" fill="#1A1D21" font-weight="600">Fecha</text>
+<text x="574.91" y="271" font-size="14" fill="#1A1D21" font-weight="600" text-anchor="end">Submetas iniciadas</text>
+<text x="787.27" y="271" font-size="14" fill="#1A1D21" font-weight="600" text-anchor="end">Evidencias enviadas</text>
+<text x="799.27" y="271" font-size="14" fill="#1A1D21" font-weight="600">Nota</text>
+<text x="56" y="323.6" font-size="16" fill="#1A1D21">lun 02/11/2026</text>
+<text x="574.91" y="323.6" font-size="16" fill="#1A1D21" text-anchor="end">2</text>
+<text x="787.27" y="323.6" font-size="16" fill="#1A1D21" text-anchor="end">1</text>
+<text x="799.27" y="323.6" font-size="16" fill="#1A1D21">Estudiar capítulo 3 y Repasar vocabulario</text>
+<line x1="41" y1="348" x2="1239" y2="348" stroke="#D7DDE8" stroke-width="1"/>
+<text x="56" y="383.6" font-size="16" fill="#1A1D21">dom 01/11/2026</text>
+<text x="574.91" y="383.6" font-size="16" fill="#1A1D21" text-anchor="end">2</text>
+<text x="787.27" y="383.6" font-size="16" fill="#1A1D21" text-anchor="end">2</text>
+<text x="799.27" y="383.6" font-size="16" fill="#1A1D21">Derivadas y Repasar vocabulario</text>
+<line x1="41" y1="408" x2="1239" y2="408" stroke="#D7DDE8" stroke-width="1"/>
+<text x="56" y="443.6" font-size="16" fill="#1A1D21">sáb 31/10/2026</text>
+<text x="574.91" y="443.6" font-size="16" fill="#1A1D21" text-anchor="end">1</text>
+<text x="787.27" y="443.6" font-size="16" fill="#1A1D21" text-anchor="end">2</text>
+<text x="799.27" y="443.6" font-size="16" fill="#1A1D21">Continuidad</text>
+<line x1="41" y1="468" x2="1239" y2="468" stroke="#D7DDE8" stroke-width="1"/>
+<text x="56" y="503.6" font-size="16" fill="#1A1D21">vie 30/10/2026</text>
+<text x="574.91" y="503.6" font-size="16" fill="#1A1D21" text-anchor="end">1</text>
+<text x="787.27" y="503.6" font-size="16" fill="#1A1D21" text-anchor="end">1</text>
+<text x="799.27" y="503.6" font-size="16" fill="#1A1D21">Límites</text>
+<line x1="41" y1="528" x2="1239" y2="528" stroke="#D7DDE8" stroke-width="1"/>
+<text x="56" y="563.6" font-size="16" fill="#1A1D21">jue 29/10/2026</text>
+<text x="574.91" y="563.6" font-size="16" fill="#1A1D21" text-anchor="end">0</text>
+<text x="787.27" y="563.6" font-size="16" fill="#1A1D21" text-anchor="end">1</text>
+<text x="799.27" y="563.6" font-size="16" fill="#1A1D21">Solo envió evidencia: también cuenta como día activo</text>
+<line x1="41" y1="588" x2="1239" y2="588" stroke="#D7DDE8" stroke-width="1"/>
+</g>
+</g>
+<g id="boton-6" data-name="Botón: Anterior" data-interactive="button" data-orden-foco="9">
+<rect x="40" y="608" width="102.58" height="44" fill="none" data-hit="1"/>
+<rect x="41" y="609" width="100.58" height="42" rx="8" fill="#FFFFFF" stroke="#4338CA" stroke-width="2"/>
+<text x="91.29" y="635.6" font-size="16" fill="#4338CA" font-weight="600" text-anchor="middle">Anterior</text>
+</g>
+<text x="154.58" y="634.9" font-size="14" fill="#4B5563">Página 1 de 4</text>
+<g id="boton-7" data-name="Botón: Siguiente" data-interactive="button" data-orden-foco="10">
+<rect x="255.2" y="608" width="113.95" height="44" fill="none" data-hit="1"/>
+<rect x="256.2" y="609" width="111.95" height="42" rx="8" fill="#FFFFFF" stroke="#4338CA" stroke-width="2"/>
+<text x="312.18" y="635.6" font-size="16" fill="#4338CA" font-weight="600" text-anchor="middle">Siguiente</text>
+</g>
+</g>
+</svg>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="375" height="1484" viewBox="0 0 375 1484" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" data-pan="PAN-021" data-dispositivo="movil" data-tema="oscuro" aria-labelledby="t d">
+<title id="t">PAN-021 — Resultado y puntaje de la submeta (móvil 375 px, tema oscuro)</title>
+<desc id="d">Mockup de alta fidelidad de Resultado y puntaje de la submeta. Ruta /submetas/:id/resultado; rol cliente; CU CU-016, CU-026, CU-011; EP EP-031, EP-010. Estado mostrado: submeta finalizada con dos envíos (Incoherente 50 + Excelente 50 = 100, tope 90) y tabla de los tres dictámenes. Colores, tipografía (Inter), espaciado y radios del sistema de diseño (tema oscuro); texto editable. Dictamen en texto + ícono + color (BR-031); 'Inválida' no es 'Error' (Error es un fallo técnico). Regiones ARIA: banner, navigation, main. Orden de foco con Tab (coincide con el orden visual y del DOM): Enlace de salto «Saltar al contenido principal» (visible solo al recibir el foco). 1 Menú de cuenta; 2 Navegación: Inicio; 3 Navegación: Agenda; 4 Navegación: Metas; 5 Navegación: Ranking; 6 Navegación: Perfil; 7 Botón: Volver a la agenda; 8 Botón: Ver mi perfil.</desc>
+<defs><pattern id="rayas-gracia" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#2A323D"/><rect width="3" height="6" fill="#F5B93A"/></pattern></defs>
+<rect id="fondo-pagina" width="375" height="1484" fill="#161A20"/>
+<g id="barra-superior" data-name="Barra superior" role="banner">
+<rect x="0" y="0" width="375" height="56" fill="#1C2128"/>
+<line x1="0" y1="56" x2="375" y2="56" stroke="#2A323D" stroke-width="1"/>
+<g id="logo-15" data-name="Logotipo FocusStrike" data-exempt="logo">
+<rect x="16" y="12" width="32" height="32" rx="8" fill="#A5B4FC"/>
+<g transform="translate(22.4 18.4) scale(0.8)" fill="none" stroke="#1E1B4B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="58" y="34.3" font-size="18" fill="#F1F3F7" font-weight="700">FocusStrike</text>
+</g>
+<g id="avatar-16" data-name="Menú de cuenta" data-interactive="button" data-orden-foco="1">
+<rect x="319" y="6" width="44" height="44" fill="none" data-hit="1"/>
+<circle cx="341" cy="28" r="18" fill="#A5B4FC"/>
+<text x="341" y="33.6" font-size="16" fill="#1E1B4B" font-weight="700" text-anchor="middle">A</text>
+</g>
+</g>
+<g id="navegacion-inferior" data-name="Navegación inferior" role="navigation">
+<rect x="0" y="1420" width="375" height="64" fill="#1C2128"/>
+<line x1="0" y1="1420" x2="375" y2="1420" stroke="#2A323D" stroke-width="1"/>
+<g id="nav-17" data-name="Navegación: Inicio" data-interactive="link" data-orden-foco="2">
+<rect x="0" y="1420" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(25.5 1428) scale(1)" fill="none" stroke="#C3CAD6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7"/><path d="M6 10v10h12V10"/></g>
+<text x="37.5" y="1470" font-size="14" fill="#C3CAD6" font-weight="600" text-anchor="middle">Inicio</text>
+</g>
+<g id="nav-18" data-name="Navegación: Agenda" data-interactive="link" data-orden-foco="3" aria-current="page">
+<rect x="75" y="1420" width="75" height="64" fill="none" data-hit="1"/>
+<rect x="81" y="1424" width="63" height="56" rx="8" fill="#23264A"/>
+<g transform="translate(100.5 1428) scale(1)" fill="none" stroke="#C7CDFE" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v14H4z"/><path d="M4 10h16M8 3v4M16 3v4"/></g>
+<text x="112.5" y="1470" font-size="14" fill="#C7CDFE" font-weight="700" text-anchor="middle">Agenda</text>
+</g>
+<g id="nav-19" data-name="Navegación: Metas" data-interactive="link" data-orden-foco="4">
+<rect x="150" y="1420" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(175.5 1428) scale(1)" fill="none" stroke="#C3CAD6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="187.5" y="1470" font-size="14" fill="#C3CAD6" font-weight="600" text-anchor="middle">Metas</text>
+</g>
+<g id="nav-20" data-name="Navegación: Ranking" data-interactive="link" data-orden-foco="5">
+<rect x="225" y="1420" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(250.5 1428) scale(1)" fill="none" stroke="#C3CAD6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v6a4 4 0 01-8 0z"/><path d="M8 6H4v2a3 3 0 003 3M16 6h4v2a3 3 0 01-3 3"/><path d="M12 14v4M8 20h8"/></g>
+<text x="262.5" y="1470" font-size="14" fill="#C3CAD6" font-weight="600" text-anchor="middle">Ranking</text>
+</g>
+<g id="nav-21" data-name="Navegación: Perfil" data-interactive="link" data-orden-foco="6">
+<rect x="300" y="1420" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(325.5 1428) scale(1)" fill="none" stroke="#C3CAD6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4a4 4 0 100 8 4 4 0 000-8z"/><path d="M4.5 20a7.5 7.5 0 0115 0"/></g>
+<text x="337.5" y="1470" font-size="14" fill="#C3CAD6" font-weight="600" text-anchor="middle">Perfil</text>
+</g>
+</g>
+<g id="contenido-principal" data-name="Contenido principal (main)" role="main">
+<text x="16" y="99.4" font-size="24" fill="#F1F3F7" font-weight="600">Resultado de la submeta</text>
+<text x="16" y="129.4" font-size="14" fill="#C3CAD6">Estudiar capítulo 3 · Aprender cálculo · Finalizada</text>
+<g id="aviso-1" data-name="Aviso: Logro nuevo: «Segunda oportunidad»" role="status">
+<rect x="16" y="151" width="343" height="72" rx="8" fill="#F1F3F7"/>
+<g transform="translate(30 163) scale(0.92)" fill="none" stroke="#1A1D21" stroke-width="1.91" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.1 5.9-.8z"/></g>
+<text x="64" y="180.6" font-size="16" fill="#1A1D21" font-weight="600">Logro nuevo: «Segunda</text>
+<text x="64" y="204.6" font-size="16" fill="#1A1D21" font-weight="600">oportunidad»</text>
+</g>
+<g id="puntaje-2" data-name="Puntaje final">
+<rect x="16" y="239" width="343" height="141" rx="12" fill="#23264A"/>
+<text x="32" y="272.6" font-size="16" fill="#C7CDFE" font-weight="600">Puntaje final</text>
+<text x="32" y="324.6" font-size="48" fill="#C7CDFE" font-weight="700">90</text>
+<text x="103.36" y="324.6" font-size="24" fill="#C7CDFE" font-weight="600">puntos</text>
+<text x="32" y="358.4" font-size="14" fill="#C7CDFE">Con dos envíos el máximo es 90 puntos.</text>
+</g>
+<g id="tarjeta-3" data-name="Tarjeta">
+<rect x="16.5" y="396.5" width="342" height="381" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="32" y="429.3" font-size="18" fill="#F1F3F7" font-weight="600">Desglose</text>
+<g id="desglose-4" data-name="Desglose del puntaje">
+<text x="32" y="472" font-size="16" fill="#F1F3F7" font-weight="600">Envío 1</text>
+<text x="32" y="491.4" font-size="14" fill="#C3CAD6">Periodo inicial · 10:52</text>
+<g id="insignia-5" data-name="Insignia: Incoherente">
+<rect x="32" y="510" width="124.51" height="28" rx="14" fill="#33260A"/>
+<g transform="translate(42 516) scale(0.67)" fill="none" stroke="#FCD34D" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5L2.8 19.5h18.4z"/><path d="M12 10v4.5"/><path d="M12 17.2v.1"/></g>
+<text x="64" y="528.9" font-size="14" fill="#FCD34D" font-weight="600">Incoherente</text>
+</g>
+<text x="343" y="530" font-size="16" fill="#F1F3F7" font-weight="700" text-anchor="end">50 puntos</text>
+<line x1="32" y1="544" x2="343" y2="544" stroke="#2A323D" stroke-width="1"/>
+<text x="32" y="576" font-size="16" fill="#F1F3F7" font-weight="600">Envío 2 (vale la mitad)</text>
+<text x="32" y="595.4" font-size="14" fill="#C3CAD6">Tiempo de gracia · 11:03</text>
+<g id="insignia-6" data-name="Insignia: Excelente">
+<rect x="32" y="614" width="111.01" height="28" rx="14" fill="#12301F"/>
+<g transform="translate(42 620) scale(0.67)" fill="none" stroke="#86D9A4" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M8 12.5l3 3 5-6"/></g>
+<text x="64" y="632.9" font-size="14" fill="#86D9A4" font-weight="600">Excelente</text>
+</g>
+<text x="343" y="634" font-size="16" fill="#F1F3F7" font-weight="700" text-anchor="end">50 puntos</text>
+<line x1="32" y1="648" x2="343" y2="648" stroke="#2A323D" stroke-width="1"/>
+<text x="32" y="675" font-size="16" fill="#F1F3F7">Suma de los dos envíos</text>
+<text x="343" y="675" font-size="16" fill="#F1F3F7" font-weight="600" text-anchor="end">100 puntos</text>
+<text x="32" y="711" font-size="16" fill="#F1F3F7">Tope con dos envíos</text>
+<text x="343" y="711" font-size="16" fill="#F1F3F7" font-weight="600" text-anchor="end">90 puntos</text>
+<text x="32" y="747" font-size="16" fill="#F1F3F7" font-weight="700">Puntaje final</text>
+<text x="343" y="747" font-size="16" fill="#F1F3F7" font-weight="700" text-anchor="end">90 puntos</text>
+</g>
+</g>
+<g id="tarjeta-7" data-name="Tarjeta">
+<rect x="16.5" y="794.5" width="342" height="305" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="32" y="827.3" font-size="18" fill="#F1F3F7" font-weight="600">Cómo se puntúa</text>
+<g id="puntos-8" data-name="Puntos por dictamen">
+<g id="insignia-9" data-name="Insignia: Excelente">
+<rect x="32" y="858" width="111.01" height="28" rx="14" fill="#12301F"/>
+<g transform="translate(42 864) scale(0.67)" fill="none" stroke="#86D9A4" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M8 12.5l3 3 5-6"/></g>
+<text x="64" y="876.9" font-size="14" fill="#86D9A4" font-weight="600">Excelente</text>
+</g>
+<text x="32" y="905.4" font-size="14" fill="#F1F3F7">100 puntos en el 1.er envío del periodo inicial;</text>
+<text x="32" y="926.4" font-size="14" fill="#F1F3F7">50 en gracia o en el 2.º envío.</text>
+<line x1="32" y1="924" x2="343" y2="924" stroke="#2A323D" stroke-width="1"/>
+<g id="insignia-10" data-name="Insignia: Incoherente">
+<rect x="32" y="938" width="124.51" height="28" rx="14" fill="#33260A"/>
+<g transform="translate(42 944) scale(0.67)" fill="none" stroke="#FCD34D" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5L2.8 19.5h18.4z"/><path d="M12 10v4.5"/><path d="M12 17.2v.1"/></g>
+<text x="64" y="956.9" font-size="14" fill="#FCD34D" font-weight="600">Incoherente</text>
+</g>
+<text x="32" y="985.4" font-size="14" fill="#F1F3F7">50 puntos en el 1.er envío del periodo inicial;</text>
+<text x="32" y="1006.4" font-size="14" fill="#F1F3F7">25 en gracia o en el 2.º envío.</text>
+<line x1="32" y1="1004" x2="343" y2="1004" stroke="#2A323D" stroke-width="1"/>
+<g id="insignia-11" data-name="Insignia: Inválida">
+<rect x="32" y="1018" width="96.91" height="28" rx="14" fill="#3A1412"/>
+<g transform="translate(42 1024) scale(0.67)" fill="none" stroke="#FCA5A5" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M9 9l6 6M15 9l-6 6"/></g>
+<text x="64" y="1036.9" font-size="14" fill="#FCA5A5" font-weight="600">Inválida</text>
+</g>
+<text x="32" y="1065.4" font-size="14" fill="#F1F3F7">0 puntos en cualquier envío.</text>
+</g>
+</g>
+<g id="tarjeta-12" data-name="Tarjeta">
+<rect x="16.5" y="1116.5" width="342" height="167" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="32" y="1149.3" font-size="18" fill="#F1F3F7" font-weight="600">Tu avance</text>
+<text x="32" y="1181.4" font-size="14" fill="#C3CAD6">Puntaje</text>
+<text x="32" y="1202.4" font-size="14" fill="#C3CAD6">acumulado</text>
+<text x="162.62" y="1183.6" font-size="16" fill="#F1F3F7">1.240 puntos (+90)</text>
+<text x="32" y="1227.4" font-size="14" fill="#C3CAD6">Racha</text>
+<text x="162.62" y="1229.6" font-size="16" fill="#F1F3F7">5 días</text>
+<text x="32" y="1255.4" font-size="14" fill="#C3CAD6">Logro nuevo</text>
+<text x="162.62" y="1257.6" font-size="16" fill="#F1F3F7">Segunda oportunidad</text>
+</g>
+<g id="boton-13" data-name="Botón: Volver a la agenda" data-interactive="button" data-orden-foco="7">
+<rect x="16" y="1300" width="343" height="44" fill="none" data-hit="1"/>
+<rect x="16" y="1300" width="343" height="44" rx="8" fill="#A5B4FC"/>
+<text x="187.5" y="1327.6" font-size="16" fill="#1E1B4B" font-weight="600" text-anchor="middle">Volver a la agenda</text>
+</g>
+<g id="boton-14" data-name="Botón: Ver mi perfil" data-interactive="button" data-orden-foco="8">
+<rect x="16" y="1352" width="343" height="44" fill="none" data-hit="1"/>
+<rect x="17" y="1353" width="341" height="42" rx="8" fill="#1C2128" stroke="#A5B4FC" stroke-width="2"/>
+<text x="187.5" y="1379.6" font-size="16" fill="#A5B4FC" font-weight="600" text-anchor="middle">Ver mi perfil</text>
+</g>
+</g>
+</svg>

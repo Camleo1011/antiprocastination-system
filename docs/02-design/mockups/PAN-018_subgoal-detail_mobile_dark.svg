@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="375" height="1389" viewBox="0 0 375 1389" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" data-pan="PAN-018" data-dispositivo="movil" data-tema="oscuro" aria-labelledby="t d">
+<title id="t">PAN-018 — Detalle de submeta (móvil 375 px, tema oscuro)</title>
+<desc id="d">Mockup de alta fidelidad de Detalle de submeta. Ruta /submetas/:id; rol cliente; CU CU-011, CU-009, CU-013, CU-015, CU-016; EP EP-031, EP-032, EP-037. Estado mostrado: en curso en el periodo inicial pasado el 80 %: carga de evidencia habilitada; reloj, barra con marca del 80 % y tramo de gracia. Colores, tipografía (Inter), espaciado y radios del sistema de diseño (tema oscuro); texto editable. Ventanas inicial/gracia (BR-001, BR-003, RF-PUNT-007): el reloj dura 2 h desde el inicio real (09:02, BR-006, BR-032), así termina a las 11:02, el 80 % es a las 10:38 y la gracia (10 % = 12 min) llega hasta las 11:14. El reloj no usa aria-live por segundo. Regiones ARIA: banner, navigation, main. Orden de foco con Tab (coincide con el orden visual y del DOM): Enlace de salto «Saltar al contenido principal» (visible solo al recibir el foco). 1 Menú de cuenta; 2 Navegación: Inicio; 3 Navegación: Agenda; 4 Navegación: Metas; 5 Navegación: Ranking; 6 Navegación: Perfil; 7 Botón: ‹ Volver a la agenda; 8 Botón: Cargar evidencia; 9 Botón: Abrir Pomodoro.</desc>
+<defs><pattern id="rayas-gracia" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#2A323D"/><rect width="3" height="6" fill="#F5B93A"/></pattern></defs>
+<rect id="fondo-pagina" width="375" height="1389" fill="#161A20"/>
+<g id="barra-superior" data-name="Barra superior" role="banner">
+<rect x="0" y="0" width="375" height="56" fill="#1C2128"/>
+<line x1="0" y1="56" x2="375" y2="56" stroke="#2A323D" stroke-width="1"/>
+<g id="logo-16" data-name="Logotipo FocusStrike" data-exempt="logo">
+<rect x="16" y="12" width="32" height="32" rx="8" fill="#A5B4FC"/>
+<g transform="translate(22.4 18.4) scale(0.8)" fill="none" stroke="#1E1B4B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="58" y="34.3" font-size="18" fill="#F1F3F7" font-weight="700">FocusStrike</text>
+</g>
+<g id="avatar-17" data-name="Menú de cuenta" data-interactive="button" data-orden-foco="1">
+<rect x="319" y="6" width="44" height="44" fill="none" data-hit="1"/>
+<circle cx="341" cy="28" r="18" fill="#A5B4FC"/>
+<text x="341" y="33.6" font-size="16" fill="#1E1B4B" font-weight="700" text-anchor="middle">A</text>
+</g>
+</g>
+<g id="navegacion-inferior" data-name="Navegación inferior" role="navigation">
+<rect x="0" y="1325" width="375" height="64" fill="#1C2128"/>
+<line x1="0" y1="1325" x2="375" y2="1325" stroke="#2A323D" stroke-width="1"/>
+<g id="nav-18" data-name="Navegación: Inicio" data-interactive="link" data-orden-foco="2">
+<rect x="0" y="1325" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(25.5 1333) scale(1)" fill="none" stroke="#C3CAD6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7"/><path d="M6 10v10h12V10"/></g>
+<text x="37.5" y="1375" font-size="14" fill="#C3CAD6" font-weight="600" text-anchor="middle">Inicio</text>
+</g>
+<g id="nav-19" data-name="Navegación: Agenda" data-interactive="link" data-orden-foco="3" aria-current="page">
+<rect x="75" y="1325" width="75" height="64" fill="none" data-hit="1"/>
+<rect x="81" y="1329" width="63" height="56" rx="8" fill="#23264A"/>
+<g transform="translate(100.5 1333) scale(1)" fill="none" stroke="#C7CDFE" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v14H4z"/><path d="M4 10h16M8 3v4M16 3v4"/></g>
+<text x="112.5" y="1375" font-size="14" fill="#C7CDFE" font-weight="700" text-anchor="middle">Agenda</text>
+</g>
+<g id="nav-20" data-name="Navegación: Metas" data-interactive="link" data-orden-foco="4">
+<rect x="150" y="1325" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(175.5 1333) scale(1)" fill="none" stroke="#C3CAD6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="187.5" y="1375" font-size="14" fill="#C3CAD6" font-weight="600" text-anchor="middle">Metas</text>
+</g>
+<g id="nav-21" data-name="Navegación: Ranking" data-interactive="link" data-orden-foco="5">
+<rect x="225" y="1325" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(250.5 1333) scale(1)" fill="none" stroke="#C3CAD6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v6a4 4 0 01-8 0z"/><path d="M8 6H4v2a3 3 0 003 3M16 6h4v2a3 3 0 01-3 3"/><path d="M12 14v4M8 20h8"/></g>
+<text x="262.5" y="1375" font-size="14" fill="#C3CAD6" font-weight="600" text-anchor="middle">Ranking</text>
+</g>
+<g id="nav-22" data-name="Navegación: Perfil" data-interactive="link" data-orden-foco="6">
+<rect x="300" y="1325" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(325.5 1333) scale(1)" fill="none" stroke="#C3CAD6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4a4 4 0 100 8 4 4 0 000-8z"/><path d="M4.5 20a7.5 7.5 0 0115 0"/></g>
+<text x="337.5" y="1375" font-size="14" fill="#C3CAD6" font-weight="600" text-anchor="middle">Perfil</text>
+</g>
+</g>
+<g id="contenido-principal" data-name="Contenido principal (main)" role="main">
+<g id="boton-1" data-name="Botón: ‹ Volver a la agenda" data-interactive="link" data-orden-foco="7">
+<rect x="16" y="76" width="199.42" height="44" fill="none" data-hit="1"/>
+<text x="16" y="103.6" font-size="16" fill="#A5B4FC" font-weight="600">‹ Volver a la agenda</text>
+<line x1="16" y1="106.6" x2="169.05" y2="106.6" stroke="#A5B4FC" stroke-width="1"/>
+</g>
+<text x="16" y="159.4" font-size="24" fill="#F1F3F7" font-weight="600">Estudiar capítulo 3</text>
+<g id="tarjeta-2" data-name="Tarjeta">
+<rect x="16.5" y="174.5" width="342" height="179" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/><rect x="17" y="186" width="6" height="156" fill="#A5B4FC"/>
+<g id="insignia-3" data-name="Insignia: En curso">
+<rect x="38" y="190" width="102.84" height="28" rx="14" fill="#10243D"/>
+<g transform="translate(48 196) scale(0.67)" fill="none" stroke="#93C5FD" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 7v5l3 2"/></g>
+<text x="70" y="208.9" font-size="14" fill="#93C5FD" font-weight="600">En curso</text>
+</g>
+<g id="insignia-4" data-name="Insignia: Aprender cálculo">
+<rect x="148.84" y="190" width="157.75" height="28" rx="14" fill="#23264A"/>
+<g transform="translate(158.84 196) scale(0.67)" fill="none" stroke="#C7CDFE" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="180.84" y="208.9" font-size="14" fill="#C7CDFE" font-weight="600">Aprender cálculo</text>
+</g>
+<text x="38" y="245.4" font-size="14" fill="#C3CAD6">Programada</text>
+<text x="166.1" y="247.6" font-size="16" fill="#F1F3F7">02/11/2026 ·</text>
+<text x="166.1" y="271.6" font-size="16" fill="#F1F3F7">09:00–11:00</text>
+<text x="38" y="297.4" font-size="14" fill="#C3CAD6">Inicio</text>
+<text x="166.1" y="299.6" font-size="16" fill="#F1F3F7">Manual, a las 09:02</text>
+<text x="38" y="325.4" font-size="14" fill="#C3CAD6">Puntaje</text>
+<text x="166.1" y="327.6" font-size="16" fill="#F1F3F7">Sin calificar aún</text>
+</g>
+<g id="tarjeta-5" data-name="Tarjeta">
+<rect x="16.5" y="370.5" width="342" height="152" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<g transform="translate(32 388) scale(0.83)" fill="none" stroke="#93C5FD" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 7v5l3 2"/></g>
+<text x="60" y="403" font-size="16" fill="#93C5FD" font-weight="600">Tiempo estipulado</text>
+<text x="32" y="450.2" font-size="36" fill="#F1F3F7" font-weight="700" font-family="'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" role="timer">00:12:00</text>
+<text x="32" y="480.4" font-size="14" fill="#C3CAD6">Quedan 12 minutos. Termina a las 11:02</text>
+<text x="32" y="501.4" font-size="14" fill="#C3CAD6">(America/Bogota).</text>
+</g>
+<g id="tarjeta-6" data-name="Tarjeta">
+<rect x="16.5" y="539.5" width="342" height="274" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="32" y="572.3" font-size="18" fill="#F1F3F7" font-weight="600">Ventana de tiempo</text>
+<g id="progreso-7" data-name="Progreso de la ventana de tiempo" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="110">
+<text x="111.64" y="608" font-size="14" fill="#F1F3F7" font-weight="600">Evidencia desde las 10:38 (80 %)</text>
+<rect x="32" y="621" width="311" height="12" rx="6" fill="#2A323D"/>
+<rect x="32" y="621" width="254.45" height="12" rx="6" fill="#A5B4FC"/>
+<rect x="315.23" y="621.5" width="27.27" height="11" fill="none" stroke="#F5B93A" stroke-width="1" stroke-dasharray="3 2"/>
+<rect x="257.18" y="615" width="2" height="24" fill="#F1F3F7"/>
+</g>
+<rect x="32" y="652" width="14" height="14" rx="3" fill="#A5B4FC"/>
+<text x="52" y="664" font-size="14" fill="#C3CAD6">Tiempo estipulado</text>
+<rect x="32" y="678" width="14" height="14" rx="3" fill="url(#rayas-gracia)" stroke="#F5B93A" stroke-width="1"/>
+<text x="52" y="690" font-size="14" fill="#C3CAD6">Tiempo de gracia (10 %)</text>
+<rect x="38" y="702" width="2" height="18" fill="#F1F3F7"/>
+<text x="52" y="716" font-size="14" fill="#C3CAD6">Evidencia desde el 80 %</text>
+<text x="32" y="750.4" font-size="14" fill="#C3CAD6">Ya puedes enviar tu evidencia: pasó el 80 % del</text>
+<text x="32" y="771.4" font-size="14" fill="#C3CAD6">tiempo. Después de las 11:02 hay 12 min de</text>
+<text x="32" y="792.4" font-size="14" fill="#C3CAD6">gracia.</text>
+</g>
+<g id="tarjeta-8" data-name="Tarjeta">
+<rect x="16.5" y="830.5" width="342" height="165" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="32" y="863.3" font-size="18" fill="#F1F3F7" font-weight="600">Acciones</text>
+<g id="boton-9" data-name="Botón: Cargar evidencia" data-interactive="button" data-orden-foco="8">
+<rect x="32" y="880" width="311" height="44" fill="none" data-hit="1"/>
+<rect x="32" y="880" width="311" height="44" rx="8" fill="#A5B4FC"/>
+<g transform="translate(108.36 892) scale(0.83)" fill="none" stroke="#1E1B4B" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5"/><path d="M4 16v4h16v-4"/></g>
+<text x="134.36" y="907.6" font-size="16" fill="#1E1B4B" font-weight="600">Cargar evidencia</text>
+</g>
+<g id="boton-10" data-name="Botón: Abrir Pomodoro" data-interactive="button" data-orden-foco="9">
+<rect x="32" y="936" width="311" height="44" fill="none" data-hit="1"/>
+<rect x="33" y="937" width="309" height="42" rx="8" fill="#1C2128" stroke="#A5B4FC" stroke-width="2"/>
+<text x="187.5" y="963.6" font-size="16" fill="#A5B4FC" font-weight="600" text-anchor="middle">Abrir Pomodoro</text>
+</g>
+</g>
+<g id="tarjeta-11" data-name="Tarjeta">
+<rect x="16.5" y="1012.5" width="342" height="288" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="32" y="1045.3" font-size="18" fill="#F1F3F7" font-weight="600">Envíos</text>
+<g id="fila-12" data-name="Fila: Envío 1">
+<rect x="32" y="1062" width="311" height="101" fill="none" data-hit="1"/>
+<text x="32" y="1089.6" font-size="16" fill="#F1F3F7" font-weight="600">Envío 1</text>
+<text x="32" y="1111.4" font-size="14" fill="#C3CAD6">Aún no enviado</text>
+<g id="insignia-13" data-name="Insignia: Pendiente">
+<rect x="32.5" y="1125.5" width="88.01" height="27" rx="14" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="42" y="1143.9" font-size="14" fill="#C3CAD6" font-weight="600">Pendiente</text>
+</g>
+</g>
+<line x1="32" y1="1163" x2="343" y2="1163" stroke="#2A323D" stroke-width="1"/>
+<g id="fila-14" data-name="Fila: Envío 2">
+<rect x="32" y="1163" width="311" height="122" fill="none" data-hit="1"/>
+<text x="32" y="1190.6" font-size="16" fill="#F1F3F7" font-weight="600">Envío 2</text>
+<text x="32" y="1212.4" font-size="14" fill="#C3CAD6">Se habilita solo si tu primer envío es</text>
+<text x="32" y="1233.4" font-size="14" fill="#C3CAD6">Incoherente o Inválida; vale la mitad</text>
+<g id="insignia-15" data-name="Insignia: No disponible">
+<rect x="32.5" y="1247.5" width="133.45" height="27" rx="14" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<g transform="translate(42 1253) scale(0.67)" fill="none" stroke="#C3CAD6" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 11h12v9H6z"/><path d="M8.5 11V8a3.5 3.5 0 017 0v3"/></g>
+<text x="64" y="1265.9" font-size="14" fill="#C3CAD6" font-weight="600">No disponible</text>
+</g>
+</g>
+</g>
+</g>
+</svg>

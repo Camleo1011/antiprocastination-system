@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="1107" viewBox="0 0 1280 1107" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" data-pan="PAN-007" data-dispositivo="desktop" data-tema="claro" aria-labelledby="t d">
+<title id="t">PAN-007 — Agenda (escritorio 1280 px, tema claro)</title>
+<desc id="d">Mockup de alta fidelidad de Agenda. Ruta /agenda; rol cliente; CU CU-010; EP EP-029, EP-030. Estado mostrado: mes de noviembre de 2026 con la agenda de Ana: submetas por día con franja de color de la meta, ícono de estado y leyenda en texto (escritorio: rejilla mensual). Colores, tipografía (Inter), espaciado y radios del sistema de diseño (tema claro); texto editable. Estado de submeta con ícono y texto (BR-031); en la rejilla el texto del estado está en la leyenda y en el aria-label de cada submeta. Rango máximo 93 días (RANGO_AGENDA_EXCEDIDO). Regiones ARIA: banner, navigation, main. Orden de foco con Tab (coincide con el orden visual y del DOM): Enlace de salto «Saltar al contenido principal» (visible solo al recibir el foco). 1 Navegación: Inicio; 2 Navegación: Agenda; 3 Navegación: Metas; 4 Navegación: Ranking; 5 Navegación: Perfil; 6 Menú de cuenta; 7 Selector: Mes: noviembre 2026; 8 Selector: Estado: todos; 9 Selector: Meta: todas; 10 Botón: ‹ Mes anterior; 11 Botón: Hoy; 12 Botón: Mes siguiente ›; 13 Submeta: 09:00 Límites, Finalizada; 14 Submeta: 09:00 Continuidad, Finalizada; 15 Submeta: 07:00 Repasar vocabulario, Finalizada; 16 Submeta: 09:00 Derivadas, Finalizada; 17 Ver 1 submetas más del día 1; 18 Submeta: 07:00 Repasar vocabulario, Finalizada; 19 Submeta: 09:00 Estudiar capítulo 3, En curso; 20 Ver 2 submetas más del día 2; 21 Submeta: 07:00 Repasar vocabulario, Pendiente; 22 Submeta: 09:00 Estudiar capítulo 4, Pendiente; 23 Ver 1 submetas más del día 3; 24 Submeta: 07:00 Repasar vocabulario, Pendiente; 25 Submeta: 09:00 Integrales, Pendiente; 26 Ver 2 submetas más del día 4; 27 Submeta: 07:00 Repasar vocabulario, Pendiente; 28 Submeta: 09:00 Repaso general, Pendiente; 29 Ver 1 submetas más del día 5; 30 Submeta: 07:00 Repasar vocabulario, Pendiente; 31 Submeta: 09:00 Simulacro, Pendiente; 32 Ver 1 submetas más del día 6; 33 Submeta: 14:00 Leer capítulo 5, Pendiente; 34 Submeta: 14:00 Leer capítulo 6, Pendiente; 35 Submeta: 14:00 Leer capítulo 7, Pendiente.</desc>
+<defs><pattern id="rayas-gracia" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#E3E8EF"/><rect width="3" height="6" fill="#8A4B00"/></pattern></defs>
+<rect id="fondo-pagina" width="1280" height="1107" fill="#F5F7FA"/>
+<g id="cabecera" data-name="Cabecera" role="banner">
+<rect x="0" y="0" width="1280" height="64" fill="#FFFFFF"/>
+<line x1="0" y1="64" x2="1280" y2="64" stroke="#D7DDE8" stroke-width="1"/>
+<g id="logo-32" data-name="Logotipo FocusStrike" data-exempt="logo">
+<rect x="40" y="16" width="32" height="32" rx="8" fill="#4338CA"/>
+<g transform="translate(46.4 22.4) scale(0.8)" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="82" y="38.3" font-size="18" fill="#1A1D21" font-weight="700">FocusStrike</text>
+</g>
+<g id="navegacion-principal" data-name="Navegación principal" role="navigation" aria-label="Principal">
+<g id="nav-33" data-name="Navegación: Inicio" data-interactive="link" data-orden-foco="1">
+<rect x="240" y="10" width="95.76" height="44" fill="none" data-hit="1"/>
+<g transform="translate(252 22) scale(0.83)" fill="none" stroke="#4B5563" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7"/><path d="M6 10v10h12V10"/></g>
+<text x="280" y="37.6" font-size="16" fill="#4B5563" font-weight="600">Inicio</text>
+</g>
+<g id="nav-34" data-name="Navegación: Agenda" data-interactive="link" data-orden-foco="2" aria-current="page">
+<rect x="339.76" y="10" width="110.68" height="44" fill="none" data-hit="1"/>
+<rect x="339.76" y="10" width="110.68" height="44" rx="8" fill="#EEF0FF"/>
+<g transform="translate(351.76 22) scale(0.83)" fill="none" stroke="#3730A3" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v14H4z"/><path d="M4 10h16M8 3v4M16 3v4"/></g>
+<text x="379.76" y="37.6" font-size="16" fill="#3730A3" font-weight="700">Agenda</text>
+</g>
+<g id="nav-35" data-name="Navegación: Metas" data-interactive="link" data-orden-foco="3">
+<rect x="454.44" y="10" width="101.01" height="44" fill="none" data-hit="1"/>
+<g transform="translate(466.44 22) scale(0.83)" fill="none" stroke="#4B5563" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="494.44" y="37.6" font-size="16" fill="#4B5563" font-weight="600">Metas</text>
+</g>
+<g id="nav-36" data-name="Navegación: Ranking" data-interactive="link" data-orden-foco="4">
+<rect x="559.45" y="10" width="115.26" height="44" fill="none" data-hit="1"/>
+<g transform="translate(571.45 22) scale(0.83)" fill="none" stroke="#4B5563" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v6a4 4 0 01-8 0z"/><path d="M8 6H4v2a3 3 0 003 3M16 6h4v2a3 3 0 01-3 3"/><path d="M12 14v4M8 20h8"/></g>
+<text x="599.45" y="37.6" font-size="16" fill="#4B5563" font-weight="600">Ranking</text>
+</g>
+<g id="nav-37" data-name="Navegación: Perfil" data-interactive="link" data-orden-foco="5">
+<rect x="678.71" y="10" width="94.06" height="44" fill="none" data-hit="1"/>
+<g transform="translate(690.71 22) scale(0.83)" fill="none" stroke="#4B5563" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4a4 4 0 100 8 4 4 0 000-8z"/><path d="M4.5 20a7.5 7.5 0 0115 0"/></g>
+<text x="718.71" y="37.6" font-size="16" fill="#4B5563" font-weight="600">Perfil</text>
+</g>
+</g>
+<text x="1192" y="37" font-size="14" fill="#4B5563" font-weight="600" text-anchor="end">Ana Gómez</text>
+<g id="avatar-38" data-name="Menú de cuenta" data-interactive="button" data-orden-foco="6">
+<rect x="1200" y="10" width="44" height="44" fill="none" data-hit="1"/>
+<circle cx="1222" cy="32" r="18" fill="#4338CA"/>
+<text x="1222" y="37.6" font-size="16" fill="#FFFFFF" font-weight="700" text-anchor="middle">A</text>
+</g>
+</g>
+<g id="contenido-principal" data-name="Contenido principal (main)" role="main">
+<text x="40" y="125.5" font-size="30" fill="#1A1D21" font-weight="700">Agenda</text>
+<g id="selector-1" data-name="Selector: Mes: noviembre 2026" data-interactive="input" data-orden-foco="7">
+<rect x="40" y="142" width="216.64" height="44" fill="none" data-hit="1"/>
+<rect x="41" y="143" width="214.64" height="42" rx="8" fill="#FFFFFF" stroke="#6B7385" stroke-width="1"/>
+<text x="52" y="169.6" font-size="16" fill="#1A1D21">Mes: noviembre 2026</text>
+<g transform="translate(228.64 154) scale(0.83)" fill="none" stroke="#4B5563" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" transform-origin="center"><path d="M9 6l6 6-6 6"/></g>
+</g>
+<g id="selector-2" data-name="Selector: Estado: todos" data-interactive="input" data-orden-foco="8">
+<rect x="264.64" y="142" width="158.56" height="44" fill="none" data-hit="1"/>
+<rect x="265.64" y="143" width="156.56" height="42" rx="8" fill="#FFFFFF" stroke="#6B7385" stroke-width="1"/>
+<text x="276.64" y="169.6" font-size="16" fill="#1A1D21">Estado: todos</text>
+<g transform="translate(395.2 154) scale(0.83)" fill="none" stroke="#4B5563" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" transform-origin="center"><path d="M9 6l6 6-6 6"/></g>
+</g>
+<g id="selector-3" data-name="Selector: Meta: todas" data-interactive="input" data-orden-foco="9">
+<rect x="431.2" y="142" width="143.68" height="44" fill="none" data-hit="1"/>
+<rect x="432.2" y="143" width="141.68" height="42" rx="8" fill="#FFFFFF" stroke="#6B7385" stroke-width="1"/>
+<text x="443.2" y="169.6" font-size="16" fill="#1A1D21">Meta: todas</text>
+<g transform="translate(546.88 154) scale(0.83)" fill="none" stroke="#4B5563" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" transform-origin="center"><path d="M9 6l6 6-6 6"/></g>
+</g>
+<g id="boton-4" data-name="Botón: ‹ Mes anterior" data-interactive="button" data-orden-foco="10">
+<rect x="40" y="202" width="153.29" height="44" fill="none" data-hit="1"/>
+<rect x="41" y="203" width="151.29" height="42" rx="8" fill="#FFFFFF" stroke="#4338CA" stroke-width="2"/>
+<text x="116.65" y="229.6" font-size="16" fill="#4338CA" font-weight="600" text-anchor="middle">‹ Mes anterior</text>
+</g>
+<g id="boton-5" data-name="Botón: Hoy" data-interactive="button" data-orden-foco="11">
+<rect x="205.29" y="202" width="96" height="44" fill="none" data-hit="1"/>
+<rect x="206.29" y="203" width="94" height="42" rx="8" fill="#FFFFFF" stroke="#4338CA" stroke-width="2"/>
+<text x="253.29" y="229.6" font-size="16" fill="#4338CA" font-weight="600" text-anchor="middle">Hoy</text>
+</g>
+<g id="boton-6" data-name="Botón: Mes siguiente ›" data-interactive="button" data-orden-foco="12">
+<rect x="313.29" y="202" width="164.66" height="44" fill="none" data-hit="1"/>
+<rect x="314.29" y="203" width="162.66" height="42" rx="8" fill="#FFFFFF" stroke="#4338CA" stroke-width="2"/>
+<text x="395.62" y="229.6" font-size="16" fill="#4338CA" font-weight="600" text-anchor="middle">Mes siguiente ›</text>
+</g>
+<g id="calendario-mes-7" data-name="Calendario de noviembre de 2026" role="grid" aria-label="Calendario de noviembre de 2026">
+<g id="tarjeta-8" data-name="Tarjeta">
+<rect x="40" y="263" width="1200" height="734" rx="12" fill="#1A1D21" fill-opacity="0.08"/><rect x="40.5" y="262.5" width="1199" height="733" rx="12" fill="#FFFFFF" stroke="#D7DDE8" stroke-width="1"/>
+<rect x="41" y="263" width="1198" height="36" rx="12" fill="#EBEEF3"/>
+<text x="50" y="287" font-size="14" fill="#1A1D21" font-weight="600">lun</text>
+<text x="221.43" y="287" font-size="14" fill="#1A1D21" font-weight="600">mar</text>
+<text x="392.86" y="287" font-size="14" fill="#1A1D21" font-weight="600">mié</text>
+<text x="564.29" y="287" font-size="14" fill="#1A1D21" font-weight="600">jue</text>
+<text x="735.71" y="287" font-size="14" fill="#1A1D21" font-weight="600">vie</text>
+<text x="907.14" y="287" font-size="14" fill="#1A1D21" font-weight="600">sáb</text>
+<text x="1078.57" y="287" font-size="14" fill="#1A1D21" font-weight="600">dom</text>
+<line x1="40" y1="300" x2="211.43" y2="300" stroke="#D7DDE8" stroke-width="1"/>
+<text x="50" y="325" font-size="14" fill="#4B5563">26</text>
+<line x1="211.43" y1="300" x2="382.86" y2="300" stroke="#D7DDE8" stroke-width="1"/>
+<line x1="211.43" y1="300" x2="211.43" y2="416" stroke="#D7DDE8" stroke-width="1"/>
+<text x="221.43" y="325" font-size="14" fill="#4B5563">27</text>
+<line x1="382.86" y1="300" x2="554.29" y2="300" stroke="#D7DDE8" stroke-width="1"/>
+<line x1="382.86" y1="300" x2="382.86" y2="416" stroke="#D7DDE8" stroke-width="1"/>
+<text x="392.86" y="325" font-size="14" fill="#4B5563">28</text>
+<line x1="554.29" y1="300" x2="725.71" y2="300" stroke="#D7DDE8" stroke-width="1"/>
+<line x1="554.29" y1="300" x2="554.29" y2="416" stroke="#D7DDE8" stroke-width="1"/>
+<text x="564.29" y="325" font-size="14" fill="#4B5563">29</text>
+<line x1="725.71" y1="300" x2="897.14" y2="300" stroke="#D7DDE8" stroke-width="1"/>
+<line x1="725.71" y1="300" x2="725.71" y2="416" stroke="#D7DDE8" stroke-width="1"/>
+<text x="735.71" y="325" font-size="14" fill="#4B5563">30</text>
+<g id="submeta-dia-9" data-name="Submeta: 09:00 Límites, Finalizada" data-interactive="link" data-orden-foco="13" aria-label="09:00 Límites, Finalizada">
+<rect x="729.71" y="336" width="163.43" height="24" fill="none" data-hit="1"/>
+<rect x="729.71" y="336" width="163.43" height="24" rx="4" fill="#F5F7FA"/>
+<rect x="729.71" y="339" width="4" height="18" rx="2" fill="#4338CA"/>
+<g transform="translate(736.71 340) scale(0.67)" fill="none" stroke="#0F5132" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M8 12.5l3 3 5-6"/></g>
+<text x="756.71" y="353" font-size="14" fill="#1A1D21">09:00 Límites</text>
+</g>
+<line x1="897.14" y1="300" x2="1068.57" y2="300" stroke="#D7DDE8" stroke-width="1"/>
+<line x1="897.14" y1="300" x2="897.14" y2="416" stroke="#D7DDE8" stroke-width="1"/>
+<text x="907.14" y="325" font-size="14" fill="#4B5563">31</text>
+<g id="submeta-dia-10" data-name="Submeta: 09:00 Continuidad, Finalizada" data-interactive="link" data-orden-foco="14" aria-label="09:00 Continuidad, Finalizada">
+<rect x="901.14" y="336" width="163.43" height="24" fill="none" data-hit="1"/>
+<rect x="901.14" y="336" width="163.43" height="24" rx="4" fill="#F5F7FA"/>
+<rect x="901.14" y="339" width="4" height="18" rx="2" fill="#4338CA"/>
+<g transform="translate(908.14 340) scale(0.67)" fill="none" stroke="#0F5132" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M8 12.5l3 3 5-6"/></g>
+<text x="928.14" y="353" font-size="14" fill="#1A1D21">09:00 Continuidad</text>
+</g>
+<line x1="1068.57" y1="300" x2="1240" y2="300" stroke="#D7DDE8" stroke-width="1"/>
+<line x1="1068.57" y1="300" x2="1068.57" y2="416" stroke="#D7DDE8" stroke-width="1"/>
+<text x="1078.57" y="325" font-size="14" fill="#1A1D21" font-weight="600">1</text>
+<g id="submeta-dia-11" data-name="Submeta: 07:00 Repasar vocabulario, Finalizada" data-interactive="link" data-orden-foco="15" aria-label="07:00 Repasar vocabulario, Finalizada">
+<rect x="1072.57" y="336" width="163.43" height="24" fill="none" data-hit="1"/>
+<rect x="1072.57" y="336" width="163.43" height="24" rx="4" fill="#F5F7FA"/>
+<rect x="1072.57" y="339" width="4" height="18" rx="2" fill="#C2410C"/>
+<g transform="translate(1079.57 340) scale(0.67)" fill="none" stroke="#0F5132" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M8 12.5l3 3 5-6"/></g>
+<text x="1099.57" y="353" font-size="14" fill="#1A1D21">07:00 Repasar voc…</text>
+</g>
+<g id="submeta-dia-12" data-name="Submeta: 09:00 Derivadas, Finalizada" data-interactive="link" data-orden-foco="16" aria-label="09:00 Derivadas, Finalizada">
+<rect x="1072.57" y="364" width="163.43" height="24" fill="none" data-hit="1"/>
+<rect x="1072.57" y="364" width="163.43" height="24" rx="4" fill="#F5F7FA"/>
+<rect x="1072.57" y="367" width="4" height="18" rx="2" fill="#4338CA"/>
+<g transform="translate(1079.57 368) scale(0.67)" fill="none" stroke="#0F5132" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M8 12.5l3 3 5-6"/></g>
+<text x="1099.57" y="381" font-size="14" fill="#1A1D21">09:00 Derivadas</text>
+</g>
+<g id="mas-13" data-name="Ver 1 submetas más del día 1" data-interactive="link" data-orden-foco="17">
+<rect x="1072.57" y="392" width="72" height="24" fill="none" data-hit="1"/>
+<text x="1078.57" y="409" font-size="14" fill="#4338CA" font-weight="600">+1 más</text>
+</g>
+<line x1="40" y1="416" x2="211.43" y2="416" stroke="#D7DDE8" stroke-width="1"/>
+<circle cx="62" cy="436" r="14" fill="#4338CA"/>
+<text x="62" y="441" font-size="14" fill="#FFFFFF" font-weight="700" text-anchor="middle">2</text>
+<g id="submeta-dia-14" data-name="Submeta: 07:00 Repasar vocabulario, Finalizada" data-interactive="link" data-orden-foco="18" aria-label="07:00 Repasar vocabulario, Finalizada">
+<rect x="44" y="452" width="163.43" height="24" fill="none" data-hit="1"/>
+<rect x="44" y="452" width="163.43" height="24" rx="4" fill="#F5F7FA"/>
+<rect x="44" y="455" width="4" height="18" rx="2" fill="#C2410C"/>
+<g transform="translate(51 456) scale(0.67)" fill="none" stroke="#0F5132" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M8 12.5l3 3 5-6"/></g>
+<text x="71" y="469" font-size="14" fill="#1A1D21">07:00 Repasar voc…</text>
+</g>
+<g id="submeta-dia-15" data-name="Submeta: 09:00 Estudiar capítulo 3, En curso" data-interactive="link" data-orden-foco="19" aria-label="09:00 Estudiar capítulo 3, En curso">
+<rect x="44" y="480" width="163.43" height="24" fill="none" data-hit="1"/>
+<rect x="44" y="480" width="163.43" height="24" rx="4" fill="#F5F7FA"/>
+<rect x="44" y="483" width="4" height="18" rx="2" fill="#4338CA"/>
+<g transform="translate(51 484) scale(0.67)" fill="none" stroke="#084A8C" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 7v5l3 2"/></g>
+<text x="71" y="497" font-size="14" fill="#1A1D21">09:00 Estudiar cap…</text>
+</g>
+<g id="mas-16" data-name="Ver 2 submetas más del día 2" data-interactive="link" data-orden-foco="20">
+<rect x="44" y="508" width="72" height="24" fill="none" data-hit="1"/>
+<text x="50" y="525" font-size="14" fill="#4338CA" font-weight="600">+2 más</text>
+</g>
+<line x1="211.43" y1="416" x2="382.86" y2="416" stroke="#D7DDE8" stroke-width="1"/>
+<line x1="211.43" y1="416" x2="211.43" y2="532" stroke="#D7DDE8" stroke-width="1"/>
+<text x="221.43" y="441" font-size="14" fill="#1A1D21" font-weight="600">3</text>
+<g id="submeta-dia-17" data-name="Submeta: 07:00 Repasar vocabulario, Pendiente" data-interactive="link" data-orden-foco="21" aria-label="07:00 Repasar vocabulario, Pendiente">
+<rect x="215.43" y="452" width="163.43" height="24" fill="none" data-hit="1"/>
+<rect x="215.43" y="452" width="163.43" height="24" rx="4" fill="#F5F7FA"/>
+<rect x="215.43" y="455" width="4" height="18" rx="2" fill="#C2410C"/>
+<circle cx="230.43" cy="464" r="6" fill="none" stroke="#4B5563" stroke-width="2"/>
+<text x="242.43" y="469" font-size="14" fill="#1A1D21">07:00 Repasar voc…</text>
+</g>
+<g id="submeta-dia-18" data-name="Submeta: 09:00 Estudiar capítulo 4, Pendiente" data-interactive="link" data-orden-foco="22" aria-label="09:00 Estudiar capítulo 4, Pendiente">
+<rect x="215.43" y="480" width="163.43" height="24" fill="none" data-hit="1"/>
+<rect x="215.43" y="480" width="163.43" height="24" rx="4" fill="#F5F7FA"/>
+<rect x="215.43" y="483" width="4" height="18" rx="2" fill="#4338CA"/>
+<circle cx="230.43" cy="492" r="6" fill="none" stroke="#4B5563" stroke-width="2"/>
+<text x="242.43" y="497" font-size="14" fill="#1A1D21">09:00 Estudiar cap…</text>
+</g>
+<g id="mas-19" data-name="Ver 1 submetas más del día 3" data-interactive="link" data-orden-foco="23">
+<rect x="215.43" y="508" width="72" height="24" fill="none" data-hit="1"/>
+<text x="221.43" y="525" font-size="14" fill="#4338CA" font-weight="600">+1 más</text>
+</g>
+<line x1="382.86" y1="416" x2="554.29" y2="416" stroke="#D7DDE8" stroke-width="1"/>
+<line x1="382.86" y1="416" x2="382.86" y2="532" stroke="#D7DDE8" stroke-width="1"/>
+<text x="392.86" y="441" font-size="14" fill="#1A1D21" font-weight="600">4</text>
+<g id="submeta-dia-20" data-name="Submeta: 07:00 Repasar vocabulario, Pendiente" data-interactive="link" data-orden-foco="24" aria-label="07:00 Repasar vocabulario, Pendiente">
+<rect x="386.86" y="452" width="163.43" height="24" fill="none" data-hit="1"/>
+<rect x="386.86" y="452" width="163.43" height="24" rx="4" fill="#F5F7FA"/>
+<rect x="386.86" y="455" width="4" height="18" rx="2" fill="#C2410C"/>
+<circle cx="401.86" cy="464" r="6" fill="none" stroke="#4B5563" stroke-width="2"/>
+<text x="413.86" y="469" font-size="14" fill="#1A1D21">07:00 Repasar voc…</text>
+</g>
+<g id="submeta-dia-21" data-name="Submeta: 09:00 Integrales, Pendiente" data-interactive="link" data-orden-foco="25" aria-label="09:00 Integrales, Pendiente">
+<rect x="386.86" y="480" width="163.43" height="24" fill="none" data-hit="1"/>
+<rect x="386.86" y="480" width="163.43" height="24" rx="4" fill="#F5F7FA"/>
+<rect x="386.86" y="483" width="4" height="18" rx="2" fill="#4338CA"/>
+<circle cx="401.86" cy="492" r="6" fill="none" stroke="#4B5563" stroke-width="2"/>
+<text x="413.86" y="497" font-size="14" fill="#1A1D21">09:00 Integrales</text>
+</g>
+<g id="mas-22" data-name="Ver 2 submetas más del día 4" data-interactive="link" data-orden-foco="26">
+<rect x="386.86" y="508" width="72" height="24" fill="none" data-hit="1"/>
+<text x="392.86" y="525" font-size="14" fill="#4338CA" font-weight="600">+2 más</text>
+</g>
+<line x1="554.29" y1="416" x2="725.71" y2="416" stroke="#D7DDE8" stroke-width="1"/>
+<line x1="554.29" y1="416" x2="554.29" y2="532" stroke="#D7DDE8" stroke-width="1"/>
+<text x="564.29" y="441" font-size="14" fill="#1A1D21" font-weight="600">5</text>
+<g id="submeta-dia-23" data-name="Submeta: 07:00 Repasar vocabulario, Pendiente" data-interactive="link" data-orden-foco="27" aria-label="07:00 Repasar vocabulario, Pendiente">
+<rect x="558.29" y="452" width="163.43" height="24" fill="none" data-hit="1"/>
+<rect x="558.29" y="452" width="163.43" height="24" rx="4" fill="#F5F7FA"/>
+<rect x="558.29" y="455" width="4" height="18" rx="2" fill="#C2410C"/>
+<circle cx="573.29" cy="464" r="6" fill="none" stroke="#4B5563" stroke-width="2"/>
+<text x="585.29" y="469" font-size="14" fill="#1A1D21">07:00 Repasar voc…</text>
+</g>
+<g id="submeta-dia-24" data-name="Submeta: 09:00 Repaso general, Pendiente" data-interactive="link" data-orden-foco="28" aria-label="09:00 Repaso general, Pendiente">
+<rect x="558.29" y="480" width="163.43" height="24" fill="none" data-hit="1"/>
+<rect x="558.29" y="480" width="163.43" height="24" rx="4" fill="#F5F7FA"/>
+<rect x="558.29" y="483" width="4" height="18" rx="2" fill="#4338CA"/>
+<circle cx="573.29" cy="492" r="6" fill="none" stroke="#4B5563" stroke-width="2"/>
+<text x="585.29" y="497" font-size="14" fill="#1A1D21">09:00 Repaso gene…</text>
+</g>
+<g id="mas-25" data-name="Ver 1 submetas más del día 5" data-interactive="link" data-orden-foco="29">
+<rect x="558.29" y="508" width="72" height="24" fill="none" data-hit="1"/>
+<text x="564.29" y="525" font-size="14" fill="#4338CA" font-weight="600">+1 más</text>
+</g>
+<line x1="725.71" y1="416" x2="897.14" y2="416" stroke="#D7DDE8" stroke-width="1"/>
+<line x1="725.71" y1="416" x2="725.71" y2="532" stroke="#D7DDE8" stroke-width="1"/>
+<text x="735.71" y="441" font-size="14" fill="#1A1D21" font-weight="600">6</text>
+<g id="submeta-dia-26" data-name="Submeta: 07:00 Repasar vocabulario, Pendiente" data-interactive="link" data-orden-foco="30" aria-label="07:00 Repasar vocabulario, Pendiente">
+<rect x="729.71" y="452" width="163.43" height="24" fill="none" data-hit="1"/>
+<rect x="729.71" y="452" width="163.43" height="24" rx="4" fill="#F5F7FA"/>
+<rect x="729.71" y="455" width="4" height="18" rx="2" fill="#C2410C"/>
+<circle cx="744.71" cy="464" r="6" fill="none" stroke="#4B5563" stroke-width="2"/>
+<text x="756.71" y="469" font-size="14" fill="#1A1D21">07:00 Repasar voc…</text>
+</g>
+<g id="submeta-dia-27" data-name="Submeta: 09:00 Simulacro, Pendiente" data-interactive="link" data-orden-foco="31" aria-label="09:00 Simulacro, Pendiente">
+<rect x="729.71" y="480" width="163.43" height="24" fill="none" data-hit="1"/>
+<rect x="729.71" y="480" width="163.43" height="24" rx="4" fill="#F5F7FA"/>
+<rect x="729.71" y="483" width="4" height="18" rx="2" fill="#4338CA"/>
+<circle cx="744.71" cy="492" r="6" fill="none" stroke="#4B5563" stroke-width="2"/>
+<text x="756.71" y="497" font-size="14" fill="#1A1D21">09:00 Simulacro</text>
+</g>
+<g id="mas-28" data-name="Ver 1 submetas más del día 6" data-interactive="link" data-orden-foco="32">
+<rect x="729.71" y="508" width="72" height="24" fill="none" data-hit="1"/>
+<text x="735.71" y="525" font-size="14" fill="#4338CA" font-weight="600">+1 más</text>
+</g>
+<line x1="897.14" y1="416" x2="1068.57" y2="416" stroke="#D7DDE8" stroke-width="1"/>
+<line x1="897.14" y1="416" x2="897.14" y2="532" stroke="#D7DDE8" stroke-width="1"/>
+<text x="907.14" y="441" font-size="14" fill="#1A1D21" font-weight="600">7</text>
+<line x1="1068.57" y1="416" x2="1240" y2="416" stroke="#D7DDE8" stroke-width="1"/>
+<line x1="1068.57" y1="416" x2="1068.57" y2="532" stroke="#D7DDE8" stroke-width="1"/>
+<text x="1078.57" y="441" font-size="14" fill="#1A1D21" font-weight="600">8</text>
+<line x1="40" y1="532" x2="211.43" y2="532" stroke="#D7DDE8" stroke-width="1"/>
+<text x="50" y="557" font-size="14" fill="#1A1D21" font-weight="600">9</text>
+<g id="submeta-dia-29" data-name="Submeta: 14:00 Leer capítulo 5, Pendiente" data-interactive="link" data-orden-foco="33" aria-label="14:00 Leer capítulo 5, Pendiente">
+<rect x="44" y="568" width="163.43" height="24" fill="none" data-hit="1"/>
+<rect x="44" y="568" width="163.43" height="24" rx="4" fill="#F5F7FA"/>
+<rect x="44" y="571" width="4" height="18" rx="2" fill="#0F766E"/>
+<circle cx="59" cy="580" r="6" fill="none" stroke="#4B5563" stroke-width="2"/>
+<text x="71" y="585" font-size="14" fill="#1A1D21">14:00 Leer capítul…</text>
+</g>
+<line x1="211.43" y1="532" x2="382.86" y2="532" stroke="#D7DDE8" stroke-width="1"/>
+<line x1="211.43" y1="532" x2="211.43" y2="648" stroke="#D7DDE8" stroke-width="1"/>
+<text x="221.43" y="557" font-size="14" fill="#1A1D21" font-weight="600">10</text>
+<line x1="382.86" y1="532" x2="554.29" y2="532" stroke="#D7DDE8" stroke-width="1"/>
+<line x1="382.86" y1="532" x2="382.86" y2="648" stroke="#D7DDE8" stroke-width="1"/>
+<text x="392.86" y="557" font-size="14" fill="#1A1D21" font-weight="600">11</text>
+<g id="submeta-dia-30" data-name="Submeta: 14:00 Leer capítulo 6, Pendiente" data-interactive="link" data-orden-foco="34" aria-label="14:00 Leer capítulo 6, Pendiente">
+<rect x="386.86" y="568" width="163.43" height="24" fill="none" data-hit="1"/>
+<rect x="386.86" y="568" width="163.43" height="24" rx="4" fill="#F5F7FA"/>
+<rect x="386.86" y="571" width="4" height="18" rx="2" fill="#0F766E"/>
+<circle cx="401.86" cy="580" r="6" fill="none" stroke="#4B5563" stroke-width="2"/>
+<text x="413.86" y="585" font-size="14" fill="#1A1D21">14:00 Leer capítul…</text>
+</g>
+<line x1="554.29" y1="532" x2="725.71" y2="532" stroke="#D7DDE8" stroke-width="1"/>
+<line x1="554.29" y1="532" x2="554.29" y2="648" stroke="#D7DDE8" stroke-width="1"/>
+<text x="564.29" y="557" font-size="14" fill="#1A1D21" font-weight="600">12</text>
+<line x1="725.71" y1="532" x2="897.14" y2="532" stroke="#D7DDE8" stroke-width="1"/>
+<line x1="725.71" y1="532" x2="725.71" y2="648" stroke="#D7DDE8" stroke-width="1"/>
+<text x="735.71" y="557" font-size="14" fill="#1A1D21" font-weight="600">13</text>
+<g id="submeta-dia-31" data-name="Submeta: 14:00 Leer capítulo 7, Pendiente" data-interactive="link" data-orden-foco="35" aria-label="14:00 Leer capítulo 7, Pendiente">
+<rect x="729.71" y="568" width="163.43" height="24" fill="none" data-hit="1"/>
+<rect x="729.71" y="568" width="163.43" height="24" rx="4" fill="#F5F7FA"/>
+<rect x="729.71" y="571" width="4" height="18" rx="2" fill="#0F766E"/>
+<circle cx="744.71" cy="580" r="6" fill="none" stroke="#4B5563" stroke-width="2"/>
+<text x="756.71" y="585" font-size="14" fill="#1A1D21">14:00 Leer capítul…</text>
+</g>
+<line x1="897.14" y1="532" x2="1068.57" y2="532" stroke="#D7DDE8" stroke-width="1"/>
+<line x1="897.14" y1="532" x2="897.14" y2="648" stroke="#D7DDE8" stroke-width="1"/>
+<text x="907.14" y="557" font-size="14" fill="#1A1D21" font-weight="600">14</text>
+<line x1="1068.57" y1="532" x2="1240" y2="532" stroke="#D7DDE8" stroke-width="1"/>
+<line x1="1068.57" y1="532" x2="1068.57" y2="648" stroke="#D7DDE8" stroke-width="1"/>
+<text x="1078.57" y="557" font-size="14" fill="#1A1D21" font-weight="600">15</text>
+<line x1="40" y1="648" x2="211.43" y2="648" stroke="#D7DDE8" stroke-width="1"/>
+<text x="50" y="673" font-size="14" fill="#1A1D21" font-weight="600">16</text>
+<line x1="211.43" y1="648" x2="382.86" y2="648" stroke="#D7DDE8" stroke-width="1"/>
+<line x1="211.43" y1="648" x2="211.43" y2="764" stroke="#D7DDE8" stroke-width="1"/>
+<text x="221.43" y="673" font-size="14" fill="#1A1D21" font-weight="600">17</text>
+<line x1="382.86" y1="648" x2="554.29" y2="648" stroke="#D7DDE8" stroke-width="1"/>
+<line x1="382.86" y1="648" x2="382.86" y2="764" stroke="#D7DDE8" stroke-width="1"/>
+<text x="392.86" y="673" font-size="14" fill="#1A1D21" font-weight="600">18</text>
+<line x1="554.29" y1="648" x2="725.71" y2="648" stroke="#D7DDE8" stroke-width="1"/>
+<line x1="554.29" y1="648" x2="554.29" y2="764" stroke="#D7DDE8" stroke-width="1"/>
+<text x="564.29" y="673" font-size="14" fill="#1A1D21" font-weight="600">19</text>
+<line x1="725.71" y1="648" x2="897.14" y2="648" stroke="#D7DDE8" stroke-width="1"/>
+<line x1="725.71" y1="648" x2="725.71" y2="764" stroke="#D7DDE8" stroke-width="1"/>
+<text x="735.71" y="673" font-size="14" fill="#1A1D21" font-weight="600">20</text>
+<line x1="897.14" y1="648" x2="1068.57" y2="648" stroke="#D7DDE8" stroke-width="1"/>
+<line x1="897.14" y1="648" x2="897.14" y2="764" stroke="#D7DDE8" stroke-width="1"/>
+<text x="907.14" y="673" font-size="14" fill="#1A1D21" font-weight="600">21</text>
+<line x1="1068.57" y1="648" x2="1240" y2="648" stroke="#D7DDE8" stroke-width="1"/>
+<line x1="1068.57" y1="648" x2="1068.57" y2="764" stroke="#D7DDE8" stroke-width="1"/>
+<text x="1078.57" y="673" font-size="14" fill="#1A1D21" font-weight="600">22</text>
+<line x1="40" y1="764" x2="211.43" y2="764" stroke="#D7DDE8" stroke-width="1"/>
+<text x="50" y="789" font-size="14" fill="#1A1D21" font-weight="600">23</text>
+<line x1="211.43" y1="764" x2="382.86" y2="764" stroke="#D7DDE8" stroke-width="1"/>
+<line x1="211.43" y1="764" x2="211.43" y2="880" stroke="#D7DDE8" stroke-width="1"/>
+<text x="221.43" y="789" font-size="14" fill="#1A1D21" font-weight="600">24</text>
+<line x1="382.86" y1="764" x2="554.29" y2="764" stroke="#D7DDE8" stroke-width="1"/>
+<line x1="382.86" y1="764" x2="382.86" y2="880" stroke="#D7DDE8" stroke-width="1"/>
+<text x="392.86" y="789" font-size="14" fill="#1A1D21" font-weight="600">25</text>
+<line x1="554.29" y1="764" x2="725.71" y2="764" stroke="#D7DDE8" stroke-width="1"/>
+<line x1="554.29" y1="764" x2="554.29" y2="880" stroke="#D7DDE8" stroke-width="1"/>
+<text x="564.29" y="789" font-size="14" fill="#1A1D21" font-weight="600">26</text>
+<line x1="725.71" y1="764" x2="897.14" y2="764" stroke="#D7DDE8" stroke-width="1"/>
+<line x1="725.71" y1="764" x2="725.71" y2="880" stroke="#D7DDE8" stroke-width="1"/>
+<text x="735.71" y="789" font-size="14" fill="#1A1D21" font-weight="600">27</text>
+<line x1="897.14" y1="764" x2="1068.57" y2="764" stroke="#D7DDE8" stroke-width="1"/>
+<line x1="897.14" y1="764" x2="897.14" y2="880" stroke="#D7DDE8" stroke-width="1"/>
+<text x="907.14" y="789" font-size="14" fill="#1A1D21" font-weight="600">28</text>
+<line x1="1068.57" y1="764" x2="1240" y2="764" stroke="#D7DDE8" stroke-width="1"/>
+<line x1="1068.57" y1="764" x2="1068.57" y2="880" stroke="#D7DDE8" stroke-width="1"/>
+<text x="1078.57" y="789" font-size="14" fill="#1A1D21" font-weight="600">29</text>
+<line x1="40" y1="880" x2="211.43" y2="880" stroke="#D7DDE8" stroke-width="1"/>
+<text x="50" y="905" font-size="14" fill="#1A1D21" font-weight="600">30</text>
+<line x1="211.43" y1="880" x2="382.86" y2="880" stroke="#D7DDE8" stroke-width="1"/>
+<line x1="211.43" y1="880" x2="211.43" y2="996" stroke="#D7DDE8" stroke-width="1"/>
+<text x="221.43" y="905" font-size="14" fill="#4B5563">1</text>
+<line x1="382.86" y1="880" x2="554.29" y2="880" stroke="#D7DDE8" stroke-width="1"/>
+<line x1="382.86" y1="880" x2="382.86" y2="996" stroke="#D7DDE8" stroke-width="1"/>
+<text x="392.86" y="905" font-size="14" fill="#4B5563">2</text>
+<line x1="554.29" y1="880" x2="725.71" y2="880" stroke="#D7DDE8" stroke-width="1"/>
+<line x1="554.29" y1="880" x2="554.29" y2="996" stroke="#D7DDE8" stroke-width="1"/>
+<text x="564.29" y="905" font-size="14" fill="#4B5563">3</text>
+<line x1="725.71" y1="880" x2="897.14" y2="880" stroke="#D7DDE8" stroke-width="1"/>
+<line x1="725.71" y1="880" x2="725.71" y2="996" stroke="#D7DDE8" stroke-width="1"/>
+<text x="735.71" y="905" font-size="14" fill="#4B5563">4</text>
+<line x1="897.14" y1="880" x2="1068.57" y2="880" stroke="#D7DDE8" stroke-width="1"/>
+<line x1="897.14" y1="880" x2="897.14" y2="996" stroke="#D7DDE8" stroke-width="1"/>
+<text x="907.14" y="905" font-size="14" fill="#4B5563">5</text>
+<line x1="1068.57" y1="880" x2="1240" y2="880" stroke="#D7DDE8" stroke-width="1"/>
+<line x1="1068.57" y1="880" x2="1068.57" y2="996" stroke="#D7DDE8" stroke-width="1"/>
+<text x="1078.57" y="905" font-size="14" fill="#4B5563">6</text>
+</g>
+</g>
+<g transform="translate(40 1014) scale(0.67)" fill="none" stroke="#0F5132" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M8 12.5l3 3 5-6"/></g>
+<text x="62" y="1027" font-size="14" fill="#4B5563">Finalizada</text>
+<g transform="translate(153.62 1014) scale(0.67)" fill="none" stroke="#084A8C" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 7v5l3 2"/></g>
+<text x="175.62" y="1027" font-size="14" fill="#4B5563">En curso</text>
+<circle cx="265.02" cy="1022" r="6" fill="none" stroke="#4B5563" stroke-width="2"/>
+<text x="279.02" y="1027" font-size="14" fill="#4B5563">Pendiente</text>
+<text x="368.12" y="1027" font-size="14" fill="#4B5563">La franja de color es la meta; el estado se lee en el ícono y en el texto de la leyenda.</text>
+<text x="40" y="1069.4" font-size="14" fill="#4B5563">El rango máximo de consulta es de 93 días. Vista de lista disponible para teclado y lector de pantalla.</text>
+</g>
+</svg>

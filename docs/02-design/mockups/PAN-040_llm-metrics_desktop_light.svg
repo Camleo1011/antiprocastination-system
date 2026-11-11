@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" data-pan="PAN-040" data-dispositivo="desktop" data-tema="claro" aria-labelledby="t d">
+<title id="t">PAN-040 — Métricas del uso del LLM (escritorio 1280 px, tema claro)</title>
+<desc id="d">Mockup de alta fidelidad de Métricas del uso del LLM. Ruta /admin/metricas/llm; rol super; CU CU-021, CU-006, CU-014; EP EP-053. Estado mostrado: sesión super: llamadas, tokens, costo acumulado y latencia por operación de la IA desde el 01/10/2026. Colores, tipografía (Inter), espaciado y radios del sistema de diseño (tema claro); texto editable. Exclusivo del super (403 para moderador y soporte). Sin contenido de evidencias ni datos personales (regla de seguridad del proyecto). Regiones ARIA: navigation, banner, main. Orden de foco con Tab (coincide con el orden visual y del DOM): Enlace de salto «Saltar al contenido principal» (visible solo al recibir el foco). 1 Navegación: Panel; 2 Navegación: Cuentas; 3 Navegación: Evidencias; 4 Navegación: Ranking; 5 Navegación: Métricas; 6 Navegación: Error persistente; 7 Navegación: Métricas del LLM; 8 Menú de cuenta; 9 Selector: Desde: 01/10/2026.</desc>
+<defs><pattern id="rayas-gracia" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#E3E8EF"/><rect width="3" height="6" fill="#8A4B00"/></pattern></defs>
+<rect id="fondo-pagina" width="1280" height="800" fill="#F5F7FA"/>
+<g id="barra-lateral" data-name="Barra lateral de administración" role="navigation">
+<rect x="0" y="0" width="248" height="800" fill="#FFFFFF"/>
+<line x1="248" y1="0" x2="248" y2="800" stroke="#D7DDE8" stroke-width="1"/>
+<g id="logo-6" data-name="Logotipo FocusStrike" data-exempt="logo">
+<rect x="24" y="16" width="32" height="32" rx="8" fill="#4338CA"/>
+<g transform="translate(30.4 22.4) scale(0.8)" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="66" y="38.3" font-size="18" fill="#1A1D21" font-weight="700">FocusStrike</text>
+</g>
+<g id="nav-7" data-name="Navegación: Panel" data-interactive="link" data-orden-foco="1">
+<rect x="12" y="80" width="224" height="44" fill="none" data-hit="1"/>
+<g transform="translate(24 92) scale(0.83)" fill="none" stroke="#4B5563" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7"/><path d="M6 10v10h12V10"/></g>
+<text x="54" y="107.6" font-size="16" fill="#4B5563" font-weight="600">Panel</text>
+</g>
+<g id="nav-8" data-name="Navegación: Cuentas" data-interactive="link" data-orden-foco="2">
+<rect x="12" y="128" width="224" height="44" fill="none" data-hit="1"/>
+<g transform="translate(24 140) scale(0.83)" fill="none" stroke="#4B5563" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4a4 4 0 100 8 4 4 0 000-8z"/><path d="M4.5 20a7.5 7.5 0 0115 0"/></g>
+<text x="54" y="155.6" font-size="16" fill="#4B5563" font-weight="600">Cuentas</text>
+</g>
+<g id="nav-9" data-name="Navegación: Evidencias" data-interactive="link" data-orden-foco="3">
+<rect x="12" y="176" width="224" height="44" fill="none" data-hit="1"/>
+<g transform="translate(24 188) scale(0.83)" fill="none" stroke="#4B5563" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/></g>
+<text x="54" y="203.6" font-size="16" fill="#4B5563" font-weight="600">Evidencias</text>
+</g>
+<g id="nav-10" data-name="Navegación: Ranking" data-interactive="link" data-orden-foco="4">
+<rect x="12" y="224" width="224" height="44" fill="none" data-hit="1"/>
+<g transform="translate(24 236) scale(0.83)" fill="none" stroke="#4B5563" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v6a4 4 0 01-8 0z"/><path d="M8 6H4v2a3 3 0 003 3M16 6h4v2a3 3 0 01-3 3"/><path d="M12 14v4M8 20h8"/></g>
+<text x="54" y="251.6" font-size="16" fill="#4B5563" font-weight="600">Ranking</text>
+</g>
+<g id="nav-11" data-name="Navegación: Métricas" data-interactive="link" data-orden-foco="5">
+<rect x="12" y="272" width="224" height="44" fill="none" data-hit="1"/>
+<g transform="translate(24 284) scale(0.83)" fill="none" stroke="#4B5563" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v14H4z"/><path d="M4 10h16M8 3v4M16 3v4"/></g>
+<text x="54" y="299.6" font-size="16" fill="#4B5563" font-weight="600">Métricas</text>
+</g>
+<g id="nav-12" data-name="Navegación: Error persistente" data-interactive="link" data-orden-foco="6">
+<rect x="12" y="320" width="224" height="44" fill="none" data-hit="1"/>
+<g transform="translate(24 332) scale(0.83)" fill="none" stroke="#4B5563" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5L2.8 19.5h18.4z"/><path d="M12 10v4.5"/><path d="M12 17.2v.1"/></g>
+<text x="54" y="347.6" font-size="16" fill="#4B5563" font-weight="600">Error persistente</text>
+</g>
+<g id="nav-13" data-name="Navegación: Métricas del LLM" data-interactive="link" data-orden-foco="7" aria-current="page">
+<rect x="12" y="368" width="224" height="44" fill="none" data-hit="1"/>
+<rect x="12" y="368" width="224" height="44" rx="8" fill="#EEF0FF"/>
+<g transform="translate(24 380) scale(0.83)" fill="none" stroke="#3730A3" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></g>
+<text x="54" y="395.6" font-size="16" fill="#3730A3" font-weight="700">Métricas del LLM</text>
+</g>
+</g>
+<g id="cabecera" data-name="Cabecera de administración" role="banner">
+<rect x="249" y="0" width="1031" height="64" fill="#FFFFFF"/>
+<line x1="249" y1="64" x2="1280" y2="64" stroke="#D7DDE8" stroke-width="1"/>
+<text x="280" y="38" font-size="16" fill="#4B5563" font-weight="600">Administración</text>
+<g id="insignia-14" data-name="Insignia: Nivel super">
+<rect x="1068.83" y="18" width="119.17" height="28" rx="14" fill="#EEF0FF"/>
+<g transform="translate(1078.83 24) scale(0.67)" fill="none" stroke="#3730A3" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7.5 3v5.5c0 4.5-3.2 8-7.5 9.5-4.3-1.5-7.5-5-7.5-9.5V6z"/></g>
+<text x="1100.83" y="36.9" font-size="14" fill="#3730A3" font-weight="600">Nivel super</text>
+</g>
+<g id="avatar-15" data-name="Menú de cuenta" data-interactive="button" data-orden-foco="8">
+<rect x="1200" y="10" width="44" height="44" fill="none" data-hit="1"/>
+<circle cx="1222" cy="32" r="18" fill="#4338CA"/>
+<text x="1222" y="37.6" font-size="16" fill="#FFFFFF" font-weight="700" text-anchor="middle">S</text>
+</g>
+</g>
+<g id="contenido-principal" data-name="Contenido principal (main)" role="main">
+<text x="280" y="121.5" font-size="30" fill="#1A1D21" font-weight="700">Métricas del uso del LLM</text>
+<g id="selector-1" data-name="Selector: Desde: 01/10/2026" data-interactive="input" data-orden-foco="9">
+<rect x="280" y="138" width="199.52" height="44" fill="none" data-hit="1"/>
+<rect x="281" y="139" width="197.52" height="42" rx="8" fill="#FFFFFF" stroke="#6B7385" stroke-width="1"/>
+<text x="292" y="165.6" font-size="16" fill="#1A1D21">Desde: 01/10/2026</text>
+<g transform="translate(451.52 150) scale(0.83)" fill="none" stroke="#4B5563" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" transform-origin="center"><path d="M9 6l6 6-6 6"/></g>
+</g>
+<g id="tarjeta-2" data-name="Tarjeta">
+<rect x="280" y="199" width="476" height="96" rx="12" fill="#1A1D21" fill-opacity="0.08"/><rect x="280.5" y="198.5" width="475" height="95" rx="12" fill="#FFFFFF" stroke="#D7DDE8" stroke-width="1"/>
+<g transform="translate(720 210) scale(0.83)" fill="none" stroke="#4338CA" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></g>
+<text x="296" y="223.4" font-size="14" fill="#4B5563" font-weight="600">Llamadas</text>
+<text x="296" y="260" font-size="30" fill="#1A1D21" font-weight="700">1.130</text>
+<text x="296" y="279.4" font-size="14" fill="#4B5563">desde 01/10/2026</text>
+</g>
+<g id="tarjeta-3" data-name="Tarjeta">
+<rect x="772" y="199" width="476" height="96" rx="12" fill="#1A1D21" fill-opacity="0.08"/><rect x="772.5" y="198.5" width="475" height="95" rx="12" fill="#FFFFFF" stroke="#D7DDE8" stroke-width="1"/>
+<g transform="translate(1212 210) scale(0.83)" fill="none" stroke="#4338CA" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/></g>
+<text x="788" y="223.4" font-size="14" fill="#4B5563" font-weight="600">Costo acumulado</text>
+<text x="788" y="260" font-size="30" fill="#1A1D21" font-weight="700">USD 33,65</text>
+<text x="788" y="279.4" font-size="14" fill="#4B5563">con fallidas y reintentos</text>
+</g>
+<g id="tabla-4" data-name="Uso del LLM por operación" role="table">
+<g id="tarjeta-5" data-name="Tarjeta">
+<rect x="280" y="311" width="968" height="290" rx="12" fill="#1A1D21" fill-opacity="0.08"/><rect x="280.5" y="310.5" width="967" height="289" rx="12" fill="#FFFFFF" stroke="#D7DDE8" stroke-width="1"/>
+<rect x="281" y="311" width="966" height="44" rx="12" fill="#EBEEF3"/>
+<text x="296" y="339" font-size="14" fill="#1A1D21" font-weight="600">Operación</text>
+<text x="674" y="339" font-size="14" fill="#1A1D21" font-weight="600" text-anchor="end">Llamadas</text>
+<text x="830" y="339" font-size="14" fill="#1A1D21" font-weight="600" text-anchor="end">Tokens</text>
+<text x="1064" y="339" font-size="14" fill="#1A1D21" font-weight="600" text-anchor="end">Costo acumulado</text>
+<text x="1220" y="339" font-size="14" fill="#1A1D21" font-weight="600" text-anchor="end">Latencia prom.</text>
+<text x="296" y="391.6" font-size="16" fill="#1A1D21">Desglose</text>
+<text x="674" y="391.6" font-size="16" fill="#1A1D21" text-anchor="end">120</text>
+<text x="830" y="391.6" font-size="16" fill="#1A1D21" text-anchor="end">310.000</text>
+<text x="1064" y="391.6" font-size="16" fill="#1A1D21" text-anchor="end">USD 4,20</text>
+<text x="1220" y="391.6" font-size="16" fill="#1A1D21" text-anchor="end">38 s</text>
+<line x1="281" y1="416" x2="1247" y2="416" stroke="#D7DDE8" stroke-width="1"/>
+<text x="296" y="451.6" font-size="16" fill="#1A1D21">Sugerencia de fechas</text>
+<text x="674" y="451.6" font-size="16" fill="#1A1D21" text-anchor="end">45</text>
+<text x="830" y="451.6" font-size="16" fill="#1A1D21" text-anchor="end">40.000</text>
+<text x="1064" y="451.6" font-size="16" fill="#1A1D21" text-anchor="end">USD 0,60</text>
+<text x="1220" y="451.6" font-size="16" fill="#1A1D21" text-anchor="end">6 s</text>
+<line x1="281" y1="476" x2="1247" y2="476" stroke="#D7DDE8" stroke-width="1"/>
+<text x="296" y="511.6" font-size="16" fill="#1A1D21">Recomendación</text>
+<text x="674" y="511.6" font-size="16" fill="#1A1D21" text-anchor="end">60</text>
+<text x="830" y="511.6" font-size="16" fill="#1A1D21" text-anchor="end">52.000</text>
+<text x="1064" y="511.6" font-size="16" fill="#1A1D21" text-anchor="end">USD 0,75</text>
+<text x="1220" y="511.6" font-size="16" fill="#1A1D21" text-anchor="end">8 s</text>
+<line x1="281" y1="536" x2="1247" y2="536" stroke="#D7DDE8" stroke-width="1"/>
+<text x="296" y="571.6" font-size="16" fill="#1A1D21">Evaluación</text>
+<text x="674" y="571.6" font-size="16" fill="#1A1D21" text-anchor="end">1.020</text>
+<text x="830" y="571.6" font-size="16" fill="#1A1D21" text-anchor="end">1.900.000</text>
+<text x="1064" y="571.6" font-size="16" fill="#1A1D21" text-anchor="end">USD 28,10</text>
+<text x="1220" y="571.6" font-size="16" fill="#1A1D21" text-anchor="end">22 s</text>
+<line x1="281" y1="596" x2="1247" y2="596" stroke="#D7DDE8" stroke-width="1"/>
+</g>
+</g>
+<text x="280" y="631.4" font-size="14" fill="#4B5563">Las llamadas incluyen las fallidas y los reintentos. Importes en dólares con coma decimal.</text>
+</g>
+</svg>

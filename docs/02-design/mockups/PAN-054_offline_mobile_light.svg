@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="375" height="1051" viewBox="0 0 375 1051" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" data-pan="PAN-054" data-dispositivo="movil" data-tema="claro" aria-labelledby="t d">
+<title id="t">PAN-054 — Sin conexión (móvil 375 px, tema claro)</title>
+<desc id="d">Mockup de alta fidelidad de Sin conexión. Ruta (estado global); rol todos; CU CU-010, CU-012, CU-011; EP —. Estado mostrado: estado global sin conexión: banner, última agenda conocida con el reloj marcado como posiblemente desfasado y lo que no se puede hacer. Colores, tipografía (Inter), espaciado y radios del sistema de diseño (tema claro); texto editable. Los relojes se calculan con la última hora del servidor y se marcan «puede estar desfasado». El cliente reintenta al recuperar la conexión. Regiones ARIA: banner, navigation, main. Orden de foco con Tab (coincide con el orden visual y del DOM): Enlace de salto «Saltar al contenido principal» (visible solo al recibir el foco). 1 Menú de cuenta; 2 Navegación: Inicio; 3 Navegación: Agenda; 4 Navegación: Metas; 5 Navegación: Ranking; 6 Navegación: Perfil; 7 Fila: Estudiar capítulo 3; 8 Fila: Leer capítulo 2; 9 Fila: Caminar 30 min; 10 Botón: Reintentar.</desc>
+<defs><pattern id="rayas-gracia" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#E3E8EF"/><rect width="3" height="6" fill="#8A4B00"/></pattern></defs>
+<rect id="fondo-pagina" width="375" height="1051" fill="#F5F7FA"/>
+<g id="barra-superior" data-name="Barra superior" role="banner">
+<rect x="0" y="0" width="375" height="56" fill="#FFFFFF"/>
+<line x1="0" y1="56" x2="375" y2="56" stroke="#D7DDE8" stroke-width="1"/>
+<g id="logo-11" data-name="Logotipo FocusStrike" data-exempt="logo">
+<rect x="16" y="12" width="32" height="32" rx="8" fill="#4338CA"/>
+<g transform="translate(22.4 18.4) scale(0.8)" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="58" y="34.3" font-size="18" fill="#1A1D21" font-weight="700">FocusStrike</text>
+</g>
+<g id="avatar-12" data-name="Menú de cuenta" data-interactive="button" data-orden-foco="1">
+<rect x="319" y="6" width="44" height="44" fill="none" data-hit="1"/>
+<circle cx="341" cy="28" r="18" fill="#4338CA"/>
+<text x="341" y="33.6" font-size="16" fill="#FFFFFF" font-weight="700" text-anchor="middle">A</text>
+</g>
+</g>
+<g id="navegacion-inferior" data-name="Navegación inferior" role="navigation">
+<rect x="0" y="987" width="375" height="64" fill="#FFFFFF"/>
+<line x1="0" y1="987" x2="375" y2="987" stroke="#D7DDE8" stroke-width="1"/>
+<g id="nav-13" data-name="Navegación: Inicio" data-interactive="link" data-orden-foco="2" aria-current="page">
+<rect x="0" y="987" width="75" height="64" fill="none" data-hit="1"/>
+<rect x="6" y="991" width="63" height="56" rx="8" fill="#EEF0FF"/>
+<g transform="translate(25.5 995) scale(1)" fill="none" stroke="#3730A3" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7"/><path d="M6 10v10h12V10"/></g>
+<text x="37.5" y="1037" font-size="14" fill="#3730A3" font-weight="700" text-anchor="middle">Inicio</text>
+</g>
+<g id="nav-14" data-name="Navegación: Agenda" data-interactive="link" data-orden-foco="3">
+<rect x="75" y="987" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(100.5 995) scale(1)" fill="none" stroke="#4B5563" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v14H4z"/><path d="M4 10h16M8 3v4M16 3v4"/></g>
+<text x="112.5" y="1037" font-size="14" fill="#4B5563" font-weight="600" text-anchor="middle">Agenda</text>
+</g>
+<g id="nav-15" data-name="Navegación: Metas" data-interactive="link" data-orden-foco="4">
+<rect x="150" y="987" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(175.5 995) scale(1)" fill="none" stroke="#4B5563" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="187.5" y="1037" font-size="14" fill="#4B5563" font-weight="600" text-anchor="middle">Metas</text>
+</g>
+<g id="nav-16" data-name="Navegación: Ranking" data-interactive="link" data-orden-foco="5">
+<rect x="225" y="987" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(250.5 995) scale(1)" fill="none" stroke="#4B5563" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v6a4 4 0 01-8 0z"/><path d="M8 6H4v2a3 3 0 003 3M16 6h4v2a3 3 0 01-3 3"/><path d="M12 14v4M8 20h8"/></g>
+<text x="262.5" y="1037" font-size="14" fill="#4B5563" font-weight="600" text-anchor="middle">Ranking</text>
+</g>
+<g id="nav-17" data-name="Navegación: Perfil" data-interactive="link" data-orden-foco="6">
+<rect x="300" y="987" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(325.5 995) scale(1)" fill="none" stroke="#4B5563" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4a4 4 0 100 8 4 4 0 000-8z"/><path d="M4.5 20a7.5 7.5 0 0115 0"/></g>
+<text x="337.5" y="1037" font-size="14" fill="#4B5563" font-weight="600" text-anchor="middle">Perfil</text>
+</g>
+</g>
+<g id="contenido-principal" data-name="Contenido principal (main)" role="main">
+<text x="16" y="99.4" font-size="24" fill="#1A1D21" font-weight="600">Inicio</text>
+<g id="alerta-1" data-name="Alerta: Estás sin conexión" role="alert">
+<rect x="16" y="114" width="343" height="111" rx="8" fill="#FFF4DB"/>
+<rect x="16" y="114" width="4" height="111" rx="2" fill="#B45309"/>
+<g transform="translate(32 126) scale(0.83)" fill="none" stroke="#8A4B00" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5L2.8 19.5h18.4z"/><path d="M12 10v4.5"/><path d="M12 17.2v.1"/></g>
+<text x="64" y="143.6" font-size="16" fill="#8A4B00" font-weight="600">Estás sin conexión</text>
+<text x="64" y="165.4" font-size="14" fill="#1A1D21">Sin conexión. Algunos datos pueden estar</text>
+<text x="64" y="186.4" font-size="14" fill="#1A1D21">desactualizados; reintentaremos al volver</text>
+<text x="64" y="207.4" font-size="14" fill="#1A1D21">la conexión.</text>
+</g>
+<g id="tarjeta-2" data-name="Tarjeta">
+<rect x="16" y="242" width="343" height="412" rx="12" fill="#1A1D21" fill-opacity="0.08"/><rect x="16.5" y="241.5" width="342" height="411" rx="12" fill="#FFFFFF" stroke="#D7DDE8" stroke-width="1"/>
+<text x="32" y="274.3" font-size="18" fill="#1A1D21" font-weight="600">Agenda de hoy · última</text>
+<text x="32" y="296.3" font-size="18" fill="#1A1D21" font-weight="600">actualización 10:41</text>
+<g id="fila-3" data-name="Fila: Estudiar capítulo 3" data-interactive="link" data-orden-foco="7">
+<rect x="32" y="313" width="311" height="122" fill="none" data-hit="1"/>
+<rect x="32" y="323" width="4" height="102" rx="2" fill="#4338CA"/>
+<text x="46" y="340.6" font-size="16" fill="#1A1D21" font-weight="600">Estudiar capítulo 3</text>
+<text x="46" y="362.4" font-size="14" fill="#4B5563">Aprender cálculo · 09:00–11:00 · el tiempo</text>
+<text x="46" y="383.4" font-size="14" fill="#4B5563">puede estar desfasado</text>
+<g id="insignia-4" data-name="Insignia: En curso">
+<rect x="46" y="397" width="102.84" height="28" rx="14" fill="#E6F1FB"/>
+<g transform="translate(56 403) scale(0.67)" fill="none" stroke="#084A8C" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 7v5l3 2"/></g>
+<text x="78" y="415.9" font-size="14" fill="#084A8C" font-weight="600">En curso</text>
+</g>
+</g>
+<line x1="32" y1="435" x2="343" y2="435" stroke="#D7DDE8" stroke-width="1"/>
+<g id="fila-5" data-name="Fila: Leer capítulo 2" data-interactive="link" data-orden-foco="8">
+<rect x="32" y="435" width="311" height="101" fill="none" data-hit="1"/>
+<rect x="32" y="445" width="4" height="81" rx="2" fill="#0F766E"/>
+<text x="46" y="462.6" font-size="16" fill="#1A1D21" font-weight="600">Leer capítulo 2</text>
+<text x="46" y="484.4" font-size="14" fill="#4B5563">Leer 2 libros · 14:00–15:00</text>
+<g id="insignia-6" data-name="Insignia: Pendiente">
+<rect x="46.5" y="498.5" width="88.01" height="27" rx="14" fill="#EBEEF3" stroke="#D7DDE8" stroke-width="1"/>
+<text x="56" y="516.9" font-size="14" fill="#4B5563" font-weight="600">Pendiente</text>
+</g>
+</g>
+<line x1="32" y1="536" x2="343" y2="536" stroke="#D7DDE8" stroke-width="1"/>
+<g id="fila-7" data-name="Fila: Caminar 30 min" data-interactive="link" data-orden-foco="9">
+<rect x="32" y="536" width="311" height="101" fill="none" data-hit="1"/>
+<rect x="32" y="546" width="4" height="81" rx="2" fill="#A21CAF"/>
+<text x="46" y="563.6" font-size="16" fill="#1A1D21" font-weight="600">Caminar 30 min</text>
+<text x="46" y="585.4" font-size="14" fill="#4B5563">Caminar a diario · 18:00–18:30</text>
+<g id="insignia-8" data-name="Insignia: Pendiente">
+<rect x="46.5" y="599.5" width="88.01" height="27" rx="14" fill="#EBEEF3" stroke="#D7DDE8" stroke-width="1"/>
+<text x="56" y="617.9" font-size="14" fill="#4B5563" font-weight="600">Pendiente</text>
+</g>
+</g>
+</g>
+<g id="tarjeta-9" data-name="Tarjeta">
+<rect x="16" y="670" width="343" height="234" rx="12" fill="#1A1D21" fill-opacity="0.08"/><rect x="16.5" y="669.5" width="342" height="233" rx="12" fill="#FFFFFF" stroke="#D7DDE8" stroke-width="1"/>
+<text x="32" y="702.3" font-size="18" fill="#1A1D21" font-weight="600">Sin conexión no puedes</text>
+<circle cx="38" cy="731" r="3" fill="#1A1D21"/>
+<text x="52" y="736.6" font-size="16" fill="#1A1D21">cargar evidencia</text>
+<circle cx="38" cy="755" r="3" fill="#1A1D21"/>
+<text x="52" y="760.6" font-size="16" fill="#1A1D21">iniciar una submeta</text>
+<circle cx="38" cy="779" r="3" fill="#1A1D21"/>
+<text x="52" y="784.6" font-size="16" fill="#1A1D21">guardar una sesión de Pomodoro</text>
+<text x="32" y="818.4" font-size="14" fill="#4B5563">El temporizador de Pomodoro sigue</text>
+<text x="32" y="839.4" font-size="14" fill="#4B5563">funcionando porque vive en tu dispositivo.</text>
+<text x="32" y="860.4" font-size="14" fill="#4B5563">No hay cola de escritura sin</text>
+<text x="32" y="881.4" font-size="14" fill="#4B5563">conexión.</text>
+</g>
+<g id="boton-10" data-name="Botón: Reintentar" data-interactive="button" data-orden-foco="10">
+<rect x="16" y="919" width="343" height="44" fill="none" data-hit="1"/>
+<rect x="16" y="919" width="343" height="44" rx="8" fill="#4338CA"/>
+<text x="187.5" y="946.6" font-size="16" fill="#FFFFFF" font-weight="600" text-anchor="middle">Reintentar</text>
+</g>
+</g>
+</svg>

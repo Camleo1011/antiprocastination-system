@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="375" height="862" viewBox="0 0 375 862" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" data-pan="PAN-013" data-dispositivo="movil" data-tema="claro" aria-labelledby="t d">
+<title id="t">PAN-013 — Crear meta: tipo de desglose (móvil 375 px, tema claro)</title>
+<desc id="d">Mockup de alta fidelidad de Crear meta: tipo de desglose. Ruta /metas/nueva/desglose; rol cliente; CU CU-005, CU-006, CU-032; EP EP-014. Estado mostrado: paso 4 de 6: elegir entre desglose por IA y manual; la meta requiere evidencia y el consentimiento de IA ya fue aceptado. Colores, tipografía (Inter), espaciado y radios del sistema de diseño (tema claro); texto editable. Una meta de 1 día salta este paso (RF-META-031). Sin consentimiento de IA la opción IA abre PAN-028 y, si se rechaza, queda el desglose manual. Regiones ARIA: banner, navigation, main. Orden de foco con Tab (coincide con el orden visual y del DOM): Enlace de salto «Saltar al contenido principal» (visible solo al recibir el foco). 1 Menú de cuenta; 2 Navegación: Inicio; 3 Navegación: Agenda; 4 Navegación: Metas; 5 Navegación: Ranking; 6 Navegación: Perfil; 7 Botón: Elegir desglose por IA; 8 Botón: Elegir desglose manual; 9 Botón: ‹ Atrás.</desc>
+<defs><pattern id="rayas-gracia" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#E3E8EF"/><rect width="3" height="6" fill="#8A4B00"/></pattern></defs>
+<rect id="fondo-pagina" width="375" height="862" fill="#F5F7FA"/>
+<g id="barra-superior" data-name="Barra superior" role="banner">
+<rect x="0" y="0" width="375" height="56" fill="#FFFFFF"/>
+<line x1="0" y1="56" x2="375" y2="56" stroke="#D7DDE8" stroke-width="1"/>
+<g id="logo-9" data-name="Logotipo FocusStrike" data-exempt="logo">
+<rect x="16" y="12" width="32" height="32" rx="8" fill="#4338CA"/>
+<g transform="translate(22.4 18.4) scale(0.8)" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="58" y="34.3" font-size="18" fill="#1A1D21" font-weight="700">FocusStrike</text>
+</g>
+<g id="avatar-10" data-name="Menú de cuenta" data-interactive="button" data-orden-foco="1">
+<rect x="319" y="6" width="44" height="44" fill="none" data-hit="1"/>
+<circle cx="341" cy="28" r="18" fill="#4338CA"/>
+<text x="341" y="33.6" font-size="16" fill="#FFFFFF" font-weight="700" text-anchor="middle">A</text>
+</g>
+</g>
+<g id="navegacion-inferior" data-name="Navegación inferior" role="navigation">
+<rect x="0" y="798" width="375" height="64" fill="#FFFFFF"/>
+<line x1="0" y1="798" x2="375" y2="798" stroke="#D7DDE8" stroke-width="1"/>
+<g id="nav-11" data-name="Navegación: Inicio" data-interactive="link" data-orden-foco="2">
+<rect x="0" y="798" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(25.5 806) scale(1)" fill="none" stroke="#4B5563" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7"/><path d="M6 10v10h12V10"/></g>
+<text x="37.5" y="848" font-size="14" fill="#4B5563" font-weight="600" text-anchor="middle">Inicio</text>
+</g>
+<g id="nav-12" data-name="Navegación: Agenda" data-interactive="link" data-orden-foco="3">
+<rect x="75" y="798" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(100.5 806) scale(1)" fill="none" stroke="#4B5563" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v14H4z"/><path d="M4 10h16M8 3v4M16 3v4"/></g>
+<text x="112.5" y="848" font-size="14" fill="#4B5563" font-weight="600" text-anchor="middle">Agenda</text>
+</g>
+<g id="nav-13" data-name="Navegación: Metas" data-interactive="link" data-orden-foco="4" aria-current="page">
+<rect x="150" y="798" width="75" height="64" fill="none" data-hit="1"/>
+<rect x="156" y="802" width="63" height="56" rx="8" fill="#EEF0FF"/>
+<g transform="translate(175.5 806) scale(1)" fill="none" stroke="#3730A3" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="187.5" y="848" font-size="14" fill="#3730A3" font-weight="700" text-anchor="middle">Metas</text>
+</g>
+<g id="nav-14" data-name="Navegación: Ranking" data-interactive="link" data-orden-foco="5">
+<rect x="225" y="798" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(250.5 806) scale(1)" fill="none" stroke="#4B5563" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v6a4 4 0 01-8 0z"/><path d="M8 6H4v2a3 3 0 003 3M16 6h4v2a3 3 0 01-3 3"/><path d="M12 14v4M8 20h8"/></g>
+<text x="262.5" y="848" font-size="14" fill="#4B5563" font-weight="600" text-anchor="middle">Ranking</text>
+</g>
+<g id="nav-15" data-name="Navegación: Perfil" data-interactive="link" data-orden-foco="6">
+<rect x="300" y="798" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(325.5 806) scale(1)" fill="none" stroke="#4B5563" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4a4 4 0 100 8 4 4 0 000-8z"/><path d="M4.5 20a7.5 7.5 0 0115 0"/></g>
+<text x="337.5" y="848" font-size="14" fill="#4B5563" font-weight="600" text-anchor="middle">Perfil</text>
+</g>
+</g>
+<g id="contenido-principal" data-name="Contenido principal (main)" role="main">
+<text x="16" y="99.4" font-size="24" fill="#1A1D21" font-weight="600">Nueva meta</text>
+<g id="pasos-1" data-name="Pasos del asistente: paso 4 de 6" role="progressbar">
+<text x="16" y="131.6" font-size="16" fill="#1A1D21" font-weight="600">Paso 4 de 6: Desglose</text>
+<rect x="16" y="144" width="53.83" height="6" rx="3" fill="#4338CA"/>
+<rect x="73.83" y="144" width="53.83" height="6" rx="3" fill="#4338CA"/>
+<rect x="131.67" y="144" width="53.83" height="6" rx="3" fill="#4338CA"/>
+<rect x="189.5" y="144" width="53.83" height="6" rx="3" fill="#4338CA"/>
+<rect x="247.33" y="144" width="53.83" height="6" rx="3" fill="#E3E8EF"/>
+<rect x="305.17" y="144" width="53.83" height="6" rx="3" fill="#E3E8EF"/>
+</g>
+<text x="16" y="181.4" font-size="14" fill="#4B5563">Preparar examen final · 2 días · 26 h</text>
+<g id="tarjeta-2" data-name="Tarjeta">
+<rect x="16" y="204" width="343" height="264" rx="12" fill="#1A1D21" fill-opacity="0.08"/><rect x="16.5" y="203.5" width="342" height="263" rx="12" fill="#FFFFFF" stroke="#D7DDE8" stroke-width="1"/>
+<text x="32" y="236.3" font-size="18" fill="#1A1D21" font-weight="600">Desglose por IA</text>
+<g id="insignia-3" data-name="Insignia: Usa un servicio externo">
+<rect x="32" y="253" width="204.65" height="28" rx="14" fill="#EEF0FF"/>
+<g transform="translate(42 259) scale(0.67)" fill="none" stroke="#3730A3" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></g>
+<text x="64" y="271.9" font-size="14" fill="#3730A3" font-weight="600">Usa un servicio externo</text>
+</g>
+<text x="32" y="310.6" font-size="16" fill="#1A1D21">Rápido: la IA reparte las 26 h entre las 2</text>
+<text x="32" y="334.6" font-size="16" fill="#1A1D21">fechas.</text>
+<text x="32" y="368.4" font-size="14" fill="#4B5563">Puede tardar hasta 2 minutos. Mantén esta</text>
+<text x="32" y="389.4" font-size="14" fill="#4B5563">pantalla abierta.</text>
+<g id="boton-4" data-name="Botón: Elegir desglose por IA" data-interactive="button" data-orden-foco="7">
+<rect x="32" y="407" width="311" height="44" fill="none" data-hit="1"/>
+<rect x="32" y="407" width="311" height="44" rx="8" fill="#4338CA"/>
+<text x="187.5" y="434.6" font-size="16" fill="#FFFFFF" font-weight="600" text-anchor="middle">Elegir desglose por IA</text>
+</g>
+</g>
+<g id="tarjeta-5" data-name="Tarjeta">
+<rect x="16" y="484" width="343" height="243" rx="12" fill="#1A1D21" fill-opacity="0.08"/><rect x="16.5" y="483.5" width="342" height="242" rx="12" fill="#FFFFFF" stroke="#D7DDE8" stroke-width="1"/>
+<text x="32" y="516.3" font-size="18" fill="#1A1D21" font-weight="600">Desglose manual</text>
+<g id="insignia-6" data-name="Insignia: No usa IA">
+<rect x="32.5" y="533.5" width="107.48" height="27" rx="14" fill="#EBEEF3" stroke="#D7DDE8" stroke-width="1"/>
+<g transform="translate(42 539) scale(0.67)" fill="none" stroke="#4B5563" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4a4 4 0 100 8 4 4 0 000-8z"/><path d="M4.5 20a7.5 7.5 0 0115 0"/></g>
+<text x="64" y="551.9" font-size="14" fill="#4B5563" font-weight="600">No usa IA</text>
+</g>
+<text x="32" y="590.6" font-size="16" fill="#1A1D21">Tú defines el nombre, la hora y la</text>
+<text x="32" y="614.6" font-size="16" fill="#1A1D21">duración de cada submeta.</text>
+<text x="32" y="648.4" font-size="14" fill="#4B5563">Siempre disponible, también si la IA falla.</text>
+<g id="boton-7" data-name="Botón: Elegir desglose manual" data-interactive="button" data-orden-foco="8">
+<rect x="32" y="666" width="311" height="44" fill="none" data-hit="1"/>
+<rect x="33" y="667" width="309" height="42" rx="8" fill="#FFFFFF" stroke="#4338CA" stroke-width="2"/>
+<text x="187.5" y="693.6" font-size="16" fill="#4338CA" font-weight="600" text-anchor="middle">Elegir desglose manual</text>
+</g>
+</g>
+<g id="boton-8" data-name="Botón: ‹ Atrás" data-interactive="link" data-orden-foco="9">
+<rect x="16" y="730" width="96.65" height="44" fill="none" data-hit="1"/>
+<text x="16" y="757.6" font-size="16" fill="#4338CA" font-weight="600">‹ Atrás</text>
+<line x1="16" y1="760.6" x2="70.38" y2="760.6" stroke="#4338CA" stroke-width="1"/>
+</g>
+</g>
+</svg>

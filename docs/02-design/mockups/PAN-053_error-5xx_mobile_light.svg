@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="375" height="812" viewBox="0 0 375 812" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" data-pan="PAN-053" data-dispositivo="movil" data-tema="claro" aria-labelledby="t d">
+<title id="t">PAN-053 — Error 5xx: fallo del servidor o servicio no disponible (móvil 375 px, tema claro)</title>
+<desc id="d">Mockup de alta fidelidad de Error 5xx: fallo del servidor o servicio no disponible. Ruta (estado en la página); rol todos; CU CU-006, CU-013, CU-014; EP EP-001, EP-002. Estado mostrado: 503 con Retry-After de 30 s: reintento automático y manual. Colores, tipografía (Inter), espaciado y radios del sistema de diseño (tema claro); texto editable. Nunca se muestran trazas ni detalles internos; la referencia sirve para soporte (RNF-004). 502/504 de la IA se tratan en cada pantalla. Regiones ARIA: banner, navigation, main. Orden de foco con Tab (coincide con el orden visual y del DOM): Enlace de salto «Saltar al contenido principal» (visible solo al recibir el foco). 1 Menú de cuenta; 2 Navegación: Inicio; 3 Navegación: Agenda; 4 Navegación: Metas; 5 Navegación: Ranking; 6 Navegación: Perfil; 7 Botón: Reintentar; 8 Botón: Comprobar estado.</desc>
+<defs><pattern id="rayas-gracia" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#E3E8EF"/><rect width="3" height="6" fill="#8A4B00"/></pattern></defs>
+<rect id="fondo-pagina" width="375" height="812" fill="#F5F7FA"/>
+<g id="barra-superior" data-name="Barra superior" role="banner">
+<rect x="0" y="0" width="375" height="56" fill="#FFFFFF"/>
+<line x1="0" y1="56" x2="375" y2="56" stroke="#D7DDE8" stroke-width="1"/>
+<g id="logo-5" data-name="Logotipo FocusStrike" data-exempt="logo">
+<rect x="16" y="12" width="32" height="32" rx="8" fill="#4338CA"/>
+<g transform="translate(22.4 18.4) scale(0.8)" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="58" y="34.3" font-size="18" fill="#1A1D21" font-weight="700">FocusStrike</text>
+</g>
+<g id="avatar-6" data-name="Menú de cuenta" data-interactive="button" data-orden-foco="1">
+<rect x="319" y="6" width="44" height="44" fill="none" data-hit="1"/>
+<circle cx="341" cy="28" r="18" fill="#4338CA"/>
+<text x="341" y="33.6" font-size="16" fill="#FFFFFF" font-weight="700" text-anchor="middle">A</text>
+</g>
+</g>
+<g id="navegacion-inferior" data-name="Navegación inferior" role="navigation">
+<rect x="0" y="748" width="375" height="64" fill="#FFFFFF"/>
+<line x1="0" y1="748" x2="375" y2="748" stroke="#D7DDE8" stroke-width="1"/>
+<g id="nav-7" data-name="Navegación: Inicio" data-interactive="link" data-orden-foco="2">
+<rect x="0" y="748" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(25.5 756) scale(1)" fill="none" stroke="#4B5563" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7"/><path d="M6 10v10h12V10"/></g>
+<text x="37.5" y="798" font-size="14" fill="#4B5563" font-weight="600" text-anchor="middle">Inicio</text>
+</g>
+<g id="nav-8" data-name="Navegación: Agenda" data-interactive="link" data-orden-foco="3">
+<rect x="75" y="748" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(100.5 756) scale(1)" fill="none" stroke="#4B5563" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v14H4z"/><path d="M4 10h16M8 3v4M16 3v4"/></g>
+<text x="112.5" y="798" font-size="14" fill="#4B5563" font-weight="600" text-anchor="middle">Agenda</text>
+</g>
+<g id="nav-9" data-name="Navegación: Metas" data-interactive="link" data-orden-foco="4">
+<rect x="150" y="748" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(175.5 756) scale(1)" fill="none" stroke="#4B5563" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="187.5" y="798" font-size="14" fill="#4B5563" font-weight="600" text-anchor="middle">Metas</text>
+</g>
+<g id="nav-10" data-name="Navegación: Ranking" data-interactive="link" data-orden-foco="5">
+<rect x="225" y="748" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(250.5 756) scale(1)" fill="none" stroke="#4B5563" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v6a4 4 0 01-8 0z"/><path d="M8 6H4v2a3 3 0 003 3M16 6h4v2a3 3 0 01-3 3"/><path d="M12 14v4M8 20h8"/></g>
+<text x="262.5" y="798" font-size="14" fill="#4B5563" font-weight="600" text-anchor="middle">Ranking</text>
+</g>
+<g id="nav-11" data-name="Navegación: Perfil" data-interactive="link" data-orden-foco="6">
+<rect x="300" y="748" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(325.5 756) scale(1)" fill="none" stroke="#4B5563" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4a4 4 0 100 8 4 4 0 000-8z"/><path d="M4.5 20a7.5 7.5 0 0115 0"/></g>
+<text x="337.5" y="798" font-size="14" fill="#4B5563" font-weight="600" text-anchor="middle">Perfil</text>
+</g>
+</g>
+<g id="contenido-principal" data-name="Contenido principal (main)" role="main">
+<circle cx="187.5" cy="104" r="28" fill="#EEF0FF"/>
+<g transform="translate(173.5 90) scale(1.17)" fill="none" stroke="#3730A3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5L2.8 19.5h18.4z"/><path d="M12 10v4.5"/><path d="M12 17.2v.1"/></g>
+<text x="187.5" y="179.4" font-size="24" fill="#1A1D21" font-weight="600" text-anchor="middle">El servicio no está</text>
+<text x="187.5" y="209.4" font-size="24" fill="#1A1D21" font-weight="600" text-anchor="middle">disponible</text>
+<text x="187.5" y="239.4" font-size="14" fill="#4B5563" text-anchor="middle">No es tu culpa y no perdiste lo que escribiste.</text>
+<text x="187.5" y="260.4" font-size="14" fill="#4B5563" text-anchor="middle">Puedes volver a intentarlo en unos segundos (se</text>
+<text x="187.5" y="281.4" font-size="14" fill="#4B5563" text-anchor="middle">reintenta solo en 30 s si es un 503).</text>
+<g id="insignia-1" data-name="Insignia: 503 SERVICIO_NO_DISPONIBLE">
+<rect x="54.22" y="303.5" width="266.57" height="27" rx="14" fill="#EBEEF3" stroke="#D7DDE8" stroke-width="1"/>
+<g transform="translate(63.72 309) scale(0.67)" fill="none" stroke="#4B5563" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 11v5.5"/><path d="M12 7.6v.1"/></g>
+<text x="85.72" y="321.9" font-size="14" fill="#4B5563" font-weight="600">503 SERVICIO_NO_DISPONIBLE</text>
+</g>
+<g id="alerta-2" data-name="Alerta: Si falla la IA, arma tu desglose manual:" role="status">
+<rect x="16" y="347" width="343" height="87" rx="8" fill="#E6F1FB"/>
+<rect x="16" y="347" width="4" height="87" rx="2" fill="#0B5CAD"/>
+<g transform="translate(32 359) scale(0.83)" fill="none" stroke="#084A8C" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 11v5.5"/><path d="M12 7.6v.1"/></g>
+<text x="64" y="374.4" font-size="14" fill="#1A1D21">Si falla la IA, arma tu desglose manual:</text>
+<text x="64" y="395.4" font-size="14" fill="#1A1D21">las funciones que no dependen de la IA</text>
+<text x="64" y="416.4" font-size="14" fill="#1A1D21">siguen disponibles.</text>
+</g>
+<g id="boton-3" data-name="Botón: Reintentar" data-interactive="button" data-orden-foco="7">
+<rect x="16" y="450" width="343" height="44" fill="none" data-hit="1"/>
+<rect x="16" y="450" width="343" height="44" rx="8" fill="#4338CA"/>
+<text x="187.5" y="477.6" font-size="16" fill="#FFFFFF" font-weight="600" text-anchor="middle">Reintentar</text>
+</g>
+<g id="boton-4" data-name="Botón: Comprobar estado" data-interactive="button" data-orden-foco="8">
+<rect x="16" y="502" width="343" height="44" fill="none" data-hit="1"/>
+<rect x="17" y="503" width="341" height="42" rx="8" fill="#FFFFFF" stroke="#4338CA" stroke-width="2"/>
+<text x="187.5" y="529.6" font-size="16" fill="#4338CA" font-weight="600" text-anchor="middle">Comprobar estado</text>
+</g>
+</g>
+</svg>

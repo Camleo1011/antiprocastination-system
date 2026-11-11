@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="375" height="983" viewBox="0 0 375 983" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" data-pan="PAN-051" data-dispositivo="movil" data-tema="claro" aria-labelledby="t d">
+<title id="t">PAN-051 — Error 422: errores de validación (patrón) (móvil 375 px, tema claro)</title>
+<desc id="d">Mockup de alta fidelidad de Error 422: errores de validación (patrón). Ruta (patrón de formularios); rol todos; CU CU-001, CU-005, CU-032, CU-019; EP EP-003, EP-023, EP-028, EP-044. Estado mostrado: patrón 422: resumen con role=alert que recibe el foco, enlaces a cada campo y error en texto junto a cada campo con borde y ícono. Colores, tipografía (Inter), espaciado y radios del sistema de diseño (tema claro); texto editable. El error nunca se comunica solo con color; lo escrito se conserva; aria-invalid y aria-describedby por campo. Ejemplo del paso 1 (Datos); el mismo patrón sirve en los demás pasos, por ejemplo DESGLOSE_SUMA_INVALIDA en el paso 5. Cubre VALIDACION_FALLIDA, DESGLOSE_SUMA_INVALIDA, CAPACIDAD_HORARIO_INSUFICIENTE y similares. Regiones ARIA: banner, navigation, main. Orden de foco con Tab (coincide con el orden visual y del DOM): Enlace de salto «Saltar al contenido principal» (visible solo al recibir el foco). 1 Menú de cuenta; 2 Navegación: Inicio; 3 Navegación: Agenda; 4 Navegación: Metas; 5 Navegación: Ranking; 6 Navegación: Perfil; 7 Campo: Nombre de la meta; 8 Campo: Tiempo total (horas); 9 Campo: Hora de inicio diaria; 10 Campo: Hora de fin diaria; 11 Botón: Cancelar; 12 Botón: Continuar.</desc>
+<defs><pattern id="rayas-gracia" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#E3E8EF"/><rect width="3" height="6" fill="#8A4B00"/></pattern></defs>
+<rect id="fondo-pagina" width="375" height="983" fill="#F5F7FA"/>
+<g id="barra-superior" data-name="Barra superior" role="banner">
+<rect x="0" y="0" width="375" height="56" fill="#FFFFFF"/>
+<line x1="0" y1="56" x2="375" y2="56" stroke="#D7DDE8" stroke-width="1"/>
+<g id="logo-14" data-name="Logotipo FocusStrike" data-exempt="logo">
+<rect x="16" y="12" width="32" height="32" rx="8" fill="#4338CA"/>
+<g transform="translate(22.4 18.4) scale(0.8)" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="58" y="34.3" font-size="18" fill="#1A1D21" font-weight="700">FocusStrike</text>
+</g>
+<g id="avatar-15" data-name="Menú de cuenta" data-interactive="button" data-orden-foco="1">
+<rect x="319" y="6" width="44" height="44" fill="none" data-hit="1"/>
+<circle cx="341" cy="28" r="18" fill="#4338CA"/>
+<text x="341" y="33.6" font-size="16" fill="#FFFFFF" font-weight="700" text-anchor="middle">A</text>
+</g>
+</g>
+<g id="navegacion-inferior" data-name="Navegación inferior" role="navigation">
+<rect x="0" y="919" width="375" height="64" fill="#FFFFFF"/>
+<line x1="0" y1="919" x2="375" y2="919" stroke="#D7DDE8" stroke-width="1"/>
+<g id="nav-16" data-name="Navegación: Inicio" data-interactive="link" data-orden-foco="2">
+<rect x="0" y="919" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(25.5 927) scale(1)" fill="none" stroke="#4B5563" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7"/><path d="M6 10v10h12V10"/></g>
+<text x="37.5" y="969" font-size="14" fill="#4B5563" font-weight="600" text-anchor="middle">Inicio</text>
+</g>
+<g id="nav-17" data-name="Navegación: Agenda" data-interactive="link" data-orden-foco="3">
+<rect x="75" y="919" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(100.5 927) scale(1)" fill="none" stroke="#4B5563" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v14H4z"/><path d="M4 10h16M8 3v4M16 3v4"/></g>
+<text x="112.5" y="969" font-size="14" fill="#4B5563" font-weight="600" text-anchor="middle">Agenda</text>
+</g>
+<g id="nav-18" data-name="Navegación: Metas" data-interactive="link" data-orden-foco="4" aria-current="page">
+<rect x="150" y="919" width="75" height="64" fill="none" data-hit="1"/>
+<rect x="156" y="923" width="63" height="56" rx="8" fill="#EEF0FF"/>
+<g transform="translate(175.5 927) scale(1)" fill="none" stroke="#3730A3" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="187.5" y="969" font-size="14" fill="#3730A3" font-weight="700" text-anchor="middle">Metas</text>
+</g>
+<g id="nav-19" data-name="Navegación: Ranking" data-interactive="link" data-orden-foco="5">
+<rect x="225" y="919" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(250.5 927) scale(1)" fill="none" stroke="#4B5563" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v6a4 4 0 01-8 0z"/><path d="M8 6H4v2a3 3 0 003 3M16 6h4v2a3 3 0 01-3 3"/><path d="M12 14v4M8 20h8"/></g>
+<text x="262.5" y="969" font-size="14" fill="#4B5563" font-weight="600" text-anchor="middle">Ranking</text>
+</g>
+<g id="nav-20" data-name="Navegación: Perfil" data-interactive="link" data-orden-foco="6">
+<rect x="300" y="919" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(325.5 927) scale(1)" fill="none" stroke="#4B5563" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4a4 4 0 100 8 4 4 0 000-8z"/><path d="M4.5 20a7.5 7.5 0 0115 0"/></g>
+<text x="337.5" y="969" font-size="14" fill="#4B5563" font-weight="600" text-anchor="middle">Perfil</text>
+</g>
+</g>
+<g id="contenido-principal" data-name="Contenido principal (main)" role="main">
+<text x="16" y="99.4" font-size="24" fill="#1A1D21" font-weight="600">Nueva meta</text>
+<g id="pasos-1" data-name="Pasos del asistente: paso 1 de 6" role="progressbar">
+<text x="16" y="131.6" font-size="16" fill="#1A1D21" font-weight="600">Paso 1 de 6: Datos</text>
+<rect x="16" y="144" width="53.83" height="6" rx="3" fill="#4338CA"/>
+<rect x="73.83" y="144" width="53.83" height="6" rx="3" fill="#E3E8EF"/>
+<rect x="131.67" y="144" width="53.83" height="6" rx="3" fill="#E3E8EF"/>
+<rect x="189.5" y="144" width="53.83" height="6" rx="3" fill="#E3E8EF"/>
+<rect x="247.33" y="144" width="53.83" height="6" rx="3" fill="#E3E8EF"/>
+<rect x="305.17" y="144" width="53.83" height="6" rx="3" fill="#E3E8EF"/>
+</g>
+<g id="alerta-2" data-name="Alerta: No se pudo continuar" role="alert">
+<rect x="16" y="166" width="343" height="90" rx="8" fill="#FDECEA"/>
+<rect x="16" y="166" width="4" height="90" rx="2" fill="#B3261E"/>
+<g transform="translate(32 178) scale(0.83)" fill="none" stroke="#8E1D17" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M9 9l6 6M15 9l-6 6"/></g>
+<text x="64" y="195.6" font-size="16" fill="#8E1D17" font-weight="600">No se pudo continuar</text>
+<text x="64" y="217.4" font-size="14" fill="#1A1D21">Revisa 3 campos: Nombre, Hora de fin y</text>
+<text x="64" y="238.4" font-size="14" fill="#1A1D21">Tiempo total.</text>
+</g>
+<circle cx="22" cy="284" r="3" fill="#1A1D21"/>
+<text x="36" y="289.6" font-size="16" fill="#1A1D21">Nombre: escribe un nombre</text>
+<circle cx="22" cy="308" r="3" fill="#1A1D21"/>
+<text x="36" y="313.6" font-size="16" fill="#1A1D21">Hora de fin: debe ser posterior al inicio</text>
+<circle cx="22" cy="332" r="3" fill="#1A1D21"/>
+<text x="36" y="337.6" font-size="16" fill="#1A1D21">Tiempo total: escribe un número entero de</text>
+<text x="36" y="361.6" font-size="16" fill="#1A1D21">1 o más</text>
+<g id="region-3" data-name="Datos de la meta" role="form">
+<g id="campo-4" data-name="Campo: Nombre de la meta">
+<text x="16" y="399.4" font-size="14" fill="#1A1D21" font-weight="600">Nombre de la meta</text>
+<g id="entrada-5" data-name="Entrada" data-interactive="input" data-orden-foco="7">
+<rect x="16" y="409" width="343" height="44" fill="none" data-hit="1"/>
+<rect x="17" y="410" width="341" height="42" rx="8" fill="#FFFFFF" stroke="#B3261E" stroke-width="2"/>
+<text x="28" y="436.6" font-size="16" fill="#5F6670">Ej.: Aprender cálculo</text>
+</g>
+<g transform="translate(16 459) scale(0.67)" fill="none" stroke="#8E1D17" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M9 9l6 6M15 9l-6 6"/></g>
+<text x="38" y="472.4" font-size="14" fill="#8E1D17" font-weight="500">Escribe un nombre (máximo 150 caracteres)</text>
+</g>
+<g id="campo-6" data-name="Campo: Tiempo total (horas)">
+<text x="16" y="509.4" font-size="14" fill="#1A1D21" font-weight="600">Tiempo total (horas)</text>
+<g id="entrada-7" data-name="Entrada" data-interactive="input" data-orden-foco="8">
+<rect x="16" y="519" width="343" height="44" fill="none" data-hit="1"/>
+<rect x="17" y="520" width="341" height="42" rx="8" fill="#FFFFFF" stroke="#B3261E" stroke-width="2"/>
+<text x="28" y="546.6" font-size="16" fill="#1A1D21">0</text>
+</g>
+<g transform="translate(16 569) scale(0.67)" fill="none" stroke="#8E1D17" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M9 9l6 6M15 9l-6 6"/></g>
+<text x="38" y="582.4" font-size="14" fill="#8E1D17" font-weight="500">Escribe un número entero de 1 o más</text>
+</g>
+<g id="campo-8" data-name="Campo: Hora de inicio diaria">
+<text x="16" y="619.4" font-size="14" fill="#1A1D21" font-weight="600">Hora de inicio diaria</text>
+<g id="entrada-9" data-name="Entrada" data-interactive="input" data-orden-foco="9">
+<rect x="16" y="629" width="343" height="44" fill="none" data-hit="1"/>
+<rect x="17" y="630" width="341" height="42" rx="8" fill="#FFFFFF" stroke="#6B7385" stroke-width="1"/>
+<text x="28" y="656.6" font-size="16" fill="#1A1D21">09:00</text>
+</g>
+</g>
+<g id="campo-10" data-name="Campo: Hora de fin diaria">
+<text x="16" y="704.4" font-size="14" fill="#1A1D21" font-weight="600">Hora de fin diaria</text>
+<g id="entrada-11" data-name="Entrada" data-interactive="input" data-orden-foco="10">
+<rect x="16" y="714" width="343" height="44" fill="none" data-hit="1"/>
+<rect x="17" y="715" width="341" height="42" rx="8" fill="#FFFFFF" stroke="#B3261E" stroke-width="2"/>
+<text x="28" y="741.6" font-size="16" fill="#1A1D21">06:00</text>
+</g>
+<g transform="translate(16 764) scale(0.67)" fill="none" stroke="#8E1D17" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M9 9l6 6M15 9l-6 6"/></g>
+<text x="38" y="777.4" font-size="14" fill="#8E1D17" font-weight="500">La hora de fin debe ser posterior al inicio</text>
+</g>
+</g>
+<g id="boton-12" data-name="Botón: Cancelar" data-interactive="button" data-orden-foco="11">
+<rect x="16" y="799" width="343" height="44" fill="none" data-hit="1"/>
+<rect x="17" y="800" width="341" height="42" rx="8" fill="#FFFFFF" stroke="#4338CA" stroke-width="2"/>
+<text x="187.5" y="826.6" font-size="16" fill="#4338CA" font-weight="600" text-anchor="middle">Cancelar</text>
+</g>
+<g id="boton-13" data-name="Botón: Continuar" data-interactive="button" data-orden-foco="12">
+<rect x="16" y="851" width="343" height="44" fill="none" data-hit="1"/>
+<rect x="16" y="851" width="343" height="44" rx="8" fill="#4338CA"/>
+<text x="187.5" y="878.6" font-size="16" fill="#FFFFFF" font-weight="600" text-anchor="middle">Continuar</text>
+</g>
+</g>
+</svg>

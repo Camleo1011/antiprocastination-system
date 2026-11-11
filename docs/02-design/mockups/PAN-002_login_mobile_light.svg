@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="375" height="812" viewBox="0 0 375 812" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" data-pan="PAN-002" data-dispositivo="movil" data-tema="claro" aria-labelledby="t d">
+<title id="t">PAN-002 — Inicio de sesión (móvil 375 px, tema claro)</title>
+<desc id="d">Mockup de alta fidelidad de Inicio de sesión. Ruta /ingresar; rol visitante; CU CU-002, CU-004; EP EP-004, EP-006. Estado mostrado: tras registrarse: aviso de cuenta creada, formulario vacío. Colores, tipografía (Inter), espaciado y radios del sistema de diseño (tema claro); texto editable. Un solo mensaje para credenciales inválidas (anti-enumeración). Regiones ARIA: banner, main. Orden de foco con Tab (coincide con el orden visual y del DOM): Enlace de salto «Saltar al contenido principal» (visible solo al recibir el foco). 1 Campo: Correo electrónico; 2 Campo: Contraseña; 3 Botón: Ingresar; 4 Botón: ¿Olvidaste tu contraseña?; 5 Botón: Crear cuenta.</desc>
+<defs><pattern id="rayas-gracia" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#E3E8EF"/><rect width="3" height="6" fill="#8A4B00"/></pattern></defs>
+<rect id="fondo-pagina" width="375" height="812" fill="#FFFFFF"/>
+<g id="cabecera" data-name="Cabecera" role="banner">
+<rect x="0" y="0" width="375" height="56" fill="#FFFFFF"/>
+<line x1="0" y1="56" x2="375" y2="56" stroke="#D7DDE8" stroke-width="1"/>
+<g id="logo-9" data-name="Logotipo FocusStrike" data-exempt="logo">
+<rect x="16" y="12" width="32" height="32" rx="8" fill="#4338CA"/>
+<g transform="translate(22.4 18.4) scale(0.8)" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="58" y="34.3" font-size="18" fill="#1A1D21" font-weight="700">FocusStrike</text>
+</g>
+</g>
+<g id="contenido-principal" data-name="Contenido principal (main)" role="main">
+<text x="16" y="99.4" font-size="24" fill="#1A1D21" font-weight="600">Iniciar sesión</text>
+<g id="alerta-1" data-name="Alerta: Cuenta creada. Inicia sesión." role="status">
+<rect x="16" y="114" width="343" height="45" rx="8" fill="#E8F6EE"/>
+<rect x="16" y="114" width="4" height="45" rx="2" fill="#1B7F3B"/>
+<g transform="translate(32 126) scale(0.83)" fill="none" stroke="#0F5132" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M8 12.5l3 3 5-6"/></g>
+<text x="64" y="141.4" font-size="14" fill="#1A1D21">Cuenta creada. Inicia sesión.</text>
+</g>
+<g id="campo-2" data-name="Campo: Correo electrónico">
+<text x="16" y="190.4" font-size="14" fill="#1A1D21" font-weight="600">Correo electrónico</text>
+<g id="entrada-3" data-name="Entrada" data-interactive="input" data-orden-foco="1">
+<rect x="16" y="200" width="343" height="44" fill="none" data-hit="1"/>
+<rect x="17" y="201" width="341" height="42" rx="8" fill="#FFFFFF" stroke="#6B7385" stroke-width="1"/>
+<text x="28" y="227.6" font-size="16" fill="#5F6670">tu@correo.com</text>
+</g>
+</g>
+<g id="campo-4" data-name="Campo: Contraseña">
+<text x="16" y="275.4" font-size="14" fill="#1A1D21" font-weight="600">Contraseña</text>
+<g id="entrada-5" data-name="Entrada" data-interactive="input" data-orden-foco="2">
+<rect x="16" y="285" width="343" height="44" fill="none" data-hit="1"/>
+<rect x="17" y="286" width="341" height="42" rx="8" fill="#FFFFFF" stroke="#6B7385" stroke-width="1"/>
+<text x="347" y="311.9" font-size="14" fill="#4338CA" font-weight="600" text-anchor="end">Mostrar</text>
+</g>
+</g>
+<g id="boton-6" data-name="Botón: Ingresar" data-interactive="button" data-orden-foco="3">
+<rect x="16" y="345" width="343" height="44" fill="none" data-hit="1"/>
+<rect x="16" y="345" width="343" height="44" rx="8" fill="#4338CA"/>
+<text x="187.5" y="372.6" font-size="16" fill="#FFFFFF" font-weight="600" text-anchor="middle">Ingresar</text>
+</g>
+<g id="boton-7" data-name="Botón: ¿Olvidaste tu contraseña?" data-interactive="link" data-orden-foco="4">
+<rect x="16" y="393" width="246.23" height="44" fill="none" data-hit="1"/>
+<text x="16" y="420.6" font-size="16" fill="#4338CA" font-weight="600">¿Olvidaste tu contraseña?</text>
+<line x1="16" y1="423.6" x2="213.98" y2="423.6" stroke="#4338CA" stroke-width="1"/>
+</g>
+<g id="boton-8" data-name="Botón: Crear cuenta" data-interactive="link" data-orden-foco="5">
+<rect x="16" y="441" width="140.74" height="44" fill="none" data-hit="1"/>
+<text x="16" y="468.6" font-size="16" fill="#4338CA" font-weight="600">Crear cuenta</text>
+<line x1="16" y1="471.6" x2="112.71" y2="471.6" stroke="#4338CA" stroke-width="1"/>
+</g>
+</g>
+</svg>

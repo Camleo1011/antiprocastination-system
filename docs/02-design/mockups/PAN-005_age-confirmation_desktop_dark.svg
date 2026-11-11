@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" data-pan="PAN-005" data-dispositivo="desktop" data-tema="oscuro" aria-labelledby="t d">
+<title id="t">PAN-005 — Declaración de mayoría de edad pendiente (escritorio 1280 px, tema oscuro)</title>
+<desc id="d">Mockup de alta fidelidad de Declaración de mayoría de edad pendiente. Ruta /mayoria-de-edad; rol cliente; CU CU-002, CU-019; EP EP-059, EP-006, EP-005. Estado mostrado: 422 MAYORIA_EDAD_REQUERIDA: se intentó continuar sin marcar la casilla. Colores, tipografía (Inter), espaciado y radios del sistema de diseño (tema oscuro); texto editable. Sin barra de navegación: el resto de la app está bloqueada hasta declarar. Solo se guarda el sello de tiempo. Regiones ARIA: banner, main. Orden de foco con Tab (coincide con el orden visual y del DOM): Enlace de salto «Saltar al contenido principal» (visible solo al recibir el foco). 1 Botón: Cerrar sesión; 2 Casilla: Declaro ser mayor de 18 años; 3 Botón: Continuar; 4 Botón: No soy mayor de 18 años: cerrar sesión.</desc>
+<defs><pattern id="rayas-gracia" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#2A323D"/><rect width="3" height="6" fill="#F5B93A"/></pattern></defs>
+<rect id="fondo-pagina" width="1280" height="800" fill="#161A20"/>
+<g id="cabecera" data-name="Cabecera" role="banner">
+<g id="logo-7" data-name="Logotipo FocusStrike" data-exempt="logo">
+<rect x="40" y="16" width="32" height="32" rx="8" fill="#A5B4FC"/>
+<g transform="translate(46.4 22.4) scale(0.8)" fill="none" stroke="#1E1B4B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="82" y="38.3" font-size="18" fill="#F1F3F7" font-weight="700">FocusStrike</text>
+</g>
+<g id="boton-8" data-name="Botón: Cerrar sesión" data-interactive="link" data-orden-foco="1">
+<rect x="1134.68" y="10" width="145.32" height="44" fill="none" data-hit="1"/>
+<text x="1134.68" y="37.6" font-size="16" fill="#A5B4FC" font-weight="600">Cerrar sesión</text>
+<line x1="1134.68" y1="40.6" x2="1235.79" y2="40.6" stroke="#A5B4FC" stroke-width="1"/>
+</g>
+</g>
+<g id="contenido-principal" data-name="Contenido principal (main)" role="main">
+<g id="tarjeta-1" data-name="Tarjeta">
+<rect x="380.5" y="128.5" width="519" height="428" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="412" y="189.5" font-size="30" fill="#F1F3F7" font-weight="700">Antes de continuar</text>
+<g id="alerta-2" data-name="Alerta: Tu cuenta fue creada por un administrado" role="alert">
+<rect x="412" y="206" width="456" height="66" rx="8" fill="#33260A"/>
+<rect x="412" y="206" width="4" height="66" rx="2" fill="#F5B93A"/>
+<g transform="translate(428 218) scale(0.83)" fill="none" stroke="#FCD34D" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5L2.8 19.5h18.4z"/><path d="M12 10v4.5"/><path d="M12 17.2v.1"/></g>
+<text x="460" y="233.4" font-size="14" fill="#F1F3F7">Tu cuenta fue creada por un administrador. Antes de usar</text>
+<text x="460" y="254.4" font-size="14" fill="#F1F3F7">FocusStrike debes declarar que eres mayor de 18 años.</text>
+</g>
+<g id="declaracion-3" data-name="Declaración de mayoría de edad">
+<rect x="413" y="289" width="454" height="127" rx="8" fill="#161A20" stroke="#F87171" stroke-width="2"/>
+<g id="casilla-4" data-name="Casilla: Declaro ser mayor de 18 años" data-interactive="check" data-orden-foco="2">
+<rect x="428" y="296" width="424" height="44" fill="none" data-hit="1"/>
+<rect x="429" y="307" width="22" height="22" rx="4" fill="#1C2128" stroke="#F87171" stroke-width="2"/>
+<text x="464" y="323.6" font-size="16" fill="#F1F3F7">Declaro ser mayor de 18 años</text>
+</g>
+<g transform="translate(428 344) scale(0.67)" fill="none" stroke="#FCA5A5" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M9 9l6 6M15 9l-6 6"/></g>
+<text x="450" y="357.4" font-size="14" fill="#FCA5A5" font-weight="500">Debes declarar que eres mayor de 18 años</text>
+<text x="464" y="378.4" font-size="14" fill="#C3CAD6">Solo guardamos la fecha y hora de tu declaración, nunca tu</text>
+<text x="464" y="399.4" font-size="14" fill="#C3CAD6">fecha de nacimiento.</text>
+</g>
+<g id="boton-5" data-name="Botón: Continuar" data-interactive="button" data-orden-foco="3">
+<rect x="412" y="433" width="115.47" height="44" fill="none" data-hit="1"/>
+<rect x="412" y="433" width="115.47" height="44" rx="8" fill="#A5B4FC"/>
+<text x="469.74" y="460.6" font-size="16" fill="#1E1B4B" font-weight="600" text-anchor="middle">Continuar</text>
+</g>
+<g id="boton-6" data-name="Botón: No soy mayor de 18 años: cerrar sesión" data-interactive="link" data-orden-foco="4">
+<rect x="412" y="481" width="352.23" height="44" fill="none" data-hit="1"/>
+<text x="412" y="508.6" font-size="16" fill="#A5B4FC" font-weight="600">No soy mayor de 18 años: cerrar sesión</text>
+<line x1="412" y1="511.6" x2="711.74" y2="511.6" stroke="#A5B4FC" stroke-width="1"/>
+</g>
+</g>
+</g>
+</svg>

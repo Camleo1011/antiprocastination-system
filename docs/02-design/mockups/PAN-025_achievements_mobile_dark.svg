@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="375" height="1462" viewBox="0 0 375 1462" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" data-pan="PAN-025" data-dispositivo="movil" data-tema="oscuro" aria-labelledby="t d">
+<title id="t">PAN-025 — Logros (móvil 375 px, tema oscuro)</title>
+<desc id="d">Mockup de alta fidelidad de Logros. Ruta /perfil/logros; rol cliente; CU CU-017, CU-026; EP EP-010. Estado mostrado: racha de 5 días y catálogo de 7 logros: 3 obtenidos con fecha y 4 bloqueados con candado, texto y condición. Colores, tipografía (Inter), espaciado y radios del sistema de diseño (tema oscuro); texto editable. Bloqueado = ícono de candado + texto 'Bloqueado' + condición (nunca solo atenuado). Catálogo según BR-020. Regiones ARIA: banner, navigation, main. Orden de foco con Tab (coincide con el orden visual y del DOM): Enlace de salto «Saltar al contenido principal» (visible solo al recibir el foco). 1 Menú de cuenta; 2 Navegación: Inicio; 3 Navegación: Agenda; 4 Navegación: Metas; 5 Navegación: Ranking; 6 Navegación: Perfil.</desc>
+<defs><pattern id="rayas-gracia" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#2A323D"/><rect width="3" height="6" fill="#F5B93A"/></pattern></defs>
+<rect id="fondo-pagina" width="375" height="1462" fill="#161A20"/>
+<g id="barra-superior" data-name="Barra superior" role="banner">
+<rect x="0" y="0" width="375" height="56" fill="#1C2128"/>
+<line x1="0" y1="56" x2="375" y2="56" stroke="#2A323D" stroke-width="1"/>
+<g id="logo-16" data-name="Logotipo FocusStrike" data-exempt="logo">
+<rect x="16" y="12" width="32" height="32" rx="8" fill="#A5B4FC"/>
+<g transform="translate(22.4 18.4) scale(0.8)" fill="none" stroke="#1E1B4B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="58" y="34.3" font-size="18" fill="#F1F3F7" font-weight="700">FocusStrike</text>
+</g>
+<g id="avatar-17" data-name="Menú de cuenta" data-interactive="button" data-orden-foco="1">
+<rect x="319" y="6" width="44" height="44" fill="none" data-hit="1"/>
+<circle cx="341" cy="28" r="18" fill="#A5B4FC"/>
+<text x="341" y="33.6" font-size="16" fill="#1E1B4B" font-weight="700" text-anchor="middle">A</text>
+</g>
+</g>
+<g id="navegacion-inferior" data-name="Navegación inferior" role="navigation">
+<rect x="0" y="1398" width="375" height="64" fill="#1C2128"/>
+<line x1="0" y1="1398" x2="375" y2="1398" stroke="#2A323D" stroke-width="1"/>
+<g id="nav-18" data-name="Navegación: Inicio" data-interactive="link" data-orden-foco="2">
+<rect x="0" y="1398" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(25.5 1406) scale(1)" fill="none" stroke="#C3CAD6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7"/><path d="M6 10v10h12V10"/></g>
+<text x="37.5" y="1448" font-size="14" fill="#C3CAD6" font-weight="600" text-anchor="middle">Inicio</text>
+</g>
+<g id="nav-19" data-name="Navegación: Agenda" data-interactive="link" data-orden-foco="3">
+<rect x="75" y="1398" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(100.5 1406) scale(1)" fill="none" stroke="#C3CAD6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v14H4z"/><path d="M4 10h16M8 3v4M16 3v4"/></g>
+<text x="112.5" y="1448" font-size="14" fill="#C3CAD6" font-weight="600" text-anchor="middle">Agenda</text>
+</g>
+<g id="nav-20" data-name="Navegación: Metas" data-interactive="link" data-orden-foco="4">
+<rect x="150" y="1398" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(175.5 1406) scale(1)" fill="none" stroke="#C3CAD6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="187.5" y="1448" font-size="14" fill="#C3CAD6" font-weight="600" text-anchor="middle">Metas</text>
+</g>
+<g id="nav-21" data-name="Navegación: Ranking" data-interactive="link" data-orden-foco="5">
+<rect x="225" y="1398" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(250.5 1406) scale(1)" fill="none" stroke="#C3CAD6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v6a4 4 0 01-8 0z"/><path d="M8 6H4v2a3 3 0 003 3M16 6h4v2a3 3 0 01-3 3"/><path d="M12 14v4M8 20h8"/></g>
+<text x="262.5" y="1448" font-size="14" fill="#C3CAD6" font-weight="600" text-anchor="middle">Ranking</text>
+</g>
+<g id="nav-22" data-name="Navegación: Perfil" data-interactive="link" data-orden-foco="6" aria-current="page">
+<rect x="300" y="1398" width="75" height="64" fill="none" data-hit="1"/>
+<rect x="306" y="1402" width="63" height="56" rx="8" fill="#23264A"/>
+<g transform="translate(325.5 1406) scale(1)" fill="none" stroke="#C7CDFE" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4a4 4 0 100 8 4 4 0 000-8z"/><path d="M4.5 20a7.5 7.5 0 0115 0"/></g>
+<text x="337.5" y="1448" font-size="14" fill="#C7CDFE" font-weight="700" text-anchor="middle">Perfil</text>
+</g>
+</g>
+<g id="contenido-principal" data-name="Contenido principal (main)" role="main">
+<text x="16" y="99.4" font-size="24" fill="#F1F3F7" font-weight="600">Logros y racha</text>
+<text x="16" y="129.4" font-size="14" fill="#C3CAD6">Los logros no dan puntos ni afectan el ranking.</text>
+<g id="tarjeta-1" data-name="Tarjeta">
+<rect x="16.5" y="151.5" width="342" height="226" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<circle cx="56" cy="191" r="24" fill="#33260A"/>
+<g transform="translate(44 179) scale(1)" fill="none" stroke="#FCD34D" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1 3.5 5 5.5 5 10a5 5 0 01-10 0c0-2 1-3 2-4 0 1.5.8 2.5 1.8 2.5C11 9.5 11 6 12 3z"/></g>
+<text x="96" y="187" font-size="14" fill="#C3CAD6" font-weight="600">Racha actual</text>
+<text x="96" y="213" font-size="24" fill="#F1F3F7" font-weight="700">5 días</text>
+<text x="32" y="242.4" font-size="14" fill="#C3CAD6">Máxima: 5 días · Perfecta: 2 días</text>
+<rect x="32" y="256" width="39.29" height="52" rx="8" fill="#2A323D"/>
+<text x="51.64" y="278" font-size="14" fill="#F1F3F7" font-weight="600" text-anchor="middle">–</text>
+<text x="51.64" y="300" font-size="14" fill="#F1F3F7" font-weight="600" text-anchor="middle">mar</text>
+<rect x="77.29" y="256" width="39.29" height="52" rx="8" fill="#2A323D"/>
+<text x="96.93" y="278" font-size="14" fill="#F1F3F7" font-weight="600" text-anchor="middle">–</text>
+<text x="96.93" y="300" font-size="14" fill="#F1F3F7" font-weight="600" text-anchor="middle">mié</text>
+<rect x="122.57" y="256" width="39.29" height="52" rx="8" fill="#4FBF7B"/>
+<g transform="translate(133.21 262) scale(0.75)" fill="none" stroke="#0F1114" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></g>
+<text x="142.21" y="300" font-size="14" fill="#0F1114" font-weight="700" text-anchor="middle">jue</text>
+<rect x="167.86" y="256" width="39.29" height="52" rx="8" fill="#4FBF7B"/>
+<g transform="translate(178.5 262) scale(0.75)" fill="none" stroke="#0F1114" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></g>
+<text x="187.5" y="300" font-size="14" fill="#0F1114" font-weight="700" text-anchor="middle">vie</text>
+<rect x="213.14" y="256" width="39.29" height="52" rx="8" fill="#4FBF7B"/>
+<g transform="translate(223.79 262) scale(0.75)" fill="none" stroke="#0F1114" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></g>
+<text x="232.79" y="300" font-size="14" fill="#0F1114" font-weight="700" text-anchor="middle">sáb</text>
+<rect x="258.43" y="256" width="39.29" height="52" rx="8" fill="#4FBF7B"/>
+<g transform="translate(269.07 262) scale(0.75)" fill="none" stroke="#0F1114" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></g>
+<text x="278.07" y="300" font-size="14" fill="#0F1114" font-weight="700" text-anchor="middle">dom</text>
+<rect x="303.71" y="256" width="39.29" height="52" rx="8" fill="#4FBF7B"/>
+<g transform="translate(314.36 262) scale(0.75)" fill="none" stroke="#0F1114" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></g>
+<text x="323.36" y="300" font-size="14" fill="#0F1114" font-weight="700" text-anchor="middle">hoy</text>
+<text x="32" y="335.4" font-size="14" fill="#F1F3F7">Te faltan 2 días para el logro «Constante»</text>
+<text x="32" y="356.4" font-size="14" fill="#F1F3F7">(racha de 7 días).</text>
+</g>
+<text x="16" y="411.3" font-size="18" fill="#F1F3F7" font-weight="600">3 de 7 logros obtenidos</text>
+<g id="tarjeta-2" data-name="Tarjeta">
+<rect x="16.5" y="424.5" width="342" height="112" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<circle cx="52" cy="460" r="20" fill="#23264A"/>
+<g transform="translate(40 448) scale(1)" fill="none" stroke="#C7CDFE" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.1 5.9-.8z"/></g>
+<text x="84" y="457.6" font-size="16" fill="#F1F3F7" font-weight="600">Primer paso</text>
+<text x="84" y="479.4" font-size="14" fill="#C3CAD6">Iniciaste tu primera submeta.</text>
+<g id="insignia-3" data-name="Insignia: Obtenido el 20/10/2026">
+<rect x="32" y="493" width="205.24" height="28" rx="14" fill="#12301F"/>
+<g transform="translate(42 499) scale(0.67)" fill="none" stroke="#86D9A4" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M8 12.5l3 3 5-6"/></g>
+<text x="64" y="511.9" font-size="14" fill="#86D9A4" font-weight="600">Obtenido el 20/10/2026</text>
+</g>
+</g>
+<g id="tarjeta-4" data-name="Tarjeta">
+<rect x="16.5" y="553.5" width="342" height="112" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<circle cx="52" cy="589" r="20" fill="#23264A"/>
+<g transform="translate(40 577) scale(1)" fill="none" stroke="#C7CDFE" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.1 5.9-.8z"/></g>
+<text x="84" y="586.6" font-size="16" fill="#F1F3F7" font-weight="600">Mil puntos</text>
+<text x="84" y="608.4" font-size="14" fill="#C3CAD6">Alcanzaste 1.000 puntos acumulados.</text>
+<g id="insignia-5" data-name="Insignia: Obtenido el 30/10/2026">
+<rect x="32" y="622" width="205.24" height="28" rx="14" fill="#12301F"/>
+<g transform="translate(42 628) scale(0.67)" fill="none" stroke="#86D9A4" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M8 12.5l3 3 5-6"/></g>
+<text x="64" y="640.9" font-size="14" fill="#86D9A4" font-weight="600">Obtenido el 30/10/2026</text>
+</g>
+</g>
+<g id="tarjeta-6" data-name="Tarjeta">
+<rect x="16.5" y="682.5" width="342" height="112" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<circle cx="52" cy="718" r="20" fill="#23264A"/>
+<g transform="translate(40 706) scale(1)" fill="none" stroke="#C7CDFE" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.1 5.9-.8z"/></g>
+<text x="84" y="715.6" font-size="16" fill="#F1F3F7" font-weight="600">Segunda oportunidad</text>
+<text x="84" y="737.4" font-size="14" fill="#C3CAD6">Tu segundo envío sumó puntos.</text>
+<g id="insignia-7" data-name="Insignia: Obtenido el 02/11/2026">
+<rect x="32" y="751" width="205.24" height="28" rx="14" fill="#12301F"/>
+<g transform="translate(42 757) scale(0.67)" fill="none" stroke="#86D9A4" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M8 12.5l3 3 5-6"/></g>
+<text x="64" y="769.9" font-size="14" fill="#86D9A4" font-weight="600">Obtenido el 02/11/2026</text>
+</g>
+</g>
+<g id="tarjeta-8" data-name="Tarjeta">
+<rect x="16.5" y="811.5" width="342" height="112" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<circle cx="52" cy="847" r="20" fill="#1C2128"/>
+<g transform="translate(40 835) scale(1)" fill="none" stroke="#C3CAD6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 11h12v9H6z"/><path d="M8.5 11V8a3.5 3.5 0 017 0v3"/></g>
+<text x="84" y="844.6" font-size="16" fill="#F1F3F7" font-weight="600">Constante</text>
+<text x="84" y="866.4" font-size="14" fill="#C3CAD6">Mantén una racha de 7 días.</text>
+<g id="insignia-9" data-name="Insignia: Bloqueado">
+<rect x="32.5" y="880.5" width="112.97" height="27" rx="14" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<g transform="translate(42 886) scale(0.67)" fill="none" stroke="#C3CAD6" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 11h12v9H6z"/><path d="M8.5 11V8a3.5 3.5 0 017 0v3"/></g>
+<text x="64" y="898.9" font-size="14" fill="#C3CAD6" font-weight="600">Bloqueado</text>
+</g>
+</g>
+<g id="tarjeta-10" data-name="Tarjeta">
+<rect x="16.5" y="940.5" width="342" height="112" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<circle cx="52" cy="976" r="20" fill="#1C2128"/>
+<g transform="translate(40 964) scale(1)" fill="none" stroke="#C3CAD6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 11h12v9H6z"/><path d="M8.5 11V8a3.5 3.5 0 017 0v3"/></g>
+<text x="84" y="973.6" font-size="16" fill="#F1F3F7" font-weight="600">Imparable</text>
+<text x="84" y="995.4" font-size="14" fill="#C3CAD6">Mantén una racha de 30 días.</text>
+<g id="insignia-11" data-name="Insignia: Bloqueado">
+<rect x="32.5" y="1009.5" width="112.97" height="27" rx="14" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<g transform="translate(42 1015) scale(0.67)" fill="none" stroke="#C3CAD6" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 11h12v9H6z"/><path d="M8.5 11V8a3.5 3.5 0 017 0v3"/></g>
+<text x="64" y="1027.9" font-size="14" fill="#C3CAD6" font-weight="600">Bloqueado</text>
+</g>
+</g>
+<g id="tarjeta-12" data-name="Tarjeta">
+<rect x="16.5" y="1069.5" width="342" height="133" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<circle cx="52" cy="1105" r="20" fill="#1C2128"/>
+<g transform="translate(40 1093) scale(1)" fill="none" stroke="#C3CAD6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 11h12v9H6z"/><path d="M8.5 11V8a3.5 3.5 0 017 0v3"/></g>
+<text x="84" y="1102.6" font-size="16" fill="#F1F3F7" font-weight="600">Impecable</text>
+<text x="84" y="1124.4" font-size="14" fill="#C3CAD6">Cierra una submeta con Excelente en el</text>
+<text x="84" y="1145.4" font-size="14" fill="#C3CAD6">primer envío del periodo inicial.</text>
+<g id="insignia-13" data-name="Insignia: Bloqueado">
+<rect x="32.5" y="1159.5" width="112.97" height="27" rx="14" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<g transform="translate(42 1165) scale(0.67)" fill="none" stroke="#C3CAD6" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 11h12v9H6z"/><path d="M8.5 11V8a3.5 3.5 0 017 0v3"/></g>
+<text x="64" y="1177.9" font-size="14" fill="#C3CAD6" font-weight="600">Bloqueado</text>
+</g>
+</g>
+<g id="tarjeta-14" data-name="Tarjeta">
+<rect x="16.5" y="1219.5" width="342" height="154" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<circle cx="52" cy="1255" r="20" fill="#1C2128"/>
+<g transform="translate(40 1243) scale(1)" fill="none" stroke="#C3CAD6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 11h12v9H6z"/><path d="M8.5 11V8a3.5 3.5 0 017 0v3"/></g>
+<text x="84" y="1252.6" font-size="16" fill="#F1F3F7" font-weight="600">Meta cumplida</text>
+<text x="84" y="1274.4" font-size="14" fill="#C3CAD6">Finaliza todas las submetas de una</text>
+<text x="84" y="1295.4" font-size="14" fill="#C3CAD6">meta multidía habiendo iniciado cada</text>
+<text x="84" y="1316.4" font-size="14" fill="#C3CAD6">una.</text>
+<g id="insignia-15" data-name="Insignia: Bloqueado">
+<rect x="32.5" y="1330.5" width="112.97" height="27" rx="14" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<g transform="translate(42 1336) scale(0.67)" fill="none" stroke="#C3CAD6" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 11h12v9H6z"/><path d="M8.5 11V8a3.5 3.5 0 017 0v3"/></g>
+<text x="64" y="1348.9" font-size="14" fill="#C3CAD6" font-weight="600">Bloqueado</text>
+</g>
+</g>
+</g>
+</svg>
