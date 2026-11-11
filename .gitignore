@@ -1,0 +1,50 @@
+# ============================================================================
+# FocusStrike — .gitignore de la raíz
+# El frontend tiene además su propio frontend/.gitignore (node_modules, dist...).
+# ============================================================================
+
+# --- Secretos y configuración local (NUNCA versionar valores reales) ---
+.env
+.env.*
+!.env.example
+
+# --- Node (por si se instala algo fuera de frontend/) ---
+node_modules/
+npm-debug.log*
+
+# --- Cobertura de pruebas (genérico) ---
+coverage/
+.coverage
+htmlcov/
+
+# --- Evidencias subidas por usuarios y datos locales (pueden ser personales) ---
+evidence/
+evidences/
+storage/
+
+# --- Copias de seguridad y volcados de base de datos ---
+backups/
+*.dump
+*.sql.gz
+*.sql.bak
+
+# --- Docker: overrides locales ---
+docker-compose.override.yml
+
+# --- Registros ---
+*.log
+logs/
+
+# --- Editores y sistema operativo ---
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# --- Temporales ---
+*.tmp
+*.bak
