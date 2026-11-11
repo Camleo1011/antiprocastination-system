@@ -3,31 +3,21 @@
 # El frontend tiene además su propio frontend/.gitignore (node_modules, dist...).
 # ============================================================================
 
-# --- Secretos y configuración local
+# --- Secretos y configuración local (NUNCA versionar valores reales) ---
 .env
 .env.*
 !.env.example
-
-# --- Python / Django (backend) ---
-__pycache__/
-*.py[cod]
-*.egg-info/
-.venv/
-venv/
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-.coverage
-htmlcov/
-backend/db.sqlite3
-backend/staticfiles/
 
 # --- Node (por si se instala algo fuera de frontend/) ---
 node_modules/
 npm-debug.log*
 
+# --- Cobertura de pruebas (genérico) ---
+coverage/
+.coverage
+htmlcov/
+
 # --- Evidencias subidas por usuarios y datos locales (pueden ser personales) ---
-backend/media/
 evidence/
 evidences/
 storage/
