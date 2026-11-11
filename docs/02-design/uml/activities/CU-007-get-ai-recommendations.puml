@@ -1,0 +1,66 @@
+@startuml CU-007-get-ai-recommendations
+' ==============================================================
+' CONTROL DE VERSIONES
+' Archivo  : CU-007-get-ai-recommendations.puml
+' Versión  : 0.1      Fecha: 2026-11-11      Autor: Equipo FocusStrike
+' Fuente   : docs/01-analysis/SRS.md (SRS 0.1), sección 3.7, CU-007
+' Cambio   : Línea base
+' ==============================================================
+title Actividades — CU-007 Obtener Recomendaciones IA (promedio diario mayor a 12 h)\n(SRS 0.1 · diagrama v0.1)
+|Sistema|
+start
+:Detectar tiempo total entre días destinados mayor a 12 h y menor o igual a 24 h;
+note right: BR-015, RF-META-008
+if (¿El usuario aceptó el servicio externo de IA?) then (no)
+  if (¿La meta requiere evidencia?) then (sí)
+    :Responder HTTP 403 con el aviso; la meta no se guarda (requiere evidencia);
+    note right: Flujo alterno 1b. RF-IA-010, RF-IA-011, BR-035
+    stop
+  else (no)
+    :Responder HTTP 403 con el aviso de consentimiento a la solicitud de recomendaciones; 0 llamadas al LLM;
+    note right: Flujo alterno 1b. RF-IA-011, CP-126. La recomendación es informativa y no impide guardar.
+    :Guardar la meta sin recomendaciones (1 día, o multidía con desglose manual CU-032);
+    stop
+  endif
+else (sí)
+endif
+
+|Motor LLM|
+:Entregar recomendaciones de hábitos saludables, descanso y mejor división del tiempo;
+note right: RF-META-023 en metas multidía
+|Base de datos|
+:Registrar el uso del LLM de la llamada;
+note right: RF-ADM-007
+|Sistema|
+if (¿El LLM respondió tras los reintentos?) then (no)
+  :Informar recomendaciones no disponibles;
+  note right: Flujo alterno 1a. RF-META-030
+  :Permitir guardar la meta de 1 día sin recomendaciones;
+  :En metas multidía seguir RF-META-024 y ofrecer siempre el desglose manual (CU-032);
+  stop
+else (sí)
+endif
+:Presentar las sugerencias al usuario;
+
+|Usuario (cliente)|
+if (¿Acepta, modifica o rechaza?) then (acepta o modifica)
+  |Base de datos|
+  :Persistir la decisión con su fecha-hora;
+  note right: RF-META-009, RF-META-014
+else (rechaza)
+  |Base de datos|
+  :Persistir la decisión como rechazada y conservar los parámetros originales;
+  note right: Flujo alterno 4a
+endif
+
+|Sistema|
+if (¿Meta de 1 día?) then (sí)
+  :Guardar la meta con su submeta única;
+  note right: RF-META-031
+else (no)
+  :Continuar en CU-006 (desglose por IA) o CU-032 (desglose manual);
+  note right: Las recomendaciones de descanso aceptadas se conservan con los consejos (RF-META-023).
+endif
+stop
+
+@enduml

@@ -1,0 +1,368 @@
+@startuml clases_v0_1_aplicacion
+title FocusStrike - Diagrama de clases v0.1 (2/3): controladores, servicios de aplicación y trabajos del worker
+
+' | Versión | Fecha      | Autor              | Cambio     |
+' |---------|------------|--------------------|------------|
+' | 0.1     | 2026-11-11 | Equipo FocusStrike | Línea base |
+'
+' Índice: class-diagram.puml (dominio) | class-diagram-application.puml (este) | class-diagram-infrastructure.puml
+' Capas (ADR-003): api (vistas/serializadores) -> servicios (casos de uso) -> repositorios -> puertos.
+' Cada servicio lista en la línea ".. CU-xxx ..." los casos de uso que implementa; cada controlador lista sus EP.
+' Los servicios dependen de INTERFACES (repositorios y puertos del archivo 3), nunca de adaptadores concretos.
+' Patrones: Application Service (un método por CU), Repository, Strategy/Adapter (puertos), Template Method (Job),
+' Decorator (ResilientLLMProvider, archivo 3). Los controladores llaman directamente al servicio (sin fachada intermedia).
+
+hide empty members
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam classAttributeIconSize 0
+skinparam class {
+  BackgroundColor #FFFFFF
+  BorderColor #333333
+}
+skinparam class<<controlador>> {
+  BackgroundColor #E8F1FB
+}
+skinparam class<<servicio>> {
+  BackgroundColor #E9F7EC
+}
+skinparam class<<tecnico>> {
+  BackgroundColor #E9F7EC
+}
+skinparam class<<job>> {
+  BackgroundColor #FDECEA
+}
+skinparam class<<interfaz>> {
+  BackgroundColor #F5F5F5
+}
+
+package "api (DRF): controladores y DTO - contrato OpenAPI, EP-nnn" {
+  class AuthController <<controlador>> {
+    .. EP-003 EP-004 EP-005 EP-006 EP-007 EP-008 EP-059 ..
+    +register(dto: RegisterDto): 201
+    +login(dto: LoginDto): 200
+    +logout(): 204
+    +session(): 200
+    +declare_adulthood(dto: AdulthoodDto): 200
+    +request_recovery(dto): 202
+    +reset_password(dto): 200
+  }
+  class ProfileController <<controlador>> {
+    .. EP-009 EP-010 EP-011 EP-012 EP-013 EP-014 EP-015 EP-016 EP-017 EP-018 ..
+    +profile() +achievements() +activity_calendar()
+    +preferences() +update_preferences()
+    +ai_consent() +accept_ai_consent()
+    +push_public_key() +subscribe() +unsubscribe(id)
+  }
+  class GoalController <<controlador>> {
+    .. EP-019 EP-020 EP-021 EP-022 EP-023 EP-024 EP-025 EP-026 EP-027 EP-028 ..
+    +home() +recommendations() +suggest_dates()
+    +list() +create() +get(id) +edit(id) +delete(id)
+    +ai_breakdown(id) +manual_breakdown(id)
+  }
+  class SubgoalController <<controlador>> {
+    .. EP-029 EP-030 EP-031 EP-032 EP-033 EP-034 ..
+    +agenda() +list() +get(id) +start(id)
+    +create_pomodoro() +list_pomodoro()
+  }
+  class EvidenceController <<controlador>> {
+    .. EP-035 EP-036 EP-037 EP-038 EP-039 EP-040 EP-041 EP-042 ..
+    +formats() +upload(id_subgoal): 202
+    +list_by_subgoal(id) +get(id) +download(id)
+    +get_evaluation(id) +retry_evaluation(id)
+    +ranking()
+  }
+  class AdminController <<controlador>> {
+    .. EP-043 EP-044 EP-045 EP-046 EP-047 EP-048 EP-049 EP-050 EP-051 ..
+    .. EP-052 EP-053 EP-054 EP-055 EP-056 EP-057 EP-058 ..
+    +list_users() +create_user() +get_user(id) +edit_user(id) +delete_user(id)
+    +change_role(id) +change_access_level(id) +block(id) +unblock(id)
+    +app_metrics() +llm_metrics() +list_evidence() +admin_ranking()
+    +persistent_errors() +admin_subgoal(id) +administrative_close(id)
+  }
+  class HealthController <<controlador>> {
+    .. EP-001 EP-002 ..
+    +liveness(): 200
+    +readiness(): 200|503
+  }
+  class AuthMiddleware <<controlador>> {
+    .. RF-AUT-004 RNF-008 ..
+    +authenticate(request): Principal
+    +check_origin(request): void
+    +assign_request_id(request): str
+  }
+  class AgeDeclarationGuard <<controlador>> {
+    .. RF-AUT-018 RF-AUT-017 ..
+    ' UN solo punto: toda ruta de cliente salvo EP-005, EP-006 y EP-059
+    +enforce(principal: Principal, route): void
+  }
+  class ExceptionHandler <<controlador>> {
+    .. traduce errores de BD y de dominio a HTTP ..
+    +to_response(error: DomainError): ErrorDto
+  }
+}
+
+package "Servicios de aplicación (un método por caso de uso)" {
+  class AuthService <<servicio>> {
+    .. CU-001 CU-002 CU-004 ..
+    +register(cmd: RegisterCmd): Client
+    +login(cmd): LoginResult
+    +logout(principal): void
+    +current_session(principal): SessionView
+    -hash_password(plain): str
+    -verify_or_dummy(email, plain): bool
+  }
+  class AdulthoodDeclarationService <<servicio>> {
+    .. CU-002 ..
+    ' RF-AUT-018: cuentas creadas por un administrador o convertidas
+    .. idempotente; 422 si falta o es false; la cuenta sale de la sesion ..
+    .. Tras declarar, revoca el token actual y emite uno nuevo con el sello (Set-Cookie) ..
+    +declare(principal: Principal, confirms: bool): AdulthoodStatus
+    +is_pending(id_client: int): bool
+  }
+  class PasswordRecoveryService <<servicio>> {
+    .. CU-003 ..
+    +request_code(email): void
+    +reset_password(email, code, new_password): void
+  }
+  class BootstrapService <<servicio>> {
+    .. CU-029 ..
+    +seed_first_super(email, name, plain_password): SeedResult
+  }
+  class TokenService <<servicio>> {
+    .. CU-002 CU-004 ..
+    +issue(user: Account): Token
+    +verify(raw: str): Principal
+    +revoke(jti: str): void
+    +revoke_all(id_user: int): void
+  }
+  class GoalService <<servicio>> {
+    .. CU-005 CU-008a CU-008b CU-022 ..
+    +create_goal(cmd): Goal
+    +list_goals(principal, filters): list
+    +get_goal(principal, id): GoalDetail
+    +edit_goal(principal, id, patch): Goal
+    +delete_goal(principal, id, confirm): void
+  }
+  class BreakdownService <<servicio>> {
+    .. CU-006 CU-032 ..
+    +ai_breakdown(principal, id_goal): GoalDetail
+    +define_manual_breakdown(principal, id_goal, items): GoalDetail
+  }
+  class AiAdvisorService <<servicio>> {
+    .. CU-007 CU-025 ..
+    +recommend(principal, draft): Recommendations
+    +suggest_dates(principal, draft): SuggestedDates
+  }
+  class ConsentService <<servicio>> {
+    .. CU-005 CU-006 CU-007 CU-013 CU-025 ..
+    +get(principal): ConsentView
+    +accept(principal): ConsentView
+    +require(principal): void
+  }
+  class AgendaService <<servicio>> {
+    .. CU-010 CU-011 CU-024 ..
+    +agenda(principal, range): Agenda
+    +list_subgoals(principal, filters): list
+    +subgoal_detail(principal, id): SubgoalDetail
+    +home(principal): HomeView
+  }
+  class SubgoalService <<servicio>> {
+    .. CU-009 CU-016 ..
+    +start_manual(principal, id): Subgoal
+    +start_automatic(id): Subgoal
+    +close_expired(now_utc): int
+    +close_unstarted(id, local_now): bool
+  }
+  class PomodoroService <<servicio>> {
+    .. CU-012 ..
+    +record(principal, cmd): PomodoroSession
+    +list(principal, filters): list
+  }
+  class EvidenceService <<servicio>> {
+    .. CU-013 CU-015 CU-021 CU-023 ..
+    +formats(): FormatCatalog
+    +upload(principal, id_subgoal, file): AcceptedEvidence
+    +list_by_subgoal(principal, id): list
+    +get(principal, id): EvidenceView
+    +open_file(principal, id): FileStream
+    +delete_files_for(paths: list): void
+  }
+  class EvaluationService <<servicio>> {
+    .. CU-014 CU-023 CU-016 ..
+    +get_evaluation(principal, id_evidence): EvaluationView
+    +retry(principal, id_evidence): EvaluationView
+    +process_next(): bool
+    -finish(evaluation, verdict, justification): void
+  }
+  class ScoringService <<servicio>> {
+    .. CU-016 CU-030 ..
+    +provisional_score(id_subgoal): int
+    +administrative_close(admin, id_subgoal, confirm): int
+  }
+  class RankingService <<servicio>> {
+    .. CU-018 CU-021 ..
+    +global_ranking(principal, page): RankingPage
+    +admin_ranking(admin, page): RankingPage
+  }
+  class ProfileService <<servicio>> {
+    .. CU-017 CU-027 CU-031 ..
+    +profile(principal): ProfileView
+    +activity_calendar(principal): Calendar
+    +preferences(principal): Preferences
+    +update_preferences(principal, patch): Preferences
+  }
+  class AchievementService <<servicio>> {
+    .. CU-017 CU-026 ..
+    +list(principal): list
+    +grant(id_user, code): bool
+  }
+  class UserAdminService <<servicio>> {
+    .. CU-019 CU-020 ..
+    +list(admin, filters): Page
+    +create(admin, cmd): Account
+    +edit(admin, id, patch): Account
+    +delete(admin, id, confirm): void
+    .. p_id_actor = actor.id_user (sesion, nunca el DTO); la BD exige super ..
+    +change_role(actor: Principal, id, role, level): Account
+    +change_access_level(actor: Principal, id, level): Account
+    +block(admin, id): void
+    +unblock(admin, id): void
+    -authorize(admin, action, target): void
+  }
+  class AdminReportService <<servicio>> {
+    .. CU-021 CU-030 ..
+    +app_metrics(admin): AppMetrics
+    +llm_metrics(admin, since): LlmMetrics
+    +list_evidence(admin, filters): Page
+    +persistent_errors(admin): list
+    +subgoal_for_review(admin, id): SubgoalDetail
+  }
+  class NotificationService <<servicio>> {
+    .. CU-027 CU-028 ..
+    +public_key(): str
+    +subscribe(principal, sub): PushSubscription
+    +unsubscribe(principal, id): void
+    +notify(id_user, event: NotificationEvent): int
+  }
+  class HealthService <<tecnico>> {
+    .. ADR-013 RNF-004 ..
+    +liveness(): Status
+    +readiness(): Status
+  }
+}
+
+package "worker: planificador y trabajos" {
+  class Scheduler <<job>> {
+    .. ADR-009 ..
+    -jobs: list<Job>
+    +start(): void
+    +stop(): void
+    -run_once(job: Job): JobResult
+  }
+  abstract class Job <<job>> {
+    +id: str
+    +every_seconds: int
+    +run(now_utc: datetime): JobResult
+    +{abstract} execute(now_utc: datetime): JobResult
+  }
+  class CloseExpiredSubgoalsJob <<job>> {
+    .. JOB-01 ..
+  }
+  class CloseUnstartedSubgoalsJob <<job>> {
+    .. JOB-02 ..
+  }
+  class AutoStartSubgoalsJob <<job>> {
+    .. JOB-03 ..
+  }
+  class EvaluationDispatcherJob <<job>> {
+    .. JOB-04 JOB-05 ..
+  }
+  class TimedNotificationsJob <<job>> {
+    .. JOB-06 ..
+  }
+  class PurgeExpiredTokensJob <<job>> {
+    .. JOB-07 ..
+  }
+  class PurgeExpiredCodesJob <<job>> {
+    .. JOB-08 ..
+  }
+  class OrphanFilesCleanupJob <<job>> {
+    .. JOB-09 CU-033 ..
+  }
+  class HeartbeatJob <<job>> {
+    .. JOB-10 ..
+  }
+  Scheduler "1" o-- "*" Job
+  Job <|-- CloseExpiredSubgoalsJob
+  Job <|-- CloseUnstartedSubgoalsJob
+  Job <|-- AutoStartSubgoalsJob
+  Job <|-- EvaluationDispatcherJob
+  Job <|-- TimedNotificationsJob
+  Job <|-- PurgeExpiredTokensJob
+  Job <|-- PurgeExpiredCodesJob
+  Job <|-- OrphanFilesCleanupJob
+  Job <|-- HeartbeatJob
+}
+
+' ---- dependencias controlador -> servicio ----
+AuthController ..> AuthService
+AuthController ..> PasswordRecoveryService
+AuthController ..> AdulthoodDeclarationService
+ProfileController ..> ProfileService
+ProfileController ..> AchievementService
+ProfileController ..> ConsentService
+ProfileController ..> NotificationService
+GoalController ..> GoalService
+GoalController ..> BreakdownService
+GoalController ..> AiAdvisorService
+GoalController ..> AgendaService
+SubgoalController ..> AgendaService
+SubgoalController ..> SubgoalService
+SubgoalController ..> PomodoroService
+EvidenceController ..> EvidenceService
+EvidenceController ..> EvaluationService
+EvidenceController ..> RankingService
+AdminController ..> UserAdminService
+AdminController ..> AdminReportService
+AdminController ..> ScoringService
+AdminController ..> RankingService
+HealthController ..> HealthService
+AuthMiddleware ..> TokenService
+AgeDeclarationGuard ..> AdulthoodDeclarationService : is_pending
+
+' ---- dependencias servicio -> servicio ----
+AuthService ..> TokenService
+AdulthoodDeclarationService ..> TokenService
+BreakdownService ..> ConsentService
+AiAdvisorService ..> ConsentService
+GoalService ..> ConsentService
+GoalService ..> EvidenceService : borra archivos tras commit\n(RF-EVID-017)
+UserAdminService ..> EvidenceService : borra archivos tras commit
+EvaluationService ..> NotificationService : RF-NOT-006
+EvaluationService ..> AchievementService : logros al cerrar
+SubgoalService ..> AchievementService
+SubgoalService ..> ScoringService
+
+' ---- jobs -> servicios ----
+CloseExpiredSubgoalsJob ..> SubgoalService
+CloseUnstartedSubgoalsJob ..> SubgoalService
+AutoStartSubgoalsJob ..> SubgoalService
+EvaluationDispatcherJob ..> EvaluationService
+TimedNotificationsJob ..> NotificationService
+OrphanFilesCleanupJob ..> EvidenceService
+
+note bottom of ConsentService
+  Sin consentimiento registrado no se llama a ningun
+  LLMProvider (RF-IA-011, BR-035): 403 CONSENTIMIENTO_IA_REQUERIDO.
+end note
+note bottom of SubgoalService
+  La app nunca actualiza submeta ni puntaje_acumulado:
+  todo cierre es un solo procedimiento almacenado (RNF-002, ADR-003 regla 4).
+end note
+
+legend bottom
+|= Versión |= Fecha |= Autor |= Cambio |
+| 0.1 | 2026-11-11 | Equipo FocusStrike | Línea base |
+endlegend
+@enduml

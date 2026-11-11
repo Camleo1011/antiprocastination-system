@@ -1,0 +1,35 @@
+@startuml CU-018-view-global-ranking
+' ==============================================================
+' CONTROL DE VERSIONES
+' Archivo  : CU-018-view-global-ranking.puml
+' Versión  : 0.1      Fecha: 2026-11-11      Autor: Equipo FocusStrike
+' Fuente   : docs/01-analysis/SRS.md (SRS 0.1), sección 3.7, CU-018
+' Cambio   : Línea base
+' ==============================================================
+title Actividades — CU-018 Ver Ranking Global\n(SRS 0.1 · diagrama v0.1)
+|Usuario (cliente)|
+start
+:Acceder al ranking desde el perfil o directamente;
+note right: RF-RANK-002. Flujo alterno 1a.
+
+|Sistema|
+|Base de datos|
+:Consultar las cuentas elegibles ordenadas de mayor a menor puntaje;
+note right
+  RF-RANK-001, RF-RANK-005. Solo cuentas con rol cliente no bloqueadas
+  administrativamente (BR-023): una cuenta bloqueada no aparece y reaparece
+  al desbloquearse (flujo alterno 2a); el ranking de administración (CU-021) sí la lista, marcada.
+end note
+|Sistema|
+:Asignar igual posición a los empates y ordenarlos por nombre;
+note right: RF-RANK-003
+:Mostrar solo nombre y puntaje;
+note right: RF-RANK-004. El correo no se expone (BR-023).
+:Mostrar la posición del usuario en su perfil;
+note right: RF-PER-004
+
+|Usuario (cliente)|
+:Ver el ranking global y su posición;
+stop
+
+@enduml

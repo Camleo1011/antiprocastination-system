@@ -1,0 +1,259 @@
+@startuml relational
+title Diagrama Relacional normalizado (3FN) — Focus Strike v0.1 (MariaDB, 17 tablas)
+
+' | Versión | Fecha      | Autor              | Cambio     |
+' |---------|------------|--------------------|------------|
+' | 0.1     | 2026-11-11 | Equipo FocusStrike | Línea base |
+
+' Convenciones: * = NOT NULL · <<PK>> clave primaria · <<FK tabla.columna>> clave foránea · <<UK>> UNIQUE (columnas con el mismo grupo forman una clave compuesta)
+' Relaciones: padre ||--o{ hijo : nombre_fk (ON DELETE); lado padre || = FK NOT NULL, |o = FK anulable; lado hijo o| = FK única, o{ = FK repetible.
+
+hide circle
+skinparam nodesep 30
+skinparam ranksep 50
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam entity {
+  BackgroundColor #FFFFFF
+  BorderColor #333333
+}
+skinparam entity<<tecnica>> {
+  BackgroundColor #EEEEEE
+}
+
+package "Cuentas, sesiones y notificaciones" {
+entity "usuario" as usuario {
+  * id_usuario : INT <<PK>>
+  --
+  * nombre : VARCHAR(100)
+  * correo : VARCHAR(150) <<UK>>
+  * contrasena_hash : VARCHAR(255)
+  * puntaje_acumulado : INT
+  * estado_bloqueo : TINYINT(1)
+  * rol : VARCHAR(20)
+  * intentos_fallidos : INT
+  bloqueado_hasta : DATETIME
+  * fecha_registro : DATETIME
+}
+entity "administrador" as administrador {
+  * id_usuario : INT <<PK>> <<FK usuario.id_usuario>>
+  --
+  * nivel_acceso : VARCHAR(20)
+  * fecha_asignacion : DATETIME
+}
+entity "cliente" as cliente {
+  * id_usuario : INT <<PK>> <<FK usuario.id_usuario>>
+  --
+  * zona_horaria : VARCHAR(64)
+  * notificaciones_push : TINYINT(1)
+  fecha_aceptacion_ia : DATETIME
+  * zona_pendiente_deteccion : TINYINT(1)
+  fecha_confirmacion_mayoria_edad : DATETIME
+}
+entity "token_sesion" as token_sesion {
+  * id_token : INT <<PK>>
+  --
+  * token_hash : VARCHAR(255) <<UK>>
+  * fecha_emision : DATETIME
+  * fecha_expiracion : DATETIME
+  * revocado : TINYINT(1)
+  * id_usuario : INT <<FK usuario.id_usuario>>
+}
+entity "codigo_recuperacion" as codigo_recuperacion {
+  * id_codigo : INT <<PK>>
+  --
+  * codigo_hash : VARCHAR(255) <<UK>>
+  * fecha_generacion : DATETIME
+  * fecha_expiracion : DATETIME
+  * usado : TINYINT(1)
+  * id_usuario : INT <<FK usuario.id_usuario>>
+}
+entity "suscripcion_push" as suscripcion_push {
+  * id_suscripcion : INT <<PK>>
+  --
+  * id_usuario : INT <<FK cliente.id_usuario>> <<UK id_usuario_endpoint>>
+  * endpoint : VARCHAR(512) <<UK id_usuario_endpoint>>
+  * clave_p256dh : VARCHAR(255)
+  * clave_auth : VARCHAR(255)
+  * fecha_creacion : DATETIME
+  * vigente : TINYINT(1)
+}
+entity "cerrojo_sistema" as cerrojo_sistema <<tecnica>> {
+  * clave : VARCHAR(30) <<PK>>
+  --
+}
+}
+
+package "Planificación de metas" {
+entity "meta" as meta {
+  * id_meta : INT <<PK>>
+  --
+  * id_usuario : INT <<FK cliente.id_usuario>>
+  * nombre : VARCHAR(150)
+  descripcion : TEXT
+  * categoria : VARCHAR(30)
+  * tipo : VARCHAR(10)
+  * dias_destinados : INT
+  * tiempo_total : INT
+  * fecha_inicio : DATE
+  * fecha_fin : DATE
+  * horario_inicio : TIME
+  * horario_fin : TIME
+  * requiere_evidencia : TINYINT(1)
+  * modo_inicio : VARCHAR(10)
+  * modo_planificacion : VARCHAR(20)
+  modo_desglose : VARCHAR(10)
+  consejos_ia : TEXT
+  * estado : VARCHAR(20)
+  * fecha_creacion : DATETIME
+}
+entity "submeta" as submeta {
+  * id_submeta : INT <<PK>>
+  --
+  * id_meta : INT <<FK meta.id_meta>> <<UK id_meta_fecha_programada>>
+  * fecha_programada : DATE <<UK id_meta_fecha_programada>>
+  * horario_inicio : TIME
+  * horario_fin : TIME
+  hora_inicio_real : DATETIME
+  hora_fin_real : DATETIME
+  * estado : VARCHAR(20)
+  puntaje_obtenido : INT
+  nombre : VARCHAR(150)
+  descripcion_ia : TEXT
+  * cerrada_por_administrador : TINYINT(1)
+  id_administrador_cierre : INT <<FK administrador.id_usuario>>
+  fecha_cierre_administrativo : DATETIME
+}
+entity "recomendacion_ia" as recomendacion_ia {
+  * id_recomendacion : INT <<PK>>
+  --
+  * id_meta : INT <<FK meta.id_meta>>
+  * sugerencia_habito : TEXT
+  * propuesta_horario : VARCHAR(100)
+  estado_aceptacion : VARCHAR(10)
+  fecha_decision : DATETIME
+}
+entity "sesion_pomodoro" as sesion_pomodoro {
+  * id_sesion : INT <<PK>>
+  --
+  * fecha_hora_inicio : DATETIME
+  * duracion_minutos : INT
+  * estado : VARCHAR(15)
+  * id_usuario : INT <<FK cliente.id_usuario>>
+  id_submeta : INT <<FK submeta.id_submeta>>
+}
+}
+
+package "Evidencias, evaluación e IA" {
+entity "evidencia" as evidencia {
+  * id_evidencia : INT <<PK>>
+  --
+  * id_submeta : INT <<FK submeta.id_submeta>> <<UK id_submeta_intento>>
+  * id_usuario : INT <<FK cliente.id_usuario>>
+  * archivo : VARCHAR(255)
+  * formato : VARCHAR(10)
+  * tamano : INT
+  * porcentaje_tiempo_transcurrido : DECIMAL(5,2)
+  * intento : TINYINT <<UK id_submeta_intento>>
+  * ventana : VARCHAR(10)
+  * fecha_carga : DATETIME
+}
+entity "evaluacion" as evaluacion {
+  * id_evaluacion : INT <<PK>>
+  --
+  * id_evidencia : INT <<FK evidencia.id_evidencia>> <<UK>>
+  * estado : VARCHAR(15)
+  dictamen : VARCHAR(15)
+  puntos_otorgados : INT
+  justificacion : TEXT
+  fecha_evaluacion : DATETIME
+  fecha_ultimo_error : DATETIME
+}
+entity "uso_llm" as uso_llm {
+  * id_uso : INT <<PK>>
+  --
+  * fecha : DATETIME
+  * operacion : VARCHAR(20)
+  * tokens_consumidos : INT
+  * costo : DECIMAL(10,4)
+  * latencia_ms : INT
+  * proveedor : VARCHAR(50)
+  * modelo : VARCHAR(100)
+  * resultado : VARCHAR(10)
+  id_usuario : INT <<FK usuario.id_usuario>>
+  id_meta : INT <<FK meta.id_meta>>
+  id_evaluacion : INT <<FK evaluacion.id_evaluacion>>
+}
+}
+
+package "Actividad y logros" {
+entity "dia_activo" as dia_activo {
+  * id_usuario : INT <<PK>> <<FK cliente.id_usuario>>
+  * fecha : DATE <<PK>>
+  --
+  primera_submeta_inicio : DATETIME
+  * total_submetas_iniciadas : INT
+}
+entity "logro" as logro {
+  * id_logro : INT <<PK>>
+  --
+  * codigo : VARCHAR(40) <<UK>>
+  * nombre : VARCHAR(100)
+  * descripcion : VARCHAR(255)
+}
+entity "usuario_logro" as usuario_logro {
+  * id_usuario : INT <<PK>> <<FK cliente.id_usuario>>
+  * id_logro : INT <<PK>> <<FK logro.id_logro>>
+  --
+  * fecha_obtencion : DATETIME
+}
+}
+
+usuario ||--o| administrador : fk_administrador_usuario (CASCADE)
+usuario ||--o| cliente : fk_cliente_usuario (CASCADE)
+usuario ||--o{ token_sesion : fk_token_usuario (CASCADE)
+usuario ||--o{ codigo_recuperacion : fk_codigo_usuario (CASCADE)
+usuario |o--o{ uso_llm : fk_uso_llm_usuario (SET NULL)
+administrador |o--o{ submeta : fk_submeta_admin_cierre (SET NULL)
+cliente ||--o{ suscripcion_push : fk_push_cliente (CASCADE)
+cliente ||--o{ meta : fk_meta_cliente (CASCADE)
+cliente ||--o{ sesion_pomodoro : fk_pomodoro_cliente (CASCADE)
+cliente ||--o{ evidencia : fk_evidencia_cliente (CASCADE)
+cliente ||--o{ dia_activo : fk_dia_activo_cliente (CASCADE)
+cliente ||--o{ usuario_logro : fk_usuario_logro_cliente (CASCADE)
+meta ||--o{ submeta : fk_submeta_meta (CASCADE)
+meta ||--o{ recomendacion_ia : fk_recomendacion_meta (CASCADE)
+meta |o--o{ uso_llm : fk_uso_llm_meta (SET NULL)
+submeta |o--o{ sesion_pomodoro : fk_pomodoro_submeta (SET NULL)
+submeta ||--o{ evidencia : fk_evidencia_submeta (CASCADE)
+evidencia ||--o| evaluacion : fk_evaluacion_evidencia (CASCADE)
+evaluacion |o--o{ uso_llm : fk_uso_llm_evaluacion (SET NULL)
+logro ||--o{ usuario_logro : fk_usuario_logro_logro (RESTRICT)
+
+note as NotaNorm
+  **Normalización**
+  1FN: todo atributo es atómico; sin grupos repetidos (el JSON del desglose es solo
+  parámetro de sp_crear_desglose y no se almacena); N:M cliente-logro en usuario_logro.
+  2FN: las únicas claves compuestas (dia_activo, usuario_logro) no tienen atributos que
+  dependan de una parte de la clave.
+  3FN: catálogos fijos como CHECK (RNF-011), no como tablas; subtipos usuario → administrador / cliente (JOINED).
+  **Desnormalización deliberada** (dependencias derivadas, todas protegidas por trigger/CHECK):
+  · meta.estado derivado de submeta (BR-029), mantenido por sp_recalcular_estado_meta.
+  · meta.tipo derivado de dias_destinados (CHECK chk_meta_tipo_dias).
+  · usuario.puntaje_acumulado = Σ submeta.puntaje_obtenido (trigger submeta_au).
+  · evidencia.id_usuario repite el dueño de la submeta (trigger evidencia_bi).
+  · dia_activo.total_submetas_iniciadas, submeta.puntaje_obtenido: valores de cierre almacenados.
+  · cliente.fecha_confirmacion_mayoria_edad: dato propio del cliente (el administrador no declara;
+    sin fecha de nacimiento). Nula solo en cuentas creadas o convertidas por un
+    administrador hasta su primer inicio de sesión (RF-AUT-018).
+  · meta.dias_destinados = nº de submetas y meta.tiempo_total = Σ duraciones (sp_validar_suma_desglose al crear el desglose).
+  · submeta.cerrada_por_administrador ≡ fecha_cierre_administrativo IS NOT NULL (CHECK que las liga).
+  cerrojo_sistema: tabla técnica sin relaciones.
+end note
+
+legend bottom
+|= Versión |= Fecha |= Autor |= Cambio |
+| 0.1 | 2026-11-11 | Equipo FocusStrike | Línea base |
+endlegend
+
+@enduml

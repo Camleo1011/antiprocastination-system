@@ -1,0 +1,73 @@
+@startuml CU-009-start-subgoal
+' ==============================================================
+' CONTROL DE VERSIONES
+' Archivo  : CU-009-start-subgoal.puml
+' Versión  : 0.1      Fecha: 2026-11-11      Autor: Equipo FocusStrike
+' Fuente   : docs/01-analysis/SRS.md (SRS 0.1), sección 3.7, CU-009
+' Cambio   : Línea base
+' ==============================================================
+title Actividades — CU-009 Iniciar Submeta (Reloj Global)\n(SRS 0.1 · diagrama v0.1)
+|Sistema|
+start
+if (¿Rol de la cuenta es administrador?) then (sí)
+  :Responder HTTP 403;
+  note right: Flujo alterno 1c. RF-ADM-006
+  stop
+else (no)
+endif
+if (¿Modo de inicio de la submeta?) then (manual)
+  |Usuario (cliente)|
+  :Solicitar iniciar la submeta;
+  |Sistema|
+  if (¿La submeta ya está en curso o finalizada, incluida la cerrada por no inicio?) then (sí)
+    :Rechazar con HTTP 409; la submeta no cambia;
+    note right: Flujo alterno 1d. BR-027, RF-META-012
+    stop
+  elseif (¿Hoy (en su zona horaria) es anterior a la fecha programada?) then (sí)
+    :Rechazar con HTTP 409; la submeta no cambia;
+    note right: Flujo alterno 1d. Solo vale durante su fecha programada.
+    stop
+  elseif (¿Pasaron las 23:59 de la fecha programada sin iniciarla?) then (sí)
+    |Base de datos|
+    :Cerrar como finalizada, sin gracia: 0 puntos si requiere evidencia,\nsin calificación si no la requiere;
+    note right: Flujo alterno 1b. BR-027, RF-META-026, BR-010
+    stop
+  else (no)
+  endif
+  |Base de datos|
+  :Registrar la hora real y arrancar el reloj global por el tiempo estipulado;
+  note right
+    RF-META-012, BR-032. Flujo alterno 1a: vale a cualquier hora de su fecha,
+    de 00:00:00 a 23:59:59, antes o después del horario programado; el reloj corre
+    desde el inicio real durante la duración programada (BR-006, BR-027).
+  end note
+  :Registrar el día activo, la hora de la primera submeta iniciada a mano y el contador diario;
+  note right: RF-PER-002, RF-PER-005, RF-PER-006, BR-009
+else (automático)
+  |Sistema|
+  if (¿El sistema estuvo caído a la hora programada?) then (sí)
+    if (¿Venció ya el tiempo de la submeta?) then (sí)
+      :Aplicar el cierre que corresponda;
+      stop
+    else (no)
+    endif
+    note right: Flujo alterno 2a. RF-META-025
+  else (no)
+  endif
+  |Base de datos|
+  :Iniciar el reloj a la hora programada en la zona horaria del usuario;
+  note right
+    RF-META-013. El inicio automático NO registra
+    día activo (BR-009).
+  end note
+endif
+
+|Base de datos|
+:Cambiar el estado de la submeta a en curso;
+|Sistema|
+:Evaluar los logros aplicables (CU-026);
+|Usuario (cliente)|
+:Ver la submeta en curso con su reloj;
+stop
+
+@enduml

@@ -1,0 +1,61 @@
+@startuml CU-006-break-down-goal-with-ai
+' ==============================================================
+' CONTROL DE VERSIONES
+' Archivo  : CU-006-break-down-goal-with-ai.puml
+' Versión  : 0.1      Fecha: 2026-11-11      Autor: Equipo FocusStrike
+' Fuente   : docs/01-analysis/SRS.md (SRS 0.1), sección 3.7, CU-006
+' Cambio   : Línea base
+' ==============================================================
+title Actividades — CU-006 Desglosar Meta con IA (duración mayor a 1 día)\n(SRS 0.1 · diagrama v0.1)
+|Sistema|
+start
+:Recibir una meta guardada con más de 1 día y fechas definidas;
+if (¿El usuario aceptó el servicio externo de IA?) then (no)
+  :Responder HTTP 403 con el aviso; no invocar al Agente IA;
+  note right: Flujo alterno 1a. RF-IA-011, BR-035
+  if (¿La meta requiere evidencia?) then (sí)
+    :No guardar la meta;
+    stop
+  else (no)
+    :Ofrecer el desglose manual (CU-032);
+    note right: RF-META-033
+    stop
+  endif
+else (sí)
+endif
+
+repeat
+  |Sistema|
+  :Invocar al Agente IA con descripción, tiempo total, fechas y horario;
+  note right: RF-META-003, RF-META-022, RF-IA-001
+  |Motor LLM|
+  :Distribuir el tiempo en horas enteras (mínimo 1 h) por fecha,\ncalcular el horario de cada submeta,\ngenerar descripciones y consejos generales;
+  note right: BR-032, RF-META-007, RF-META-011
+  |Base de datos|
+  :Registrar un uso del LLM por cada llamada, incluidos los reintentos;
+  note right: RF-ADM-007
+  |Sistema|
+  :Validar la respuesta contra el esquema, la duración entera ≥ 1 h,\nla suma igual al tiempo total y el horario diario;
+  note right: RF-IA-002, RF-META-005. Flujo alterno 2b.
+repeat while (¿Timeout, error o respuesta inválida y reintentos < 2?) is (sí) not (no)
+note right: Flujo alterno 2a. RF-IA-003, RF-IA-004
+
+if (¿Persisten los errores o la IA no está disponible?) then (sí)
+  |Base de datos|
+  :Conservar la meta sin submetas;
+  |Sistema|
+  :Informar al usuario y ofrecer Reintentar o armar el desglose manual (CU-032);
+  note right: Flujo alterno 2c. RF-META-024
+  stop
+else (no)
+endif
+
+|Base de datos|
+:Guardar las submetas vinculadas a la meta con los consejos;
+note right: RF-META-005, RF-META-023. Conserva las recomendaciones de descanso aceptadas en CU-007.
+
+|Usuario (cliente)|
+:Visualizar las submetas y los consejos en la agenda;
+stop
+
+@enduml

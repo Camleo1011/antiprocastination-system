@@ -1,0 +1,51 @@
+@startuml CU-032-define-manual-breakdown
+' ==============================================================
+' CONTROL DE VERSIONES
+' Archivo  : CU-032-define-manual-breakdown.puml
+' Versión  : 0.1      Fecha: 2026-11-11      Autor: Equipo FocusStrike
+' Fuente   : docs/01-analysis/SRS.md (SRS 0.1), sección 3.7, CU-032
+' Cambio   : Línea base
+' ==============================================================
+title Actividades — CU-032 Definir Desglose Manual de una Meta Multidía\n(SRS 0.1 · diagrama v0.1)
+|Sistema|
+start
+:Recibir el formulario de meta con 2 o más fechas, tiempo total y horario diario;
+note right: Extiende CU-005. No exige la aceptación del servicio de IA.
+if (¿La meta requiere evidencia y el usuario no aceptó el servicio de IA?) then (sí)
+  :Responder HTTP 403 con el aviso de consentimiento;
+  note right: Flujo alterno 1a. RF-IA-011, BR-035
+  stop
+else (no)
+endif
+:Mostrar una submeta por cada fecha de trabajo, sin invocar al Agente IA;
+note right: RF-META-033. Flujo 1b: con IA aceptada puede elegirse este desglose (RF-META-036).
+
+repeat
+  |Usuario (cliente)|
+  :Capturar por submeta su nombre, hora de inicio y duración en horas enteras (mínimo 1 h);
+  note right: RF-META-033, RF-META-035
+  |Sistema|
+  :Calcular la hora de fin y la suma de las duraciones;
+  note right: BR-032
+  if (¿La suma es igual al tiempo total?) then (no)
+    :Responder HTTP 422 con la diferencia (faltan o sobran horas); no guardar nada;
+    note right: Flujo alterno 4a. RF-META-034, BR-014
+  elseif (¿Alguna submeta sale del horario, pasa de 24:00, tiene duración 0, negativa o no entera, nombre vacío o de más de 150 caracteres, o repite o no pertenece a las fechas?) then (sí)
+    :Responder HTTP 422 indicando el campo;
+    note right: Flujo alterno 4b. RF-META-035
+  else (válido)
+  endif
+repeat while (¿Hay error de validación o el usuario cambia fechas o tiempo total?) is (sí) not (no)
+note right: Flujo alterno 4c. Se vuelve a validar suma y horario.
+
+|Base de datos|
+:Guardar la meta con modo de desglose manual y sus submetas (sp_crear_desglose), sin registrar llamadas al LLM;
+note right: RF-META-005, RF-META-033
+|Sistema|
+:Mostrar las submetas en la agenda;
+note right: Este desglose se ofrece siempre como alternativa si el de IA falló (flujo 1c, RF-META-024).
+|Usuario (cliente)|
+:Ver la meta con sus submetas;
+stop
+
+@enduml

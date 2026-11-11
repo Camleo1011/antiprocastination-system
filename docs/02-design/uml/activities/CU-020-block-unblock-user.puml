@@ -1,0 +1,59 @@
+@startuml CU-020-block-unblock-user
+' ==============================================================
+' CONTROL DE VERSIONES
+' Archivo  : CU-020-block-unblock-user.puml
+' Versión  : 0.1      Fecha: 2026-11-11      Autor: Equipo FocusStrike
+' Fuente   : docs/01-analysis/SRS.md (SRS 0.1), sección 3.7, CU-020
+' Cambio   : Línea base
+' ==============================================================
+title Actividades — CU-020 Bloquear/Desbloquear Usuario\n(SRS 0.1 · diagrama v0.1)
+|Administrador|
+start
+:Seleccionar una cuenta;
+:Solicitar bloquearla o desbloquearla;
+
+|Sistema|
+if (¿Nivel soporte?) then (sí)
+  :Responder HTTP 403;
+  note right: Flujo alterno 2b. RF-ADM-015, BR-021
+  stop
+else (no)
+endif
+if (¿Es moderador y la cuenta es administrador?) then (sí)
+  :Responder HTTP 403 NIVEL_ADMIN_INSUFICIENTE; no cambiar nada;
+  note right
+    Flujo alterno 2d. RF-ADM-015, BR-021, CP-052, CP-058.
+    Solo el super bloquea y desbloquea cuentas administrador;
+    el moderador solo opera sobre cuentas cliente.
+    Esta comprobación precede a la del último super.
+  end note
+  stop
+else (no)
+endif
+if (¿Acción?) then (bloquear)
+  if (¿Un super bloquea al único super sin bloquear (incluido uno mismo)?) then (sí)
+    :Responder HTTP 409;
+    note right: Flujo alterno 2c. RF-ADM-004, BR-021
+    stop
+  else (no)
+  endif
+  |Base de datos|
+  :Persistir el estado administrativo bloqueado, independiente del bloqueo temporal;
+  note right: RF-ADM-004, BR-012
+  |Sistema|
+  :Revocar las sesiones activas de la cuenta;
+  note right: RF-ADM-013
+else (desbloquear)
+  |Base de datos|
+  :Persistir el estado administrativo desbloqueado;
+  note right: RF-ADM-012, BR-012
+endif
+
+|Sistema|
+:Reflejar el cambio en el acceso y en la presencia de la cuenta en el ranking;
+note right: Flujo alterno 2a. Un usuario bloqueado que intenta iniciar sesión recibe HTTP 403.
+|Administrador|
+:Ver el nuevo estado de la cuenta;
+stop
+
+@enduml

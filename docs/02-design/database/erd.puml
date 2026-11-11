@@ -1,0 +1,235 @@
+@startuml erd
+title Diagrama Entidad-Relación — Focus Strike v0.1 (17 entidades; notación pata de gallo)
+
+' | Versión | Fecha      | Autor              | Cambio     |
+' |---------|------------|--------------------|------------|
+' | 0.1     | 2026-11-11 | Equipo FocusStrike | Línea base |
+
+' Convenciones: * = obligatorio · <<PK>> identificador propio · <<UK>> clave candidata única · <<derivado>> atributo calculable almacenado.
+' Las claves foráneas NO se listan como atributos: son las relaciones (se materializan en el MR).
+' Cardinalidad: padre [izq] -- hijo [der]; || exactamente uno · |o cero o uno · o{ cero o muchos · o| cero o uno (1:1).
+
+hide circle
+skinparam nodesep 30
+skinparam ranksep 50
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam entity<<tecnica>> {
+  BackgroundColor #EEEEEE
+}
+skinparam entity<<debil>> {
+  BackgroundColor #FFF7E0
+}
+skinparam entity<<asociativa>> {
+  BackgroundColor #E8F3FF
+}
+skinparam entity<<subtipo>> {
+  BackgroundColor #F1FAEE
+}
+
+package "Cuentas, sesiones y notificaciones" {
+entity "usuario" as usuario {
+  * id_usuario <<PK>>
+  --
+  * nombre
+  * correo <<UK>>
+  * contrasena_hash
+  * puntaje_acumulado <<derivado>>
+  * estado_bloqueo
+  * rol
+  * intentos_fallidos
+  bloqueado_hasta
+  * fecha_registro
+}
+entity "administrador" as administrador <<subtipo>> {
+  --
+  * nivel_acceso
+  * fecha_asignacion
+}
+entity "cliente" as cliente <<subtipo>> {
+  --
+  * zona_horaria
+  * notificaciones_push
+  fecha_aceptacion_ia
+  * zona_pendiente_deteccion
+  fecha_confirmacion_mayoria_edad
+}
+entity "token_sesion" as token_sesion {
+  * id_token <<PK>>
+  --
+  * token_hash <<UK>>
+  * fecha_emision
+  * fecha_expiracion
+  * revocado
+}
+entity "codigo_recuperacion" as codigo_recuperacion {
+  * id_codigo <<PK>>
+  --
+  * codigo_hash <<UK>>
+  * fecha_generacion
+  * fecha_expiracion
+  * usado
+}
+entity "suscripcion_push" as suscripcion_push {
+  * id_suscripcion <<PK>>
+  --
+  * endpoint
+  * clave_p256dh
+  * clave_auth
+  * fecha_creacion
+  * vigente
+}
+entity "cerrojo_sistema" as cerrojo_sistema <<tecnica>> {
+  * clave <<PK>>
+}
+}
+
+package "Planificación de metas" {
+entity "meta" as meta {
+  * id_meta <<PK>>
+  --
+  * nombre
+  descripcion
+  * categoria
+  * tipo <<derivado>>
+  * dias_destinados
+  * tiempo_total
+  * fecha_inicio
+  * fecha_fin
+  * horario_inicio
+  * horario_fin
+  * requiere_evidencia
+  * modo_inicio
+  * modo_planificacion
+  modo_desglose
+  consejos_ia
+  * estado <<derivado>>
+  * fecha_creacion
+}
+entity "submeta" as submeta {
+  * id_submeta <<PK>>
+  --
+  * fecha_programada
+  * horario_inicio
+  * horario_fin
+  hora_inicio_real
+  hora_fin_real
+  * estado
+  puntaje_obtenido
+  nombre
+  descripcion_ia
+  * cerrada_por_administrador
+  fecha_cierre_administrativo
+}
+entity "recomendacion_ia" as recomendacion_ia {
+  * id_recomendacion <<PK>>
+  --
+  * sugerencia_habito
+  * propuesta_horario
+  estado_aceptacion
+  fecha_decision
+}
+entity "sesion_pomodoro" as sesion_pomodoro {
+  * id_sesion <<PK>>
+  --
+  * fecha_hora_inicio
+  * duracion_minutos
+  * estado
+}
+}
+
+package "Evidencias, evaluación e IA" {
+entity "evidencia" as evidencia {
+  * id_evidencia <<PK>>
+  --
+  * archivo
+  * formato
+  * tamano
+  * porcentaje_tiempo_transcurrido
+  * intento
+  * ventana
+  * fecha_carga
+}
+entity "evaluacion" as evaluacion {
+  * id_evaluacion <<PK>>
+  --
+  * estado
+  dictamen
+  puntos_otorgados
+  justificacion
+  fecha_evaluacion
+  fecha_ultimo_error
+}
+entity "uso_llm" as uso_llm {
+  * id_uso <<PK>>
+  --
+  * fecha
+  * operacion
+  * tokens_consumidos
+  * costo
+  * latencia_ms
+  * proveedor
+  * modelo
+  * resultado
+}
+}
+
+package "Actividad y logros" {
+entity "dia_activo" as dia_activo <<debil>> {
+  * fecha <<PK>>
+  --
+  primera_submeta_inicio
+  * total_submetas_iniciadas
+}
+entity "logro" as logro {
+  * id_logro <<PK>>
+  --
+  * codigo <<UK>>
+  * nombre
+  * descripcion
+}
+entity "usuario_logro" as usuario_logro <<asociativa>> {
+  --
+  * fecha_obtencion
+}
+}
+
+usuario ||--o| administrador : es subtipo (rol administrador)
+usuario ||--o| cliente : es subtipo (rol cliente)
+usuario ||--o{ token_sesion : abre
+usuario ||--o{ codigo_recuperacion : solicita
+usuario |o--o{ uso_llm : origina
+administrador |o--o{ submeta : cierra (cierre administrativo)
+cliente ||--o{ suscripcion_push : registra
+cliente ||--o{ meta : planifica
+cliente ||--o{ sesion_pomodoro : ejecuta
+cliente ||--o{ evidencia : envía
+cliente ||--o{ dia_activo : acumula
+cliente ||--o{ usuario_logro : obtiene
+meta ||--o{ submeta : se desglosa en
+meta ||--o{ recomendacion_ia : recibe
+meta |o--o{ uso_llm : registra el desglose de
+submeta |o--o{ sesion_pomodoro : se vincula a
+submeta ||--o{ evidencia : acredita
+evidencia ||--o| evaluacion : es evaluada en
+evaluacion |o--o{ uso_llm : registra la llamada de
+logro ||--o{ usuario_logro : se otorga en
+
+note as NotaMER
+  **Lectura del MER**
+  · usuario es el supertipo {disjunto, total}: toda cuenta es administrador o cliente, nunca ambos (BR-013).
+  · dia_activo es entidad débil: se identifica por cliente + fecha.
+  · usuario_logro es entidad asociativa de la relación N:M cliente-logro (atributo propio: fecha_obtencion).
+  · uso_llm: los tres vínculos son opcionales (cuenta, meta o evaluación eliminadas dejan NULL, RF-ADM-011).
+  · submeta ← administrador: cierre administrativo opcional (RF-ADM-019).
+  · sesion_pomodoro ← submeta: vínculo opcional.
+  · evaluacion: 1:1 con evidencia (UNIQUE); el reintento reutiliza la fila (BR-017).
+  · cerrojo_sistema: entidad TÉCNICA sin relaciones ni datos de negocio (BR-021); no está en el modelo de dominio.
+end note
+
+legend bottom
+|= Versión |= Fecha |= Autor |= Cambio |
+| 0.1 | 2026-11-11 | Equipo FocusStrike | Línea base |
+endlegend
+
+@enduml

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="991" viewBox="0 0 1280 991" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" data-pan="PAN-031" data-dispositivo="desktop" data-tema="oscuro" aria-labelledby="t d">
+<title id="t">PAN-031 — Cuentas: listado (escritorio 1280 px, tema oscuro)</title>
+<desc id="d">Mockup de alta fidelidad de Cuentas: listado. Ruta /admin/cuentas; rol soporte+; CU CU-019; EP EP-043. Estado mostrado: sesión de un moderador: las filas de administradores muestran solo «Ver» (lectura); Editar y Bloquear existen solo en cuentas cliente (BR-021); estados con ícono y texto. Colores, tipografía (Inter), espaciado y radios del sistema de diseño (tema oscuro); texto editable. La interfaz oculta lo que el nivel no puede hacer; el servidor responde 403 NIVEL_ADMIN_INSUFICIENTE como defensa (BR-021). Regiones ARIA: navigation, banner, main. Orden de foco con Tab (coincide con el orden visual y del DOM): Enlace de salto «Saltar al contenido principal» (visible solo al recibir el foco). 1 Navegación: Panel; 2 Navegación: Cuentas; 3 Navegación: Evidencias; 4 Navegación: Ranking; 5 Navegación: Métricas; 6 Navegación: Error persistente; 7 Menú de cuenta; 8 Botón: Crear cuenta; 9 Campo: Buscar por nombre o correo; 10 Selector: Rol: todos; 11 Selector: Nivel: todos; 12 Selector: Bloqueo: todos; 13 Botón: Ver; 14 Botón: Editar; 15 Botón: Bloquear; 16 Botón: Ver; 17 Botón: Editar; 18 Botón: Desbloquear; 19 Botón: Ver; 20 Botón: Editar; 21 Botón: Bloquear; 22 Botón: Ver; 23 Botón: Ver; 24 Botón: Anterior; 25 Botón: Siguiente.</desc>
+<defs><pattern id="rayas-gracia" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#2A323D"/><rect width="3" height="6" fill="#F5B93A"/></pattern></defs>
+<rect id="fondo-pagina" width="1280" height="991" fill="#161A20"/>
+<g id="barra-lateral" data-name="Barra lateral de administración" role="navigation">
+<rect x="0" y="0" width="248" height="991" fill="#1C2128"/>
+<line x1="248" y1="0" x2="248" y2="991" stroke="#2A323D" stroke-width="1"/>
+<g id="logo-30" data-name="Logotipo FocusStrike" data-exempt="logo">
+<rect x="24" y="16" width="32" height="32" rx="8" fill="#A5B4FC"/>
+<g transform="translate(30.4 22.4) scale(0.8)" fill="none" stroke="#1E1B4B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="66" y="38.3" font-size="18" fill="#F1F3F7" font-weight="700">FocusStrike</text>
+</g>
+<g id="nav-31" data-name="Navegación: Panel" data-interactive="link" data-orden-foco="1">
+<rect x="12" y="80" width="224" height="44" fill="none" data-hit="1"/>
+<g transform="translate(24 92) scale(0.83)" fill="none" stroke="#C3CAD6" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7"/><path d="M6 10v10h12V10"/></g>
+<text x="54" y="107.6" font-size="16" fill="#C3CAD6" font-weight="600">Panel</text>
+</g>
+<g id="nav-32" data-name="Navegación: Cuentas" data-interactive="link" data-orden-foco="2" aria-current="page">
+<rect x="12" y="128" width="224" height="44" fill="none" data-hit="1"/>
+<rect x="12" y="128" width="224" height="44" rx="8" fill="#23264A"/>
+<g transform="translate(24 140) scale(0.83)" fill="none" stroke="#C7CDFE" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4a4 4 0 100 8 4 4 0 000-8z"/><path d="M4.5 20a7.5 7.5 0 0115 0"/></g>
+<text x="54" y="155.6" font-size="16" fill="#C7CDFE" font-weight="700">Cuentas</text>
+</g>
+<g id="nav-33" data-name="Navegación: Evidencias" data-interactive="link" data-orden-foco="3">
+<rect x="12" y="176" width="224" height="44" fill="none" data-hit="1"/>
+<g transform="translate(24 188) scale(0.83)" fill="none" stroke="#C3CAD6" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/></g>
+<text x="54" y="203.6" font-size="16" fill="#C3CAD6" font-weight="600">Evidencias</text>
+</g>
+<g id="nav-34" data-name="Navegación: Ranking" data-interactive="link" data-orden-foco="4">
+<rect x="12" y="224" width="224" height="44" fill="none" data-hit="1"/>
+<g transform="translate(24 236) scale(0.83)" fill="none" stroke="#C3CAD6" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v6a4 4 0 01-8 0z"/><path d="M8 6H4v2a3 3 0 003 3M16 6h4v2a3 3 0 01-3 3"/><path d="M12 14v4M8 20h8"/></g>
+<text x="54" y="251.6" font-size="16" fill="#C3CAD6" font-weight="600">Ranking</text>
+</g>
+<g id="nav-35" data-name="Navegación: Métricas" data-interactive="link" data-orden-foco="5">
+<rect x="12" y="272" width="224" height="44" fill="none" data-hit="1"/>
+<g transform="translate(24 284) scale(0.83)" fill="none" stroke="#C3CAD6" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v14H4z"/><path d="M4 10h16M8 3v4M16 3v4"/></g>
+<text x="54" y="299.6" font-size="16" fill="#C3CAD6" font-weight="600">Métricas</text>
+</g>
+<g id="nav-36" data-name="Navegación: Error persistente" data-interactive="link" data-orden-foco="6">
+<rect x="12" y="320" width="224" height="44" fill="none" data-hit="1"/>
+<g transform="translate(24 332) scale(0.83)" fill="none" stroke="#C3CAD6" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5L2.8 19.5h18.4z"/><path d="M12 10v4.5"/><path d="M12 17.2v.1"/></g>
+<text x="54" y="347.6" font-size="16" fill="#C3CAD6" font-weight="600">Error persistente</text>
+</g>
+</g>
+<g id="cabecera" data-name="Cabecera de administración" role="banner">
+<rect x="249" y="0" width="1031" height="64" fill="#1C2128"/>
+<line x1="249" y1="64" x2="1280" y2="64" stroke="#2A323D" stroke-width="1"/>
+<text x="280" y="38" font-size="16" fill="#C3CAD6" font-weight="600">Administración</text>
+<g id="insignia-37" data-name="Insignia: Nivel moderador">
+<rect x="1034.25" y="18" width="153.75" height="28" rx="14" fill="#23264A"/>
+<g transform="translate(1044.25 24) scale(0.67)" fill="none" stroke="#C7CDFE" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7.5 3v5.5c0 4.5-3.2 8-7.5 9.5-4.3-1.5-7.5-5-7.5-9.5V6z"/></g>
+<text x="1066.25" y="36.9" font-size="14" fill="#C7CDFE" font-weight="600">Nivel moderador</text>
+</g>
+<g id="avatar-38" data-name="Menú de cuenta" data-interactive="button" data-orden-foco="7">
+<rect x="1200" y="10" width="44" height="44" fill="none" data-hit="1"/>
+<circle cx="1222" cy="32" r="18" fill="#A5B4FC"/>
+<text x="1222" y="37.6" font-size="16" fill="#1E1B4B" font-weight="700" text-anchor="middle">S</text>
+</g>
+</g>
+<g id="contenido-principal" data-name="Contenido principal (main)" role="main">
+<text x="280" y="121.5" font-size="30" fill="#F1F3F7" font-weight="700">Cuentas</text>
+<g id="boton-1" data-name="Botón: Crear cuenta" data-interactive="button" data-orden-foco="8">
+<rect x="280" y="138" width="140.74" height="44" fill="none" data-hit="1"/>
+<rect x="280" y="138" width="140.74" height="44" rx="8" fill="#A5B4FC"/>
+<text x="350.37" y="165.6" font-size="16" fill="#1E1B4B" font-weight="600" text-anchor="middle">Crear cuenta</text>
+</g>
+<g id="campo-2" data-name="Campo: Buscar por nombre o correo">
+<text x="280" y="213.4" font-size="14" fill="#F1F3F7" font-weight="600">Buscar por nombre o correo</text>
+<g id="entrada-3" data-name="Entrada" data-interactive="input" data-orden-foco="9">
+<rect x="280" y="223" width="968" height="44" fill="none" data-hit="1"/>
+<rect x="281" y="224" width="966" height="42" rx="8" fill="#1C2128" stroke="#8D97A8" stroke-width="1"/>
+<text x="292" y="250.6" font-size="16" fill="#A0A9B8">Nombre o correo</text>
+</g>
+</g>
+<g id="selector-4" data-name="Selector: Rol: todos" data-interactive="input" data-orden-foco="10">
+<rect x="280" y="283" width="130.24" height="44" fill="none" data-hit="1"/>
+<rect x="281" y="284" width="128.24" height="42" rx="8" fill="#1C2128" stroke="#8D97A8" stroke-width="1"/>
+<text x="292" y="310.6" font-size="16" fill="#F1F3F7">Rol: todos</text>
+<g transform="translate(382.24 295) scale(0.83)" fill="none" stroke="#C3CAD6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" transform-origin="center"><path d="M9 6l6 6-6 6"/></g>
+</g>
+<g id="selector-5" data-name="Selector: Nivel: todos" data-interactive="input" data-orden-foco="11">
+<rect x="418.24" y="283" width="143.52" height="44" fill="none" data-hit="1"/>
+<rect x="419.24" y="284" width="141.52" height="42" rx="8" fill="#1C2128" stroke="#8D97A8" stroke-width="1"/>
+<text x="430.24" y="310.6" font-size="16" fill="#F1F3F7">Nivel: todos</text>
+<g transform="translate(533.76 295) scale(0.83)" fill="none" stroke="#C3CAD6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" transform-origin="center"><path d="M9 6l6 6-6 6"/></g>
+</g>
+<g id="selector-6" data-name="Selector: Bloqueo: todos" data-interactive="input" data-orden-foco="12">
+<rect x="569.76" y="283" width="166.08" height="44" fill="none" data-hit="1"/>
+<rect x="570.76" y="284" width="164.08" height="42" rx="8" fill="#1C2128" stroke="#8D97A8" stroke-width="1"/>
+<text x="581.76" y="310.6" font-size="16" fill="#F1F3F7">Bloqueo: todos</text>
+<g transform="translate(707.84 295) scale(0.83)" fill="none" stroke="#C3CAD6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" transform-origin="center"><path d="M9 6l6 6-6 6"/></g>
+</g>
+<g id="alerta-7" data-name="Alerta: Acciones según tu nivel" role="status">
+<rect x="280" y="343" width="968" height="90" rx="8" fill="#10243D"/>
+<rect x="280" y="343" width="4" height="90" rx="2" fill="#60A5FA"/>
+<g transform="translate(296 355) scale(0.83)" fill="none" stroke="#93C5FD" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 11v5.5"/><path d="M12 7.6v.1"/></g>
+<text x="328" y="372.6" font-size="16" fill="#93C5FD" font-weight="600">Acciones según tu nivel</text>
+<text x="328" y="394.4" font-size="14" fill="#F1F3F7">Con nivel moderador puedes ver todas las cuentas, y editar y bloquear las de clientes. Las cuentas administrador las ves en solo lectura:</text>
+<text x="328" y="415.4" font-size="14" fill="#F1F3F7">las gestiona un administrador super.</text>
+</g>
+<g id="tabla-cuentas-8" data-name="Tabla de cuentas" role="table">
+<g id="tarjeta-9" data-name="Tarjeta">
+<rect x="280.5" y="449.5" width="967" height="449" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<rect x="281" y="450" width="966" height="44" rx="12" fill="#1C2128"/>
+<text x="296" y="478" font-size="14" fill="#F1F3F7" font-weight="600">Cuenta</text>
+<text x="539.36" y="478" font-size="14" fill="#F1F3F7" font-weight="600">Rol y nivel</text>
+<text x="679.76" y="478" font-size="14" fill="#F1F3F7" font-weight="600">Estado</text>
+<text x="889.76" y="478" font-size="14" fill="#F1F3F7" font-weight="600" text-anchor="end">Puntaje</text>
+<text x="913.76" y="478" font-size="14" fill="#F1F3F7" font-weight="600">Acciones</text>
+<text x="296" y="527" font-size="16" fill="#F1F3F7" font-weight="600">Ana Gómez</text>
+<text x="296" y="549" font-size="14" fill="#C3CAD6">ana.gomez@correo.com</text>
+<text x="539.36" y="527" font-size="16" fill="#F1F3F7">Cliente</text>
+<g id="insignia-10" data-name="Insignia: Activa">
+<rect x="679.76" y="513" width="86.07" height="28" rx="14" fill="#12301F"/>
+<g transform="translate(689.76 519) scale(0.67)" fill="none" stroke="#86D9A4" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M8 12.5l3 3 5-6"/></g>
+<text x="711.76" y="531.9" font-size="14" fill="#86D9A4" font-weight="600">Activa</text>
+</g>
+<text x="889.76" y="535" font-size="16" fill="#F1F3F7" text-anchor="end">1.240</text>
+<g id="boton-11" data-name="Botón: Ver" data-interactive="button" data-orden-foco="13">
+<rect x="913.76" y="513" width="50.8" height="44" fill="none" data-hit="1"/>
+<rect x="914.76" y="514" width="48.8" height="42" rx="8" fill="#1C2128" stroke="#A5B4FC" stroke-width="2"/>
+<text x="939.16" y="540.6" font-size="16" fill="#A5B4FC" font-weight="600" text-anchor="middle">Ver</text>
+</g>
+<g id="boton-12" data-name="Botón: Editar" data-interactive="button" data-orden-foco="14">
+<rect x="972.56" y="513" width="70.98" height="44" fill="none" data-hit="1"/>
+<rect x="973.56" y="514" width="68.98" height="42" rx="8" fill="#1C2128" stroke="#A5B4FC" stroke-width="2"/>
+<text x="1008.05" y="540.6" font-size="16" fill="#A5B4FC" font-weight="600" text-anchor="middle">Editar</text>
+</g>
+<g id="boton-13" data-name="Botón: Bloquear" data-interactive="button" data-orden-foco="15">
+<rect x="1051.54" y="513" width="93.37" height="44" fill="none" data-hit="1"/>
+<rect x="1052.54" y="514" width="91.37" height="42" rx="8" fill="#1C2128" stroke="#A5B4FC" stroke-width="2"/>
+<text x="1098.22" y="540.6" font-size="16" fill="#A5B4FC" font-weight="600" text-anchor="middle">Bloquear</text>
+</g>
+<line x1="281" y1="575" x2="1247" y2="575" stroke="#2A323D" stroke-width="1"/>
+<text x="296" y="607" font-size="16" fill="#F1F3F7" font-weight="600">Luis Prada</text>
+<text x="296" y="629" font-size="14" fill="#C3CAD6">luis.prada@correo.com</text>
+<text x="539.36" y="607" font-size="16" fill="#F1F3F7">Cliente</text>
+<g id="insignia-14" data-name="Insignia: Bloqueada">
+<rect x="679.76" y="593" width="113.97" height="28" rx="14" fill="#3A1412"/>
+<g transform="translate(689.76 599) scale(0.67)" fill="none" stroke="#FCA5A5" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M5.6 5.6l12.8 12.8"/></g>
+<text x="711.76" y="611.9" font-size="14" fill="#FCA5A5" font-weight="600">Bloqueada</text>
+</g>
+<text x="679.76" y="637" font-size="14" fill="#C3CAD6">por un administrador</text>
+<text x="889.76" y="615" font-size="16" fill="#F1F3F7" text-anchor="end">310</text>
+<g id="boton-15" data-name="Botón: Ver" data-interactive="button" data-orden-foco="16">
+<rect x="913.76" y="593" width="50.8" height="44" fill="none" data-hit="1"/>
+<rect x="914.76" y="594" width="48.8" height="42" rx="8" fill="#1C2128" stroke="#A5B4FC" stroke-width="2"/>
+<text x="939.16" y="620.6" font-size="16" fill="#A5B4FC" font-weight="600" text-anchor="middle">Ver</text>
+</g>
+<g id="boton-16" data-name="Botón: Editar" data-interactive="button" data-orden-foco="17">
+<rect x="972.56" y="593" width="70.98" height="44" fill="none" data-hit="1"/>
+<rect x="973.56" y="594" width="68.98" height="42" rx="8" fill="#1C2128" stroke="#A5B4FC" stroke-width="2"/>
+<text x="1008.05" y="620.6" font-size="16" fill="#A5B4FC" font-weight="600" text-anchor="middle">Editar</text>
+</g>
+<g id="boton-17" data-name="Botón: Desbloquear" data-interactive="button" data-orden-foco="18">
+<rect x="1051.54" y="593" width="121.86" height="44" fill="none" data-hit="1"/>
+<rect x="1052.54" y="594" width="119.86" height="42" rx="8" fill="#1C2128" stroke="#A5B4FC" stroke-width="2"/>
+<text x="1112.47" y="620.6" font-size="16" fill="#A5B4FC" font-weight="600" text-anchor="middle">Desbloquear</text>
+</g>
+<line x1="281" y1="655" x2="1247" y2="655" stroke="#2A323D" stroke-width="1"/>
+<text x="296" y="687" font-size="16" fill="#F1F3F7" font-weight="600">Marta Ríos</text>
+<text x="296" y="709" font-size="14" fill="#C3CAD6">marta.rios@correo.com</text>
+<text x="539.36" y="687" font-size="16" fill="#F1F3F7">Cliente</text>
+<g id="insignia-18" data-name="Insignia: Bloqueo temporal">
+<rect x="679.76" y="673" width="162.06" height="28" rx="14" fill="#33260A"/>
+<g transform="translate(689.76 679) scale(0.67)" fill="none" stroke="#FCD34D" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 7v5l3 2"/></g>
+<text x="711.76" y="691.9" font-size="14" fill="#FCD34D" font-weight="600">Bloqueo temporal</text>
+</g>
+<text x="679.76" y="717" font-size="14" fill="#C3CAD6">hasta las 14:35</text>
+<text x="889.76" y="695" font-size="16" fill="#F1F3F7" text-anchor="end">95</text>
+<g id="boton-19" data-name="Botón: Ver" data-interactive="button" data-orden-foco="19">
+<rect x="913.76" y="673" width="50.8" height="44" fill="none" data-hit="1"/>
+<rect x="914.76" y="674" width="48.8" height="42" rx="8" fill="#1C2128" stroke="#A5B4FC" stroke-width="2"/>
+<text x="939.16" y="700.6" font-size="16" fill="#A5B4FC" font-weight="600" text-anchor="middle">Ver</text>
+</g>
+<g id="boton-20" data-name="Botón: Editar" data-interactive="button" data-orden-foco="20">
+<rect x="972.56" y="673" width="70.98" height="44" fill="none" data-hit="1"/>
+<rect x="973.56" y="674" width="68.98" height="42" rx="8" fill="#1C2128" stroke="#A5B4FC" stroke-width="2"/>
+<text x="1008.05" y="700.6" font-size="16" fill="#A5B4FC" font-weight="600" text-anchor="middle">Editar</text>
+</g>
+<g id="boton-21" data-name="Botón: Bloquear" data-interactive="button" data-orden-foco="21">
+<rect x="1051.54" y="673" width="93.37" height="44" fill="none" data-hit="1"/>
+<rect x="1052.54" y="674" width="91.37" height="42" rx="8" fill="#1C2128" stroke="#A5B4FC" stroke-width="2"/>
+<text x="1098.22" y="700.6" font-size="16" fill="#A5B4FC" font-weight="600" text-anchor="middle">Bloquear</text>
+</g>
+<line x1="281" y1="735" x2="1247" y2="735" stroke="#2A323D" stroke-width="1"/>
+<text x="296" y="767" font-size="16" fill="#F1F3F7" font-weight="600">Sofía Vega</text>
+<text x="296" y="789" font-size="14" fill="#C3CAD6">sofia.vega@correo.com</text>
+<text x="539.36" y="767" font-size="16" fill="#F1F3F7">Administrador</text>
+<g id="insignia-22" data-name="Insignia: Nivel soporte">
+<rect x="539.36" y="775" width="110.82" height="28" rx="14" fill="#23264A"/>
+<text x="549.36" y="793.9" font-size="14" fill="#C7CDFE" font-weight="600">Nivel soporte</text>
+</g>
+<g id="insignia-23" data-name="Insignia: Activa">
+<rect x="679.76" y="753" width="86.07" height="28" rx="14" fill="#12301F"/>
+<g transform="translate(689.76 759) scale(0.67)" fill="none" stroke="#86D9A4" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M8 12.5l3 3 5-6"/></g>
+<text x="711.76" y="771.9" font-size="14" fill="#86D9A4" font-weight="600">Activa</text>
+</g>
+<text x="889.76" y="775" font-size="16" fill="#F1F3F7" text-anchor="end">—</text>
+<g id="boton-24" data-name="Botón: Ver" data-interactive="button" data-orden-foco="22">
+<rect x="913.76" y="753" width="50.8" height="44" fill="none" data-hit="1"/>
+<rect x="914.76" y="754" width="48.8" height="42" rx="8" fill="#1C2128" stroke="#A5B4FC" stroke-width="2"/>
+<text x="939.16" y="780.6" font-size="16" fill="#A5B4FC" font-weight="600" text-anchor="middle">Ver</text>
+</g>
+<text x="976.56" y="780" font-size="14" fill="#C3CAD6">Solo lectura</text>
+<line x1="281" y1="815" x2="1247" y2="815" stroke="#2A323D" stroke-width="1"/>
+<text x="296" y="847" font-size="16" fill="#F1F3F7" font-weight="600">Mario Cano</text>
+<text x="296" y="869" font-size="14" fill="#C3CAD6">mario.cano@correo.com</text>
+<text x="539.36" y="847" font-size="16" fill="#F1F3F7">Administrador</text>
+<g id="insignia-25" data-name="Insignia: Nivel super">
+<rect x="539.36" y="855" width="97.17" height="28" rx="14" fill="#23264A"/>
+<text x="549.36" y="873.9" font-size="14" fill="#C7CDFE" font-weight="600">Nivel super</text>
+</g>
+<g id="insignia-26" data-name="Insignia: Activa">
+<rect x="679.76" y="833" width="86.07" height="28" rx="14" fill="#12301F"/>
+<g transform="translate(689.76 839) scale(0.67)" fill="none" stroke="#86D9A4" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M8 12.5l3 3 5-6"/></g>
+<text x="711.76" y="851.9" font-size="14" fill="#86D9A4" font-weight="600">Activa</text>
+</g>
+<text x="889.76" y="855" font-size="16" fill="#F1F3F7" text-anchor="end">—</text>
+<g id="boton-27" data-name="Botón: Ver" data-interactive="button" data-orden-foco="23">
+<rect x="913.76" y="833" width="50.8" height="44" fill="none" data-hit="1"/>
+<rect x="914.76" y="834" width="48.8" height="42" rx="8" fill="#1C2128" stroke="#A5B4FC" stroke-width="2"/>
+<text x="939.16" y="860.6" font-size="16" fill="#A5B4FC" font-weight="600" text-anchor="middle">Ver</text>
+</g>
+<text x="976.56" y="860" font-size="14" fill="#C3CAD6">Solo lectura</text>
+<line x1="281" y1="895" x2="1247" y2="895" stroke="#2A323D" stroke-width="1"/>
+</g>
+</g>
+<g id="boton-28" data-name="Botón: Anterior" data-interactive="button" data-orden-foco="24">
+<rect x="280" y="915" width="102.58" height="44" fill="none" data-hit="1"/>
+<rect x="281" y="916" width="100.58" height="42" rx="8" fill="#1C2128" stroke="#A5B4FC" stroke-width="2"/>
+<text x="331.29" y="942.6" font-size="16" fill="#A5B4FC" font-weight="600" text-anchor="middle">Anterior</text>
+</g>
+<text x="394.58" y="941.9" font-size="14" fill="#C3CAD6">Página 1 de 4</text>
+<g id="boton-29" data-name="Botón: Siguiente" data-interactive="button" data-orden-foco="25">
+<rect x="495.2" y="915" width="113.95" height="44" fill="none" data-hit="1"/>
+<rect x="496.2" y="916" width="111.95" height="42" rx="8" fill="#1C2128" stroke="#A5B4FC" stroke-width="2"/>
+<text x="552.18" y="942.6" font-size="16" fill="#A5B4FC" font-weight="600" text-anchor="middle">Siguiente</text>
+</g>
+</g>
+</svg>

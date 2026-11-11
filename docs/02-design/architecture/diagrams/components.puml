@@ -1,0 +1,123 @@
+@startuml componentes
+title FocusStrike - Diagrama de componentes
+
+' | Versión | Fecha      | Autor               | Cambio     |
+' |---------|------------|---------------------|------------|
+' | 0.1     | 2026-11-11 | Equipo FocusStrike  | Línea base |
+'
+' Interfaces provistas (lollipop) y requeridas (socket). Los EP corresponden al contrato OpenAPI de la API (pendiente de publicar en architecture/api/).
+' Protocolos: HTTPS (443 público), HTTP interno (8000), MariaDB 3306 (solo red interna), SMTP 587, HTTPS saliente a Gemini y a los servicios push.
+
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam componentStyle uml2
+skinparam component {
+  BackgroundColor #FFFFFF
+  BorderColor #333333
+}
+skinparam package {
+  BackgroundColor #FAFAFA
+}
+
+actor "Cliente\n(navegador / PWA)" as Cliente
+actor "Administrador\n(navegador)" as Admin
+actor "Monitor externo\n(cada 5 min, RNF-004)" as Monitor
+
+node "Navegador" {
+  component "SPA React + TS + Tailwind\n(Vite, TanStack Query)" as SPA {
+    portin "UI" as spa_ui
+    portout "API REST" as spa_api
+  }
+  component "Service Worker (PWA)\nWeb Push" as SW {
+    portout "suscripción" as sw_sub
+    portin "push" as sw_push
+  }
+}
+
+package "Servidor (VPS, Docker Compose)" {
+  component "Proxy inverso + TLS\n(Caddy/Nginx, Let's Encrypt)" as Proxy {
+    portin "443 HTTPS" as px_in
+    portout "/api -> 8000" as px_api
+    portout "/ -> estáticos" as px_static
+  }
+  component "Estáticos de la SPA" as Static
+
+  package "Backend (Python 3.12 + Django LTS + DRF) - mismo código, dos procesos" {
+    component "API (gunicorn, 1-2 réplicas sin estado)" as API {
+      component "api: controladores y DTO" as ApiCtl
+      component "servicios por módulo\nAUT META AGEN POM EVID PUNT IA RANK PER LOGR ADM NOT" as Svc
+      component "repositorios (SQL + CALL sp_*)" as Repo
+      component "adaptadores (LLM, almacén, push, correo)" as Adp
+      ApiCtl --> Svc
+      Svc --> Repo
+      Svc --> Adp
+    }
+    component "Worker (1 réplica) + planificador interno" as Worker {
+      component "Scheduler y trabajos JOB-01..JOB-11" as Jobs
+      component "servicios (mismos del API)" as WSvc
+      component "repositorios + adaptadores" as WRepo
+      Jobs --> WSvc
+      WSvc --> WRepo
+    }
+  }
+
+  database "MariaDB >= 10.11\n(prod 11.8 LTS; esquema, triggers,\nsp_*, vistas; ADR-001/002)" as DB
+  folder "Volumen de evidencias\n(EvidenceStore, disco privado)" as Files
+  folder "Volumen heartbeat\n(archivo compartido, solo lectura en API)" as Hb
+  component "Copias de seguridad\n(mariadb-dump + evidencias, cifradas)" as Backup
+}
+
+cloud "Servicios externos" {
+  component "Google Gemini API\n(plan de pago)" as Gemini
+  component "Servicio push del navegador\n(FCM / Mozilla / Apple, VAPID)" as PushSvc
+  component "Servidor SMTP\n(proveedor por decidir)" as Smtp
+  component "Almacenamiento externo de copias" as OffSite
+}
+
+' ---- cliente -> proxy ----
+Cliente --> spa_ui
+Admin --> spa_ui
+spa_api --> px_in : HTTPS 443\nJSON + cookie HttpOnly\nEP-003..EP-059
+sw_sub --> px_in : EP-016, EP-017, EP-018
+Monitor --> px_in : HTTPS 443\nEP-001, EP-002
+px_static --> Static : HTTP
+px_api --> ApiCtl : HTTP 8000 (red interna)\nX-Request-Id
+
+' ---- backend -> infraestructura ----
+Repo --> DB : MariaDB 3306\ncuenta fs_app\nCALL sp_* / SQL parametrizado
+WRepo --> DB : MariaDB 3306\ncuenta fs_app
+Adp --> Files : lectura/escritura (EP-036, EP-039)
+WRepo --> Files : lectura, borrado (JOB-04, JOB-09)
+Worker --> Hb : escribe heartbeat (JOB-10)
+API --> Hb : lee (EP-002)
+
+Adp --> Gemini : HTTPS (EP-020, EP-021, EP-027)\n30 s por intento, 2 reintentos\n(peor caso 100 s; plazo de la operación 110 s)
+WRepo --> Gemini : HTTPS evaluación asíncrona (CU-014)
+WRepo --> PushSvc : Web Push VAPID (CU-028)
+Adp --> Smtp : SMTP 587 STARTTLS\ncorreos de recuperación y bloqueo (EP-007, EP-004)
+PushSvc ..> sw_push : push al dispositivo
+
+Backup --> DB : fs_backup, diario
+Backup --> Files : copia de archivos
+Backup --> OffSite : cifrado (age/gpg)
+
+note bottom of Worker
+  Cierra submetas vencidas (cada 60 s), cierra manuales no iniciadas con la hora local
+  de cada cliente, inicia automáticas, despacha evaluaciones, notificaciones temporales,
+  limpieza de huérfanos (RF-EVID-018).
+end note
+note bottom of DB
+  Reglas críticas en la BD (RNF-014). 5 cuentas: fs_owner (solo despliegue y DEFINER),
+  fs_app (API y worker), fs_seed (primer super), fs_ro, fs_backup (ADR-014).
+end note
+note right of Proxy
+  RNF-006: TLS >= 1.2, 301 de HTTP a HTTPS.
+  Rutas de IA síncronas (/metas/{id}/desglose-ia, /metas/recomendaciones, /metas/fechas-sugeridas): espera del proxy 130 s
+  (plazo de la operación 110 s < gunicorn 120 s < proxy 130 s < cliente 140 s; ADR-007).
+end note
+
+legend bottom
+|= Versión |= Fecha |= Autor |= Cambio |
+| 0.1 | 2026-11-11 | Equipo FocusStrike | Línea base |
+endlegend
+@enduml

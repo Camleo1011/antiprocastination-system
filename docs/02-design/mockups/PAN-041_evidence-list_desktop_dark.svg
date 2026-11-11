@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" data-pan="PAN-041" data-dispositivo="desktop" data-tema="oscuro" aria-labelledby="t d">
+<title id="t">PAN-041 — Evidencias: listado (escritorio 1280 px, tema oscuro)</title>
+<desc id="d">Mockup de alta fidelidad de Evidencias: listado. Ruta /admin/evidencias; rol soporte+; CU CU-021; EP EP-054. Estado mostrado: listado de 5 envíos con dictamen y estado en texto e ícono, incluidos dos en Error persistente. Colores, tipografía (Inter), espaciado y radios del sistema de diseño (tema oscuro); texto editable. El listado no muestra contenido de evidencias. Estado vacío: «No hay evidencias con esos filtros». Regiones ARIA: navigation, banner, main. Orden de foco con Tab (coincide con el orden visual y del DOM): Enlace de salto «Saltar al contenido principal» (visible solo al recibir el foco). 1 Navegación: Panel; 2 Navegación: Cuentas; 3 Navegación: Evidencias; 4 Navegación: Ranking; 5 Navegación: Métricas; 6 Navegación: Error persistente; 7 Menú de cuenta; 8 Selector: Usuario: todos; 9 Selector: Dictamen: todos; 10 Selector: Estado: todos; 11 Selector: Rango de fechas; 12 Botón: Abrir; 13 Botón: Abrir; 14 Botón: Abrir; 15 Botón: Abrir; 16 Botón: Abrir; 17 Botón: Anterior; 18 Botón: Siguiente.</desc>
+<defs><pattern id="rayas-gracia" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#2A323D"/><rect width="3" height="6" fill="#F5B93A"/></pattern></defs>
+<rect id="fondo-pagina" width="1280" height="800" fill="#161A20"/>
+<g id="barra-lateral" data-name="Barra lateral de administración" role="navigation">
+<rect x="0" y="0" width="248" height="800" fill="#1C2128"/>
+<line x1="248" y1="0" x2="248" y2="800" stroke="#2A323D" stroke-width="1"/>
+<g id="logo-24" data-name="Logotipo FocusStrike" data-exempt="logo">
+<rect x="24" y="16" width="32" height="32" rx="8" fill="#A5B4FC"/>
+<g transform="translate(30.4 22.4) scale(0.8)" fill="none" stroke="#1E1B4B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="66" y="38.3" font-size="18" fill="#F1F3F7" font-weight="700">FocusStrike</text>
+</g>
+<g id="nav-25" data-name="Navegación: Panel" data-interactive="link" data-orden-foco="1">
+<rect x="12" y="80" width="224" height="44" fill="none" data-hit="1"/>
+<g transform="translate(24 92) scale(0.83)" fill="none" stroke="#C3CAD6" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7"/><path d="M6 10v10h12V10"/></g>
+<text x="54" y="107.6" font-size="16" fill="#C3CAD6" font-weight="600">Panel</text>
+</g>
+<g id="nav-26" data-name="Navegación: Cuentas" data-interactive="link" data-orden-foco="2">
+<rect x="12" y="128" width="224" height="44" fill="none" data-hit="1"/>
+<g transform="translate(24 140) scale(0.83)" fill="none" stroke="#C3CAD6" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4a4 4 0 100 8 4 4 0 000-8z"/><path d="M4.5 20a7.5 7.5 0 0115 0"/></g>
+<text x="54" y="155.6" font-size="16" fill="#C3CAD6" font-weight="600">Cuentas</text>
+</g>
+<g id="nav-27" data-name="Navegación: Evidencias" data-interactive="link" data-orden-foco="3" aria-current="page">
+<rect x="12" y="176" width="224" height="44" fill="none" data-hit="1"/>
+<rect x="12" y="176" width="224" height="44" rx="8" fill="#23264A"/>
+<g transform="translate(24 188) scale(0.83)" fill="none" stroke="#C7CDFE" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/></g>
+<text x="54" y="203.6" font-size="16" fill="#C7CDFE" font-weight="700">Evidencias</text>
+</g>
+<g id="nav-28" data-name="Navegación: Ranking" data-interactive="link" data-orden-foco="4">
+<rect x="12" y="224" width="224" height="44" fill="none" data-hit="1"/>
+<g transform="translate(24 236) scale(0.83)" fill="none" stroke="#C3CAD6" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v6a4 4 0 01-8 0z"/><path d="M8 6H4v2a3 3 0 003 3M16 6h4v2a3 3 0 01-3 3"/><path d="M12 14v4M8 20h8"/></g>
+<text x="54" y="251.6" font-size="16" fill="#C3CAD6" font-weight="600">Ranking</text>
+</g>
+<g id="nav-29" data-name="Navegación: Métricas" data-interactive="link" data-orden-foco="5">
+<rect x="12" y="272" width="224" height="44" fill="none" data-hit="1"/>
+<g transform="translate(24 284) scale(0.83)" fill="none" stroke="#C3CAD6" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v14H4z"/><path d="M4 10h16M8 3v4M16 3v4"/></g>
+<text x="54" y="299.6" font-size="16" fill="#C3CAD6" font-weight="600">Métricas</text>
+</g>
+<g id="nav-30" data-name="Navegación: Error persistente" data-interactive="link" data-orden-foco="6">
+<rect x="12" y="320" width="224" height="44" fill="none" data-hit="1"/>
+<g transform="translate(24 332) scale(0.83)" fill="none" stroke="#C3CAD6" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5L2.8 19.5h18.4z"/><path d="M12 10v4.5"/><path d="M12 17.2v.1"/></g>
+<text x="54" y="347.6" font-size="16" fill="#C3CAD6" font-weight="600">Error persistente</text>
+</g>
+</g>
+<g id="cabecera" data-name="Cabecera de administración" role="banner">
+<rect x="249" y="0" width="1031" height="64" fill="#1C2128"/>
+<line x1="249" y1="64" x2="1280" y2="64" stroke="#2A323D" stroke-width="1"/>
+<text x="280" y="38" font-size="16" fill="#C3CAD6" font-weight="600">Administración</text>
+<g id="insignia-31" data-name="Insignia: Nivel moderador">
+<rect x="1034.25" y="18" width="153.75" height="28" rx="14" fill="#23264A"/>
+<g transform="translate(1044.25 24) scale(0.67)" fill="none" stroke="#C7CDFE" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7.5 3v5.5c0 4.5-3.2 8-7.5 9.5-4.3-1.5-7.5-5-7.5-9.5V6z"/></g>
+<text x="1066.25" y="36.9" font-size="14" fill="#C7CDFE" font-weight="600">Nivel moderador</text>
+</g>
+<g id="avatar-32" data-name="Menú de cuenta" data-interactive="button" data-orden-foco="7">
+<rect x="1200" y="10" width="44" height="44" fill="none" data-hit="1"/>
+<circle cx="1222" cy="32" r="18" fill="#A5B4FC"/>
+<text x="1222" y="37.6" font-size="16" fill="#1E1B4B" font-weight="700" text-anchor="middle">S</text>
+</g>
+</g>
+<g id="contenido-principal" data-name="Contenido principal (main)" role="main">
+<text x="280" y="121.5" font-size="30" fill="#F1F3F7" font-weight="700">Evidencias</text>
+<g id="selector-1" data-name="Selector: Usuario: todos" data-interactive="input" data-orden-foco="8">
+<rect x="280" y="138" width="162.88" height="44" fill="none" data-hit="1"/>
+<rect x="281" y="139" width="160.88" height="42" rx="8" fill="#1C2128" stroke="#8D97A8" stroke-width="1"/>
+<text x="292" y="165.6" font-size="16" fill="#F1F3F7">Usuario: todos</text>
+<g transform="translate(414.88 150) scale(0.83)" fill="none" stroke="#C3CAD6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" transform-origin="center"><path d="M9 6l6 6-6 6"/></g>
+</g>
+<g id="selector-2" data-name="Selector: Dictamen: todos" data-interactive="input" data-orden-foco="9">
+<rect x="450.88" y="138" width="176.48" height="44" fill="none" data-hit="1"/>
+<rect x="451.88" y="139" width="174.48" height="42" rx="8" fill="#1C2128" stroke="#8D97A8" stroke-width="1"/>
+<text x="462.88" y="165.6" font-size="16" fill="#F1F3F7">Dictamen: todos</text>
+<g transform="translate(599.36 150) scale(0.83)" fill="none" stroke="#C3CAD6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" transform-origin="center"><path d="M9 6l6 6-6 6"/></g>
+</g>
+<g id="selector-3" data-name="Selector: Estado: todos" data-interactive="input" data-orden-foco="10">
+<rect x="635.36" y="138" width="158.56" height="44" fill="none" data-hit="1"/>
+<rect x="636.36" y="139" width="156.56" height="42" rx="8" fill="#1C2128" stroke="#8D97A8" stroke-width="1"/>
+<text x="647.36" y="165.6" font-size="16" fill="#F1F3F7">Estado: todos</text>
+<g transform="translate(765.92 150) scale(0.83)" fill="none" stroke="#C3CAD6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" transform-origin="center"><path d="M9 6l6 6-6 6"/></g>
+</g>
+<g id="selector-4" data-name="Selector: Rango de fechas" data-interactive="input" data-orden-foco="11">
+<rect x="801.92" y="138" width="179.84" height="44" fill="none" data-hit="1"/>
+<rect x="802.92" y="139" width="177.84" height="42" rx="8" fill="#1C2128" stroke="#8D97A8" stroke-width="1"/>
+<text x="813.92" y="165.6" font-size="16" fill="#F1F3F7">Rango de fechas</text>
+<g transform="translate(953.76 150) scale(0.83)" fill="none" stroke="#C3CAD6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" transform-origin="center"><path d="M9 6l6 6-6 6"/></g>
+</g>
+<g id="tabla-5" data-name="Evidencias enviadas" role="table">
+<g id="tarjeta-6" data-name="Tarjeta">
+<rect x="280.5" y="198.5" width="967" height="389" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<rect x="281" y="199" width="966" height="44" rx="12" fill="#1C2128"/>
+<text x="296" y="227" font-size="14" fill="#F1F3F7" font-weight="600">Usuario</text>
+<text x="419.22" y="227" font-size="14" fill="#F1F3F7" font-weight="600">Submeta</text>
+<text x="604.04" y="227" font-size="14" fill="#F1F3F7" font-weight="600">Envío y fecha</text>
+<text x="788.87" y="227" font-size="14" fill="#F1F3F7" font-weight="600">Dictamen</text>
+<text x="973.69" y="227" font-size="14" fill="#F1F3F7" font-weight="600">Estado</text>
+<text x="1170.52" y="227" font-size="14" fill="#F1F3F7" font-weight="600">Acciones</text>
+<text x="296" y="283.6" font-size="16" fill="#F1F3F7">Ana Gómez</text>
+<text x="419.22" y="283.6" font-size="16" fill="#F1F3F7">Estudiar capítulo 3</text>
+<text x="604.04" y="283.6" font-size="16" fill="#F1F3F7">2.º · 02/11/2026</text>
+<g id="insignia-7" data-name="Insignia: Sin dictamen">
+<rect x="789.37" y="264.5" width="108.78" height="27" rx="14" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="798.87" y="282.9" font-size="14" fill="#C3CAD6" font-weight="600">Sin dictamen</text>
+</g>
+<g id="insignia-8" data-name="Insignia: En evaluación">
+<rect x="973.69" y="264" width="138.76" height="28" rx="14" fill="#10243D"/>
+<g transform="translate(983.69 270) scale(0.67)" fill="none" stroke="#93C5FD" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 7v5l3 2"/></g>
+<text x="1005.69" y="282.9" font-size="14" fill="#93C5FD" font-weight="600">En evaluación</text>
+</g>
+<g id="boton-9" data-name="Botón: Abrir" data-interactive="button" data-orden-foco="12">
+<rect x="1170.52" y="256" width="61.48" height="44" fill="none" data-hit="1"/>
+<rect x="1171.52" y="257" width="59.48" height="42" rx="8" fill="#1C2128" stroke="#A5B4FC" stroke-width="2"/>
+<text x="1201.26" y="283.6" font-size="16" fill="#A5B4FC" font-weight="600" text-anchor="middle">Abrir</text>
+</g>
+<line x1="281" y1="312" x2="1247" y2="312" stroke="#2A323D" stroke-width="1"/>
+<text x="296" y="351.6" font-size="16" fill="#F1F3F7">Ana Gómez</text>
+<text x="419.22" y="351.6" font-size="16" fill="#F1F3F7">Estudiar capítulo 3</text>
+<text x="604.04" y="351.6" font-size="16" fill="#F1F3F7">1.º · 02/11/2026</text>
+<g id="insignia-10" data-name="Insignia: Incoherente">
+<rect x="788.87" y="332" width="124.51" height="28" rx="14" fill="#33260A"/>
+<g transform="translate(798.87 338) scale(0.67)" fill="none" stroke="#FCD34D" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5L2.8 19.5h18.4z"/><path d="M12 10v4.5"/><path d="M12 17.2v.1"/></g>
+<text x="820.87" y="350.9" font-size="14" fill="#FCD34D" font-weight="600">Incoherente</text>
+</g>
+<g id="insignia-11" data-name="Insignia: Evaluada">
+<rect x="974.19" y="332.5" width="104.66" height="27" rx="14" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<g transform="translate(983.69 338) scale(0.67)" fill="none" stroke="#C3CAD6" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M8 12.5l3 3 5-6"/></g>
+<text x="1005.69" y="350.9" font-size="14" fill="#C3CAD6" font-weight="600">Evaluada</text>
+</g>
+<g id="boton-12" data-name="Botón: Abrir" data-interactive="button" data-orden-foco="13">
+<rect x="1170.52" y="324" width="61.48" height="44" fill="none" data-hit="1"/>
+<rect x="1171.52" y="325" width="59.48" height="42" rx="8" fill="#1C2128" stroke="#A5B4FC" stroke-width="2"/>
+<text x="1201.26" y="351.6" font-size="16" fill="#A5B4FC" font-weight="600" text-anchor="middle">Abrir</text>
+</g>
+<line x1="281" y1="380" x2="1247" y2="380" stroke="#2A323D" stroke-width="1"/>
+<text x="296" y="419.6" font-size="16" fill="#F1F3F7">Luis Prada</text>
+<text x="419.22" y="419.6" font-size="16" fill="#F1F3F7">Resolver guía 2</text>
+<text x="604.04" y="419.6" font-size="16" fill="#F1F3F7">1.º · 30/10/2026</text>
+<g id="insignia-13" data-name="Insignia: Sin dictamen">
+<rect x="789.37" y="400.5" width="108.78" height="27" rx="14" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="798.87" y="418.9" font-size="14" fill="#C3CAD6" font-weight="600">Sin dictamen</text>
+</g>
+<g id="insignia-14" data-name="Insignia: Error persistente">
+<rect x="973.69" y="400" width="158.49" height="28" rx="14" fill="#3A1412"/>
+<g transform="translate(983.69 406) scale(0.67)" fill="none" stroke="#FCA5A5" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M9 9l6 6M15 9l-6 6"/></g>
+<text x="1005.69" y="418.9" font-size="14" fill="#FCA5A5" font-weight="600">Error persistente</text>
+</g>
+<g id="boton-15" data-name="Botón: Abrir" data-interactive="button" data-orden-foco="14">
+<rect x="1170.52" y="392" width="61.48" height="44" fill="none" data-hit="1"/>
+<rect x="1171.52" y="393" width="59.48" height="42" rx="8" fill="#1C2128" stroke="#A5B4FC" stroke-width="2"/>
+<text x="1201.26" y="419.6" font-size="16" fill="#A5B4FC" font-weight="600" text-anchor="middle">Abrir</text>
+</g>
+<line x1="281" y1="448" x2="1247" y2="448" stroke="#2A323D" stroke-width="1"/>
+<text x="296" y="487.6" font-size="16" fill="#F1F3F7">Luis Prada</text>
+<text x="419.22" y="487.6" font-size="16" fill="#F1F3F7">Resolver guía 1</text>
+<text x="604.04" y="487.6" font-size="16" fill="#F1F3F7">1.º · 29/10/2026</text>
+<g id="insignia-16" data-name="Insignia: Excelente">
+<rect x="788.87" y="468" width="111.01" height="28" rx="14" fill="#12301F"/>
+<g transform="translate(798.87 474) scale(0.67)" fill="none" stroke="#86D9A4" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M8 12.5l3 3 5-6"/></g>
+<text x="820.87" y="486.9" font-size="14" fill="#86D9A4" font-weight="600">Excelente</text>
+</g>
+<g id="insignia-17" data-name="Insignia: Evaluada">
+<rect x="974.19" y="468.5" width="104.66" height="27" rx="14" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<g transform="translate(983.69 474) scale(0.67)" fill="none" stroke="#C3CAD6" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M8 12.5l3 3 5-6"/></g>
+<text x="1005.69" y="486.9" font-size="14" fill="#C3CAD6" font-weight="600">Evaluada</text>
+</g>
+<g id="boton-18" data-name="Botón: Abrir" data-interactive="button" data-orden-foco="15">
+<rect x="1170.52" y="460" width="61.48" height="44" fill="none" data-hit="1"/>
+<rect x="1171.52" y="461" width="59.48" height="42" rx="8" fill="#1C2128" stroke="#A5B4FC" stroke-width="2"/>
+<text x="1201.26" y="487.6" font-size="16" fill="#A5B4FC" font-weight="600" text-anchor="middle">Abrir</text>
+</g>
+<line x1="281" y1="516" x2="1247" y2="516" stroke="#2A323D" stroke-width="1"/>
+<text x="296" y="555.6" font-size="16" fill="#F1F3F7">Marta Ríos</text>
+<text x="419.22" y="555.6" font-size="16" fill="#F1F3F7">Leer capítulo 2</text>
+<text x="604.04" y="555.6" font-size="16" fill="#F1F3F7">2.º · 29/10/2026</text>
+<g id="insignia-19" data-name="Insignia: Sin dictamen">
+<rect x="789.37" y="536.5" width="108.78" height="27" rx="14" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="798.87" y="554.9" font-size="14" fill="#C3CAD6" font-weight="600">Sin dictamen</text>
+</g>
+<g id="insignia-20" data-name="Insignia: Error persistente">
+<rect x="973.69" y="536" width="158.49" height="28" rx="14" fill="#3A1412"/>
+<g transform="translate(983.69 542) scale(0.67)" fill="none" stroke="#FCA5A5" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M9 9l6 6M15 9l-6 6"/></g>
+<text x="1005.69" y="554.9" font-size="14" fill="#FCA5A5" font-weight="600">Error persistente</text>
+</g>
+<g id="boton-21" data-name="Botón: Abrir" data-interactive="button" data-orden-foco="16">
+<rect x="1170.52" y="528" width="61.48" height="44" fill="none" data-hit="1"/>
+<rect x="1171.52" y="529" width="59.48" height="42" rx="8" fill="#1C2128" stroke="#A5B4FC" stroke-width="2"/>
+<text x="1201.26" y="555.6" font-size="16" fill="#A5B4FC" font-weight="600" text-anchor="middle">Abrir</text>
+</g>
+<line x1="281" y1="584" x2="1247" y2="584" stroke="#2A323D" stroke-width="1"/>
+</g>
+</g>
+<g id="boton-22" data-name="Botón: Anterior" data-interactive="button" data-orden-foco="17">
+<rect x="280" y="604" width="102.58" height="44" fill="none" data-hit="1"/>
+<rect x="281" y="605" width="100.58" height="42" rx="8" fill="#1C2128" stroke="#A5B4FC" stroke-width="2"/>
+<text x="331.29" y="631.6" font-size="16" fill="#A5B4FC" font-weight="600" text-anchor="middle">Anterior</text>
+</g>
+<text x="394.58" y="630.9" font-size="14" fill="#C3CAD6">Página 1 de 4</text>
+<g id="boton-23" data-name="Botón: Siguiente" data-interactive="button" data-orden-foco="18">
+<rect x="495.2" y="604" width="113.95" height="44" fill="none" data-hit="1"/>
+<rect x="496.2" y="605" width="111.95" height="42" rx="8" fill="#1C2128" stroke="#A5B4FC" stroke-width="2"/>
+<text x="552.18" y="631.6" font-size="16" fill="#A5B4FC" font-weight="600" text-anchor="middle">Siguiente</text>
+</g>
+<text x="280" y="679.4" font-size="14" fill="#C3CAD6">El contenido de una evidencia solo se abre desde su detalle.</text>
+</g>
+</svg>

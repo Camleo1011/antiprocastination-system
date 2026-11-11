@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="985" viewBox="0 0 1280 985" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" data-pan="PAN-001" data-dispositivo="desktop" data-tema="oscuro" aria-labelledby="t d">
+<title id="t">PAN-001 — Registro (escritorio 1280 px, tema oscuro)</title>
+<desc id="d">Mockup de alta fidelidad de Registro. Ruta /registro; rol visitante; CU CU-001; EP EP-003. Estado mostrado: 422 MAYORIA_EDAD_REQUERIDA: casilla de declaración 18+ sin marcar; la cuenta NO se crea. Colores, tipografía (Inter), espaciado y radios del sistema de diseño (tema oscuro); texto editable. Declaración 18+ obligatoria y sin premarcar (RF-AUT-017). La política de contraseña se ve antes de escribir. Regiones ARIA: banner, main. Orden de foco con Tab (coincide con el orden visual y del DOM): Enlace de salto «Saltar al contenido principal» (visible solo al recibir el foco). 1 Campo: Nombre; 2 Campo: Correo electrónico; 3 Campo: Contraseña; 4 Casilla: Declaro ser mayor de 18 años; 5 Botón: Crear cuenta; 6 Botón: ¿Ya tienes cuenta? Inicia sesión.</desc>
+<defs><pattern id="rayas-gracia" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#2A323D"/><rect width="3" height="6" fill="#F5B93A"/></pattern></defs>
+<rect id="fondo-pagina" width="1280" height="985" fill="#161A20"/>
+<g id="cabecera" data-name="Cabecera" role="banner">
+<g id="logo-13" data-name="Logotipo FocusStrike" data-exempt="logo">
+<rect x="556" y="56" width="32" height="32" rx="8" fill="#A5B4FC"/>
+<g transform="translate(562.4 62.4) scale(0.8)" fill="none" stroke="#1E1B4B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="598" y="78.3" font-size="18" fill="#F1F3F7" font-weight="700">FocusStrike</text>
+</g>
+</g>
+<g id="contenido-principal" data-name="Contenido principal (main)" role="main">
+<g id="tarjeta-1" data-name="Tarjeta">
+<rect x="420.5" y="128.5" width="439" height="824" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="452" y="189.5" font-size="30" fill="#F1F3F7" font-weight="700">Crear cuenta</text>
+<text x="452" y="221.4" font-size="14" fill="#C3CAD6">FocusStrike es para personas de 18 años o más.</text>
+<g id="alerta-2" data-name="Alerta: Debes declarar que eres mayor de 18 años" role="alert">
+<rect x="452" y="243" width="376" height="66" rx="8" fill="#3A1412"/>
+<rect x="452" y="243" width="4" height="66" rx="2" fill="#F87171"/>
+<g transform="translate(468 255) scale(0.83)" fill="none" stroke="#FCA5A5" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M9 9l6 6M15 9l-6 6"/></g>
+<text x="500" y="270.4" font-size="14" fill="#F1F3F7">Debes declarar que eres mayor de 18 años</text>
+<text x="500" y="291.4" font-size="14" fill="#F1F3F7">para crear tu cuenta.</text>
+</g>
+<g id="campo-3" data-name="Campo: Nombre">
+<text x="452" y="340.4" font-size="14" fill="#F1F3F7" font-weight="600">Nombre</text>
+<g id="entrada-4" data-name="Entrada" data-interactive="input" data-orden-foco="1">
+<rect x="452" y="350" width="376" height="44" fill="none" data-hit="1"/>
+<rect x="453" y="351" width="374" height="42" rx="8" fill="#1C2128" stroke="#8D97A8" stroke-width="1"/>
+<text x="464" y="377.6" font-size="16" fill="#F1F3F7">Ana Gómez</text>
+</g>
+</g>
+<g id="campo-5" data-name="Campo: Correo electrónico">
+<text x="452" y="425.4" font-size="14" fill="#F1F3F7" font-weight="600">Correo electrónico</text>
+<g id="entrada-6" data-name="Entrada" data-interactive="input" data-orden-foco="2">
+<rect x="452" y="435" width="376" height="44" fill="none" data-hit="1"/>
+<rect x="453" y="436" width="374" height="42" rx="8" fill="#1C2128" stroke="#8D97A8" stroke-width="1"/>
+<text x="464" y="462.6" font-size="16" fill="#F1F3F7">ana.gomez@correo.com</text>
+</g>
+</g>
+<g id="campo-7" data-name="Campo: Contraseña">
+<text x="452" y="510.4" font-size="14" fill="#F1F3F7" font-weight="600">Contraseña</text>
+<g id="entrada-8" data-name="Entrada" data-interactive="input" data-orden-foco="3">
+<rect x="452" y="520" width="376" height="44" fill="none" data-hit="1"/>
+<rect x="453" y="521" width="374" height="42" rx="8" fill="#1C2128" stroke="#8D97A8" stroke-width="1"/>
+<text x="464" y="547.6" font-size="16" fill="#F1F3F7">•••••••••••</text>
+<text x="816" y="546.9" font-size="14" fill="#A5B4FC" font-weight="600" text-anchor="end">Mostrar</text>
+</g>
+<text x="452" y="583.4" font-size="14" fill="#C3CAD6">Mínimo 8 caracteres, con una letra y un número</text>
+</g>
+<text x="452" y="620.4" font-size="14" fill="#C3CAD6">Usaremos tu zona horaria: America/Bogota; podrás</text>
+<text x="452" y="641.4" font-size="14" fill="#C3CAD6">cambiarla en Preferencias.</text>
+<g id="declaracion-9" data-name="Declaración de mayoría de edad">
+<rect x="453" y="664" width="374" height="148" rx="8" fill="#161A20" stroke="#F87171" stroke-width="2"/>
+<g id="casilla-10" data-name="Casilla: Declaro ser mayor de 18 años" data-interactive="check" data-orden-foco="4">
+<rect x="468" y="671" width="344" height="44" fill="none" data-hit="1"/>
+<rect x="469" y="682" width="22" height="22" rx="4" fill="#1C2128" stroke="#F87171" stroke-width="2"/>
+<text x="504" y="698.6" font-size="16" fill="#F1F3F7">Declaro ser mayor de 18 años</text>
+</g>
+<g transform="translate(468 719) scale(0.67)" fill="none" stroke="#FCA5A5" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M9 9l6 6M15 9l-6 6"/></g>
+<text x="490" y="732.4" font-size="14" fill="#FCA5A5" font-weight="500">Debes declarar que eres mayor de 18 años para</text>
+<text x="490" y="753.4" font-size="14" fill="#FCA5A5" font-weight="500">crear tu cuenta</text>
+<text x="504" y="774.4" font-size="14" fill="#C3CAD6">Solo guardamos la fecha y hora de tu</text>
+<text x="504" y="795.4" font-size="14" fill="#C3CAD6">declaración, nunca tu fecha de nacimiento.</text>
+</g>
+<g id="boton-11" data-name="Botón: Crear cuenta" data-interactive="button" data-orden-foco="5">
+<rect x="452" y="829" width="140.74" height="44" fill="none" data-hit="1"/>
+<rect x="452" y="829" width="140.74" height="44" rx="8" fill="#A5B4FC"/>
+<text x="522.37" y="856.6" font-size="16" fill="#1E1B4B" font-weight="600" text-anchor="middle">Crear cuenta</text>
+</g>
+<g id="boton-12" data-name="Botón: ¿Ya tienes cuenta? Inicia sesión" data-interactive="link" data-orden-foco="6">
+<rect x="452" y="877" width="296.77" height="44" fill="none" data-hit="1"/>
+<text x="452" y="904.6" font-size="16" fill="#A5B4FC" font-weight="600">¿Ya tienes cuenta? Inicia sesión</text>
+<line x1="452" y1="907.6" x2="698.5" y2="907.6" stroke="#A5B4FC" stroke-width="1"/>
+</g>
+</g>
+</g>
+</svg>

@@ -1,0 +1,77 @@
+@startuml CU-014-evaluate-evidence-llm
+' ==============================================================
+' CONTROL DE VERSIONES
+' Archivo  : CU-014-evaluate-evidence-llm.puml
+' Versión  : 0.1      Fecha: 2026-11-11      Autor: Equipo FocusStrike
+' Fuente   : docs/01-analysis/SRS.md (SRS 0.1), sección 3.7, CU-014
+' Cambio   : Línea base
+' ==============================================================
+title Actividades — CU-014 Evaluar Evidencia con LLM (asíncrono)\n(SRS 0.1 · diagrama v0.1)
+|Sistema|
+start
+:Tomar el contenido preparado en la carga según el formato, ya convertido cuando corresponde; se conserva solo en memoria;
+note right
+  CU-013, RF-EVID-003, RF-IA-005, RF-IA-012. Imagen (el GIF como PNG de su primer fotograma),
+  PDF, texto, o texto o Markdown de documentos y hojas. El contenido preparado NO se persiste.
+  Flujo alterno 1a: un archivo vacío, corrupto, ilegible, no convertible o de formato no soportado
+  no llega aquí; se rechazó en la carga (HTTP 415 o 422) sin evaluación ni dictamen y sin consumir envío.
+end note
+if (¿El contenido es una imagen?) then (sí)
+  :Preparar la copia a enviar: aplicar la rotación de su orientación, eliminar todos sus metadatos EXIF (ubicación, fecha de captura y dispositivo) y reducir la resolución a la mínima útil sin ampliarla;
+  note right
+    RF-IA-005, BR-026, CP-127. La limpieza se aplica
+    solo a la copia enviada; el archivo guardado del usuario no se modifica.
+  end note
+else (no)
+endif
+:Armar la solicitud con el contexto de la meta y sin datos personales: sin nombre, correo ni ids del usuario y sin el nombre original del archivo;
+note right: RF-IA-006, RF-IA-008, CP-127
+|Base de datos|
+:Crear la evaluación en estado En evaluación;
+note right: RF-EVID-005, RF-EVID-006
+|Sistema|
+:Enviar la solicitud de forma asíncrona;
+
+repeat
+  |Motor LLM|
+  :Evaluar y responder dentro del timeout con dictamen y justificación en el esquema acordado;
+  note right: RF-IA-002, RF-IA-003
+  |Base de datos|
+  :Registrar un uso del LLM por cada llamada, con proveedor, modelo y resultado;
+  note right: RF-ADM-007, RF-IA-009
+  |Sistema|
+repeat while (¿Timeout, 5xx, cuota agotada o respuesta fuera del esquema y reintentos pendientes?) is (sí) not (no)
+note right: Reintentos automáticos. RF-IA-004
+
+if (¿Persiste el fallo tras los reintentos?) then (sí)
+  |Base de datos|
+  :Pasar la evaluación a Error;
+  note right: Flujo alterno 3a. Error técnico: no puntúa. Inicia la cuenta de 48 h (RF-ADM-018).
+  |Sistema|
+  :Notificar al usuario (CU-028); el usuario puede reintentar (CU-023);
+  stop
+else (no)
+endif
+
+|Base de datos|
+:Registrar la evaluación como Evaluada con su dictamen y justificación;
+note right: RF-EVID-006
+|Sistema|
+if (¿Dictamen?) then (Inválida)
+  :Dictamen Inválida: 0 puntos y envío consumido;
+  note right: Flujo alterno 3b. No es un Error y no admite Reintentar. BR-005
+else (Excelente o Incoherente)
+endif
+:Completar la evaluación aunque el plazo haya expirado durante el proceso;
+note right: RF-EVID-011, BR-016
+|Base de datos|
+:Invocar sp_registrar_dictamen, que decide si la submeta se cierra;
+note right
+  El cierre no lo decide el dictamen sino
+  sp_cerrar_submeta (BR-018).
+end note
+|Sistema|
+:Notificar el resultado (CU-028) y continuar en CU-016;
+stop
+
+@enduml

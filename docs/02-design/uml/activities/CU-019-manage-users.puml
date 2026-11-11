@@ -1,0 +1,142 @@
+@startuml CU-019-manage-users
+' ==============================================================
+' CONTROL DE VERSIONES
+' Archivo  : CU-019-manage-users.puml
+' Versión  : 0.1      Fecha: 2026-11-11      Autor: Equipo FocusStrike
+' Fuente   : docs/01-analysis/SRS.md (SRS 0.1), sección 3.7, CU-019
+' Cambio   : Línea base
+' ==============================================================
+title Actividades — CU-019 Administrar Usuarios\n(SRS 0.1 · diagrama v0.1)
+|Administrador|
+start
+:Acceder al panel de administración;
+
+|Sistema|
+if (¿La cuenta tiene rol administrador?) then (no)
+  :Responder HTTP 403;
+  note right: Flujo alterno 2a. RF-ADM-016
+  stop
+else (sí)
+endif
+
+|Administrador|
+:Consultar el listado y el detalle de cuentas;
+note right: RF-ADM-008. Todos los niveles.
+:Elegir la acción: crear o editar una cuenta (cliente o administrador), cambiar su rol,\neliminar una cuenta o asignar el nivel de un administrador;
+
+|Sistema|
+if (¿El administrador está identificado como actor y su nivel permite la acción según la matriz de BR-021?) then (no)
+  :Responder HTTP 403 y no cambiar nada;
+  note right
+    Flujos alternos 3a y 3i. RF-ADM-015, RF-ADM-014, RF-ADM-009, BR-021.
+    Cambiar un nivel o un rol exige un administrador super identificado como actor
+    (la operación sin actor identificado se rechaza). Matriz:
+    - crear y editar cuentas cliente: super y moderador;
+    - crear y editar cuentas administrador, asignar o cambiar niveles,
+      cambiar roles y eliminar cuentas: solo super;
+    - soporte: solo consulta (cualquier modificación se rechaza).
+    Bloquear y desbloquear (CU-020): cuentas cliente, super y moderador;
+    cuentas administrador, solo super.
+  end note
+  stop
+else (sí)
+endif
+
+if (¿Acción?) then (crear)
+  if (¿Correo duplicado?) then (sí)
+    :Responder HTTP 409;
+    note right: Flujo alterno 3b
+    stop
+  elseif (¿Se asigna un segundo rol?) then (sí)
+    :Responder HTTP 422;
+    note right: Flujo alterno 3d. RF-ADM-006
+    stop
+  else (no)
+  endif
+  |Base de datos|
+  :Crear la cuenta; el cliente nace con zona\nAmerica/Bogota y sin declaración\nde mayoría de edad;
+  note right
+    RF-ADM-001, RF-ADM-021, RF-AUT-016,
+    RF-AUT-018. La declaración la hace
+    en su primer inicio de sesión (CU-002, 5b);
+    hasta entonces HTTP 403
+    MAYORIA_EDAD_REQUERIDA.
+    Cliente: super o moderador;
+    administrador: solo super.
+  end note
+elseif (editar) then
+  |Sistema|
+  if (¿Cambia el rol de una cuenta con datos?) then (sí)
+    :Responder HTTP 409;
+    note right: Flujo alterno 3e. RF-ADM-009, BR-013
+    stop
+  elseif (¿Cambia el rol o nivel del último super?) then (sí)
+    :Responder HTTP 409;
+    note right: Flujo alterno 3c. RF-ADM-009, BR-021
+    stop
+  else (no)
+  endif
+  |Base de datos|
+  :Actualizar la cuenta; en un cambio de rol\n(sp_cambiar_rol, actor super) se eliminan\nlos datos del rol anterior y se crean\nlos del nuevo con valores por defecto;
+  note right
+    RF-ADM-009, RF-ADM-020, RF-AUT-018.
+    Editar cliente: super o moderador;
+    editar administrador o cambiar rol:
+    solo super identificado. Hacia
+    administrador exige el nivel; el que
+    vuelve a cliente nace sin declaración
+    de mayoría de edad y con zona pendiente.
+  end note
+elseif (eliminar) then
+  |Sistema|
+  if (¿Es su propia cuenta o el último super?) then (sí)
+    :Responder HTTP 409;
+    note right: Flujo alterno 3c. RF-ADM-010, BR-021
+    stop
+  else (no)
+  endif
+  |Administrador|
+  :Confirmar la eliminación y enviar la confirmación explícita (confirmar=true);
+  |Sistema|
+  if (¿La solicitud lleva la confirmación explícita confirmar=true?) then (no)
+    :Responder HTTP 422; no eliminar nada;
+    note right: Flujo alterno 3h. RF-ADM-010
+    stop
+  else (sí)
+  endif
+  |Base de datos|
+  :Borrar en cascada los datos de la cuenta;
+  note right
+    RF-ADM-010. Solo super. Un administrador que cerró
+    submetas las deja finalizadas con el
+    administrador vacío (3f).
+  end note
+  |Sistema|
+  :Eliminar los archivos de evidencia de la cuenta;
+  note right: RF-EVID-017
+  if (¿Falló el borrado de un archivo?) then (sí)
+    :Completar la eliminación y dejar el archivo para la limpieza programada (CU-033);
+    note right: Flujo alterno 3g. RF-EVID-018
+  else (no)
+  endif
+else (asignar nivel)
+  |Sistema|
+  if (¿Es super y el cambio deja al sistema sin super?) then (sí)
+    :Responder HTTP 409;
+    note right: Flujo alterno 3c. BR-021
+    stop
+  else (no)
+  endif
+  |Base de datos|
+  :Asignar o cambiar el nivel de acceso\n(sp_cambiar_nivel_acceso, actor super);
+  note right: RF-ADM-014, BR-021
+endif
+
+|Sistema|
+:Validar permisos por nivel y confirmar los cambios;
+note right: RF-ADM-015
+|Administrador|
+:Ver las cuentas gestionadas;
+stop
+
+@enduml

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="375" height="1208" viewBox="0 0 375 1208" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" data-pan="PAN-040" data-dispositivo="movil" data-tema="oscuro" aria-labelledby="t d">
+<title id="t">PAN-040 — Métricas del uso del LLM (móvil 375 px, tema oscuro)</title>
+<desc id="d">Mockup de alta fidelidad de Métricas del uso del LLM. Ruta /admin/metricas/llm; rol super; CU CU-021, CU-006, CU-014; EP EP-053. Estado mostrado: sesión super: llamadas, tokens, costo acumulado y latencia por operación de la IA desde el 01/10/2026. Colores, tipografía (Inter), espaciado y radios del sistema de diseño (tema oscuro); texto editable. Exclusivo del super (403 para moderador y soporte). Sin contenido de evidencias ni datos personales (regla de seguridad del proyecto). Regiones ARIA: banner, navigation, main. Orden de foco con Tab (coincide con el orden visual y del DOM): Enlace de salto «Saltar al contenido principal» (visible solo al recibir el foco). 1 Abrir menú de administración; 2 Selector: Desde: 01/10/2026.</desc>
+<defs><pattern id="rayas-gracia" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#2A323D"/><rect width="3" height="6" fill="#F5B93A"/></pattern></defs>
+<rect id="fondo-pagina" width="375" height="1208" fill="#161A20"/>
+<g id="barra-superior" data-name="Barra superior de administración" role="banner">
+<rect x="0" y="0" width="375" height="56" fill="#1C2128"/>
+<line x1="0" y1="56" x2="375" y2="56" stroke="#2A323D" stroke-width="1"/>
+<g id="navegacion-admin" data-name="Navegación de administración (cajón)" role="navigation" aria-label="Administración">
+<g id="boton-menu" data-name="Abrir menú de administración" data-interactive="button" data-orden-foco="1">
+<rect x="4" y="6" width="44" height="44" fill="none" data-hit="1"/>
+<g transform="translate(14 16) scale(1)" fill="none" stroke="#F1F3F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></g>
+</g>
+</g>
+<g id="logo-9" data-name="Logotipo FocusStrike" data-exempt="logo">
+<rect x="56" y="12" width="32" height="32" rx="8" fill="#A5B4FC"/>
+<g transform="translate(62.4 18.4) scale(0.8)" fill="none" stroke="#1E1B4B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+</g>
+<g id="insignia-10" data-name="Insignia: Nivel super">
+<rect x="239.83" y="14" width="119.17" height="28" rx="14" fill="#23264A"/>
+<g transform="translate(249.83 20) scale(0.67)" fill="none" stroke="#C7CDFE" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7.5 3v5.5c0 4.5-3.2 8-7.5 9.5-4.3-1.5-7.5-5-7.5-9.5V6z"/></g>
+<text x="271.83" y="32.9" font-size="14" fill="#C7CDFE" font-weight="600">Nivel super</text>
+</g>
+</g>
+<g id="contenido-principal" data-name="Contenido principal (main)" role="main">
+<text x="16" y="99.4" font-size="24" fill="#F1F3F7" font-weight="600">Métricas del uso del LLM</text>
+<g id="selector-1" data-name="Selector: Desde: 01/10/2026" data-interactive="input" data-orden-foco="2">
+<rect x="16" y="114" width="199.52" height="44" fill="none" data-hit="1"/>
+<rect x="17" y="115" width="197.52" height="42" rx="8" fill="#1C2128" stroke="#8D97A8" stroke-width="1"/>
+<text x="28" y="141.6" font-size="16" fill="#F1F3F7">Desde: 01/10/2026</text>
+<g transform="translate(187.52 126) scale(0.83)" fill="none" stroke="#C3CAD6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" transform-origin="center"><path d="M9 6l6 6-6 6"/></g>
+</g>
+<g id="tarjeta-2" data-name="Tarjeta">
+<rect x="16.5" y="174.5" width="342" height="95" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<g transform="translate(323 186) scale(0.83)" fill="none" stroke="#A5B4FC" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></g>
+<text x="32" y="199.4" font-size="14" fill="#C3CAD6" font-weight="600">Llamadas</text>
+<text x="32" y="236" font-size="30" fill="#F1F3F7" font-weight="700">1.130</text>
+<text x="32" y="255.4" font-size="14" fill="#C3CAD6">desde 01/10/2026</text>
+</g>
+<g id="tarjeta-3" data-name="Tarjeta">
+<rect x="16.5" y="282.5" width="342" height="95" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<g transform="translate(323 294) scale(0.83)" fill="none" stroke="#A5B4FC" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/></g>
+<text x="32" y="307.4" font-size="14" fill="#C3CAD6" font-weight="600">Costo acumulado</text>
+<text x="32" y="344" font-size="30" fill="#F1F3F7" font-weight="700">USD 33,65</text>
+<text x="32" y="363.4" font-size="14" fill="#C3CAD6">con fallidas y reintentos</text>
+</g>
+<g id="tabla-4" data-name="Uso del LLM por operación" role="table">
+<g id="tarjeta-5" data-name="Tarjeta">
+<rect x="16.5" y="394.5" width="342" height="173" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="32" y="427.6" font-size="16" fill="#F1F3F7" font-weight="700">Desglose</text>
+<text x="32" y="455.4" font-size="14" fill="#C3CAD6">Llamadas</text>
+<text x="156.4" y="457.6" font-size="16" fill="#F1F3F7">120</text>
+<text x="32" y="483.4" font-size="14" fill="#C3CAD6">Tokens</text>
+<text x="156.4" y="485.6" font-size="16" fill="#F1F3F7">310.000</text>
+<text x="32" y="511.4" font-size="14" fill="#C3CAD6">Costo acumulado</text>
+<text x="156.4" y="513.6" font-size="16" fill="#F1F3F7">USD 4,20</text>
+<text x="32" y="539.4" font-size="14" fill="#C3CAD6">Latencia prom.</text>
+<text x="156.4" y="541.6" font-size="16" fill="#F1F3F7">38 s</text>
+</g>
+<g id="tarjeta-6" data-name="Tarjeta">
+<rect x="16.5" y="580.5" width="342" height="173" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="32" y="613.6" font-size="16" fill="#F1F3F7" font-weight="700">Sugerencia de fechas</text>
+<text x="32" y="641.4" font-size="14" fill="#C3CAD6">Llamadas</text>
+<text x="156.4" y="643.6" font-size="16" fill="#F1F3F7">45</text>
+<text x="32" y="669.4" font-size="14" fill="#C3CAD6">Tokens</text>
+<text x="156.4" y="671.6" font-size="16" fill="#F1F3F7">40.000</text>
+<text x="32" y="697.4" font-size="14" fill="#C3CAD6">Costo acumulado</text>
+<text x="156.4" y="699.6" font-size="16" fill="#F1F3F7">USD 0,60</text>
+<text x="32" y="725.4" font-size="14" fill="#C3CAD6">Latencia prom.</text>
+<text x="156.4" y="727.6" font-size="16" fill="#F1F3F7">6 s</text>
+</g>
+<g id="tarjeta-7" data-name="Tarjeta">
+<rect x="16.5" y="766.5" width="342" height="173" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="32" y="799.6" font-size="16" fill="#F1F3F7" font-weight="700">Recomendación</text>
+<text x="32" y="827.4" font-size="14" fill="#C3CAD6">Llamadas</text>
+<text x="156.4" y="829.6" font-size="16" fill="#F1F3F7">60</text>
+<text x="32" y="855.4" font-size="14" fill="#C3CAD6">Tokens</text>
+<text x="156.4" y="857.6" font-size="16" fill="#F1F3F7">52.000</text>
+<text x="32" y="883.4" font-size="14" fill="#C3CAD6">Costo acumulado</text>
+<text x="156.4" y="885.6" font-size="16" fill="#F1F3F7">USD 0,75</text>
+<text x="32" y="911.4" font-size="14" fill="#C3CAD6">Latencia prom.</text>
+<text x="156.4" y="913.6" font-size="16" fill="#F1F3F7">8 s</text>
+</g>
+<g id="tarjeta-8" data-name="Tarjeta">
+<rect x="16.5" y="952.5" width="342" height="173" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="32" y="985.6" font-size="16" fill="#F1F3F7" font-weight="700">Evaluación</text>
+<text x="32" y="1013.4" font-size="14" fill="#C3CAD6">Llamadas</text>
+<text x="156.4" y="1015.6" font-size="16" fill="#F1F3F7">1.020</text>
+<text x="32" y="1041.4" font-size="14" fill="#C3CAD6">Tokens</text>
+<text x="156.4" y="1043.6" font-size="16" fill="#F1F3F7">1.900.000</text>
+<text x="32" y="1069.4" font-size="14" fill="#C3CAD6">Costo acumulado</text>
+<text x="156.4" y="1071.6" font-size="16" fill="#F1F3F7">USD 28,10</text>
+<text x="32" y="1097.4" font-size="14" fill="#C3CAD6">Latencia prom.</text>
+<text x="156.4" y="1099.6" font-size="16" fill="#F1F3F7">22 s</text>
+</g>
+</g>
+<text x="16" y="1157.4" font-size="14" fill="#C3CAD6">Las llamadas incluyen las fallidas y los reintentos.</text>
+<text x="16" y="1178.4" font-size="14" fill="#C3CAD6">Importes en dólares con coma decimal.</text>
+</g>
+</svg>

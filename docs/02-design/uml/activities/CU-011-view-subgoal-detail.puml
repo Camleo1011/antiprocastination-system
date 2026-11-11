@@ -1,0 +1,43 @@
+@startuml CU-011-view-subgoal-detail
+' ==============================================================
+' CONTROL DE VERSIONES
+' Archivo  : CU-011-view-subgoal-detail.puml
+' Versión  : 0.1      Fecha: 2026-11-11      Autor: Equipo FocusStrike
+' Fuente   : docs/01-analysis/SRS.md (SRS 0.1), sección 3.7, CU-011
+' Cambio   : Línea base
+' ==============================================================
+title Actividades — CU-011 Consultar Detalle de Submeta\n(SRS 0.1 · diagrama v0.1)
+|Usuario (cliente)|
+start
+:Seleccionar una submeta propia en la agenda;
+
+|Sistema|
+|Base de datos|
+:Recuperar horario, estado, puntaje, evidencias y estado de evaluación;
+note right: RF-AGEN-004
+|Sistema|
+if (¿La submeta está en curso?) then (sí)
+  :Mostrar la ventana vigente y su cuenta regresiva;
+  note right: RF-AGEN-006
+else (no)
+endif
+if (¿La submeta está abierta?) then (sí)
+  :Mostrar el puntaje como provisional;
+  note right: RF-PUNT-012
+else (no)
+endif
+if (¿Tiene puntaje?) then (no)
+  if (¿La meta requiere evidencia?) then (no)
+    :Mostrar sin calificación;
+  else (sí)
+    :Mostrar sin valor, aún sin evidencias;
+  endif
+  note right: Flujo alterno 2a. BR-010
+else (sí)
+endif
+
+|Usuario (cliente)|
+:Ver el detalle de la submeta;
+stop
+
+@enduml

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" data-pan="PAN-046" data-dispositivo="desktop" data-tema="claro" aria-labelledby="t d">
+<title id="t">PAN-046 — Confirmar cierre administrativo (escritorio 1280 px, tema claro)</title>
+<desc id="d">Mockup de alta fidelidad de Confirmar cierre administrativo. Ruta (modal); rol moderador+; CU CU-030; EP EP-058. Estado mostrado: confirmación del cierre administrativo (mismo patrón que PAN-029): casilla sin marcar con mensaje CONFIRMACION_REQUERIDA; foco inicial en Cancelar. Colores, tipografía (Inter), espaciado y radios del sistema de diseño (tema claro); texto editable. El cliente envía confirmar=true (EP-058). 409 CIERRE_ADMIN_NO_PROCEDE si la evaluación se resolvió mientras tanto. Regiones ARIA: navigation, banner, main, alertdialog. Orden de foco con Tab (coincide con el orden visual y del DOM): Diálogo abierto: el fondo queda inerte y el foco se atrapa en el diálogo; foco inicial en el botón seguro (Cancelar). 1 Casilla: Entiendo las consecuencias; 2 Botón: Cancelar; 3 Botón: Cerrar submeta.</desc>
+<defs><pattern id="rayas-gracia" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#E3E8EF"/><rect width="3" height="6" fill="#8A4B00"/></pattern></defs>
+<rect id="fondo-pagina" width="1280" height="800" fill="#F5F7FA"/>
+<g id="fondo-inerte" data-name="Contenido de la pantalla cubierto por el diálogo" data-inert="true" aria-hidden="true">
+<g id="barra-lateral" data-name="Barra lateral de administración" role="navigation">
+<rect x="0" y="0" width="248" height="800" fill="#FFFFFF"/>
+<line x1="248" y1="0" x2="248" y2="800" stroke="#D7DDE8" stroke-width="1"/>
+<g id="logo-13" data-name="Logotipo FocusStrike" data-exempt="logo">
+<rect x="24" y="16" width="32" height="32" rx="8" fill="#4338CA"/>
+<g transform="translate(30.4 22.4) scale(0.8)" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="66" y="38.3" font-size="18" fill="#1A1D21" font-weight="700">FocusStrike</text>
+</g>
+<g id="nav-14" data-name="Navegación: Panel" data-interactive="link">
+<rect x="12" y="80" width="224" height="44" fill="none" data-hit="1"/>
+<g transform="translate(24 92) scale(0.83)" fill="none" stroke="#4B5563" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7"/><path d="M6 10v10h12V10"/></g>
+<text x="54" y="107.6" font-size="16" fill="#4B5563" font-weight="600">Panel</text>
+</g>
+<g id="nav-15" data-name="Navegación: Cuentas" data-interactive="link">
+<rect x="12" y="128" width="224" height="44" fill="none" data-hit="1"/>
+<g transform="translate(24 140) scale(0.83)" fill="none" stroke="#4B5563" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4a4 4 0 100 8 4 4 0 000-8z"/><path d="M4.5 20a7.5 7.5 0 0115 0"/></g>
+<text x="54" y="155.6" font-size="16" fill="#4B5563" font-weight="600">Cuentas</text>
+</g>
+<g id="nav-16" data-name="Navegación: Evidencias" data-interactive="link">
+<rect x="12" y="176" width="224" height="44" fill="none" data-hit="1"/>
+<g transform="translate(24 188) scale(0.83)" fill="none" stroke="#4B5563" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/></g>
+<text x="54" y="203.6" font-size="16" fill="#4B5563" font-weight="600">Evidencias</text>
+</g>
+<g id="nav-17" data-name="Navegación: Ranking" data-interactive="link">
+<rect x="12" y="224" width="224" height="44" fill="none" data-hit="1"/>
+<g transform="translate(24 236) scale(0.83)" fill="none" stroke="#4B5563" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v6a4 4 0 01-8 0z"/><path d="M8 6H4v2a3 3 0 003 3M16 6h4v2a3 3 0 01-3 3"/><path d="M12 14v4M8 20h8"/></g>
+<text x="54" y="251.6" font-size="16" fill="#4B5563" font-weight="600">Ranking</text>
+</g>
+<g id="nav-18" data-name="Navegación: Métricas" data-interactive="link">
+<rect x="12" y="272" width="224" height="44" fill="none" data-hit="1"/>
+<g transform="translate(24 284) scale(0.83)" fill="none" stroke="#4B5563" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v14H4z"/><path d="M4 10h16M8 3v4M16 3v4"/></g>
+<text x="54" y="299.6" font-size="16" fill="#4B5563" font-weight="600">Métricas</text>
+</g>
+<g id="nav-19" data-name="Navegación: Error persistente" data-interactive="link" aria-current="page">
+<rect x="12" y="320" width="224" height="44" fill="none" data-hit="1"/>
+<rect x="12" y="320" width="224" height="44" rx="8" fill="#EEF0FF"/>
+<g transform="translate(24 332) scale(0.83)" fill="none" stroke="#3730A3" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5L2.8 19.5h18.4z"/><path d="M12 10v4.5"/><path d="M12 17.2v.1"/></g>
+<text x="54" y="347.6" font-size="16" fill="#3730A3" font-weight="700">Error persistente</text>
+</g>
+</g>
+<g id="cabecera" data-name="Cabecera de administración" role="banner">
+<rect x="249" y="0" width="1031" height="64" fill="#FFFFFF"/>
+<line x1="249" y1="64" x2="1280" y2="64" stroke="#D7DDE8" stroke-width="1"/>
+<text x="280" y="38" font-size="16" fill="#4B5563" font-weight="600">Administración</text>
+<g id="insignia-20" data-name="Insignia: Nivel moderador">
+<rect x="1034.25" y="18" width="153.75" height="28" rx="14" fill="#EEF0FF"/>
+<g transform="translate(1044.25 24) scale(0.67)" fill="none" stroke="#3730A3" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7.5 3v5.5c0 4.5-3.2 8-7.5 9.5-4.3-1.5-7.5-5-7.5-9.5V6z"/></g>
+<text x="1066.25" y="36.9" font-size="14" fill="#3730A3" font-weight="600">Nivel moderador</text>
+</g>
+<g id="avatar-21" data-name="Menú de cuenta" data-interactive="button">
+<rect x="1200" y="10" width="44" height="44" fill="none" data-hit="1"/>
+<circle cx="1222" cy="32" r="18" fill="#4338CA"/>
+<text x="1222" y="37.6" font-size="16" fill="#FFFFFF" font-weight="700" text-anchor="middle">S</text>
+</g>
+</g>
+<g id="contenido-principal" data-name="Contenido principal (main)" role="main">
+<g id="boton-1" data-name="Botón: ‹ Evaluaciones en error persistente" data-interactive="link">
+<rect x="280" y="92" width="320.01" height="44" fill="none" data-hit="1"/>
+<text x="280" y="119.6" font-size="16" fill="#4338CA" font-weight="600">‹ Evaluaciones en error persistente</text>
+<line x1="280" y1="122.6" x2="548.81" y2="122.6" stroke="#4338CA" stroke-width="1"/>
+</g>
+<text x="280" y="181.5" font-size="30" fill="#1A1D21" font-weight="700">Cierre administrativo</text>
+<g id="tarjeta-2" data-name="Tarjeta">
+<rect x="280" y="199" width="566.4" height="222" rx="12" fill="#1A1D21" fill-opacity="0.08"/><rect x="280.5" y="198.5" width="565.4" height="221" rx="12" fill="#FFFFFF" stroke="#D7DDE8" stroke-width="1"/>
+<text x="304" y="239.3" font-size="18" fill="#1A1D21" font-weight="600">Submeta</text>
+<text x="304" y="271.4" font-size="14" fill="#4B5563">Usuario</text>
+<text x="511.36" y="273.6" font-size="16" fill="#1A1D21">Marta Ríos</text>
+<text x="304" y="299.4" font-size="14" fill="#4B5563">Meta</text>
+<text x="511.36" y="301.6" font-size="16" fill="#1A1D21">Leer 2 libros</text>
+<text x="304" y="327.4" font-size="14" fill="#4B5563">Submeta</text>
+<text x="511.36" y="329.6" font-size="16" fill="#1A1D21">Leer capítulo 2</text>
+<text x="304" y="355.4" font-size="14" fill="#4B5563">Programada</text>
+<text x="511.36" y="357.6" font-size="16" fill="#1A1D21">29/10/2026 · 14:00–15:00</text>
+<text x="304" y="383.4" font-size="14" fill="#4B5563">En Error desde</text>
+<text x="511.36" y="385.6" font-size="16" fill="#1A1D21">31/10/2026 09:10 (49 h)</text>
+</g>
+<g id="tarjeta-3" data-name="Tarjeta">
+<rect x="280" y="437" width="566.4" height="220" rx="12" fill="#1A1D21" fill-opacity="0.08"/><rect x="280.5" y="436.5" width="565.4" height="219" rx="12" fill="#FFFFFF" stroke="#D7DDE8" stroke-width="1"/>
+<text x="304" y="477.3" font-size="18" fill="#1A1D21" font-weight="600">Evidencias</text>
+<g id="fila-4" data-name="Fila: Envío 1 · capitulo2.pdf">
+<rect x="304" y="494" width="518.4" height="69" fill="none" data-hit="1"/>
+<text x="304" y="521.6" font-size="16" fill="#1A1D21" font-weight="600">Envío 1 · capitulo2.pdf</text>
+<text x="304" y="543.4" font-size="14" fill="#4B5563">Dictamen: Incoherente · 50 puntos</text>
+<g id="insignia-5" data-name="Insignia: Incoherente">
+<rect x="689.89" y="514.5" width="124.51" height="28" rx="14" fill="#FFF4DB"/>
+<g transform="translate(699.89 520.5) scale(0.67)" fill="none" stroke="#8A4B00" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5L2.8 19.5h18.4z"/><path d="M12 10v4.5"/><path d="M12 17.2v.1"/></g>
+<text x="721.89" y="533.4" font-size="14" fill="#8A4B00" font-weight="600">Incoherente</text>
+</g>
+</g>
+<line x1="304" y1="563" x2="822.4" y2="563" stroke="#D7DDE8" stroke-width="1"/>
+<g id="fila-6" data-name="Fila: Envío 2 · capitulo2-v2.pdf">
+<rect x="304" y="563" width="518.4" height="69" fill="none" data-hit="1"/>
+<text x="304" y="590.6" font-size="16" fill="#1A1D21" font-weight="600">Envío 2 · capitulo2-v2.pdf</text>
+<text x="304" y="612.4" font-size="14" fill="#4B5563">Sin dictamen desde hace 48 h o más</text>
+<g id="insignia-7" data-name="Insignia: Error persistente">
+<rect x="655.91" y="583.5" width="158.49" height="28" rx="14" fill="#FDECEA"/>
+<g transform="translate(665.91 589.5) scale(0.67)" fill="none" stroke="#8E1D17" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M9 9l6 6M15 9l-6 6"/></g>
+<text x="687.91" y="602.4" font-size="14" fill="#8E1D17" font-weight="600">Error persistente</text>
+</g>
+</g>
+</g>
+<g id="tarjeta-8" data-name="Tarjeta">
+<rect x="870.4" y="199" width="377.6" height="314" rx="12" fill="#1A1D21" fill-opacity="0.08"/><rect x="870.9" y="198.5" width="376.6" height="313" rx="12" fill="#FFFFFF" stroke="#D7DDE8" stroke-width="1"/>
+<text x="894.4" y="239.3" font-size="18" fill="#1A1D21" font-weight="600">Consecuencias del cierre</text>
+<g id="puntaje-9" data-name="Puntaje final">
+<rect x="894.4" y="256" width="329.6" height="178" rx="12" fill="#EEF0FF"/>
+<text x="918.4" y="297.6" font-size="16" fill="#3730A3" font-weight="600">Puntaje provisional</text>
+<text x="918.4" y="349.6" font-size="48" fill="#3730A3" font-weight="700">50</text>
+<text x="989.76" y="349.6" font-size="24" fill="#3730A3" font-weight="600">puntos</text>
+<text x="918.4" y="383.4" font-size="14" fill="#3730A3">Se sumará al acumulado del usuario una</text>
+<text x="918.4" y="404.4" font-size="14" fill="#3730A3">sola vez.</text>
+</g>
+<text x="894.4" y="461.4" font-size="14" fill="#1A1D21">El usuario ya no podrá reintentar. No cuenta como</text>
+<text x="894.4" y="482.4" font-size="14" fill="#1A1D21">acierto en el primer envío ni activa el día.</text>
+</g>
+<g id="alerta-10" data-name="Alerta: Esta acción cierra la submeta y no se pu" role="alert">
+<rect x="870.4" y="528" width="377.6" height="66" rx="8" fill="#FFF4DB"/>
+<rect x="870.4" y="528" width="4" height="66" rx="2" fill="#B45309"/>
+<g transform="translate(886.4 540) scale(0.83)" fill="none" stroke="#8A4B00" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5L2.8 19.5h18.4z"/><path d="M12 10v4.5"/><path d="M12 17.2v.1"/></g>
+<text x="918.4" y="555.4" font-size="14" fill="#1A1D21">Esta acción cierra la submeta y no se puede</text>
+<text x="918.4" y="576.4" font-size="14" fill="#1A1D21">deshacer. Se te pedirá confirmación.</text>
+</g>
+<g id="boton-11" data-name="Botón: Cerrar submeta con el puntaje provisional" data-interactive="button">
+<rect x="870.4" y="610" width="377.6" height="44" fill="none" data-hit="1"/>
+<rect x="870.4" y="610" width="377.6" height="44" rx="8" fill="#B3261E"/>
+<text x="1059.2" y="637.6" font-size="16" fill="#FFFFFF" font-weight="600" text-anchor="middle">Cerrar submeta con el puntaje provisional</text>
+</g>
+<g id="boton-12" data-name="Botón: Volver" data-interactive="button">
+<rect x="870.4" y="662" width="377.6" height="44" fill="none" data-hit="1"/>
+<rect x="871.4" y="663" width="375.6" height="42" rx="8" fill="#FFFFFF" stroke="#4338CA" stroke-width="2"/>
+<text x="1059.2" y="689.6" font-size="16" fill="#4338CA" font-weight="600" text-anchor="middle">Volver</text>
+</g>
+</g>
+</g>
+<rect x="0" y="0" width="1280" height="800" fill="#1A1D21" fill-opacity="0.6" id="telon"/>
+<g id="dialogo" data-name="Diálogo: ¿Cerrar la submeta con 50 puntos?" role="alertdialog" aria-modal="true">
+<rect x="380" y="227" width="520" height="358" rx="16" fill="#1A1D21" fill-opacity="0.16"/>
+<rect x="380.5" y="221.5" width="519" height="357" rx="16" fill="#FFFFFF" stroke="#D7DDE8" stroke-width="1"/>
+<text x="404" y="264.5" font-size="20" fill="#1A1D21" font-weight="600">¿Cerrar la submeta con 50 puntos?</text>
+<text x="404" y="299.6" font-size="16" fill="#1A1D21">La submeta «Leer capítulo 2» de Marta Ríos se cerrará con</text>
+<text x="404" y="323.6" font-size="16" fill="#1A1D21">50 puntos (provisional), que se sumarán a su acumulado una</text>
+<text x="404" y="347.6" font-size="16" fill="#1A1D21">sola vez.</text>
+<text x="404" y="385.4" font-size="14" fill="#4B5563">El usuario ya no podrá reintentar. No cuenta como acierto en el primer</text>
+<text x="404" y="406.4" font-size="14" fill="#4B5563">envío ni activa el día.</text>
+<g id="casilla-22" data-name="Casilla: Entiendo las consecuencias" data-interactive="check" data-orden-foco="1">
+<rect x="404" y="428" width="472" height="44" fill="none" data-hit="1"/>
+<rect x="405" y="439" width="22" height="22" rx="4" fill="#FFFFFF" stroke="#B3261E" stroke-width="2"/>
+<text x="440" y="455.6" font-size="16" fill="#1A1D21">Entiendo las consecuencias</text>
+</g>
+<g transform="translate(404 476) scale(0.67)" fill="none" stroke="#8E1D17" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M9 9l6 6M15 9l-6 6"/></g>
+<text x="426" y="489.4" font-size="14" fill="#8E1D17" font-weight="500">Marca la casilla para continuar</text>
+<g id="boton-23" data-name="Botón: Cancelar" data-interactive="button" data-orden-foco="2">
+<rect x="404" y="511" width="109.37" height="44" fill="none" data-hit="1"/>
+<rect x="401" y="508" width="115.37" height="50" rx="11" fill="none" stroke="#4338CA" stroke-width="2"/>
+<rect x="405" y="512" width="107.37" height="42" rx="8" fill="#FFFFFF" stroke="#4338CA" stroke-width="2"/>
+<text x="458.68" y="538.6" font-size="16" fill="#4338CA" font-weight="600" text-anchor="middle">Cancelar</text>
+</g>
+<g id="boton-24" data-name="Botón: Cerrar submeta" data-interactive="button" data-orden-foco="3">
+<rect x="525.37" y="511" width="161.26" height="44" fill="none" data-hit="1"/>
+<rect x="525.37" y="511" width="161.26" height="44" rx="8" fill="#B3261E"/>
+<text x="606" y="538.6" font-size="16" fill="#FFFFFF" font-weight="600" text-anchor="middle">Cerrar submeta</text>
+</g>
+</g>
+</svg>

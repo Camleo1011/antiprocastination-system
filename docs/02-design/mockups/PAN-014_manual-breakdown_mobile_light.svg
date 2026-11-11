@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="375" height="1271" viewBox="0 0 375 1271" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" data-pan="PAN-014" data-dispositivo="movil" data-tema="claro" aria-labelledby="t d">
+<title id="t">PAN-014 — Desglose manual de submetas (móvil 375 px, tema claro)</title>
+<desc id="d">Mockup de alta fidelidad de Desglose manual de submetas. Ruta /metas/nueva/desglose-manual; rol cliente; CU CU-032, CU-008a; EP EP-023, EP-028. Estado mostrado: paso 5 de 6 (Submetas), 2 fechas = 2 filas: 422 DESGLOSE_SUMA_INVALIDA, la suma (25 h) no coincide con el tiempo total (26 h); fila 2 marcada con texto. Colores, tipografía (Inter), espaciado y radios del sistema de diseño (tema claro); texto editable. Una fila por fecha de trabajo, una submeta por fecha (BR-014). Duración en horas enteras ≥ 1. La diferencia se anuncia en una región aria-live=polite. Regiones ARIA: banner, navigation, main. Orden de foco con Tab (coincide con el orden visual y del DOM): Enlace de salto «Saltar al contenido principal» (visible solo al recibir el foco). 1 Menú de cuenta; 2 Navegación: Inicio; 3 Navegación: Agenda; 4 Navegación: Metas; 5 Navegación: Ranking; 6 Navegación: Perfil; 7 Campo: Nombre de la submeta; 8 Campo: Inicio; 9 Campo: Duración (h); 10 Campo: Nombre de la submeta; 11 Campo: Inicio; 12 Campo: Duración (h); 13 Botón: Repartir en partes iguales; 14 Botón: Atrás; 15 Botón: Continuar.</desc>
+<defs><pattern id="rayas-gracia" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#E3E8EF"/><rect width="3" height="6" fill="#8A4B00"/></pattern></defs>
+<rect id="fondo-pagina" width="375" height="1271" fill="#F5F7FA"/>
+<g id="barra-superior" data-name="Barra superior" role="banner">
+<rect x="0" y="0" width="375" height="56" fill="#FFFFFF"/>
+<line x1="0" y1="56" x2="375" y2="56" stroke="#D7DDE8" stroke-width="1"/>
+<g id="logo-22" data-name="Logotipo FocusStrike" data-exempt="logo">
+<rect x="16" y="12" width="32" height="32" rx="8" fill="#4338CA"/>
+<g transform="translate(22.4 18.4) scale(0.8)" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="58" y="34.3" font-size="18" fill="#1A1D21" font-weight="700">FocusStrike</text>
+</g>
+<g id="avatar-23" data-name="Menú de cuenta" data-interactive="button" data-orden-foco="1">
+<rect x="319" y="6" width="44" height="44" fill="none" data-hit="1"/>
+<circle cx="341" cy="28" r="18" fill="#4338CA"/>
+<text x="341" y="33.6" font-size="16" fill="#FFFFFF" font-weight="700" text-anchor="middle">A</text>
+</g>
+</g>
+<g id="navegacion-inferior" data-name="Navegación inferior" role="navigation">
+<rect x="0" y="1207" width="375" height="64" fill="#FFFFFF"/>
+<line x1="0" y1="1207" x2="375" y2="1207" stroke="#D7DDE8" stroke-width="1"/>
+<g id="nav-24" data-name="Navegación: Inicio" data-interactive="link" data-orden-foco="2">
+<rect x="0" y="1207" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(25.5 1215) scale(1)" fill="none" stroke="#4B5563" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7"/><path d="M6 10v10h12V10"/></g>
+<text x="37.5" y="1257" font-size="14" fill="#4B5563" font-weight="600" text-anchor="middle">Inicio</text>
+</g>
+<g id="nav-25" data-name="Navegación: Agenda" data-interactive="link" data-orden-foco="3">
+<rect x="75" y="1207" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(100.5 1215) scale(1)" fill="none" stroke="#4B5563" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v14H4z"/><path d="M4 10h16M8 3v4M16 3v4"/></g>
+<text x="112.5" y="1257" font-size="14" fill="#4B5563" font-weight="600" text-anchor="middle">Agenda</text>
+</g>
+<g id="nav-26" data-name="Navegación: Metas" data-interactive="link" data-orden-foco="4" aria-current="page">
+<rect x="150" y="1207" width="75" height="64" fill="none" data-hit="1"/>
+<rect x="156" y="1211" width="63" height="56" rx="8" fill="#EEF0FF"/>
+<g transform="translate(175.5 1215) scale(1)" fill="none" stroke="#3730A3" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="187.5" y="1257" font-size="14" fill="#3730A3" font-weight="700" text-anchor="middle">Metas</text>
+</g>
+<g id="nav-27" data-name="Navegación: Ranking" data-interactive="link" data-orden-foco="5">
+<rect x="225" y="1207" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(250.5 1215) scale(1)" fill="none" stroke="#4B5563" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v6a4 4 0 01-8 0z"/><path d="M8 6H4v2a3 3 0 003 3M16 6h4v2a3 3 0 01-3 3"/><path d="M12 14v4M8 20h8"/></g>
+<text x="262.5" y="1257" font-size="14" fill="#4B5563" font-weight="600" text-anchor="middle">Ranking</text>
+</g>
+<g id="nav-28" data-name="Navegación: Perfil" data-interactive="link" data-orden-foco="6">
+<rect x="300" y="1207" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(325.5 1215) scale(1)" fill="none" stroke="#4B5563" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4a4 4 0 100 8 4 4 0 000-8z"/><path d="M4.5 20a7.5 7.5 0 0115 0"/></g>
+<text x="337.5" y="1257" font-size="14" fill="#4B5563" font-weight="600" text-anchor="middle">Perfil</text>
+</g>
+</g>
+<g id="contenido-principal" data-name="Contenido principal (main)" role="main">
+<text x="16" y="99.4" font-size="24" fill="#1A1D21" font-weight="600">Desglose manual</text>
+<g id="pasos-1" data-name="Pasos del asistente: paso 5 de 6" role="progressbar">
+<text x="16" y="131.6" font-size="16" fill="#1A1D21" font-weight="600">Paso 5 de 6: Submetas</text>
+<rect x="16" y="144" width="53.83" height="6" rx="3" fill="#4338CA"/>
+<rect x="73.83" y="144" width="53.83" height="6" rx="3" fill="#4338CA"/>
+<rect x="131.67" y="144" width="53.83" height="6" rx="3" fill="#4338CA"/>
+<rect x="189.5" y="144" width="53.83" height="6" rx="3" fill="#4338CA"/>
+<rect x="247.33" y="144" width="53.83" height="6" rx="3" fill="#4338CA"/>
+<rect x="305.17" y="144" width="53.83" height="6" rx="3" fill="#E3E8EF"/>
+</g>
+<g id="alerta-2" data-name="Alerta: No se puede guardar el desglose" role="alert">
+<rect x="16" y="166" width="343" height="111" rx="8" fill="#FDECEA"/>
+<rect x="16" y="166" width="4" height="111" rx="2" fill="#B3261E"/>
+<g transform="translate(32 178) scale(0.83)" fill="none" stroke="#8E1D17" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M9 9l6 6M15 9l-6 6"/></g>
+<text x="64" y="195.6" font-size="16" fill="#8E1D17" font-weight="600">No se puede guardar el desglose</text>
+<text x="64" y="217.4" font-size="14" fill="#1A1D21">La suma de las submetas (25 h) no</text>
+<text x="64" y="238.4" font-size="14" fill="#1A1D21">coincide con el tiempo total (26 h). Falta</text>
+<text x="64" y="259.4" font-size="14" fill="#1A1D21">1 h. Revisa la fila 2.</text>
+</g>
+<g id="tarjeta-3" data-name="Tarjeta">
+<rect x="16" y="294" width="343" height="178" rx="12" fill="#1A1D21" fill-opacity="0.08"/><rect x="16.5" y="293.5" width="342" height="177" rx="12" fill="#FFFFFF" stroke="#D7DDE8" stroke-width="1"/>
+<text x="32" y="326.3" font-size="18" fill="#1A1D21" font-weight="600">Resumen del tiempo</text>
+<text x="32" y="358.4" font-size="14" fill="#4B5563">Meta</text>
+<text x="162.62" y="360.6" font-size="16" fill="#1A1D21">Preparar examen final</text>
+<text x="32" y="386.4" font-size="14" fill="#4B5563">Tiempo total</text>
+<text x="162.62" y="388.6" font-size="16" fill="#1A1D21">26 h</text>
+<text x="32" y="414.4" font-size="14" fill="#4B5563">Asignado</text>
+<text x="162.62" y="416.6" font-size="16" fill="#1A1D21">25 h</text>
+<text x="32" y="442.4" font-size="14" fill="#4B5563">Diferencia</text>
+<text x="162.62" y="444.6" font-size="16" fill="#1A1D21">Falta 1 h</text>
+</g>
+<g id="tarjeta-4" data-name="Tarjeta">
+<rect x="16" y="488" width="343" height="237" rx="12" fill="#1A1D21" fill-opacity="0.08"/><rect x="16.5" y="487.5" width="342" height="236" rx="12" fill="#FFFFFF" stroke="#D7DDE8" stroke-width="1"/>
+<text x="32" y="517" font-size="16" fill="#1A1D21" font-weight="700">Fila 1 · lun 02/11/2026</text>
+<g id="campo-5" data-name="Campo: Nombre de la submeta">
+<text x="32" y="548.4" font-size="14" fill="#1A1D21" font-weight="600">Nombre de la submeta</text>
+<g id="entrada-6" data-name="Entrada" data-interactive="input" data-orden-foco="7">
+<rect x="32" y="558" width="311" height="44" fill="none" data-hit="1"/>
+<rect x="33" y="559" width="309" height="42" rx="8" fill="#FFFFFF" stroke="#6B7385" stroke-width="1"/>
+<text x="44" y="585.6" font-size="16" fill="#1A1D21">Estudiar álgebra</text>
+</g>
+</g>
+<g id="campo-7" data-name="Campo: Inicio">
+<text x="32" y="625.4" font-size="14" fill="#1A1D21" font-weight="600">Inicio</text>
+<g id="entrada-8" data-name="Entrada" data-interactive="input" data-orden-foco="8">
+<rect x="32" y="635" width="149.5" height="44" fill="none" data-hit="1"/>
+<rect x="33" y="636" width="147.5" height="42" rx="8" fill="#FFFFFF" stroke="#6B7385" stroke-width="1"/>
+<text x="44" y="662.6" font-size="16" fill="#1A1D21">07:00</text>
+</g>
+</g>
+<g id="campo-9" data-name="Campo: Duración (h)">
+<text x="193.5" y="625.4" font-size="14" fill="#1A1D21" font-weight="600">Duración (h)</text>
+<g id="entrada-10" data-name="Entrada" data-interactive="input" data-orden-foco="9">
+<rect x="193.5" y="635" width="149.5" height="44" fill="none" data-hit="1"/>
+<rect x="194.5" y="636" width="147.5" height="42" rx="8" fill="#FFFFFF" stroke="#6B7385" stroke-width="1"/>
+<text x="205.5" y="662.6" font-size="16" fill="#1A1D21">13</text>
+</g>
+</g>
+<text x="32" y="702.4" font-size="14" fill="#4B5563">Termina a las 20:00 (calculado)</text>
+</g>
+<g id="tarjeta-11" data-name="Tarjeta">
+<rect x="16" y="737" width="343" height="283" rx="12" fill="#1A1D21" fill-opacity="0.08"/><rect x="16.5" y="736.5" width="342" height="282" rx="12" fill="#FFFFFF" stroke="#D7DDE8" stroke-width="1"/>
+<text x="32" y="766" font-size="16" fill="#1A1D21" font-weight="700">Fila 2 · mar 03/11/2026</text>
+<g id="insignia-12" data-name="Insignia: Revisar">
+<rect x="248.61" y="748" width="94.39" height="28" rx="14" fill="#FDECEA"/>
+<g transform="translate(258.61 754) scale(0.67)" fill="none" stroke="#8E1D17" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M9 9l6 6M15 9l-6 6"/></g>
+<text x="280.61" y="766.9" font-size="14" fill="#8E1D17" font-weight="600">Revisar</text>
+</g>
+<g id="campo-13" data-name="Campo: Nombre de la submeta">
+<text x="32" y="797.4" font-size="14" fill="#1A1D21" font-weight="600">Nombre de la submeta</text>
+<g id="entrada-14" data-name="Entrada" data-interactive="input" data-orden-foco="10">
+<rect x="32" y="807" width="311" height="44" fill="none" data-hit="1"/>
+<rect x="33" y="808" width="309" height="42" rx="8" fill="#FFFFFF" stroke="#6B7385" stroke-width="1"/>
+<text x="44" y="834.6" font-size="16" fill="#1A1D21">Estudiar geometría</text>
+</g>
+</g>
+<g id="campo-15" data-name="Campo: Inicio">
+<text x="32" y="874.4" font-size="14" fill="#1A1D21" font-weight="600">Inicio</text>
+<g id="entrada-16" data-name="Entrada" data-interactive="input" data-orden-foco="11">
+<rect x="32" y="884" width="149.5" height="44" fill="none" data-hit="1"/>
+<rect x="33" y="885" width="147.5" height="42" rx="8" fill="#FFFFFF" stroke="#6B7385" stroke-width="1"/>
+<text x="44" y="911.6" font-size="16" fill="#1A1D21">07:00</text>
+</g>
+</g>
+<g id="campo-17" data-name="Campo: Duración (h)">
+<text x="193.5" y="874.4" font-size="14" fill="#1A1D21" font-weight="600">Duración (h)</text>
+<g id="entrada-18" data-name="Entrada" data-interactive="input" data-orden-foco="12">
+<rect x="193.5" y="884" width="149.5" height="44" fill="none" data-hit="1"/>
+<rect x="194.5" y="885" width="147.5" height="42" rx="8" fill="#FFFFFF" stroke="#B3261E" stroke-width="2"/>
+<text x="205.5" y="911.6" font-size="16" fill="#1A1D21">12</text>
+</g>
+<g transform="translate(193.5 934) scale(0.67)" fill="none" stroke="#8E1D17" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M9 9l6 6M15 9l-6 6"/></g>
+<text x="215.5" y="947.4" font-size="14" fill="#8E1D17" font-weight="500">Con 13 h la suma</text>
+<text x="215.5" y="968.4" font-size="14" fill="#8E1D17" font-weight="500">llega a 26 h</text>
+</g>
+<text x="32" y="997.4" font-size="14" fill="#4B5563">Termina a las 19:00 (calculado)</text>
+</g>
+<g id="boton-19" data-name="Botón: Repartir en partes iguales" data-interactive="button" data-orden-foco="13">
+<rect x="16" y="1035" width="343" height="44" fill="none" data-hit="1"/>
+<rect x="17" y="1036" width="341" height="42" rx="8" fill="#FFFFFF" stroke="#4338CA" stroke-width="2"/>
+<text x="187.5" y="1062.6" font-size="16" fill="#4338CA" font-weight="600" text-anchor="middle">Repartir en partes iguales</text>
+</g>
+<g id="boton-20" data-name="Botón: Atrás" data-interactive="button" data-orden-foco="14">
+<rect x="16" y="1087" width="343" height="44" fill="none" data-hit="1"/>
+<rect x="17" y="1088" width="341" height="42" rx="8" fill="#FFFFFF" stroke="#4338CA" stroke-width="2"/>
+<text x="187.5" y="1114.6" font-size="16" fill="#4338CA" font-weight="600" text-anchor="middle">Atrás</text>
+</g>
+<g id="boton-21" data-name="Botón: Continuar" data-interactive="button" data-orden-foco="15">
+<rect x="16" y="1139" width="343" height="44" fill="none" data-hit="1"/>
+<rect x="16" y="1139" width="343" height="44" rx="8" fill="#4338CA"/>
+<text x="187.5" y="1166.6" font-size="16" fill="#FFFFFF" font-weight="600" text-anchor="middle">Continuar</text>
+</g>
+</g>
+</svg>

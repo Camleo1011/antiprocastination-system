@@ -1,0 +1,127 @@
+@startuml despliegue
+title FocusStrike - Diagrama de despliegue (producción; dev y staging derivan del mismo Compose)
+
+' | Versión | Fecha      | Autor               | Cambio     |
+' |---------|------------|---------------------|------------|
+' | 0.1     | 2026-11-11 | Equipo FocusStrike  | Línea base |
+'
+' Ambientes (ADR-012):
+'   dev      Compose local; LLM_PROVIDER=simulado; Mailpit (SMTP 1025); MariaDB 13.0.x o 11.8; sin TLS; datos sintéticos.
+'   staging  Mismo Compose en la VPS con otro proyecto/volúmenes y subdominio propio; datos sintéticos; Gemini con clave propia (opcional).
+'   prod     Compose en la VPS; Gemini de pago con límite de gasto; TLS automático; copias externas.
+' [SUPUESTO] Proveedor de VPS, dominio y SMTP de producción sin decidir.
+
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam node {
+  BackgroundColor #FFFFFF
+  BorderColor #333333
+}
+skinparam artifact {
+  BackgroundColor #F5F5F5
+}
+
+node "Dispositivo del usuario" as Dev {
+  artifact "Navegador (SPA + Service Worker)\nChrome, Firefox, Edge, Safari" as Browser
+}
+
+node "Monitor externo" as Mon {
+  artifact "Sonda HTTPS cada 5 min\nGET /api/v1/salud" as Probe
+}
+
+cloud "Internet" as Net
+
+node "VPS Linux (~2 vCPU / 4 GB) - NTP activo (chrony), UFW: solo 80 y 443" as VPS {
+
+  node "Docker Compose (proyecto: focusstrike-prod)" as Compose {
+
+    node "Red 'edge' (publicada)" as EdgeNet {
+      node "contenedor proxy\n(Caddy o Nginx)\n80 -> 301 a 443; 443 TLS >= 1.2" as Proxy {
+        artifact "Certificados Let's Encrypt\n(volumen proxy_certs)" as Certs
+        artifact "Estáticos de la SPA (build de Vite)" as Static
+      }
+    }
+
+    node "Red 'internal' (interna, sin salida publicada)" as IntNet {
+      node "contenedor api (x1-2)\ngunicorn :8000 (hilos)\nDjango + DRF" as Api {
+        artifact "Imagen backend\n(mismo código que worker)" as ImgApi
+      }
+      node "contenedor worker (x1)\ncomando: manage.py run_worker\nplanificador interno" as Worker {
+        artifact "Imagen backend\n(mismo código que api)" as ImgWorker
+      }
+      node "contenedor mariadb\n11.8 LTS (mín. 10.11)\n:3306 solo red interna\ntime_zone=+00:00" as Db {
+        database "db_focus_strike\n17 tablas, triggers, sp_*, vistas" as Schema
+      }
+      node "job 'init-esquema' (solo despliegue)\ncarga database/schema.sql\ncomo fs_owner y aplica los permisos por columna de fs_app" as Init
+      node "job 'seed-super' (una vez por arranque)\ncuenta fs_seed -> sp_inicializar_primer_super" as Seed
+      node "job 'backup' (cron diario 02:30 UTC)\ncuenta fs_backup: mariadb-dump\n+ tar de evidencias, cifrado age/gpg" as Backup
+    }
+
+    node "Volúmenes Docker (disco de la VPS)" as Vols {
+      artifact "db_data\n/var/lib/mysql" as VDb
+      artifact "evidencias\n/var/lib/focusstrike/evidencias/<id_usuario>/<uuid>.<ext>\n(api: rw; worker: rw; proxy: sin acceso)" as VEv
+      artifact "heartbeat\n/var/run/focusstrike/heartbeat\n(worker: rw; api: ro)" as VHb
+      artifact "logs JSON (rotación 30 días)" as VLog
+      artifact "backups\n(14 diarias + 4 semanales)" as VBk
+    }
+
+    artifact ".env (fuera del repo, permisos 600)\nGEMINI_API_KEY, JWT_SECRET,\nDB_APP_PASSWORD, DB_SEED_PASSWORD, DB_RO_PASSWORD, DB_BACKUP_PASSWORD,\nVAPID_PRIVATE_KEY, VAPID_PUBLIC_KEY, EMAIL_HOST/_USER/_PASSWORD,\nFOCUSSTRIKE_ADMIN_EMAIL/_NAME/_PASSWORD (hash del primer super; retirar tras el 1.er arranque),\nLLM_PROVIDER, LLM_MODEL_LIGHT, LLM_MODEL_EVAL, LLM_BUDGET_USD,\nEVIDENCE_ORPHAN_MIN_AGE_SECONDS=3600\nDB_OWNER_PASSWORD: solo en el job init-esquema" as Env
+  }
+}
+
+node "Servicios externos" as Ext {
+  node "Google Gemini API" as Gemini
+  node "Servicios push del navegador (VAPID)" as PushSvc
+  node "Servidor SMTP de producción" as Smtp
+  node "Almacenamiento externo de copias" as OffSite
+}
+
+Browser --> Net : HTTPS 443
+Probe --> Net : HTTPS 443
+Net --> Proxy : 80 (redirige) / 443
+Proxy --> Api : HTTP 8000\nX-Request-Id
+Api --> Db : MariaDB 3306\nfs_app (TLS opcional en red aislada;\nobligatorio si salen del host)
+Worker --> Db : MariaDB 3306\nfs_app
+Seed --> Db : 3306 fs_seed
+Init --> Db : 3306 fs_owner
+Backup --> Db : 3306 fs_backup
+Api --> VEv
+Worker --> VEv
+Worker --> VHb
+Api --> VHb
+Db --> VDb
+Backup --> VEv
+Backup --> VBk
+Backup ..> OffSite : HTTPS/SFTP (cifrado)
+Api --> Gemini : HTTPS 443 (salida)
+Worker --> Gemini : HTTPS 443 (salida)
+Worker --> PushSvc : HTTPS 443 (salida)
+Api --> Smtp : SMTP 587 STARTTLS (salida)
+Env ..> Api : variables
+Env ..> Worker : variables
+Env ..> Seed : variables
+
+note bottom of Db
+  Cuentas (ADR-014, host = subred de la red 'internal', nunca %):
+  fs_owner (ALL sobre la BD; DEFINER de 23 rutinas, 26 triggers y 5 vistas; no la recibe ningún proceso en ejecución)
+  fs_app (api + worker; 16 EXECUTE) | fs_seed (EXECUTE sp_inicializar_primer_super) | fs_ro (3 vistas + uso_llm) | fs_backup (dump).
+  Servidor: bind-address restringido, skip-name-resolve, local_infile=0, root solo por socket.
+  Si se activa binlog: log_bin_trust_function_creators=ON.
+end note
+note bottom of Proxy
+  Cabeceras de seguridad (HSTS, CSP, X-Content-Type-Options), X-Request-Id, límite de cuerpo 26 MB en
+  POST /submetas/{id}/evidencias, tiempos de espera: 130 s en las 3 rutas de IA síncronas
+  (desglose-ia, recomendaciones, fechas-sugeridas; plazo de la operación 110 s, gunicorn 120 s, cliente 140 s);
+  evidencias: 60 s de respuesta tras recibir el cuerpo y 120 s para leerlo; resto de la API: 60 s.
+  Puerto 3306, 8000 y los volúmenes NO se publican.
+end note
+note bottom of Vols
+  Las evidencias y la BD se respaldan juntas. Un solo nodo: escalar la API a 2 réplicas
+  funciona porque ambas montan el mismo volumen en el mismo host (no es válido entre hosts, ADR-008).
+end note
+
+legend bottom
+|= Versión |= Fecha |= Autor |= Cambio |
+| 0.1 | 2026-11-11 | Equipo FocusStrike | Línea base |
+endlegend
+@enduml

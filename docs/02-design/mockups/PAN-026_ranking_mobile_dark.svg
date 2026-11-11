@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="375" height="1105" viewBox="0 0 375 1105" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" data-pan="PAN-026" data-dispositivo="movil" data-tema="oscuro" aria-labelledby="t d">
+<title id="t">PAN-026 — Ranking global (móvil 375 px, tema oscuro)</title>
+<desc id="d">Mockup de alta fidelidad de Ranking global. Ruta /ranking; rol cliente; CU CU-018; EP EP-042. Estado mostrado: ranking global con empates (1, 2, 2, 4) y fila propia marcada con el texto 'Tú'. Colores, tipografía (Inter), espaciado y radios del sistema de diseño (tema oscuro); texto editable. Posición comunicada con número y texto, no solo con medalla o color (RF-RANK-003/004). Regiones ARIA: banner, navigation, main. Orden de foco con Tab (coincide con el orden visual y del DOM): Enlace de salto «Saltar al contenido principal» (visible solo al recibir el foco). 1 Menú de cuenta; 2 Navegación: Inicio; 3 Navegación: Agenda; 4 Navegación: Metas; 5 Navegación: Ranking; 6 Navegación: Perfil; 7 Botón: Ir a mi posición; 8 Botón: Anterior; 9 Botón: Siguiente.</desc>
+<defs><pattern id="rayas-gracia" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#2A323D"/><rect width="3" height="6" fill="#F5B93A"/></pattern></defs>
+<rect id="fondo-pagina" width="375" height="1105" fill="#161A20"/>
+<g id="barra-superior" data-name="Barra superior" role="banner">
+<rect x="0" y="0" width="375" height="56" fill="#1C2128"/>
+<line x1="0" y1="56" x2="375" y2="56" stroke="#2A323D" stroke-width="1"/>
+<g id="logo-7" data-name="Logotipo FocusStrike" data-exempt="logo">
+<rect x="16" y="12" width="32" height="32" rx="8" fill="#A5B4FC"/>
+<g transform="translate(22.4 18.4) scale(0.8)" fill="none" stroke="#1E1B4B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="58" y="34.3" font-size="18" fill="#F1F3F7" font-weight="700">FocusStrike</text>
+</g>
+<g id="avatar-8" data-name="Menú de cuenta" data-interactive="button" data-orden-foco="1">
+<rect x="319" y="6" width="44" height="44" fill="none" data-hit="1"/>
+<circle cx="341" cy="28" r="18" fill="#A5B4FC"/>
+<text x="341" y="33.6" font-size="16" fill="#1E1B4B" font-weight="700" text-anchor="middle">A</text>
+</g>
+</g>
+<g id="navegacion-inferior" data-name="Navegación inferior" role="navigation">
+<rect x="0" y="1041" width="375" height="64" fill="#1C2128"/>
+<line x1="0" y1="1041" x2="375" y2="1041" stroke="#2A323D" stroke-width="1"/>
+<g id="nav-9" data-name="Navegación: Inicio" data-interactive="link" data-orden-foco="2">
+<rect x="0" y="1041" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(25.5 1049) scale(1)" fill="none" stroke="#C3CAD6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7"/><path d="M6 10v10h12V10"/></g>
+<text x="37.5" y="1091" font-size="14" fill="#C3CAD6" font-weight="600" text-anchor="middle">Inicio</text>
+</g>
+<g id="nav-10" data-name="Navegación: Agenda" data-interactive="link" data-orden-foco="3">
+<rect x="75" y="1041" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(100.5 1049) scale(1)" fill="none" stroke="#C3CAD6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v14H4z"/><path d="M4 10h16M8 3v4M16 3v4"/></g>
+<text x="112.5" y="1091" font-size="14" fill="#C3CAD6" font-weight="600" text-anchor="middle">Agenda</text>
+</g>
+<g id="nav-11" data-name="Navegación: Metas" data-interactive="link" data-orden-foco="4">
+<rect x="150" y="1041" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(175.5 1049) scale(1)" fill="none" stroke="#C3CAD6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="187.5" y="1091" font-size="14" fill="#C3CAD6" font-weight="600" text-anchor="middle">Metas</text>
+</g>
+<g id="nav-12" data-name="Navegación: Ranking" data-interactive="link" data-orden-foco="5" aria-current="page">
+<rect x="225" y="1041" width="75" height="64" fill="none" data-hit="1"/>
+<rect x="231" y="1045" width="63" height="56" rx="8" fill="#23264A"/>
+<g transform="translate(250.5 1049) scale(1)" fill="none" stroke="#C7CDFE" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v6a4 4 0 01-8 0z"/><path d="M8 6H4v2a3 3 0 003 3M16 6h4v2a3 3 0 01-3 3"/><path d="M12 14v4M8 20h8"/></g>
+<text x="262.5" y="1091" font-size="14" fill="#C7CDFE" font-weight="700" text-anchor="middle">Ranking</text>
+</g>
+<g id="nav-13" data-name="Navegación: Perfil" data-interactive="link" data-orden-foco="6">
+<rect x="300" y="1041" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(325.5 1049) scale(1)" fill="none" stroke="#C3CAD6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4a4 4 0 100 8 4 4 0 000-8z"/><path d="M4.5 20a7.5 7.5 0 0115 0"/></g>
+<text x="337.5" y="1091" font-size="14" fill="#C3CAD6" font-weight="600" text-anchor="middle">Perfil</text>
+</g>
+</g>
+<g id="contenido-principal" data-name="Contenido principal (main)" role="main">
+<text x="16" y="99.4" font-size="24" fill="#F1F3F7" font-weight="600">Ranking global</text>
+<g id="tarjeta-1" data-name="Tarjeta">
+<rect x="16.5" y="114.5" width="342" height="252" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="32" y="147.3" font-size="18" fill="#F1F3F7" font-weight="600">Tu posición</text>
+<text x="32" y="179.4" font-size="14" fill="#C3CAD6">Posición</text>
+<text x="162.62" y="181.6" font-size="16" fill="#F1F3F7">12</text>
+<text x="32" y="207.4" font-size="14" fill="#C3CAD6">Puntaje</text>
+<text x="162.62" y="209.6" font-size="16" fill="#F1F3F7">1.240 puntos</text>
+<g id="boton-2" data-name="Botón: Ir a mi posición" data-interactive="button" data-orden-foco="7">
+<rect x="32" y="232" width="311" height="44" fill="none" data-hit="1"/>
+<rect x="33" y="233" width="309" height="42" rx="8" fill="#1C2128" stroke="#A5B4FC" stroke-width="2"/>
+<text x="187.5" y="259.6" font-size="16" fill="#A5B4FC" font-weight="600" text-anchor="middle">Ir a mi posición</text>
+</g>
+<text x="32" y="303.4" font-size="14" fill="#C3CAD6">El ranking solo muestra nombre y puntaje,</text>
+<text x="32" y="324.4" font-size="14" fill="#C3CAD6">nunca tu correo. Las cuentas bloqueadas no</text>
+<text x="32" y="345.4" font-size="14" fill="#C3CAD6">aparecen.</text>
+</g>
+<g id="tarjeta-3" data-name="Tarjeta">
+<rect x="16.5" y="383.5" width="342" height="633" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<g id="ranking-4" data-name="Ranking global" role="table">
+<rect x="32" y="399" width="311" height="40" rx="8" fill="#1C2128"/>
+<text x="48" y="424" font-size="14" fill="#F1F3F7" font-weight="600">Posición</text>
+<text x="152" y="424" font-size="14" fill="#F1F3F7" font-weight="600">Nombre</text>
+<text x="327" y="424" font-size="14" fill="#F1F3F7" font-weight="600" text-anchor="end">Puntaje</text>
+<text x="48" y="474" font-size="18" fill="#F1F3F7" font-weight="700">1</text>
+<g transform="translate(84 457) scale(0.92)" fill="none" stroke="#F1F3F7" stroke-width="1.91" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v6a4 4 0 01-8 0z"/><path d="M8 6H4v2a3 3 0 003 3M16 6h4v2a3 3 0 01-3 3"/><path d="M12 14v4M8 20h8"/></g>
+<text x="124" y="474" font-size="16" fill="#F1F3F7">Camila Ortiz</text>
+<text x="327" y="474" font-size="16" fill="#F1F3F7" font-weight="700" text-anchor="end">3.420</text>
+<line x1="32" y1="495" x2="343" y2="495" stroke="#2A323D" stroke-width="1"/>
+<text x="48" y="526" font-size="18" fill="#F1F3F7" font-weight="700">2</text>
+<text x="124" y="526" font-size="16" fill="#F1F3F7">Daniel Rojas</text>
+<text x="327" y="526" font-size="16" fill="#F1F3F7" font-weight="700" text-anchor="end">2.980</text>
+<line x1="32" y1="547" x2="343" y2="547" stroke="#2A323D" stroke-width="1"/>
+<text x="48" y="578" font-size="18" fill="#F1F3F7" font-weight="700">2</text>
+<text x="124" y="578" font-size="16" fill="#F1F3F7">Elena Mora</text>
+<text x="327" y="578" font-size="16" fill="#F1F3F7" font-weight="700" text-anchor="end">2.980</text>
+<line x1="32" y1="599" x2="343" y2="599" stroke="#2A323D" stroke-width="1"/>
+<text x="48" y="630" font-size="18" fill="#F1F3F7" font-weight="700">4</text>
+<text x="124" y="630" font-size="16" fill="#F1F3F7">Felipe Arias</text>
+<text x="327" y="630" font-size="16" fill="#F1F3F7" font-weight="700" text-anchor="end">2.710</text>
+<line x1="32" y1="651" x2="343" y2="651" stroke="#2A323D" stroke-width="1"/>
+<text x="48" y="682" font-size="18" fill="#F1F3F7" font-weight="700">5</text>
+<text x="124" y="682" font-size="16" fill="#F1F3F7">Gabriela León</text>
+<text x="327" y="682" font-size="16" fill="#F1F3F7" font-weight="700" text-anchor="end">2.455</text>
+<line x1="32" y1="703" x2="343" y2="703" stroke="#2A323D" stroke-width="1"/>
+<text x="48" y="734" font-size="18" fill="#F1F3F7" font-weight="700">11</text>
+<text x="124" y="734" font-size="16" fill="#F1F3F7">Hugo Salas</text>
+<text x="327" y="734" font-size="16" fill="#F1F3F7" font-weight="700" text-anchor="end">1.310</text>
+<line x1="32" y1="755" x2="343" y2="755" stroke="#2A323D" stroke-width="1"/>
+<rect x="32" y="755" width="311" height="52" rx="8" fill="#23264A"/>
+<rect x="32" y="761" width="4" height="40" rx="2" fill="#A5B4FC"/>
+<text x="48" y="786" font-size="18" fill="#C7CDFE" font-weight="700">12</text>
+<text x="124" y="786" font-size="16" fill="#C7CDFE" font-weight="700">Ana Gómez (tú)</text>
+<text x="327" y="786" font-size="16" fill="#C7CDFE" font-weight="700" text-anchor="end">1.240</text>
+<text x="48" y="838" font-size="18" fill="#F1F3F7" font-weight="700">13</text>
+<text x="124" y="838" font-size="16" fill="#F1F3F7">Iván Peña</text>
+<text x="327" y="838" font-size="16" fill="#F1F3F7" font-weight="700" text-anchor="end">1.205</text>
+<line x1="32" y1="859" x2="343" y2="859" stroke="#2A323D" stroke-width="1"/>
+</g>
+<text x="32" y="886.4" font-size="14" fill="#C3CAD6">Los empates comparten posición (1, 2, 2, 4).</text>
+<text x="32" y="907.4" font-size="14" fill="#C3CAD6">Se omiten las posiciones 6 a 10.</text>
+<g id="boton-5" data-name="Botón: Anterior" data-interactive="button" data-orden-foco="8">
+<rect x="32" y="925" width="149.5" height="44" fill="none" data-hit="1"/>
+<rect x="33" y="926" width="147.5" height="42" rx="8" fill="#1C2128" stroke="#A5B4FC" stroke-width="2"/>
+<text x="106.75" y="952.6" font-size="16" fill="#A5B4FC" font-weight="600" text-anchor="middle">Anterior</text>
+</g>
+<g id="boton-6" data-name="Botón: Siguiente" data-interactive="button" data-orden-foco="9">
+<rect x="193.5" y="925" width="149.5" height="44" fill="none" data-hit="1"/>
+<rect x="194.5" y="926" width="147.5" height="42" rx="8" fill="#1C2128" stroke="#A5B4FC" stroke-width="2"/>
+<text x="268.25" y="952.6" font-size="16" fill="#A5B4FC" font-weight="600" text-anchor="middle">Siguiente</text>
+</g>
+<text x="187.5" y="993" font-size="14" fill="#C3CAD6" text-anchor="middle">Página 1 de 4</text>
+</g>
+</g>
+</svg>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="375" height="812" viewBox="0 0 375 812" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" data-pan="PAN-020" data-dispositivo="movil" data-tema="claro" aria-labelledby="t d">
+<title id="t">PAN-020 — Estado de la evaluación y reintento (móvil 375 px, tema claro)</title>
+<desc id="d">Mockup de alta fidelidad de Estado de la evaluación y reintento. Ruta /submetas/:id/evaluacion; rol cliente; CU CU-023, CU-014, CU-015; EP EP-037, EP-040, EP-041, EP-038, EP-031. Estado mostrado: envío 1 evaluado como Incoherente (50 puntos): se ofrece el segundo envío, que vale la mitad. Colores, tipografía (Inter), espaciado y radios del sistema de diseño (tema claro); texto editable. Dictamen en texto con ícono (BR-031). «Inválida» no es «Error»; Error es un fallo técnico que no consume envío y permite reintentar (RF-EVID-008). Sondeo cada 5-10 s sin aria-live continuo. Regiones ARIA: banner, navigation, main. Orden de foco con Tab (coincide con el orden visual y del DOM): Enlace de salto «Saltar al contenido principal» (visible solo al recibir el foco). 1 Menú de cuenta; 2 Navegación: Inicio; 3 Navegación: Agenda; 4 Navegación: Metas; 5 Navegación: Ranking; 6 Navegación: Perfil; 7 Botón: ‹ Estudiar capítulo 3; 8 Botón: Enviar segunda evidencia; 9 Botón: Volver a la submeta.</desc>
+<defs><pattern id="rayas-gracia" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#E3E8EF"/><rect width="3" height="6" fill="#8A4B00"/></pattern></defs>
+<rect id="fondo-pagina" width="375" height="812" fill="#F5F7FA"/>
+<g id="barra-superior" data-name="Barra superior" role="banner">
+<rect x="0" y="0" width="375" height="56" fill="#FFFFFF"/>
+<line x1="0" y1="56" x2="375" y2="56" stroke="#D7DDE8" stroke-width="1"/>
+<g id="logo-8" data-name="Logotipo FocusStrike" data-exempt="logo">
+<rect x="16" y="12" width="32" height="32" rx="8" fill="#4338CA"/>
+<g transform="translate(22.4 18.4) scale(0.8)" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="58" y="34.3" font-size="18" fill="#1A1D21" font-weight="700">FocusStrike</text>
+</g>
+<g id="avatar-9" data-name="Menú de cuenta" data-interactive="button" data-orden-foco="1">
+<rect x="319" y="6" width="44" height="44" fill="none" data-hit="1"/>
+<circle cx="341" cy="28" r="18" fill="#4338CA"/>
+<text x="341" y="33.6" font-size="16" fill="#FFFFFF" font-weight="700" text-anchor="middle">A</text>
+</g>
+</g>
+<g id="navegacion-inferior" data-name="Navegación inferior" role="navigation">
+<rect x="0" y="748" width="375" height="64" fill="#FFFFFF"/>
+<line x1="0" y1="748" x2="375" y2="748" stroke="#D7DDE8" stroke-width="1"/>
+<g id="nav-10" data-name="Navegación: Inicio" data-interactive="link" data-orden-foco="2">
+<rect x="0" y="748" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(25.5 756) scale(1)" fill="none" stroke="#4B5563" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7"/><path d="M6 10v10h12V10"/></g>
+<text x="37.5" y="798" font-size="14" fill="#4B5563" font-weight="600" text-anchor="middle">Inicio</text>
+</g>
+<g id="nav-11" data-name="Navegación: Agenda" data-interactive="link" data-orden-foco="3" aria-current="page">
+<rect x="75" y="748" width="75" height="64" fill="none" data-hit="1"/>
+<rect x="81" y="752" width="63" height="56" rx="8" fill="#EEF0FF"/>
+<g transform="translate(100.5 756) scale(1)" fill="none" stroke="#3730A3" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v14H4z"/><path d="M4 10h16M8 3v4M16 3v4"/></g>
+<text x="112.5" y="798" font-size="14" fill="#3730A3" font-weight="700" text-anchor="middle">Agenda</text>
+</g>
+<g id="nav-12" data-name="Navegación: Metas" data-interactive="link" data-orden-foco="4">
+<rect x="150" y="748" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(175.5 756) scale(1)" fill="none" stroke="#4B5563" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="187.5" y="798" font-size="14" fill="#4B5563" font-weight="600" text-anchor="middle">Metas</text>
+</g>
+<g id="nav-13" data-name="Navegación: Ranking" data-interactive="link" data-orden-foco="5">
+<rect x="225" y="748" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(250.5 756) scale(1)" fill="none" stroke="#4B5563" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v6a4 4 0 01-8 0z"/><path d="M8 6H4v2a3 3 0 003 3M16 6h4v2a3 3 0 01-3 3"/><path d="M12 14v4M8 20h8"/></g>
+<text x="262.5" y="798" font-size="14" fill="#4B5563" font-weight="600" text-anchor="middle">Ranking</text>
+</g>
+<g id="nav-14" data-name="Navegación: Perfil" data-interactive="link" data-orden-foco="6">
+<rect x="300" y="748" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(325.5 756) scale(1)" fill="none" stroke="#4B5563" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4a4 4 0 100 8 4 4 0 000-8z"/><path d="M4.5 20a7.5 7.5 0 0115 0"/></g>
+<text x="337.5" y="798" font-size="14" fill="#4B5563" font-weight="600" text-anchor="middle">Perfil</text>
+</g>
+</g>
+<g id="contenido-principal" data-name="Contenido principal (main)" role="main">
+<g id="boton-1" data-name="Botón: ‹ Estudiar capítulo 3" data-interactive="link" data-orden-foco="7">
+<rect x="16" y="76" width="207.56" height="44" fill="none" data-hit="1"/>
+<text x="16" y="103.6" font-size="16" fill="#4338CA" font-weight="600">‹ Estudiar capítulo 3</text>
+<line x1="16" y1="106.6" x2="176.86" y2="106.6" stroke="#4338CA" stroke-width="1"/>
+</g>
+<text x="16" y="159.4" font-size="24" fill="#1A1D21" font-weight="600">Evaluación de tu evidencia</text>
+<g id="alerta-2" data-name="Alerta: Con dictamen Incoherente puedes enviar u" role="status">
+<rect x="16" y="174" width="343" height="66" rx="8" fill="#E6F1FB"/>
+<rect x="16" y="174" width="4" height="66" rx="2" fill="#0B5CAD"/>
+<g transform="translate(32 186) scale(0.83)" fill="none" stroke="#084A8C" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 11v5.5"/><path d="M12 7.6v.1"/></g>
+<text x="64" y="201.4" font-size="14" fill="#1A1D21">Con dictamen Incoherente puedes enviar</text>
+<text x="64" y="222.4" font-size="14" fill="#1A1D21">una segunda evidencia, que vale la mitad.</text>
+</g>
+<g id="tarjeta-3" data-name="Tarjeta">
+<rect x="16" y="257" width="343" height="216" rx="12" fill="#1A1D21" fill-opacity="0.08"/><rect x="16.5" y="256.5" width="342" height="215" rx="12" fill="#FFFFFF" stroke="#D7DDE8" stroke-width="1"/>
+<text x="32" y="289.3" font-size="18" fill="#1A1D21" font-weight="600">Envío 1 · capitulo3.docx</text>
+<g id="insignia-4" data-name="Insignia: Evaluada">
+<rect x="32.5" y="306.5" width="104.66" height="27" rx="14" fill="#EBEEF3" stroke="#D7DDE8" stroke-width="1"/>
+<g transform="translate(42 312) scale(0.67)" fill="none" stroke="#4B5563" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M8 12.5l3 3 5-6"/></g>
+<text x="64" y="324.9" font-size="14" fill="#4B5563" font-weight="600">Evaluada</text>
+</g>
+<g id="insignia-5" data-name="Insignia: Incoherente">
+<rect x="145.66" y="306" width="124.51" height="28" rx="14" fill="#FFF4DB"/>
+<g transform="translate(155.66 312) scale(0.67)" fill="none" stroke="#8A4B00" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5L2.8 19.5h18.4z"/><path d="M12 10v4.5"/><path d="M12 17.2v.1"/></g>
+<text x="177.66" y="324.9" font-size="14" fill="#8A4B00" font-weight="600">Incoherente</text>
+</g>
+<text x="32" y="361.4" font-size="14" fill="#4B5563">Recibido</text>
+<text x="162.62" y="363.6" font-size="16" fill="#1A1D21">10:52 · ventana inicial</text>
+<text x="32" y="389.4" font-size="14" fill="#4B5563">Puntos obtenidos</text>
+<text x="162.62" y="391.6" font-size="16" fill="#1A1D21">50</text>
+<text x="32" y="429.4" font-size="14" fill="#4B5563">Justificación: el contenido es legible pero no</text>
+<text x="32" y="450.4" font-size="14" fill="#4B5563">cubre el tema de la submeta.</text>
+</g>
+<g id="boton-6" data-name="Botón: Enviar segunda evidencia" data-interactive="button" data-orden-foco="8">
+<rect x="16" y="488" width="343" height="44" fill="none" data-hit="1"/>
+<rect x="16" y="488" width="343" height="44" rx="8" fill="#4338CA"/>
+<text x="187.5" y="515.6" font-size="16" fill="#FFFFFF" font-weight="600" text-anchor="middle">Enviar segunda evidencia</text>
+</g>
+<g id="boton-7" data-name="Botón: Volver a la submeta" data-interactive="button" data-orden-foco="9">
+<rect x="16" y="540" width="343" height="44" fill="none" data-hit="1"/>
+<rect x="17" y="541" width="341" height="42" rx="8" fill="#FFFFFF" stroke="#4338CA" stroke-width="2"/>
+<text x="187.5" y="567.6" font-size="16" fill="#4338CA" font-weight="600" text-anchor="middle">Volver a la submeta</text>
+</g>
+</g>
+</svg>

@@ -1,0 +1,80 @@
+@startuml CU-008a-edit-goal
+' ==============================================================
+' CONTROL DE VERSIONES
+' Archivo  : CU-008a-edit-goal.puml
+' Versión  : 0.1      Fecha: 2026-11-11      Autor: Equipo FocusStrike
+' Fuente   : docs/01-analysis/SRS.md (SRS 0.1), sección 3.7, CU-008a
+' Cambio   : Línea base
+' ==============================================================
+title Actividades — CU-008a Editar Meta\n(SRS 0.1 · diagrama v0.1)
+|Usuario (cliente)|
+start
+:Seleccionar editar una meta propia;
+:Modificar los parámetros;
+
+|Sistema|
+if (¿Hay alguna submeta iniciada y cambian días, tiempo total, fechas u horario?) then (sí)
+  :Responder HTTP 409;
+  note right: Flujo alterno 3b. RF-META-028
+  stop
+else (no)
+endif
+if (¿Hay alguna submeta iniciada y cambia modo de inicio o requisito de evidencia?) then (sí)
+  :Responder HTTP 409;
+  note right: Flujo alterno 3c. RF-META-028
+  stop
+else (no)
+endif
+if (¿La edición exige IA sin consentimiento aceptado?) then (sí)
+  :Responder HTTP 403 con el aviso; 0 llamadas al LLM; la meta no cambia;
+  note right
+    Flujo alterno 3d. Activar evidencia, pasar a multidía
+    con IA, pedir recomendaciones o fechas sugeridas.
+    RF-META-037, RF-IA-011, BR-035
+  end note
+  stop
+else (no)
+endif
+if (¿Pasa a multidía sin desglose manual válido ni pedir el de IA?) then (sí)
+  :Responder HTTP 422 indicando el campo; la meta no cambia;
+  note right: Flujo alterno 3e. RF-META-037
+  stop
+else (no)
+endif
+if (¿Datos válidos?) then (no)
+  :Rechazar los cambios y mostrar los errores de validación;
+  note right: Flujo alterno 3a
+  stop
+else (sí)
+endif
+
+|Base de datos|
+:Guardar los cambios de la meta;
+note right: RF-META-002b
+
+|Sistema|
+if (¿Cambian días, tiempo total, fechas u horario?) then (sí)
+  if (¿La meta tiene desglose manual?) then (sí)
+    |Usuario (cliente)|
+    :Definir las submetas nuevas en la misma edición (CU-032);
+    |Sistema|
+    if (¿Suma y horario válidos?) then (no)
+      :Responder HTTP 422; la meta no cambia;
+      note right: Flujo alterno 4a. RF-META-034, RF-META-035
+      stop
+    else (sí)
+    endif
+  else (no)
+    :Derivar a CU-006 o CU-007 si aplica;
+  endif
+  |Base de datos|
+  :Regenerar las submetas;
+  note right: RF-META-027
+else (no)
+endif
+
+|Usuario (cliente)|
+:Ver la meta actualizada;
+stop
+
+@enduml

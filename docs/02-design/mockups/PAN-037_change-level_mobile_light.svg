@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="375" height="814" viewBox="0 0 375 814" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" data-pan="PAN-037" data-dispositivo="movil" data-tema="claro" aria-labelledby="t d">
+<title id="t">PAN-037 — Cambiar nivel de acceso (móvil 375 px, tema claro)</title>
+<desc id="d">Mockup de alta fidelidad de Cambiar nivel de acceso. Ruta (modal); rol super; CU CU-019; EP EP-049. Estado mostrado: super sube de soporte a moderador a una cuenta administrador; permisos por nivel en texto. Colores, tipografía (Inter), espaciado y radios del sistema de diseño (tema claro); texto editable. Matriz de BR-021. No se puede degradar al único super (409 ULTIMO_SUPER). Regiones ARIA: banner, navigation, main, alertdialog. Orden de foco con Tab (coincide con el orden visual y del DOM): Diálogo abierto: el fondo queda inerte y el foco se atrapa en el diálogo; foco inicial en el botón seguro (Cancelar). 1 Campo: Nivel de acceso; 2 Botón: Cancelar; 3 Botón: Guardar nivel.</desc>
+<defs><pattern id="rayas-gracia" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#E3E8EF"/><rect width="3" height="6" fill="#8A4B00"/></pattern></defs>
+<rect id="fondo-pagina" width="375" height="814" fill="#F5F7FA"/>
+<g id="fondo-inerte" data-name="Contenido de la pantalla cubierto por el diálogo" data-inert="true" aria-hidden="true">
+<g id="barra-superior" data-name="Barra superior de administración" role="banner">
+<rect x="0" y="0" width="375" height="56" fill="#FFFFFF"/>
+<line x1="0" y1="56" x2="375" y2="56" stroke="#D7DDE8" stroke-width="1"/>
+<g id="navegacion-admin" data-name="Navegación de administración (cajón)" role="navigation" aria-label="Administración">
+<g id="boton-menu" data-name="Abrir menú de administración" data-interactive="button">
+<rect x="4" y="6" width="44" height="44" fill="none" data-hit="1"/>
+<g transform="translate(14 16) scale(1)" fill="none" stroke="#1A1D21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></g>
+</g>
+</g>
+<g id="logo-10" data-name="Logotipo FocusStrike" data-exempt="logo">
+<rect x="56" y="12" width="32" height="32" rx="8" fill="#4338CA"/>
+<g transform="translate(62.4 18.4) scale(0.8)" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+</g>
+<g id="insignia-11" data-name="Insignia: Nivel super">
+<rect x="239.83" y="14" width="119.17" height="28" rx="14" fill="#EEF0FF"/>
+<g transform="translate(249.83 20) scale(0.67)" fill="none" stroke="#3730A3" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7.5 3v5.5c0 4.5-3.2 8-7.5 9.5-4.3-1.5-7.5-5-7.5-9.5V6z"/></g>
+<text x="271.83" y="32.9" font-size="14" fill="#3730A3" font-weight="600">Nivel super</text>
+</g>
+</g>
+<g id="contenido-principal" data-name="Contenido principal (main)" role="main">
+<g id="boton-1" data-name="Botón: ‹ Cuentas" data-interactive="link">
+<rect x="16" y="76" width="119.03" height="44" fill="none" data-hit="1"/>
+<text x="16" y="103.6" font-size="16" fill="#4338CA" font-weight="600">‹ Cuentas</text>
+<line x1="16" y1="106.6" x2="91.87" y2="106.6" stroke="#4338CA" stroke-width="1"/>
+</g>
+<text x="16" y="159.4" font-size="24" fill="#1A1D21" font-weight="600">Sofía Vega</text>
+<g id="insignia-2" data-name="Insignia: Activa">
+<rect x="16" y="174" width="86.07" height="28" rx="14" fill="#E8F6EE"/>
+<g transform="translate(26 180) scale(0.67)" fill="none" stroke="#0F5132" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M8 12.5l3 3 5-6"/></g>
+<text x="48" y="192.9" font-size="14" fill="#0F5132" font-weight="600">Activa</text>
+</g>
+<g id="insignia-3" data-name="Insignia: Nivel soporte">
+<rect x="110.07" y="174" width="132.82" height="28" rx="14" fill="#EEF0FF"/>
+<g transform="translate(120.07 180) scale(0.67)" fill="none" stroke="#3730A3" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7.5 3v5.5c0 4.5-3.2 8-7.5 9.5-4.3-1.5-7.5-5-7.5-9.5V6z"/></g>
+<text x="142.07" y="192.9" font-size="14" fill="#3730A3" font-weight="600">Nivel soporte</text>
+</g>
+<g id="tarjeta-4" data-name="Tarjeta">
+<rect x="16" y="219" width="343" height="290" rx="12" fill="#1A1D21" fill-opacity="0.08"/><rect x="16.5" y="218.5" width="342" height="289" rx="12" fill="#FFFFFF" stroke="#D7DDE8" stroke-width="1"/>
+<text x="32" y="251.3" font-size="18" fill="#1A1D21" font-weight="600">Datos de la cuenta</text>
+<text x="32" y="283.4" font-size="14" fill="#4B5563">Nombre</text>
+<text x="162.62" y="285.6" font-size="16" fill="#1A1D21">Sofía Vega</text>
+<text x="32" y="311.4" font-size="14" fill="#4B5563">Correo</text>
+<text x="162.62" y="313.6" font-size="16" fill="#1A1D21">sofia.vega@correo.com</text>
+<text x="32" y="339.4" font-size="14" fill="#4B5563">Rol</text>
+<text x="162.62" y="341.6" font-size="16" fill="#1A1D21">Administrador</text>
+<text x="32" y="367.4" font-size="14" fill="#4B5563">Nivel de acceso</text>
+<text x="162.62" y="369.6" font-size="16" fill="#1A1D21">soporte</text>
+<text x="32" y="395.4" font-size="14" fill="#4B5563">Puntaje</text>
+<text x="162.62" y="397.6" font-size="16" fill="#1A1D21">—</text>
+<text x="32" y="423.4" font-size="14" fill="#4B5563">Zona horaria</text>
+<text x="162.62" y="425.6" font-size="16" fill="#1A1D21">America/Bogota</text>
+<text x="32" y="451.4" font-size="14" fill="#4B5563">Tiene datos</text>
+<text x="162.62" y="453.6" font-size="16" fill="#1A1D21">No aplica</text>
+<text x="32" y="479.4" font-size="14" fill="#4B5563">Registro</text>
+<text x="162.62" y="481.6" font-size="16" fill="#1A1D21">02/09/2026</text>
+</g>
+<g id="tarjeta-5" data-name="Tarjeta">
+<rect x="16" y="525" width="343" height="266" rx="12" fill="#1A1D21" fill-opacity="0.08"/><rect x="16.5" y="524.5" width="342" height="265" rx="12" fill="#FFFFFF" stroke="#D7DDE8" stroke-width="1"/>
+<text x="32" y="557.3" font-size="18" fill="#1A1D21" font-weight="600">Acciones según tu nivel</text>
+<g id="boton-6" data-name="Botón: Editar" data-interactive="button">
+<rect x="32" y="574" width="311" height="44" fill="none" data-hit="1"/>
+<rect x="33" y="575" width="309" height="42" rx="8" fill="#FFFFFF" stroke="#4338CA" stroke-width="2"/>
+<text x="187.5" y="601.6" font-size="16" fill="#4338CA" font-weight="600" text-anchor="middle">Editar</text>
+</g>
+<g id="boton-7" data-name="Botón: Bloquear" data-interactive="button">
+<rect x="32" y="626" width="311" height="44" fill="none" data-hit="1"/>
+<rect x="33" y="627" width="309" height="42" rx="8" fill="#FFFFFF" stroke="#4338CA" stroke-width="2"/>
+<text x="187.5" y="653.6" font-size="16" fill="#4338CA" font-weight="600" text-anchor="middle">Bloquear</text>
+</g>
+<g id="boton-8" data-name="Botón: Cambiar nivel" data-interactive="button">
+<rect x="32" y="678" width="311" height="44" fill="none" data-hit="1"/>
+<rect x="33" y="679" width="309" height="42" rx="8" fill="#FFFFFF" stroke="#4338CA" stroke-width="2"/>
+<text x="187.5" y="705.6" font-size="16" fill="#4338CA" font-weight="600" text-anchor="middle">Cambiar nivel</text>
+</g>
+<g id="boton-9" data-name="Botón: Eliminar cuenta" data-interactive="button">
+<rect x="32" y="730" width="311" height="44" fill="none" data-hit="1"/>
+<rect x="32" y="730" width="311" height="44" rx="8" fill="#B3261E"/>
+<text x="187.5" y="757.6" font-size="16" fill="#FFFFFF" font-weight="600" text-anchor="middle">Eliminar cuenta</text>
+</g>
+</g>
+</g>
+</g>
+<rect x="0" y="0" width="375" height="814" fill="#1A1D21" fill-opacity="0.6" id="telon"/>
+<g id="dialogo" data-name="Diálogo: Cambiar el nivel de Sofía Vega" role="alertdialog" aria-modal="true">
+<rect x="16" y="193.5" width="343" height="437" rx="16" fill="#1A1D21" fill-opacity="0.16"/>
+<rect x="16.5" y="188" width="342" height="436" rx="16" fill="#FFFFFF" stroke="#D7DDE8" stroke-width="1"/>
+<text x="40" y="228.8" font-size="18" fill="#1A1D21" font-weight="600">Cambiar el nivel de Sofía Vega</text>
+<g id="campo-12" data-name="Campo: Nivel de acceso">
+<text x="40" y="260.9" font-size="14" fill="#1A1D21" font-weight="600">Nivel de acceso</text>
+<g id="entrada-13" data-name="Entrada" data-interactive="input" data-orden-foco="1">
+<rect x="40" y="270.5" width="295" height="44" fill="none" data-hit="1"/>
+<rect x="41" y="271.5" width="293" height="42" rx="8" fill="#FFFFFF" stroke="#6B7385" stroke-width="1"/>
+<text x="52" y="298.1" font-size="16" fill="#1A1D21">Moderador</text>
+<line x1="305" y1="288.5" x2="313" y2="296.5" stroke="#4B5563" stroke-width="2"/>
+<line x1="313" y1="296.5" x2="321" y2="288.5" stroke="#4B5563" stroke-width="2"/>
+</g>
+</g>
+<text x="40" y="345.9" font-size="14" fill="#4B5563">Soporte: lectura de cuentas, evidencias y</text>
+<text x="40" y="366.9" font-size="14" fill="#4B5563">ranking.</text>
+<text x="40" y="403.9" font-size="14" fill="#4B5563">Moderador: además crea, edita y bloquea</text>
+<text x="40" y="424.9" font-size="14" fill="#4B5563">clientes, ve métricas y Error persistente.</text>
+<text x="40" y="461.9" font-size="14" fill="#4B5563">Super: además administra administradores y</text>
+<text x="40" y="482.9" font-size="14" fill="#4B5563">ve las métricas del LLM.</text>
+<g id="boton-14" data-name="Botón: Cancelar" data-interactive="button" data-orden-foco="2">
+<rect x="40" y="504.5" width="295" height="44" fill="none" data-hit="1"/>
+<rect x="37" y="501.5" width="301" height="50" rx="11" fill="none" stroke="#4338CA" stroke-width="2"/>
+<rect x="41" y="505.5" width="293" height="42" rx="8" fill="#FFFFFF" stroke="#4338CA" stroke-width="2"/>
+<text x="187.5" y="532.1" font-size="16" fill="#4338CA" font-weight="600" text-anchor="middle">Cancelar</text>
+</g>
+<g id="boton-15" data-name="Botón: Guardar nivel" data-interactive="button" data-orden-foco="3">
+<rect x="40" y="556.5" width="295" height="44" fill="none" data-hit="1"/>
+<rect x="40" y="556.5" width="295" height="44" rx="8" fill="#4338CA"/>
+<text x="187.5" y="584.1" font-size="16" fill="#FFFFFF" font-weight="600" text-anchor="middle">Guardar nivel</text>
+</g>
+</g>
+</svg>

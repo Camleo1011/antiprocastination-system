@@ -1,0 +1,103 @@
+@startuml CU-016-assign-score-close-subgoal
+' ==============================================================
+' CONTROL DE VERSIONES
+' Archivo  : CU-016-assign-score-close-subgoal.puml
+' Versión  : 0.1      Fecha: 2026-11-11      Autor: Equipo FocusStrike
+' Fuente   : docs/01-analysis/SRS.md (SRS 0.1), sección 3.7, CU-016
+' Cambio   : Línea base
+' ==============================================================
+title Actividades — CU-016 Asignar Puntuación y Cerrar Submeta\n(SRS 0.1 · diagrama v0.1)
+|Sistema|
+start
+:Recibir un evento: dictamen, fin de la gracia, vencimiento de meta sin evidencia,\nsubmeta manual no iniciada o cierre administrativo (CU-030);
+note right: Precondiciones. Procedimientos sp_registrar_dictamen y sp_cerrar_submeta.
+
+if (¿Tipo de evento?) then (meta sin evidencia vence)
+  |Base de datos|
+  :Cerrar sin calificación y sin puntos;
+  note right: Flujo alterno 1f. RF-META-006, BR-010
+  |Sistema|
+  :Evaluar logros (CU-026);
+  stop
+elseif (submeta manual no iniciada hasta las 23:59) then
+  |Base de datos|
+  :Cerrar con 0 puntos si requiere evidencia, o sin calificación si no la requiere;
+  note right: Flujo alterno 1g. RF-META-026, BR-027
+  |Sistema|
+  stop
+elseif (cierre administrativo por Error persistente, solicitado en CU-030) then
+  |Base de datos|
+  :Iniciar la transacción: finalizar la submeta con el puntaje provisional como final,\nregistrar el administrador y la fecha del cierre y sumar el puntaje al acumulado\n(sp_cerrar_submeta_admin);
+  note right: Flujo alterno 3c. RF-ADM-019, RF-PUNT-008, RF-PUNT-014, RNF-002
+  if (¿Falló la transacción?) then (sí)
+    :Revertir estado y puntaje; reintentar el cierre sin duplicar puntos;
+    note right: Flujo alterno 3a
+    stop
+  else (no)
+  endif
+  |Sistema|
+  :No registrar ningún día activo en el cierre;
+  note right: Flujo alterno 4a. BR-009
+  :Evaluar los logros aplicables sin contar este cierre como acierto en el primer envío (CU-026);
+  note right: BR-033
+  stop
+else (dictamen o fin de la gracia)
+endif
+
+|Sistema|
+:Determinar número de envío, ventana de recepción y dictamen;
+note right: BR-004, BR-016
+|Base de datos|
+:Asignar puntos según la tabla 3.6.1 (segundo envío: la mitad de la tabla del periodo inicial)\ny calcular la suma con tope de 90 si hubo dos envíos;
+note right: RF-PUNT-002, RF-PUNT-004, RF-PUNT-005, RF-PUNT-010
+
+|Sistema|
+if (¿Hay una evaluación en Error o pendiente?) then (sí)
+  if (¿Lleva 48 horas o más en Error?) then (sí)
+    :La submeta sigue abierta; queda disponible para el cierre administrativo\ncon el puntaje provisional, que un administrador solicita en CU-030;
+    note right: Flujo alterno 3c. RF-ADM-019
+  else (no)
+    :La submeta permanece abierta hasta resolverse;
+    note right: Flujo alterno 3b. RF-PUNT-011
+  endif
+  stop
+else (no)
+endif
+
+if (¿Primer envío Excelente en el periodo inicial?) then (sí)
+  :Asignar 100 puntos y cerrar de inmediato;
+  note right: Flujo alterno 1a. RF-PUNT-001
+elseif (¿Primer envío Incoherente o Inválida y la gracia no terminó?) then (sí)
+  :Asignar 50 o 0 puntos (25 o 0 en gracia); la submeta sigue abierta;
+  note right: Flujo alterno 1b. Habilita CU-015. RF-PUNT-011
+  stop
+elseif (¿Sin evidencia en el tiempo inicial?) then (sí)
+  :Asignar 0 provisionales y abrir el tiempo de gracia;
+  note right: Flujo alterno 1c. RF-PUNT-003
+  stop
+else (segundo envío, gracia vencida o fin de gracia)
+  :Cerrar en ese instante con lo acumulado, topado en 90 si hubo dos envíos;
+  note right
+    Flujos alternos 1d, 1e, 1h.
+    RF-PUNT-013, RF-PUNT-006, BR-018
+  end note
+endif
+
+|Base de datos|
+:Iniciar la transacción: finalizar la submeta y sumar su puntaje final al acumulado del usuario;
+note right: BR-018, RF-PUNT-008, RF-PUNT-014, RNF-002
+if (¿Falló la transacción?) then (sí)
+  :Revertir estado y puntaje; reintentar el cierre sin duplicar puntos;
+  note right: Flujo alterno 3a
+  stop
+else (no)
+endif
+
+|Sistema|
+:No registrar ningún día activo en el cierre;
+note right: Flujo alterno 4a. BR-009. El día activo lo registró el envío (CU-013).
+:Evaluar los logros aplicables, incluidos Impecable y racha perfecta (CU-026);
+note right: BR-033
+stop
+
+@enduml

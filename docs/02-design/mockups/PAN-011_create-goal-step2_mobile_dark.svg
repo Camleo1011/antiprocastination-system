@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="375" height="1320" viewBox="0 0 375 1320" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" data-pan="PAN-011" data-dispositivo="movil" data-tema="oscuro" aria-labelledby="t d">
+<title id="t">PAN-011 — Crear meta (paso 2): fechas de trabajo (móvil 375 px, tema oscuro)</title>
+<desc id="d">Mockup de alta fidelidad de Crear meta (paso 2): fechas de trabajo. Ruta /metas/nueva/fechas; rol cliente; CU CU-005, CU-025; EP EP-021, EP-014, EP-023. Estado mostrado: paso 2 de 6, opción A: 2 fechas elegidas (02 y 03/11/2026) en el calendario, con lista equivalente en texto. Colores, tipografía (Inter), espaciado y radios del sistema de diseño (tema oscuro); texto editable. Días pasados deshabilitados (FECHA_PASADA). La selección usa relleno, número en negrita y marca de verificación, no solo color. Opción B pide descripción para sugerir fechas con IA (RF-META-021). Regiones ARIA: banner, navigation, main. Orden de foco con Tab (coincide con el orden visual y del DOM): Enlace de salto «Saltar al contenido principal» (visible solo al recibir el foco). 1 Menú de cuenta; 2 Navegación: Inicio; 3 Navegación: Agenda; 4 Navegación: Metas; 5 Navegación: Ranking; 6 Navegación: Perfil; 7 Casilla: A. Fechas concretas: los días de trabajo; 8 Casilla: B. Número de días: indicas cuántos días ; 9 Calendario de actividad (una sola parada; flechas entre celdas); 10 Botón: Atrás; 11 Botón: Continuar.</desc>
+<defs><pattern id="rayas-gracia" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#2A323D"/><rect width="3" height="6" fill="#F5B93A"/></pattern></defs>
+<rect id="fondo-pagina" width="375" height="1320" fill="#161A20"/>
+<g id="barra-superior" data-name="Barra superior" role="banner">
+<rect x="0" y="0" width="375" height="56" fill="#1C2128"/>
+<line x1="0" y1="56" x2="375" y2="56" stroke="#2A323D" stroke-width="1"/>
+<g id="logo-52" data-name="Logotipo FocusStrike" data-exempt="logo">
+<rect x="16" y="12" width="32" height="32" rx="8" fill="#A5B4FC"/>
+<g transform="translate(22.4 18.4) scale(0.8)" fill="none" stroke="#1E1B4B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="58" y="34.3" font-size="18" fill="#F1F3F7" font-weight="700">FocusStrike</text>
+</g>
+<g id="avatar-53" data-name="Menú de cuenta" data-interactive="button" data-orden-foco="1">
+<rect x="319" y="6" width="44" height="44" fill="none" data-hit="1"/>
+<circle cx="341" cy="28" r="18" fill="#A5B4FC"/>
+<text x="341" y="33.6" font-size="16" fill="#1E1B4B" font-weight="700" text-anchor="middle">A</text>
+</g>
+</g>
+<g id="navegacion-inferior" data-name="Navegación inferior" role="navigation">
+<rect x="0" y="1256" width="375" height="64" fill="#1C2128"/>
+<line x1="0" y1="1256" x2="375" y2="1256" stroke="#2A323D" stroke-width="1"/>
+<g id="nav-54" data-name="Navegación: Inicio" data-interactive="link" data-orden-foco="2">
+<rect x="0" y="1256" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(25.5 1264) scale(1)" fill="none" stroke="#C3CAD6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7"/><path d="M6 10v10h12V10"/></g>
+<text x="37.5" y="1306" font-size="14" fill="#C3CAD6" font-weight="600" text-anchor="middle">Inicio</text>
+</g>
+<g id="nav-55" data-name="Navegación: Agenda" data-interactive="link" data-orden-foco="3">
+<rect x="75" y="1256" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(100.5 1264) scale(1)" fill="none" stroke="#C3CAD6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v14H4z"/><path d="M4 10h16M8 3v4M16 3v4"/></g>
+<text x="112.5" y="1306" font-size="14" fill="#C3CAD6" font-weight="600" text-anchor="middle">Agenda</text>
+</g>
+<g id="nav-56" data-name="Navegación: Metas" data-interactive="link" data-orden-foco="4" aria-current="page">
+<rect x="150" y="1256" width="75" height="64" fill="none" data-hit="1"/>
+<rect x="156" y="1260" width="63" height="56" rx="8" fill="#23264A"/>
+<g transform="translate(175.5 1264) scale(1)" fill="none" stroke="#C7CDFE" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="187.5" y="1306" font-size="14" fill="#C7CDFE" font-weight="700" text-anchor="middle">Metas</text>
+</g>
+<g id="nav-57" data-name="Navegación: Ranking" data-interactive="link" data-orden-foco="5">
+<rect x="225" y="1256" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(250.5 1264) scale(1)" fill="none" stroke="#C3CAD6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v6a4 4 0 01-8 0z"/><path d="M8 6H4v2a3 3 0 003 3M16 6h4v2a3 3 0 01-3 3"/><path d="M12 14v4M8 20h8"/></g>
+<text x="262.5" y="1306" font-size="14" fill="#C3CAD6" font-weight="600" text-anchor="middle">Ranking</text>
+</g>
+<g id="nav-58" data-name="Navegación: Perfil" data-interactive="link" data-orden-foco="6">
+<rect x="300" y="1256" width="75" height="64" fill="none" data-hit="1"/>
+<g transform="translate(325.5 1264) scale(1)" fill="none" stroke="#C3CAD6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4a4 4 0 100 8 4 4 0 000-8z"/><path d="M4.5 20a7.5 7.5 0 0115 0"/></g>
+<text x="337.5" y="1306" font-size="14" fill="#C3CAD6" font-weight="600" text-anchor="middle">Perfil</text>
+</g>
+</g>
+<g id="contenido-principal" data-name="Contenido principal (main)" role="main">
+<text x="16" y="99.4" font-size="24" fill="#F1F3F7" font-weight="600">Nueva meta</text>
+<g id="pasos-1" data-name="Pasos del asistente: paso 2 de 6" role="progressbar">
+<text x="16" y="131.6" font-size="16" fill="#F1F3F7" font-weight="600">Paso 2 de 6: Fechas</text>
+<rect x="16" y="144" width="53.83" height="6" rx="3" fill="#A5B4FC"/>
+<rect x="73.83" y="144" width="53.83" height="6" rx="3" fill="#A5B4FC"/>
+<rect x="131.67" y="144" width="53.83" height="6" rx="3" fill="#2A323D"/>
+<rect x="189.5" y="144" width="53.83" height="6" rx="3" fill="#2A323D"/>
+<rect x="247.33" y="144" width="53.83" height="6" rx="3" fill="#2A323D"/>
+<rect x="305.17" y="144" width="53.83" height="6" rx="3" fill="#2A323D"/>
+</g>
+<text x="16" y="181.4" font-size="14" fill="#F1F3F7" font-weight="600">¿Cómo eliges los días?</text>
+<g id="casilla-2" data-name="Casilla: A. Fechas concretas: los días de trabajo" data-interactive="radio" data-orden-foco="7">
+<rect x="16" y="187" width="343" height="56" fill="none" data-hit="1"/>
+<circle cx="28" cy="207" r="11" fill="#1C2128" stroke="#8D97A8" stroke-width="2"/>
+<circle cx="28" cy="207" r="6" fill="#A5B4FC"/>
+<text x="52" y="208.6" font-size="16" fill="#F1F3F7">A. Fechas concretas: los días de</text>
+<text x="52" y="232.6" font-size="16" fill="#F1F3F7">trabajo son las fechas que elijas</text>
+</g>
+<g id="casilla-3" data-name="Casilla: B. Número de días: indicas cuántos días " data-interactive="radio" data-orden-foco="8">
+<rect x="16" y="243" width="343" height="56" fill="none" data-hit="1"/>
+<circle cx="28" cy="263" r="11" fill="#1C2128" stroke="#8D97A8" stroke-width="2"/>
+<text x="52" y="264.6" font-size="16" fill="#F1F3F7">B. Número de días: indicas cuántos</text>
+<text x="52" y="288.6" font-size="16" fill="#F1F3F7">días y un rango</text>
+</g>
+<g id="tarjeta-4" data-name="Tarjeta">
+<rect x="16.5" y="315.5" width="342" height="385" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="32" y="348.3" font-size="18" fill="#F1F3F7" font-weight="600">Noviembre de 2026</text>
+<g id="calendario-mes-5" data-name="Calendario de noviembre de 2026" role="grid" aria-label="Calendario de noviembre de 2026">
+<text x="54.21" y="383" font-size="14" fill="#C3CAD6" font-weight="600" text-anchor="middle">lun</text>
+<text x="98.64" y="383" font-size="14" fill="#C3CAD6" font-weight="600" text-anchor="middle">mar</text>
+<text x="143.07" y="383" font-size="14" fill="#C3CAD6" font-weight="600" text-anchor="middle">mié</text>
+<text x="187.5" y="383" font-size="14" fill="#C3CAD6" font-weight="600" text-anchor="middle">jue</text>
+<text x="231.93" y="383" font-size="14" fill="#C3CAD6" font-weight="600" text-anchor="middle">vie</text>
+<text x="276.36" y="383" font-size="14" fill="#C3CAD6" font-weight="600" text-anchor="middle">sáb</text>
+<text x="320.79" y="383" font-size="14" fill="#C3CAD6" font-weight="600" text-anchor="middle">dom</text>
+<g id="dia-6" data-name="Día 26/10/2026, no disponible" data-interactive="cell" data-orden-foco="9" aria-label="26/10/2026, no disponible" data-disabled="true">
+<rect x="32" y="393" width="44.43" height="48" fill="none" data-hit="1"/>
+<rect x="36" y="397" width="36.43" height="40" rx="8" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="54.21" y="423" font-size="16" fill="#6B7385" text-anchor="middle">26</text>
+</g>
+<g id="dia-7" data-name="Día 27/10/2026, no disponible" data-interactive="cell" aria-label="27/10/2026, no disponible" data-disabled="true">
+<rect x="76.43" y="393" width="44.43" height="48" fill="none" data-hit="1"/>
+<rect x="80.43" y="397" width="36.43" height="40" rx="8" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="98.64" y="423" font-size="16" fill="#6B7385" text-anchor="middle">27</text>
+</g>
+<g id="dia-8" data-name="Día 28/10/2026, no disponible" data-interactive="cell" aria-label="28/10/2026, no disponible" data-disabled="true">
+<rect x="120.86" y="393" width="44.43" height="48" fill="none" data-hit="1"/>
+<rect x="124.86" y="397" width="36.43" height="40" rx="8" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="143.07" y="423" font-size="16" fill="#6B7385" text-anchor="middle">28</text>
+</g>
+<g id="dia-9" data-name="Día 29/10/2026, no disponible" data-interactive="cell" aria-label="29/10/2026, no disponible" data-disabled="true">
+<rect x="165.29" y="393" width="44.43" height="48" fill="none" data-hit="1"/>
+<rect x="169.29" y="397" width="36.43" height="40" rx="8" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="187.5" y="423" font-size="16" fill="#6B7385" text-anchor="middle">29</text>
+</g>
+<g id="dia-10" data-name="Día 30/10/2026, no disponible" data-interactive="cell" aria-label="30/10/2026, no disponible" data-disabled="true">
+<rect x="209.71" y="393" width="44.43" height="48" fill="none" data-hit="1"/>
+<rect x="213.71" y="397" width="36.43" height="40" rx="8" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="231.93" y="423" font-size="16" fill="#6B7385" text-anchor="middle">30</text>
+</g>
+<g id="dia-11" data-name="Día 31/10/2026, no disponible" data-interactive="cell" aria-label="31/10/2026, no disponible" data-disabled="true">
+<rect x="254.14" y="393" width="44.43" height="48" fill="none" data-hit="1"/>
+<rect x="258.14" y="397" width="36.43" height="40" rx="8" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="276.36" y="423" font-size="16" fill="#6B7385" text-anchor="middle">31</text>
+</g>
+<g id="dia-12" data-name="Día 01/11/2026, no disponible" data-interactive="cell" aria-label="01/11/2026, no disponible" data-disabled="true">
+<rect x="298.57" y="393" width="44.43" height="48" fill="none" data-hit="1"/>
+<rect x="302.57" y="397" width="36.43" height="40" rx="8" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="320.79" y="423" font-size="16" fill="#6B7385" text-anchor="middle">1</text>
+</g>
+<g id="dia-13" data-name="Día 02/11/2026, elegido" data-interactive="cell" aria-label="02/11/2026, elegido">
+<rect x="32" y="441" width="44.43" height="48" fill="none" data-hit="1"/>
+<rect x="36" y="445" width="36.43" height="40" rx="8" fill="#A5B4FC"/>
+<text x="54.21" y="471" font-size="16" fill="#1E1B4B" font-weight="700" text-anchor="middle">2</text>
+<g transform="translate(54.43 446) scale(0.58)" fill="none" stroke="#1E1B4B" stroke-width="5.14" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></g>
+</g>
+<g id="dia-14" data-name="Día 03/11/2026, elegido" data-interactive="cell" aria-label="03/11/2026, elegido">
+<rect x="76.43" y="441" width="44.43" height="48" fill="none" data-hit="1"/>
+<rect x="80.43" y="445" width="36.43" height="40" rx="8" fill="#A5B4FC"/>
+<text x="98.64" y="471" font-size="16" fill="#1E1B4B" font-weight="700" text-anchor="middle">3</text>
+<g transform="translate(98.86 446) scale(0.58)" fill="none" stroke="#1E1B4B" stroke-width="5.14" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></g>
+</g>
+<g id="dia-15" data-name="Día 04/11/2026" data-interactive="cell" aria-label="04/11/2026">
+<rect x="120.86" y="441" width="44.43" height="48" fill="none" data-hit="1"/>
+<rect x="124.86" y="445" width="36.43" height="40" rx="8" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="143.07" y="471" font-size="16" fill="#F1F3F7" text-anchor="middle">4</text>
+</g>
+<g id="dia-16" data-name="Día 05/11/2026" data-interactive="cell" aria-label="05/11/2026">
+<rect x="165.29" y="441" width="44.43" height="48" fill="none" data-hit="1"/>
+<rect x="169.29" y="445" width="36.43" height="40" rx="8" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="187.5" y="471" font-size="16" fill="#F1F3F7" text-anchor="middle">5</text>
+</g>
+<g id="dia-17" data-name="Día 06/11/2026" data-interactive="cell" aria-label="06/11/2026">
+<rect x="209.71" y="441" width="44.43" height="48" fill="none" data-hit="1"/>
+<rect x="213.71" y="445" width="36.43" height="40" rx="8" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="231.93" y="471" font-size="16" fill="#F1F3F7" text-anchor="middle">6</text>
+</g>
+<g id="dia-18" data-name="Día 07/11/2026" data-interactive="cell" aria-label="07/11/2026">
+<rect x="254.14" y="441" width="44.43" height="48" fill="none" data-hit="1"/>
+<rect x="258.14" y="445" width="36.43" height="40" rx="8" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="276.36" y="471" font-size="16" fill="#F1F3F7" text-anchor="middle">7</text>
+</g>
+<g id="dia-19" data-name="Día 08/11/2026" data-interactive="cell" aria-label="08/11/2026">
+<rect x="298.57" y="441" width="44.43" height="48" fill="none" data-hit="1"/>
+<rect x="302.57" y="445" width="36.43" height="40" rx="8" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="320.79" y="471" font-size="16" fill="#F1F3F7" text-anchor="middle">8</text>
+</g>
+<g id="dia-20" data-name="Día 09/11/2026" data-interactive="cell" aria-label="09/11/2026">
+<rect x="32" y="489" width="44.43" height="48" fill="none" data-hit="1"/>
+<rect x="36" y="493" width="36.43" height="40" rx="8" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="54.21" y="519" font-size="16" fill="#F1F3F7" text-anchor="middle">9</text>
+</g>
+<g id="dia-21" data-name="Día 10/11/2026" data-interactive="cell" aria-label="10/11/2026">
+<rect x="76.43" y="489" width="44.43" height="48" fill="none" data-hit="1"/>
+<rect x="80.43" y="493" width="36.43" height="40" rx="8" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="98.64" y="519" font-size="16" fill="#F1F3F7" text-anchor="middle">10</text>
+</g>
+<g id="dia-22" data-name="Día 11/11/2026" data-interactive="cell" aria-label="11/11/2026">
+<rect x="120.86" y="489" width="44.43" height="48" fill="none" data-hit="1"/>
+<rect x="124.86" y="493" width="36.43" height="40" rx="8" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="143.07" y="519" font-size="16" fill="#F1F3F7" text-anchor="middle">11</text>
+</g>
+<g id="dia-23" data-name="Día 12/11/2026" data-interactive="cell" aria-label="12/11/2026">
+<rect x="165.29" y="489" width="44.43" height="48" fill="none" data-hit="1"/>
+<rect x="169.29" y="493" width="36.43" height="40" rx="8" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="187.5" y="519" font-size="16" fill="#F1F3F7" text-anchor="middle">12</text>
+</g>
+<g id="dia-24" data-name="Día 13/11/2026" data-interactive="cell" aria-label="13/11/2026">
+<rect x="209.71" y="489" width="44.43" height="48" fill="none" data-hit="1"/>
+<rect x="213.71" y="493" width="36.43" height="40" rx="8" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="231.93" y="519" font-size="16" fill="#F1F3F7" text-anchor="middle">13</text>
+</g>
+<g id="dia-25" data-name="Día 14/11/2026" data-interactive="cell" aria-label="14/11/2026">
+<rect x="254.14" y="489" width="44.43" height="48" fill="none" data-hit="1"/>
+<rect x="258.14" y="493" width="36.43" height="40" rx="8" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="276.36" y="519" font-size="16" fill="#F1F3F7" text-anchor="middle">14</text>
+</g>
+<g id="dia-26" data-name="Día 15/11/2026" data-interactive="cell" aria-label="15/11/2026">
+<rect x="298.57" y="489" width="44.43" height="48" fill="none" data-hit="1"/>
+<rect x="302.57" y="493" width="36.43" height="40" rx="8" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="320.79" y="519" font-size="16" fill="#F1F3F7" text-anchor="middle">15</text>
+</g>
+<g id="dia-27" data-name="Día 16/11/2026" data-interactive="cell" aria-label="16/11/2026">
+<rect x="32" y="537" width="44.43" height="48" fill="none" data-hit="1"/>
+<rect x="36" y="541" width="36.43" height="40" rx="8" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="54.21" y="567" font-size="16" fill="#F1F3F7" text-anchor="middle">16</text>
+</g>
+<g id="dia-28" data-name="Día 17/11/2026" data-interactive="cell" aria-label="17/11/2026">
+<rect x="76.43" y="537" width="44.43" height="48" fill="none" data-hit="1"/>
+<rect x="80.43" y="541" width="36.43" height="40" rx="8" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="98.64" y="567" font-size="16" fill="#F1F3F7" text-anchor="middle">17</text>
+</g>
+<g id="dia-29" data-name="Día 18/11/2026" data-interactive="cell" aria-label="18/11/2026">
+<rect x="120.86" y="537" width="44.43" height="48" fill="none" data-hit="1"/>
+<rect x="124.86" y="541" width="36.43" height="40" rx="8" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="143.07" y="567" font-size="16" fill="#F1F3F7" text-anchor="middle">18</text>
+</g>
+<g id="dia-30" data-name="Día 19/11/2026" data-interactive="cell" aria-label="19/11/2026">
+<rect x="165.29" y="537" width="44.43" height="48" fill="none" data-hit="1"/>
+<rect x="169.29" y="541" width="36.43" height="40" rx="8" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="187.5" y="567" font-size="16" fill="#F1F3F7" text-anchor="middle">19</text>
+</g>
+<g id="dia-31" data-name="Día 20/11/2026" data-interactive="cell" aria-label="20/11/2026">
+<rect x="209.71" y="537" width="44.43" height="48" fill="none" data-hit="1"/>
+<rect x="213.71" y="541" width="36.43" height="40" rx="8" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="231.93" y="567" font-size="16" fill="#F1F3F7" text-anchor="middle">20</text>
+</g>
+<g id="dia-32" data-name="Día 21/11/2026" data-interactive="cell" aria-label="21/11/2026">
+<rect x="254.14" y="537" width="44.43" height="48" fill="none" data-hit="1"/>
+<rect x="258.14" y="541" width="36.43" height="40" rx="8" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="276.36" y="567" font-size="16" fill="#F1F3F7" text-anchor="middle">21</text>
+</g>
+<g id="dia-33" data-name="Día 22/11/2026" data-interactive="cell" aria-label="22/11/2026">
+<rect x="298.57" y="537" width="44.43" height="48" fill="none" data-hit="1"/>
+<rect x="302.57" y="541" width="36.43" height="40" rx="8" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="320.79" y="567" font-size="16" fill="#F1F3F7" text-anchor="middle">22</text>
+</g>
+<g id="dia-34" data-name="Día 23/11/2026" data-interactive="cell" aria-label="23/11/2026">
+<rect x="32" y="585" width="44.43" height="48" fill="none" data-hit="1"/>
+<rect x="36" y="589" width="36.43" height="40" rx="8" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="54.21" y="615" font-size="16" fill="#F1F3F7" text-anchor="middle">23</text>
+</g>
+<g id="dia-35" data-name="Día 24/11/2026" data-interactive="cell" aria-label="24/11/2026">
+<rect x="76.43" y="585" width="44.43" height="48" fill="none" data-hit="1"/>
+<rect x="80.43" y="589" width="36.43" height="40" rx="8" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="98.64" y="615" font-size="16" fill="#F1F3F7" text-anchor="middle">24</text>
+</g>
+<g id="dia-36" data-name="Día 25/11/2026" data-interactive="cell" aria-label="25/11/2026">
+<rect x="120.86" y="585" width="44.43" height="48" fill="none" data-hit="1"/>
+<rect x="124.86" y="589" width="36.43" height="40" rx="8" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="143.07" y="615" font-size="16" fill="#F1F3F7" text-anchor="middle">25</text>
+</g>
+<g id="dia-37" data-name="Día 26/11/2026" data-interactive="cell" aria-label="26/11/2026">
+<rect x="165.29" y="585" width="44.43" height="48" fill="none" data-hit="1"/>
+<rect x="169.29" y="589" width="36.43" height="40" rx="8" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="187.5" y="615" font-size="16" fill="#F1F3F7" text-anchor="middle">26</text>
+</g>
+<g id="dia-38" data-name="Día 27/11/2026" data-interactive="cell" aria-label="27/11/2026">
+<rect x="209.71" y="585" width="44.43" height="48" fill="none" data-hit="1"/>
+<rect x="213.71" y="589" width="36.43" height="40" rx="8" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="231.93" y="615" font-size="16" fill="#F1F3F7" text-anchor="middle">27</text>
+</g>
+<g id="dia-39" data-name="Día 28/11/2026" data-interactive="cell" aria-label="28/11/2026">
+<rect x="254.14" y="585" width="44.43" height="48" fill="none" data-hit="1"/>
+<rect x="258.14" y="589" width="36.43" height="40" rx="8" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="276.36" y="615" font-size="16" fill="#F1F3F7" text-anchor="middle">28</text>
+</g>
+<g id="dia-40" data-name="Día 29/11/2026" data-interactive="cell" aria-label="29/11/2026">
+<rect x="298.57" y="585" width="44.43" height="48" fill="none" data-hit="1"/>
+<rect x="302.57" y="589" width="36.43" height="40" rx="8" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="320.79" y="615" font-size="16" fill="#F1F3F7" text-anchor="middle">29</text>
+</g>
+<g id="dia-41" data-name="Día 30/11/2026" data-interactive="cell" aria-label="30/11/2026">
+<rect x="32" y="633" width="44.43" height="48" fill="none" data-hit="1"/>
+<rect x="36" y="637" width="36.43" height="40" rx="8" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="54.21" y="663" font-size="16" fill="#F1F3F7" text-anchor="middle">30</text>
+</g>
+<g id="dia-42" data-name="Día 01/12/2026" data-interactive="cell" aria-label="01/12/2026">
+<rect x="76.43" y="633" width="44.43" height="48" fill="none" data-hit="1"/>
+<rect x="80.43" y="637" width="36.43" height="40" rx="8" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="98.64" y="663" font-size="16" fill="#F1F3F7" text-anchor="middle">1</text>
+</g>
+<g id="dia-43" data-name="Día 02/12/2026" data-interactive="cell" aria-label="02/12/2026">
+<rect x="120.86" y="633" width="44.43" height="48" fill="none" data-hit="1"/>
+<rect x="124.86" y="637" width="36.43" height="40" rx="8" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="143.07" y="663" font-size="16" fill="#F1F3F7" text-anchor="middle">2</text>
+</g>
+<g id="dia-44" data-name="Día 03/12/2026" data-interactive="cell" aria-label="03/12/2026">
+<rect x="165.29" y="633" width="44.43" height="48" fill="none" data-hit="1"/>
+<rect x="169.29" y="637" width="36.43" height="40" rx="8" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="187.5" y="663" font-size="16" fill="#F1F3F7" text-anchor="middle">3</text>
+</g>
+<g id="dia-45" data-name="Día 04/12/2026" data-interactive="cell" aria-label="04/12/2026">
+<rect x="209.71" y="633" width="44.43" height="48" fill="none" data-hit="1"/>
+<rect x="213.71" y="637" width="36.43" height="40" rx="8" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="231.93" y="663" font-size="16" fill="#F1F3F7" text-anchor="middle">4</text>
+</g>
+<g id="dia-46" data-name="Día 05/12/2026" data-interactive="cell" aria-label="05/12/2026">
+<rect x="254.14" y="633" width="44.43" height="48" fill="none" data-hit="1"/>
+<rect x="258.14" y="637" width="36.43" height="40" rx="8" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="276.36" y="663" font-size="16" fill="#F1F3F7" text-anchor="middle">5</text>
+</g>
+<g id="dia-47" data-name="Día 06/12/2026" data-interactive="cell" aria-label="06/12/2026">
+<rect x="298.57" y="633" width="44.43" height="48" fill="none" data-hit="1"/>
+<rect x="302.57" y="637" width="36.43" height="40" rx="8" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="320.79" y="663" font-size="16" fill="#F1F3F7" text-anchor="middle">6</text>
+</g>
+</g>
+</g>
+<g id="tarjeta-48" data-name="Tarjeta">
+<rect x="16.5" y="717.5" width="342" height="299" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="32" y="750.3" font-size="18" fill="#F1F3F7" font-weight="600">Resumen</text>
+<text x="32" y="782.4" font-size="14" fill="#C3CAD6">Días elegidos</text>
+<text x="162.62" y="784.6" font-size="16" fill="#F1F3F7">2</text>
+<text x="32" y="810.4" font-size="14" fill="#C3CAD6">Horas por día</text>
+<text x="32" y="831.4" font-size="14" fill="#C3CAD6">(promedio)</text>
+<text x="162.62" y="812.6" font-size="16" fill="#F1F3F7">13 h</text>
+<text x="32" y="856.4" font-size="14" fill="#C3CAD6">Capacidad del</text>
+<text x="32" y="877.4" font-size="14" fill="#C3CAD6">horario</text>
+<text x="162.62" y="858.6" font-size="16" fill="#F1F3F7">13 h/día</text>
+<text x="32" y="914.4" font-size="14" fill="#C3CAD6">Fechas elegidas (lista equivalente para teclado</text>
+<text x="32" y="935.4" font-size="14" fill="#C3CAD6">y lector de pantalla):</text>
+<circle cx="38" cy="965" r="3" fill="#F1F3F7"/>
+<text x="52" y="970.6" font-size="16" fill="#F1F3F7">02/11/2026</text>
+<circle cx="38" cy="989" r="3" fill="#F1F3F7"/>
+<text x="52" y="994.6" font-size="16" fill="#F1F3F7">03/11/2026</text>
+</g>
+<g id="alerta-49" data-name="Alerta: Tu plan promedia 13 h por día, más de la" role="status">
+<rect x="16" y="1033" width="343" height="87" rx="8" fill="#10243D"/>
+<rect x="16" y="1033" width="4" height="87" rx="2" fill="#60A5FA"/>
+<g transform="translate(32 1045) scale(0.83)" fill="none" stroke="#93C5FD" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 11v5.5"/><path d="M12 7.6v.1"/></g>
+<text x="64" y="1060.4" font-size="14" fill="#F1F3F7">Tu plan promedia 13 h por día, más de las</text>
+<text x="64" y="1081.4" font-size="14" fill="#F1F3F7">12 h recomendadas: en el siguiente paso</text>
+<text x="64" y="1102.4" font-size="14" fill="#F1F3F7">verás sugerencias de bienestar.</text>
+</g>
+<g id="boton-50" data-name="Botón: Atrás" data-interactive="button" data-orden-foco="10">
+<rect x="16" y="1136" width="343" height="44" fill="none" data-hit="1"/>
+<rect x="17" y="1137" width="341" height="42" rx="8" fill="#1C2128" stroke="#A5B4FC" stroke-width="2"/>
+<text x="187.5" y="1163.6" font-size="16" fill="#A5B4FC" font-weight="600" text-anchor="middle">Atrás</text>
+</g>
+<g id="boton-51" data-name="Botón: Continuar" data-interactive="button" data-orden-foco="11">
+<rect x="16" y="1188" width="343" height="44" fill="none" data-hit="1"/>
+<rect x="16" y="1188" width="343" height="44" rx="8" fill="#A5B4FC"/>
+<text x="187.5" y="1215.6" font-size="16" fill="#1E1B4B" font-weight="600" text-anchor="middle">Continuar</text>
+</g>
+</g>
+</svg>

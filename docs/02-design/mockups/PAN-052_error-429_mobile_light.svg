@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="375" height="812" viewBox="0 0 375 812" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" data-pan="PAN-052" data-dispositivo="movil" data-tema="claro" aria-labelledby="t d">
+<title id="t">PAN-052 — Error 429: demasiados intentos o solicitudes (móvil 375 px, tema claro)</title>
+<desc id="d">Mockup de alta fidelidad de Error 429: demasiados intentos o solicitudes. Ruta (estado en la página); rol todos; CU CU-002, CU-001, CU-003; EP EP-004, EP-003, EP-007, EP-008. Estado mostrado: 429 LIMITE_DE_TASA: espera de 30 s con cuenta regresiva y botón deshabilitado. Colores, tipografía (Inter), espaciado y radios del sistema de diseño (tema claro); texto editable. Retry-After se muestra como texto y cuenta regresiva (sin aria-live continuo). Al terminar se habilita el botón y el foco pasa al campo. Regiones ARIA: banner, main. Orden de foco con Tab (coincide con el orden visual y del DOM): Enlace de salto «Saltar al contenido principal» (visible solo al recibir el foco). 1 Campo: Correo electrónico; 2 Campo: Contraseña; 3 Botón: Ingresar.</desc>
+<defs><pattern id="rayas-gracia" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#E3E8EF"/><rect width="3" height="6" fill="#8A4B00"/></pattern></defs>
+<rect id="fondo-pagina" width="375" height="812" fill="#FFFFFF"/>
+<g id="cabecera" data-name="Cabecera" role="banner">
+<rect x="0" y="0" width="375" height="56" fill="#FFFFFF"/>
+<line x1="0" y1="56" x2="375" y2="56" stroke="#D7DDE8" stroke-width="1"/>
+<g id="logo-8" data-name="Logotipo FocusStrike" data-exempt="logo">
+<rect x="16" y="12" width="32" height="32" rx="8" fill="#4338CA"/>
+<g transform="translate(22.4 18.4) scale(0.8)" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="58" y="34.3" font-size="18" fill="#1A1D21" font-weight="700">FocusStrike</text>
+</g>
+</g>
+<g id="contenido-principal" data-name="Contenido principal (main)" role="main">
+<text x="16" y="99.4" font-size="24" fill="#1A1D21" font-weight="600">Iniciar sesión</text>
+<g id="alerta-1" data-name="Alerta: Espera un momento" role="alert">
+<rect x="16" y="114" width="343" height="111" rx="8" fill="#FFF4DB"/>
+<rect x="16" y="114" width="4" height="111" rx="2" fill="#B45309"/>
+<g transform="translate(32 126) scale(0.83)" fill="none" stroke="#8A4B00" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5L2.8 19.5h18.4z"/><path d="M12 10v4.5"/><path d="M12 17.2v.1"/></g>
+<text x="64" y="143.6" font-size="16" fill="#8A4B00" font-weight="600">Espera un momento</text>
+<text x="64" y="165.4" font-size="14" fill="#1A1D21">Hiciste demasiadas solicitudes seguidas.</text>
+<text x="64" y="186.4" font-size="14" fill="#1A1D21">Espera 30 segundos antes de volver a</text>
+<text x="64" y="207.4" font-size="14" fill="#1A1D21">intentar. (429 LIMITE_DE_TASA)</text>
+</g>
+<g id="tarjeta-2" data-name="Tarjeta">
+<rect x="16" y="242" width="343" height="132" rx="12" fill="#1A1D21" fill-opacity="0.08"/><rect x="16.5" y="241.5" width="342" height="131" rx="12" fill="#FFFFFF" stroke="#D7DDE8" stroke-width="1"/>
+<g transform="translate(32 259) scale(0.83)" fill="none" stroke="#8A4B00" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 7v5l3 2"/></g>
+<text x="60" y="274" font-size="16" fill="#8A4B00" font-weight="600">Podrás reintentar en</text>
+<text x="32" y="321.2" font-size="36" fill="#1A1D21" font-weight="700" font-family="'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" role="timer">00:24</text>
+<text x="32" y="351.4" font-size="14" fill="#4B5563">El botón se habilita al terminar la espera.</text>
+</g>
+<g id="campo-3" data-name="Campo: Correo electrónico">
+<text x="16" y="404.4" font-size="14" fill="#1A1D21" font-weight="600">Correo electrónico</text>
+<g id="entrada-4" data-name="Entrada" data-interactive="input" data-orden-foco="1">
+<rect x="16" y="414" width="343" height="44" fill="none" data-hit="1"/>
+<rect x="17" y="415" width="341" height="42" rx="8" fill="#FFFFFF" stroke="#6B7385" stroke-width="1"/>
+<text x="28" y="441.6" font-size="16" fill="#1A1D21">ana.gomez@correo.com</text>
+</g>
+</g>
+<g id="campo-5" data-name="Campo: Contraseña">
+<text x="16" y="489.4" font-size="14" fill="#1A1D21" font-weight="600">Contraseña</text>
+<g id="entrada-6" data-name="Entrada" data-interactive="input" data-orden-foco="2">
+<rect x="16" y="499" width="343" height="44" fill="none" data-hit="1"/>
+<rect x="17" y="500" width="341" height="42" rx="8" fill="#FFFFFF" stroke="#6B7385" stroke-width="1"/>
+<text x="347" y="525.9" font-size="14" fill="#4338CA" font-weight="600" text-anchor="end">Mostrar</text>
+</g>
+</g>
+<g id="boton-7" data-name="Botón: Ingresar" data-interactive="button" data-orden-foco="3" data-disabled="true">
+<rect x="16" y="559" width="343" height="44" fill="none" data-hit="1"/>
+<rect x="16" y="559" width="343" height="44" rx="8" fill="#EBEEF3"/>
+<text x="187.5" y="586.6" font-size="16" fill="#8D97A8" font-weight="600" text-anchor="middle">Ingresar</text>
+</g>
+</g>
+</svg>

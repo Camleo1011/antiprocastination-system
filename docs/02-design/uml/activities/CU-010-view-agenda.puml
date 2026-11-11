@@ -1,0 +1,34 @@
+@startuml CU-010-view-agenda
+' ==============================================================
+' CONTROL DE VERSIONES
+' Archivo  : CU-010-view-agenda.puml
+' Versión  : 0.1      Fecha: 2026-11-11      Autor: Equipo FocusStrike
+' Fuente   : docs/01-analysis/SRS.md (SRS 0.1), sección 3.7, CU-010
+' Cambio   : Línea base
+' ==============================================================
+title Actividades — CU-010 Consultar Agenda\n(SRS 0.1 · diagrama v0.1)
+|Usuario (cliente)|
+start
+:Consultar la agenda;
+note right: RF-AGEN-001
+
+|Sistema|
+|Base de datos|
+:Consultar metas y submetas del usuario en el rango solicitado;
+|Sistema|
+if (¿Hay datos en el rango?) then (sí)
+  :Agrupar metas y submetas por fecha en la zona horaria del usuario;
+  :Aplicar el mismo color a las submetas de una meta;
+  note right: RF-AGEN-002
+  :Mostrar el estado de cada submeta con color y texto;
+  note right: RF-AGEN-003, BR-031
+else (no)
+  :Mostrar la agenda vacía;
+  note right: Flujo alterno 1a
+endif
+
+|Usuario (cliente)|
+:Visualizar la agenda;
+stop
+
+@enduml

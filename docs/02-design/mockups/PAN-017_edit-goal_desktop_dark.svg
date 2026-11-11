@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" data-pan="PAN-017" data-dispositivo="desktop" data-tema="oscuro" aria-labelledby="t d">
+<title id="t">PAN-017 — Editar meta (escritorio 1280 px, tema oscuro)</title>
+<desc id="d">Mockup de alta fidelidad de Editar meta. Ruta /metas/:id/editar; rol cliente; CU CU-008a, CU-032, CU-006; EP EP-025, EP-024, EP-028, EP-027. Estado mostrado: edición de una meta con submetas iniciadas: nombre, categoría y descripción editables; el resto bloqueado con motivo en texto (409 META_CON_SUBMETAS_INICIADAS). Colores, tipografía (Inter), espaciado y radios del sistema de diseño (tema oscuro); texto editable. El bloqueo se comunica con candado y texto, no solo con atenuado. Cambiar fechas, tiempo u horario (sin submetas iniciadas) regeneraría las submetas (RF-META-027). Regiones ARIA: banner, navigation, main. Orden de foco con Tab (coincide con el orden visual y del DOM): Enlace de salto «Saltar al contenido principal» (visible solo al recibir el foco). 1 Navegación: Inicio; 2 Navegación: Agenda; 3 Navegación: Metas; 4 Navegación: Ranking; 5 Navegación: Perfil; 6 Menú de cuenta; 7 Botón: ‹ Aprender cálculo; 8 Campo: Nombre de la meta; 9 Campo: Categoría; 10 Campo: Descripción; 11 Botón: Cancelar; 12 Botón: Guardar cambios.</desc>
+<defs><pattern id="rayas-gracia" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#2A323D"/><rect width="3" height="6" fill="#F5B93A"/></pattern></defs>
+<rect id="fondo-pagina" width="1280" height="800" fill="#161A20"/>
+<g id="cabecera" data-name="Cabecera" role="banner">
+<rect x="0" y="0" width="1280" height="64" fill="#1C2128"/>
+<line x1="0" y1="64" x2="1280" y2="64" stroke="#2A323D" stroke-width="1"/>
+<g id="logo-14" data-name="Logotipo FocusStrike" data-exempt="logo">
+<rect x="40" y="16" width="32" height="32" rx="8" fill="#A5B4FC"/>
+<g transform="translate(46.4 22.4) scale(0.8)" fill="none" stroke="#1E1B4B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="82" y="38.3" font-size="18" fill="#F1F3F7" font-weight="700">FocusStrike</text>
+</g>
+<g id="navegacion-principal" data-name="Navegación principal" role="navigation" aria-label="Principal">
+<g id="nav-15" data-name="Navegación: Inicio" data-interactive="link" data-orden-foco="1">
+<rect x="240" y="10" width="95.76" height="44" fill="none" data-hit="1"/>
+<g transform="translate(252 22) scale(0.83)" fill="none" stroke="#C3CAD6" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7"/><path d="M6 10v10h12V10"/></g>
+<text x="280" y="37.6" font-size="16" fill="#C3CAD6" font-weight="600">Inicio</text>
+</g>
+<g id="nav-16" data-name="Navegación: Agenda" data-interactive="link" data-orden-foco="2">
+<rect x="339.76" y="10" width="110.68" height="44" fill="none" data-hit="1"/>
+<g transform="translate(351.76 22) scale(0.83)" fill="none" stroke="#C3CAD6" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v14H4z"/><path d="M4 10h16M8 3v4M16 3v4"/></g>
+<text x="379.76" y="37.6" font-size="16" fill="#C3CAD6" font-weight="600">Agenda</text>
+</g>
+<g id="nav-17" data-name="Navegación: Metas" data-interactive="link" data-orden-foco="3" aria-current="page">
+<rect x="454.44" y="10" width="101.01" height="44" fill="none" data-hit="1"/>
+<rect x="454.44" y="10" width="101.01" height="44" rx="8" fill="#23264A"/>
+<g transform="translate(466.44 22) scale(0.83)" fill="none" stroke="#C7CDFE" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="494.44" y="37.6" font-size="16" fill="#C7CDFE" font-weight="700">Metas</text>
+</g>
+<g id="nav-18" data-name="Navegación: Ranking" data-interactive="link" data-orden-foco="4">
+<rect x="559.45" y="10" width="115.26" height="44" fill="none" data-hit="1"/>
+<g transform="translate(571.45 22) scale(0.83)" fill="none" stroke="#C3CAD6" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v6a4 4 0 01-8 0z"/><path d="M8 6H4v2a3 3 0 003 3M16 6h4v2a3 3 0 01-3 3"/><path d="M12 14v4M8 20h8"/></g>
+<text x="599.45" y="37.6" font-size="16" fill="#C3CAD6" font-weight="600">Ranking</text>
+</g>
+<g id="nav-19" data-name="Navegación: Perfil" data-interactive="link" data-orden-foco="5">
+<rect x="678.71" y="10" width="94.06" height="44" fill="none" data-hit="1"/>
+<g transform="translate(690.71 22) scale(0.83)" fill="none" stroke="#C3CAD6" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4a4 4 0 100 8 4 4 0 000-8z"/><path d="M4.5 20a7.5 7.5 0 0115 0"/></g>
+<text x="718.71" y="37.6" font-size="16" fill="#C3CAD6" font-weight="600">Perfil</text>
+</g>
+</g>
+<text x="1192" y="37" font-size="14" fill="#C3CAD6" font-weight="600" text-anchor="end">Ana Gómez</text>
+<g id="avatar-20" data-name="Menú de cuenta" data-interactive="button" data-orden-foco="6">
+<rect x="1200" y="10" width="44" height="44" fill="none" data-hit="1"/>
+<circle cx="1222" cy="32" r="18" fill="#A5B4FC"/>
+<text x="1222" y="37.6" font-size="16" fill="#1E1B4B" font-weight="700" text-anchor="middle">A</text>
+</g>
+</g>
+<g id="contenido-principal" data-name="Contenido principal (main)" role="main">
+<g id="boton-1" data-name="Botón: ‹ Aprender cálculo" data-interactive="link" data-orden-foco="7">
+<rect x="40" y="96" width="186.53" height="44" fill="none" data-hit="1"/>
+<text x="40" y="123.6" font-size="16" fill="#A5B4FC" font-weight="600">‹ Aprender cálculo</text>
+<line x1="40" y1="126.6" x2="180.67" y2="126.6" stroke="#A5B4FC" stroke-width="1"/>
+</g>
+<text x="40" y="185.5" font-size="30" fill="#F1F3F7" font-weight="700">Editar meta</text>
+<g id="alerta-2" data-name="Alerta: Edición limitada" role="alert">
+<rect x="40" y="202" width="1200" height="69" rx="8" fill="#33260A"/>
+<rect x="40" y="202" width="4" height="69" rx="2" fill="#F5B93A"/>
+<g transform="translate(56 214) scale(0.83)" fill="none" stroke="#FCD34D" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5L2.8 19.5h18.4z"/><path d="M12 10v4.5"/><path d="M12 17.2v.1"/></g>
+<text x="88" y="231.6" font-size="16" fill="#FCD34D" font-weight="600">Edición limitada</text>
+<text x="88" y="253.4" font-size="14" fill="#F1F3F7">Días, tiempo, fechas, horario, modo de inicio y evidencia ya no se pueden editar: la meta tiene 4 submetas iniciadas o finalizadas.</text>
+</g>
+<g id="tarjeta-3" data-name="Tarjeta">
+<rect x="40.5" y="287.5" width="587" height="356" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="64" y="328.3" font-size="18" fill="#F1F3F7" font-weight="600">Datos que puedes editar</text>
+<g id="campo-4" data-name="Campo: Nombre de la meta">
+<text x="64" y="360.4" font-size="14" fill="#F1F3F7" font-weight="600">Nombre de la meta</text>
+<g id="entrada-5" data-name="Entrada" data-interactive="input" data-orden-foco="8">
+<rect x="64" y="370" width="540" height="44" fill="none" data-hit="1"/>
+<rect x="65" y="371" width="538" height="42" rx="8" fill="#1C2128" stroke="#8D97A8" stroke-width="1"/>
+<text x="76" y="397.6" font-size="16" fill="#F1F3F7">Aprender cálculo</text>
+</g>
+</g>
+<g id="campo-6" data-name="Campo: Categoría">
+<text x="64" y="441.4" font-size="14" fill="#F1F3F7" font-weight="600">Categoría</text>
+<g id="entrada-7" data-name="Entrada" data-interactive="input" data-orden-foco="9">
+<rect x="64" y="451" width="540" height="44" fill="none" data-hit="1"/>
+<rect x="65" y="452" width="538" height="42" rx="8" fill="#1C2128" stroke="#8D97A8" stroke-width="1"/>
+<text x="76" y="478.6" font-size="16" fill="#F1F3F7">Estudio</text>
+<line x1="574" y1="469" x2="582" y2="477" stroke="#C3CAD6" stroke-width="2"/>
+<line x1="582" y1="477" x2="590" y2="469" stroke="#C3CAD6" stroke-width="2"/>
+</g>
+</g>
+<g id="campo-8" data-name="Campo: Descripción">
+<text x="64" y="522.4" font-size="14" fill="#F1F3F7" font-weight="600">Descripción (opcional)</text>
+<g id="entrada-9" data-name="Entrada" data-interactive="input" data-orden-foco="10">
+<rect x="64" y="532" width="540" height="88" fill="none" data-hit="1"/>
+<rect x="65" y="533" width="538" height="86" rx="8" fill="#1C2128" stroke="#8D97A8" stroke-width="1"/>
+<text x="76" y="559.6" font-size="16" fill="#F1F3F7">Repasar límites, derivadas e integrales para el parcial</text>
+</g>
+</g>
+</g>
+<g id="tarjeta-10" data-name="Tarjeta">
+<rect x="652.5" y="287.5" width="587" height="356" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="676" y="328.3" font-size="18" fill="#F1F3F7" font-weight="600">Datos bloqueados</text>
+<g id="insignia-11" data-name="Insignia: Bloqueado: hay submetas iniciadas">
+<rect x="676" y="345" width="285.08" height="28" rx="14" fill="#33260A"/>
+<g transform="translate(686 351) scale(0.67)" fill="none" stroke="#FCD34D" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 11h12v9H6z"/><path d="M8.5 11V8a3.5 3.5 0 017 0v3"/></g>
+<text x="708" y="363.9" font-size="14" fill="#FCD34D" font-weight="600">Bloqueado: hay submetas iniciadas</text>
+</g>
+<text x="676" y="400.4" font-size="14" fill="#C3CAD6">Tiempo total</text>
+<text x="892" y="402.6" font-size="16" fill="#F1F3F7">16 h</text>
+<text x="676" y="428.4" font-size="14" fill="#C3CAD6">Fechas de trabajo</text>
+<text x="892" y="430.6" font-size="16" fill="#F1F3F7">30/10/2026 - 06/11/2026</text>
+<text x="676" y="456.4" font-size="14" fill="#C3CAD6">Horario diario</text>
+<text x="892" y="458.6" font-size="16" fill="#F1F3F7">09:00 - 11:00</text>
+<text x="676" y="484.4" font-size="14" fill="#C3CAD6">Modo de inicio</text>
+<text x="892" y="486.6" font-size="16" fill="#F1F3F7">Manual</text>
+<text x="676" y="512.4" font-size="14" fill="#C3CAD6">Requiere evidencia</text>
+<text x="892" y="514.6" font-size="16" fill="#F1F3F7">Sí</text>
+</g>
+<g id="boton-12" data-name="Botón: Cancelar" data-interactive="button" data-orden-foco="11">
+<rect x="40" y="660" width="109.37" height="44" fill="none" data-hit="1"/>
+<rect x="41" y="661" width="107.37" height="42" rx="8" fill="#1C2128" stroke="#A5B4FC" stroke-width="2"/>
+<text x="94.68" y="687.6" font-size="16" fill="#A5B4FC" font-weight="600" text-anchor="middle">Cancelar</text>
+</g>
+<g id="boton-13" data-name="Botón: Guardar cambios" data-interactive="button" data-orden-foco="12">
+<rect x="161.37" y="660" width="172.63" height="44" fill="none" data-hit="1"/>
+<rect x="161.37" y="660" width="172.63" height="44" rx="8" fill="#A5B4FC"/>
+<text x="247.68" y="687.6" font-size="16" fill="#1E1B4B" font-weight="600" text-anchor="middle">Guardar cambios</text>
+</g>
+</g>
+</svg>

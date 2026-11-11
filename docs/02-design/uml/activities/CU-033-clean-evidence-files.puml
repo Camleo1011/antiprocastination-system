@@ -1,0 +1,47 @@
+@startuml CU-033-clean-evidence-files
+' ==============================================================
+' CONTROL DE VERSIONES
+' Archivo  : CU-033-clean-evidence-files.puml
+' Versión  : 0.1      Fecha: 2026-11-11      Autor: Equipo FocusStrike
+' Fuente   : docs/01-analysis/SRS.md (SRS 0.1), sección 3.7, CU-033
+' Cambio   : Línea base
+' ==============================================================
+title Actividades — CU-033 Limpiar Archivos de Evidencia sin Registro\n(SRS 0.1 · diagrama v0.1)
+|Sistema|
+start
+:El planificador inicia la limpieza al menos una vez cada 24 horas;
+note right: RF-EVID-018
+if (¿El almacén de evidencias está disponible?) then (no)
+  :Terminar la ejecución con un aviso en el log y repetirla en la siguiente;
+  note right: Flujo alterno 2a
+  stop
+else (sí)
+endif
+:Listar los archivos del almacén;
+|Base de datos|
+:Comparar los archivos con los registros de evidencia;
+note right: BR-036
+
+|Sistema|
+repeat
+  :Tomar el siguiente archivo;
+  if (¿El archivo tiene registro de evidencia?) then (sí)
+    :No eliminarlo nunca;
+    note right: Flujo alterno 3b. BR-036
+  elseif (¿Tiene 1 hora o menos de antigüedad desde su escritura?) then (sí)
+    :No eliminarlo; evaluarlo en la ejecución siguiente (carga en curso);
+    note right: Flujo alterno 3c. BR-036. Valor por defecto configurable.
+  else (no)
+    :Eliminar el archivo del almacén;
+    note right: RF-EVID-017, RF-EVID-018
+    if (¿Falló el borrado?) then (sí)
+      :Registrar el fallo en el log y reintentar en la siguiente ejecución;
+      note right: Flujo alterno 3a
+    else (no)
+      :Registrar en el log el archivo eliminado;
+    endif
+  endif
+repeat while (¿Quedan archivos por revisar?) is (sí) not (no)
+stop
+
+@enduml

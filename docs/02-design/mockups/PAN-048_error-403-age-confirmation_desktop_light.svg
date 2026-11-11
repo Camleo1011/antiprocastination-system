@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" data-pan="PAN-048" data-dispositivo="desktop" data-tema="claro" aria-labelledby="t d">
+<title id="t">PAN-048 — Error 403: sin permiso (escritorio 1280 px, tema claro)</title>
+<desc id="d">Mockup de alta fidelidad de Error 403: sin permiso. Ruta /sin-permiso; rol todos; CU CU-019, CU-020, CU-021, CU-030; EP EP-043, EP-052, EP-053, EP-006. Estado mostrado: página de error autónoma (navegación directa o recarga con 403 MAYORIA_EDAD_REQUERIDA): explica la causa sin culpar y lleva a la declaración (PAN-005). Colores, tipografía (Inter), espaciado y radios del sistema de diseño (tema claro); texto editable. El 403 MAYORIA_EDAD_REQUERIDA en mitad de una acción redirige DIRECTO a PAN-005; esta página solo se ve si se llega por URL o se recarga la página. Regiones ARIA: banner, main. Orden de foco con Tab (coincide con el orden visual y del DOM): Enlace de salto «Saltar al contenido principal» (visible solo al recibir el foco). 1 Botón: Cerrar sesión; 2 Botón: Declarar mayoría de edad; 3 Botón: Cerrar sesión.</desc>
+<defs><pattern id="rayas-gracia" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#E3E8EF"/><rect width="3" height="6" fill="#8A4B00"/></pattern></defs>
+<rect id="fondo-pagina" width="1280" height="800" fill="#F5F7FA"/>
+<g id="cabecera" data-name="Cabecera" role="banner">
+<g id="logo-5" data-name="Logotipo FocusStrike" data-exempt="logo">
+<rect x="40" y="16" width="32" height="32" rx="8" fill="#4338CA"/>
+<g transform="translate(46.4 22.4) scale(0.8)" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="82" y="38.3" font-size="18" fill="#1A1D21" font-weight="700">FocusStrike</text>
+</g>
+<g id="boton-6" data-name="Botón: Cerrar sesión" data-interactive="link" data-orden-foco="1">
+<rect x="1134.68" y="10" width="145.32" height="44" fill="none" data-hit="1"/>
+<text x="1134.68" y="37.6" font-size="16" fill="#4338CA" font-weight="600">Cerrar sesión</text>
+<line x1="1134.68" y1="40.6" x2="1235.79" y2="40.6" stroke="#4338CA" stroke-width="1"/>
+</g>
+</g>
+<g id="contenido-principal" data-name="Contenido principal (main)" role="main">
+<g id="tarjeta-1" data-name="Tarjeta">
+<rect x="360" y="129" width="560" height="422" rx="12" fill="#1A1D21" fill-opacity="0.08"/><rect x="360.5" y="128.5" width="559" height="421" rx="12" fill="#FFFFFF" stroke="#D7DDE8" stroke-width="1"/>
+<circle cx="640" cy="188" r="28" fill="#EEF0FF"/>
+<g transform="translate(626 174) scale(1.17)" fill="none" stroke="#3730A3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 11h12v9H6z"/><path d="M8.5 11V8a3.5 3.5 0 017 0v3"/></g>
+<text x="640" y="269.5" font-size="30" fill="#1A1D21" font-weight="700" text-anchor="middle">Falta un paso para usar esta</text>
+<text x="640" y="307.5" font-size="30" fill="#1A1D21" font-weight="700" text-anchor="middle">función</text>
+<text x="640" y="339.4" font-size="14" fill="#4B5563" text-anchor="middle">Tu cuenta aún no tiene la declaración de que eres mayor de 18 años, así</text>
+<text x="640" y="360.4" font-size="14" fill="#4B5563" text-anchor="middle">que no puedes usar esta función todavía. Decláralo y podrás continuar.</text>
+<g id="insignia-2" data-name="Insignia: 403 MAYORIA_EDAD_REQUERIDA">
+<rect x="500.85" y="382.5" width="278.29" height="27" rx="14" fill="#EBEEF3" stroke="#D7DDE8" stroke-width="1"/>
+<g transform="translate(510.35 388) scale(0.67)" fill="none" stroke="#4B5563" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 11h12v9H6z"/><path d="M8.5 11V8a3.5 3.5 0 017 0v3"/></g>
+<text x="532.35" y="400.9" font-size="14" fill="#4B5563" font-weight="600">403 MAYORIA_EDAD_REQUERIDA</text>
+</g>
+<g id="boton-3" data-name="Botón: Declarar mayoría de edad" data-interactive="button" data-orden-foco="2">
+<rect x="392" y="426" width="496" height="44" fill="none" data-hit="1"/>
+<rect x="392" y="426" width="496" height="44" rx="8" fill="#4338CA"/>
+<text x="640" y="453.6" font-size="16" fill="#FFFFFF" font-weight="600" text-anchor="middle">Declarar mayoría de edad</text>
+</g>
+<g id="boton-4" data-name="Botón: Cerrar sesión" data-interactive="link" data-orden-foco="3">
+<rect x="587.34" y="474" width="145.32" height="44" fill="none" data-hit="1"/>
+<text x="587.34" y="501.6" font-size="16" fill="#4338CA" font-weight="600">Cerrar sesión</text>
+<line x1="587.34" y1="504.6" x2="688.45" y2="504.6" stroke="#4338CA" stroke-width="1"/>
+</g>
+</g>
+</g>
+</svg>

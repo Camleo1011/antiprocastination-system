@@ -1,0 +1,54 @@
+@startuml CU-023-view-evaluation-status-retry
+' ==============================================================
+' CONTROL DE VERSIONES
+' Archivo  : CU-023-view-evaluation-status-retry.puml
+' Versión  : 0.1      Fecha: 2026-11-11      Autor: Equipo FocusStrike
+' Fuente   : docs/01-analysis/SRS.md (SRS 0.1), sección 3.7, CU-023
+' Cambio   : Línea base
+' ==============================================================
+title Actividades — CU-023 Consultar Estado de Evaluación y Reintentar\n(SRS 0.1 · diagrama v0.1)
+|Usuario (cliente)|
+start
+:Abrir el estado de la evaluación de su evidencia;
+note right: RF-EVID-009
+
+|Sistema|
+|Base de datos|
+:Consultar la evaluación;
+|Sistema|
+:Mostrar En evaluación, Evaluada con dictamen y justificación, o Error;
+|Usuario (cliente)|
+if (¿La evaluación está en Error y selecciona Reintentar?) then (no)
+  :Ver el estado;
+  stop
+else (sí)
+endif
+
+|Sistema|
+if (¿La submeta fue cerrada por un administrador tras un Error persistente?) then (sí)
+  :Responder HTTP 409;
+  note right: Flujo alterno 3b. RF-EVID-008, RF-ADM-019
+  stop
+else (no)
+endif
+note right: Flujo alterno 3a. Con la gracia expirada se acepta: la evidencia conserva su ventana (RF-EVID-011, BR-016).
+|Base de datos|
+:Pasar la evaluación a En evaluación sin consumir intento;
+note right: RF-EVID-008, BR-017
+|Sistema|
+:Volver a preparar el contenido a partir del archivo almacenado;
+note right: Flujo alterno 3d. El contenido preparado no se persiste (RF-IA-012).
+:Reevaluar la misma evidencia y registrar un uso del LLM por cada llamada;
+note right: RF-ADM-007. Continúa en CU-014.
+if (¿El reintento vuelve a fallar?) then (sí)
+  |Base de datos|
+  :Regresar la evaluación a Error y reiniciar la cuenta de 48 h;
+  note right: Flujo alterno 3c. RF-ADM-018
+else (no)
+endif
+
+|Usuario (cliente)|
+:Ver el nuevo estado de la evaluación;
+stop
+
+@enduml

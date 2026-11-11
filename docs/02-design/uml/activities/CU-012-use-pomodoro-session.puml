@@ -1,0 +1,65 @@
+@startuml CU-012-use-pomodoro-session
+' ==============================================================
+' CONTROL DE VERSIONES
+' Archivo  : CU-012-use-pomodoro-session.puml
+' Versión  : 0.1      Fecha: 2026-11-11      Autor: Equipo FocusStrike
+' Fuente   : docs/01-analysis/SRS.md (SRS 0.1), sección 3.7, CU-012
+' Cambio   : Línea base
+' ==============================================================
+title Actividades — CU-012 Usar Sesión Pomodoro\n(SRS 0.1 · diagrama v0.1)
+|Usuario (cliente)|
+start
+:Abrir el temporizador Pomodoro;
+:Iniciar la sesión y, si quiere, vincularla a una submeta en curso;
+note right: RF-POM-001, RF-POM-003
+
+|Navegador (cliente)|
+:Correr el temporizador en el navegador, sin crear ningún registro en el servidor;
+note right: RF-POM-001
+
+repeat
+  |Usuario (cliente)|
+  :Pausar, reanudar, finalizar o abandonar;
+  note right: RF-POM-004, RF-POM-005
+  |Navegador (cliente)|
+  :Aplicar la acción en el temporizador (la pausa y la reanudación no llegan al servidor);
+repeat while (¿La sesión sigue activa (solo pausa o reanuda)?) is (sí) not (no)
+
+:Calcular la duración efectiva;
+note right: RF-POM-007
+if (¿Cómo terminó la sesión?) then (abandonada)
+  :Marcar la sesión como abandonada, sin penalización;
+  note right: Flujo alterno 4a. RF-POM-006, BR-007
+else (finalizada)
+  :Marcar la sesión como finalizada;
+endif
+if (¿La duración efectiva es de al menos 1 minuto?) then (no)
+  :No enviar la sesión al servidor;
+  note right
+    Flujo alterno 4b. RF-POM-002. Si la solicitud llegara
+    de todos modos, el servidor respondería HTTP 422 y no la guardaría.
+  end note
+  |Usuario (cliente)|
+  :Ver que la sesión de menos de 1 minuto no se guardó;
+  stop
+else (sí)
+endif
+:Enviar la sesión con su duración efectiva, su estado y la submeta vinculada;
+
+|Sistema|
+if (¿La duración efectiva es de al menos 1 minuto?) then (no)
+  :Responder HTTP 422 y no guardar la sesión;
+  note right: Flujo alterno 4b. RF-POM-002
+  stop
+else (sí)
+endif
+
+|Base de datos|
+:Guardar la sesión (finalizada o abandonada) con su duración efectiva y la submeta vinculada;
+note right: RF-POM-002. La submeta vinculada no se ve afectada.
+
+|Usuario (cliente)|
+:Ver la sesión registrada;
+stop
+
+@enduml

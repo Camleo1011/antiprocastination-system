@@ -1,0 +1,144 @@
+@startuml CU-005-create-goal
+' ==============================================================
+' CONTROL DE VERSIONES
+' Archivo  : CU-005-create-goal.puml
+' Versión  : 0.1      Fecha: 2026-11-11      Autor: Equipo FocusStrike
+' Fuente   : docs/01-analysis/SRS.md (SRS 0.1), sección 3.7, CU-005
+' Cambio   : Línea base
+' ==============================================================
+title Actividades — CU-005 Crear Meta\n(SRS 0.1 · diagrama v0.1)
+|Usuario (cliente)|
+start
+:Acceder a la creación de metas;
+
+|Sistema|
+if (¿La cuenta tiene rol cliente?) then (no)
+  :Responder HTTP 403;
+  note right: Flujo alterno 1a. RF-ADM-006
+  stop
+else (sí)
+endif
+
+|Usuario (cliente)|
+:Capturar nombre, categoría, tiempo total, horario diario hasta 24:00,\nevidencia, modo de inicio y descripción opcional;
+note right: RF-META-001, RF-META-015, RF-META-021
+if (¿Indica solo número de días y rango de fechas?) then (sí)
+  :Continuar en CU-025 Sugerir Fechas de Trabajo con IA;
+  note right: Flujo alterno 2a. RF-META-017, RF-META-032
+else (no)
+  :Elegir las fechas de trabajo;
+  note right: RF-META-016
+endif
+if (¿Meta de más de 1 día?) then (sí)
+  :Elegir desglose por IA o desglose manual;
+  note right: RF-META-033, RF-META-036
+else (no)
+endif
+
+|Sistema|
+:Validar horario, fechas, límite de 24 h por día y capacidad del horario;
+note right
+  RF-META-005, RF-META-029, RF-META-010,
+  RF-META-020; tiempo total >= días destinados (RF-META-003);
+  clasifica el tipo (RF-META-019)
+end note
+if (¿Validaciones correctas?) then (no)
+  :Responder HTTP 422 con el campo o con el mínimo de días y la capacidad;
+  note right: Flujos alternos 4a, 4b, 4c. BR-011
+  |Usuario (cliente)|
+  :Corregir los parámetros;
+  stop
+else (sí)
+endif
+
+|Sistema|
+if (¿Tiempo total menor que los días destinados o días destinados mayores que los días del rango de fechas?) then (sí)
+  :Responder HTTP 422 con el campo y el mínimo requerido;\nla meta se rechaza antes de guardarla;
+  note right
+    Flujo alterno 4d. Ej.: 2 h en 3 días (cada submeta dura >= 1 h).
+    BR-014 (10) y (11), RF-META-003
+  end note
+  |Usuario (cliente)|
+  :Corregir el tiempo total o los días;
+  stop
+else (no)
+endif
+
+|Sistema|
+if (¿La meta requiere evidencia o necesita IA (CU-006, CU-007 o CU-025)?) then (sí)
+  if (¿El usuario aceptó el servicio externo de IA?) then (no)
+    :Mostrar el aviso de consentimiento;
+    |Usuario (cliente)|
+    if (¿Acepta el servicio externo de IA?) then (sí)
+      |Base de datos|
+      :Registrar la aceptación;
+      note right: RF-IA-007
+      |Sistema|
+    else (no)
+      |Sistema|
+      if (¿Meta sin evidencia, de 1 día o multidía con desglose manual?) then (sí)
+        :Continuar sin IA y sin recomendaciones;
+        note right: RF-IA-010, RF-IA-011, BR-035
+      else (no)
+        :Responder HTTP 403 con el aviso; 0 llamadas al LLM;
+        note right: Flujo alterno 5a (solo evidencia o IA obligatoria)
+        stop
+      endif
+    endif
+  else (sí)
+  endif
+else (no)
+endif
+
+|Sistema|
+if (¿Tiempo total entre días destinados mayor a 12 h?) then (sí)
+  if (¿El usuario aceptó el servicio externo de IA?) then (sí)
+    :Continuar en CU-007 Obtener Recomendaciones IA antes de guardar;
+    note right: RF-META-008, BR-015
+  else (no)
+    :Ofrecer el aviso de consentimiento para las recomendaciones;
+    note right
+      Flujo alterno 5b. La recomendación es informativa
+      y nunca bloquea guardar la meta (BR-015).
+    end note
+    |Usuario (cliente)|
+    if (¿Acepta el servicio externo de IA para las recomendaciones?) then (sí)
+      |Base de datos|
+      :Registrar la aceptación;
+      note right: RF-IA-007
+      |Sistema|
+      :Continuar en CU-007 Obtener Recomendaciones IA antes de guardar;
+    else (no)
+      |Sistema|
+      :No invocar la IA: la solicitud de recomendaciones responde HTTP 403\ncon el aviso de consentimiento; 0 llamadas al LLM;
+      note right
+        Flujo alterno 5b. RF-IA-011, CP-126.
+        La meta se guarda igual, sin recomendaciones
+        (1 día, o multidía con desglose manual CU-032).
+      end note
+    endif
+  endif
+else (no)
+endif
+
+|Base de datos|
+if (¿Meta de 1 día?) then (sí)
+  :Guardar la meta y su submeta única desde la hora de inicio, con duración igual al tiempo total;
+  note right: RF-META-004, RF-META-031
+else (no)
+  if (¿Desglose manual?) then (sí)
+    :Ejecutar CU-032 y guardar la meta con sus submetas definidas;
+    note right: Flujo alterno 6b. RF-META-033
+  else (no)
+    :Guardar la meta y continuar en CU-006 Desglosar Meta con IA;
+    note right: Flujo alterno 6a
+  endif
+endif
+
+|Sistema|
+:Mostrar la meta en la agenda;
+|Usuario (cliente)|
+:Ver la meta creada;
+stop
+
+@enduml

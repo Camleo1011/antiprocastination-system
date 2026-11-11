@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" data-pan="PAN-030" data-dispositivo="desktop" data-tema="oscuro" aria-labelledby="t d">
+<title id="t">PAN-030 — Panel de administración (escritorio 1280 px, tema oscuro)</title>
+<desc id="d">Mockup de alta fidelidad de Panel de administración. Ruta /admin; rol soporte+; CU CU-002, CU-021, CU-019, CU-030; EP EP-006, EP-052, EP-056. Estado mostrado: panel del moderador: 4 indicadores, aviso de 2 evaluaciones en Error persistente y accesos a sus secciones; sin tarjeta de métricas del LLM (solo super). Colores, tipografía (Inter), espaciado y radios del sistema de diseño (tema oscuro); texto editable. La interfaz oculta lo que el nivel no permite (BR-021): soporte no ve métricas ni Error persistente; solo el super ve métricas del LLM. El nivel se muestra en texto. Regiones ARIA: navigation, banner, main. Orden de foco con Tab (coincide con el orden visual y del DOM): Enlace de salto «Saltar al contenido principal» (visible solo al recibir el foco). 1 Navegación: Panel; 2 Navegación: Cuentas; 3 Navegación: Evidencias; 4 Navegación: Ranking; 5 Navegación: Métricas; 6 Navegación: Error persistente; 7 Menú de cuenta; 8 Botón: Abrir cuentas; 9 Botón: Abrir evidencias; 10 Botón: Abrir ranking; 11 Botón: Abrir lista; 12 Botón: Abrir métricas.</desc>
+<defs><pattern id="rayas-gracia" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#2A323D"/><rect width="3" height="6" fill="#F5B93A"/></pattern></defs>
+<rect id="fondo-pagina" width="1280" height="800" fill="#161A20"/>
+<g id="barra-lateral" data-name="Barra lateral de administración" role="navigation">
+<rect x="0" y="0" width="248" height="800" fill="#1C2128"/>
+<line x1="248" y1="0" x2="248" y2="800" stroke="#2A323D" stroke-width="1"/>
+<g id="logo-16" data-name="Logotipo FocusStrike" data-exempt="logo">
+<rect x="24" y="16" width="32" height="32" rx="8" fill="#A5B4FC"/>
+<g transform="translate(30.4 22.4) scale(0.8)" fill="none" stroke="#1E1B4B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="66" y="38.3" font-size="18" fill="#F1F3F7" font-weight="700">FocusStrike</text>
+</g>
+<g id="nav-17" data-name="Navegación: Panel" data-interactive="link" data-orden-foco="1" aria-current="page">
+<rect x="12" y="80" width="224" height="44" fill="none" data-hit="1"/>
+<rect x="12" y="80" width="224" height="44" rx="8" fill="#23264A"/>
+<g transform="translate(24 92) scale(0.83)" fill="none" stroke="#C7CDFE" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7"/><path d="M6 10v10h12V10"/></g>
+<text x="54" y="107.6" font-size="16" fill="#C7CDFE" font-weight="700">Panel</text>
+</g>
+<g id="nav-18" data-name="Navegación: Cuentas" data-interactive="link" data-orden-foco="2">
+<rect x="12" y="128" width="224" height="44" fill="none" data-hit="1"/>
+<g transform="translate(24 140) scale(0.83)" fill="none" stroke="#C3CAD6" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4a4 4 0 100 8 4 4 0 000-8z"/><path d="M4.5 20a7.5 7.5 0 0115 0"/></g>
+<text x="54" y="155.6" font-size="16" fill="#C3CAD6" font-weight="600">Cuentas</text>
+</g>
+<g id="nav-19" data-name="Navegación: Evidencias" data-interactive="link" data-orden-foco="3">
+<rect x="12" y="176" width="224" height="44" fill="none" data-hit="1"/>
+<g transform="translate(24 188) scale(0.83)" fill="none" stroke="#C3CAD6" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/></g>
+<text x="54" y="203.6" font-size="16" fill="#C3CAD6" font-weight="600">Evidencias</text>
+</g>
+<g id="nav-20" data-name="Navegación: Ranking" data-interactive="link" data-orden-foco="4">
+<rect x="12" y="224" width="224" height="44" fill="none" data-hit="1"/>
+<g transform="translate(24 236) scale(0.83)" fill="none" stroke="#C3CAD6" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v6a4 4 0 01-8 0z"/><path d="M8 6H4v2a3 3 0 003 3M16 6h4v2a3 3 0 01-3 3"/><path d="M12 14v4M8 20h8"/></g>
+<text x="54" y="251.6" font-size="16" fill="#C3CAD6" font-weight="600">Ranking</text>
+</g>
+<g id="nav-21" data-name="Navegación: Métricas" data-interactive="link" data-orden-foco="5">
+<rect x="12" y="272" width="224" height="44" fill="none" data-hit="1"/>
+<g transform="translate(24 284) scale(0.83)" fill="none" stroke="#C3CAD6" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v14H4z"/><path d="M4 10h16M8 3v4M16 3v4"/></g>
+<text x="54" y="299.6" font-size="16" fill="#C3CAD6" font-weight="600">Métricas</text>
+</g>
+<g id="nav-22" data-name="Navegación: Error persistente" data-interactive="link" data-orden-foco="6">
+<rect x="12" y="320" width="224" height="44" fill="none" data-hit="1"/>
+<g transform="translate(24 332) scale(0.83)" fill="none" stroke="#C3CAD6" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5L2.8 19.5h18.4z"/><path d="M12 10v4.5"/><path d="M12 17.2v.1"/></g>
+<text x="54" y="347.6" font-size="16" fill="#C3CAD6" font-weight="600">Error persistente</text>
+</g>
+</g>
+<g id="cabecera" data-name="Cabecera de administración" role="banner">
+<rect x="249" y="0" width="1031" height="64" fill="#1C2128"/>
+<line x1="249" y1="64" x2="1280" y2="64" stroke="#2A323D" stroke-width="1"/>
+<text x="280" y="38" font-size="16" fill="#C3CAD6" font-weight="600">Administración</text>
+<g id="insignia-23" data-name="Insignia: Nivel moderador">
+<rect x="1034.25" y="18" width="153.75" height="28" rx="14" fill="#23264A"/>
+<g transform="translate(1044.25 24) scale(0.67)" fill="none" stroke="#C7CDFE" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7.5 3v5.5c0 4.5-3.2 8-7.5 9.5-4.3-1.5-7.5-5-7.5-9.5V6z"/></g>
+<text x="1066.25" y="36.9" font-size="14" fill="#C7CDFE" font-weight="600">Nivel moderador</text>
+</g>
+<g id="avatar-24" data-name="Menú de cuenta" data-interactive="button" data-orden-foco="7">
+<rect x="1200" y="10" width="44" height="44" fill="none" data-hit="1"/>
+<circle cx="1222" cy="32" r="18" fill="#A5B4FC"/>
+<text x="1222" y="37.6" font-size="16" fill="#1E1B4B" font-weight="700" text-anchor="middle">S</text>
+</g>
+</g>
+<g id="contenido-principal" data-name="Contenido principal (main)" role="main">
+<text x="280" y="121.5" font-size="30" fill="#F1F3F7" font-weight="700">Panel de administración</text>
+<text x="280" y="153.4" font-size="14" fill="#C3CAD6">Tu nivel de acceso: moderador.</text>
+<g id="tarjeta-1" data-name="Tarjeta">
+<rect x="280.5" y="175.5" width="229" height="95" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<g transform="translate(474 187) scale(0.83)" fill="none" stroke="#A5B4FC" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4a4 4 0 100 8 4 4 0 000-8z"/><path d="M4.5 20a7.5 7.5 0 0115 0"/></g>
+<text x="296" y="200.4" font-size="14" fill="#C3CAD6" font-weight="600">Usuarios</text>
+<text x="296" y="237" font-size="30" fill="#F1F3F7" font-weight="700">128</text>
+</g>
+<g id="tarjeta-2" data-name="Tarjeta">
+<rect x="526.5" y="175.5" width="229" height="95" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<g transform="translate(720 187) scale(0.83)" fill="none" stroke="#A5B4FC" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="542" y="200.4" font-size="14" fill="#C3CAD6" font-weight="600">Metas</text>
+<text x="542" y="237" font-size="30" fill="#F1F3F7" font-weight="700">412</text>
+</g>
+<g id="tarjeta-3" data-name="Tarjeta">
+<rect x="772.5" y="175.5" width="229" height="95" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<g transform="translate(966 187) scale(0.83)" fill="none" stroke="#A5B4FC" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/></g>
+<text x="788" y="200.4" font-size="14" fill="#C3CAD6" font-weight="600">Evidencias evaluadas</text>
+<text x="788" y="237" font-size="30" fill="#F1F3F7" font-weight="700">905</text>
+</g>
+<g id="tarjeta-4" data-name="Tarjeta">
+<rect x="1018.5" y="175.5" width="229" height="95" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<g transform="translate(1212 187) scale(0.83)" fill="none" stroke="#A5B4FC" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5L2.8 19.5h18.4z"/><path d="M12 10v4.5"/><path d="M12 17.2v.1"/></g>
+<text x="1034" y="200.4" font-size="14" fill="#C3CAD6" font-weight="600">En Error persistente</text>
+<text x="1034" y="237" font-size="30" fill="#F1F3F7" font-weight="700">2</text>
+</g>
+<g id="alerta-5" data-name="Alerta: Requiere tu atención" role="alert">
+<rect x="280" y="287" width="968" height="69" rx="8" fill="#33260A"/>
+<rect x="280" y="287" width="4" height="69" rx="2" fill="#F5B93A"/>
+<g transform="translate(296 299) scale(0.83)" fill="none" stroke="#FCD34D" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5L2.8 19.5h18.4z"/><path d="M12 10v4.5"/><path d="M12 17.2v.1"/></g>
+<text x="328" y="316.6" font-size="16" fill="#FCD34D" font-weight="600">Requiere tu atención</text>
+<text x="328" y="338.4" font-size="14" fill="#F1F3F7">Hay 2 evaluaciones con 48 h o más en Error persistente. Revísalas para cerrar las submetas.</text>
+</g>
+<g id="tarjeta-6" data-name="Tarjeta">
+<rect x="280.5" y="372.5" width="305.67" height="158" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="304" y="413.3" font-size="18" fill="#F1F3F7" font-weight="600">Cuentas</text>
+<text x="304" y="445.4" font-size="14" fill="#C3CAD6">Ver y gestionar clientes.</text>
+<g id="boton-7" data-name="Botón: Abrir cuentas" data-interactive="button" data-orden-foco="8">
+<rect x="304" y="463" width="145.32" height="44" fill="none" data-hit="1"/>
+<rect x="305" y="464" width="143.32" height="42" rx="8" fill="#1C2128" stroke="#A5B4FC" stroke-width="2"/>
+<text x="376.66" y="490.6" font-size="16" fill="#A5B4FC" font-weight="600" text-anchor="middle">Abrir cuentas</text>
+</g>
+</g>
+<g id="tarjeta-8" data-name="Tarjeta">
+<rect x="611.17" y="372.5" width="305.67" height="158" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="634.67" y="413.3" font-size="18" fill="#F1F3F7" font-weight="600">Evidencias</text>
+<text x="634.67" y="445.4" font-size="14" fill="#C3CAD6">Revisión de envíos.</text>
+<g id="boton-9" data-name="Botón: Abrir evidencias" data-interactive="button" data-orden-foco="9">
+<rect x="634.67" y="463" width="167.37" height="44" fill="none" data-hit="1"/>
+<rect x="635.67" y="464" width="165.37" height="42" rx="8" fill="#1C2128" stroke="#A5B4FC" stroke-width="2"/>
+<text x="718.35" y="490.6" font-size="16" fill="#A5B4FC" font-weight="600" text-anchor="middle">Abrir evidencias</text>
+</g>
+</g>
+<g id="tarjeta-10" data-name="Tarjeta">
+<rect x="941.83" y="372.5" width="305.67" height="158" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="965.33" y="413.3" font-size="18" fill="#F1F3F7" font-weight="600">Ranking</text>
+<text x="965.33" y="445.4" font-size="14" fill="#C3CAD6">Todas las cuentas cliente.</text>
+<g id="boton-11" data-name="Botón: Abrir ranking" data-interactive="button" data-orden-foco="10">
+<rect x="965.33" y="463" width="140.4" height="44" fill="none" data-hit="1"/>
+<rect x="966.33" y="464" width="138.4" height="42" rx="8" fill="#1C2128" stroke="#A5B4FC" stroke-width="2"/>
+<text x="1035.53" y="490.6" font-size="16" fill="#A5B4FC" font-weight="600" text-anchor="middle">Abrir ranking</text>
+</g>
+</g>
+<g id="tarjeta-12" data-name="Tarjeta">
+<rect x="280.5" y="555.5" width="305.67" height="158" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="304" y="596.3" font-size="18" fill="#F1F3F7" font-weight="600">Error persistente</text>
+<text x="304" y="628.4" font-size="14" fill="#C3CAD6">2 evaluaciones.</text>
+<g id="boton-13" data-name="Botón: Abrir lista" data-interactive="button" data-orden-foco="11">
+<rect x="304" y="646" width="116.49" height="44" fill="none" data-hit="1"/>
+<rect x="305" y="647" width="114.49" height="42" rx="8" fill="#1C2128" stroke="#A5B4FC" stroke-width="2"/>
+<text x="362.24" y="673.6" font-size="16" fill="#A5B4FC" font-weight="600" text-anchor="middle">Abrir lista</text>
+</g>
+</g>
+<g id="tarjeta-14" data-name="Tarjeta">
+<rect x="611.17" y="555.5" width="305.67" height="158" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<text x="634.67" y="596.3" font-size="18" fill="#F1F3F7" font-weight="600">Métricas</text>
+<text x="634.67" y="628.4" font-size="14" fill="#C3CAD6">Uso de la aplicación.</text>
+<g id="boton-15" data-name="Botón: Abrir métricas" data-interactive="button" data-orden-foco="12">
+<rect x="634.67" y="646" width="151.43" height="44" fill="none" data-hit="1"/>
+<rect x="635.67" y="647" width="149.43" height="42" rx="8" fill="#1C2128" stroke="#A5B4FC" stroke-width="2"/>
+<text x="710.38" y="673.6" font-size="16" fill="#A5B4FC" font-weight="600" text-anchor="middle">Abrir métricas</text>
+</g>
+</g>
+</g>
+</svg>

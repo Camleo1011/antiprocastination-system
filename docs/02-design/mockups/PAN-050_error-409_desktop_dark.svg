@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" data-pan="PAN-050" data-dispositivo="desktop" data-tema="oscuro" aria-labelledby="t d">
+<title id="t">PAN-050 — Error 409: conflicto (escritorio 1280 px, tema oscuro)</title>
+<desc id="d">Mockup de alta fidelidad de Error 409: conflicto. Ruta (panel o pantalla); rol todos; CU CU-005, CU-008a, CU-009, CU-013, CU-019, CU-020, CU-023, CU-030; EP EP-025, EP-032, EP-036, EP-041, EP-047, EP-048, EP-050, EP-058. Estado mostrado: 409 en contexto: aviso con qué pasó, por qué y salida, más el catálogo de conflictos frecuentes (el recurso se refresca tras el 409). Colores, tipografía (Inter), espaciado y radios del sistema de diseño (tema oscuro); texto editable. Tras un 409 se vuelve a leer el recurso afectado. Regiones ARIA: banner, navigation, main. Orden de foco con Tab (coincide con el orden visual y del DOM): Enlace de salto «Saltar al contenido principal» (visible solo al recibir el foco). 1 Navegación: Inicio; 2 Navegación: Agenda; 3 Navegación: Metas; 4 Navegación: Ranking; 5 Navegación: Perfil; 6 Menú de cuenta; 7 Botón: ‹ Aprender cálculo; 8 Botón: Volver a la meta; 9 Botón: Ver submetas.</desc>
+<defs><pattern id="rayas-gracia" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#2A323D"/><rect width="3" height="6" fill="#F5B93A"/></pattern></defs>
+<rect id="fondo-pagina" width="1280" height="800" fill="#161A20"/>
+<g id="cabecera" data-name="Cabecera" role="banner">
+<rect x="0" y="0" width="1280" height="64" fill="#1C2128"/>
+<line x1="0" y1="64" x2="1280" y2="64" stroke="#2A323D" stroke-width="1"/>
+<g id="logo-7" data-name="Logotipo FocusStrike" data-exempt="logo">
+<rect x="40" y="16" width="32" height="32" rx="8" fill="#A5B4FC"/>
+<g transform="translate(46.4 22.4) scale(0.8)" fill="none" stroke="#1E1B4B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="82" y="38.3" font-size="18" fill="#F1F3F7" font-weight="700">FocusStrike</text>
+</g>
+<g id="navegacion-principal" data-name="Navegación principal" role="navigation" aria-label="Principal">
+<g id="nav-8" data-name="Navegación: Inicio" data-interactive="link" data-orden-foco="1">
+<rect x="240" y="10" width="95.76" height="44" fill="none" data-hit="1"/>
+<g transform="translate(252 22) scale(0.83)" fill="none" stroke="#C3CAD6" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7"/><path d="M6 10v10h12V10"/></g>
+<text x="280" y="37.6" font-size="16" fill="#C3CAD6" font-weight="600">Inicio</text>
+</g>
+<g id="nav-9" data-name="Navegación: Agenda" data-interactive="link" data-orden-foco="2">
+<rect x="339.76" y="10" width="110.68" height="44" fill="none" data-hit="1"/>
+<g transform="translate(351.76 22) scale(0.83)" fill="none" stroke="#C3CAD6" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v14H4z"/><path d="M4 10h16M8 3v4M16 3v4"/></g>
+<text x="379.76" y="37.6" font-size="16" fill="#C3CAD6" font-weight="600">Agenda</text>
+</g>
+<g id="nav-10" data-name="Navegación: Metas" data-interactive="link" data-orden-foco="3" aria-current="page">
+<rect x="454.44" y="10" width="101.01" height="44" fill="none" data-hit="1"/>
+<rect x="454.44" y="10" width="101.01" height="44" rx="8" fill="#23264A"/>
+<g transform="translate(466.44 22) scale(0.83)" fill="none" stroke="#C7CDFE" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="494.44" y="37.6" font-size="16" fill="#C7CDFE" font-weight="700">Metas</text>
+</g>
+<g id="nav-11" data-name="Navegación: Ranking" data-interactive="link" data-orden-foco="4">
+<rect x="559.45" y="10" width="115.26" height="44" fill="none" data-hit="1"/>
+<g transform="translate(571.45 22) scale(0.83)" fill="none" stroke="#C3CAD6" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v6a4 4 0 01-8 0z"/><path d="M8 6H4v2a3 3 0 003 3M16 6h4v2a3 3 0 01-3 3"/><path d="M12 14v4M8 20h8"/></g>
+<text x="599.45" y="37.6" font-size="16" fill="#C3CAD6" font-weight="600">Ranking</text>
+</g>
+<g id="nav-12" data-name="Navegación: Perfil" data-interactive="link" data-orden-foco="5">
+<rect x="678.71" y="10" width="94.06" height="44" fill="none" data-hit="1"/>
+<g transform="translate(690.71 22) scale(0.83)" fill="none" stroke="#C3CAD6" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4a4 4 0 100 8 4 4 0 000-8z"/><path d="M4.5 20a7.5 7.5 0 0115 0"/></g>
+<text x="718.71" y="37.6" font-size="16" fill="#C3CAD6" font-weight="600">Perfil</text>
+</g>
+</g>
+<text x="1192" y="37" font-size="14" fill="#C3CAD6" font-weight="600" text-anchor="end">Ana Gómez</text>
+<g id="avatar-13" data-name="Menú de cuenta" data-interactive="button" data-orden-foco="6">
+<rect x="1200" y="10" width="44" height="44" fill="none" data-hit="1"/>
+<circle cx="1222" cy="32" r="18" fill="#A5B4FC"/>
+<text x="1222" y="37.6" font-size="16" fill="#1E1B4B" font-weight="700" text-anchor="middle">A</text>
+</g>
+</g>
+<g id="contenido-principal" data-name="Contenido principal (main)" role="main">
+<g id="boton-1" data-name="Botón: ‹ Aprender cálculo" data-interactive="link" data-orden-foco="7">
+<rect x="40" y="96" width="186.53" height="44" fill="none" data-hit="1"/>
+<text x="40" y="123.6" font-size="16" fill="#A5B4FC" font-weight="600">‹ Aprender cálculo</text>
+<line x1="40" y1="126.6" x2="180.67" y2="126.6" stroke="#A5B4FC" stroke-width="1"/>
+</g>
+<text x="40" y="185.5" font-size="30" fill="#F1F3F7" font-weight="700">Aprender cálculo</text>
+<g id="alerta-2" data-name="Alerta: No se pudo completar la acción" role="alert">
+<rect x="40" y="202" width="1200" height="69" rx="8" fill="#33260A"/>
+<rect x="40" y="202" width="4" height="69" rx="2" fill="#F5B93A"/>
+<g transform="translate(56 214) scale(0.83)" fill="none" stroke="#FCD34D" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5L2.8 19.5h18.4z"/><path d="M12 10v4.5"/><path d="M12 17.2v.1"/></g>
+<text x="88" y="231.6" font-size="16" fill="#FCD34D" font-weight="600">No se pudo completar la acción</text>
+<text x="88" y="253.4" font-size="14" fill="#F1F3F7">Ya no es posible regenerar el desglose de esta meta porque tiene submetas iniciadas. (409 META_CON_SUBMETAS_INICIADAS)</text>
+</g>
+<g id="boton-3" data-name="Botón: Volver a la meta" data-interactive="button" data-orden-foco="8">
+<rect x="40" y="287" width="167.71" height="44" fill="none" data-hit="1"/>
+<rect x="40" y="287" width="167.71" height="44" rx="8" fill="#A5B4FC"/>
+<text x="123.85" y="314.6" font-size="16" fill="#1E1B4B" font-weight="600" text-anchor="middle">Volver a la meta</text>
+</g>
+<g id="boton-4" data-name="Botón: Ver submetas" data-interactive="button" data-orden-foco="9">
+<rect x="219.71" y="287" width="149.05" height="44" fill="none" data-hit="1"/>
+<rect x="220.71" y="288" width="147.05" height="42" rx="8" fill="#1C2128" stroke="#A5B4FC" stroke-width="2"/>
+<text x="294.24" y="314.6" font-size="16" fill="#A5B4FC" font-weight="600" text-anchor="middle">Ver submetas</text>
+</g>
+<text x="40" y="364.3" font-size="18" fill="#F1F3F7" font-weight="600">Otros conflictos frecuentes</text>
+<g id="tabla-5" data-name="Conflictos frecuentes" role="table">
+<g id="tarjeta-6" data-name="Tarjeta">
+<rect x="40.5" y="377.5" width="1199" height="289" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
+<rect x="41" y="378" width="1198" height="44" rx="12" fill="#1C2128"/>
+<text x="56" y="406" font-size="14" fill="#F1F3F7" font-weight="600">Código</text>
+<text x="480.73" y="406" font-size="14" fill="#F1F3F7" font-weight="600">Qué pasó</text>
+<text x="905.45" y="406" font-size="14" fill="#F1F3F7" font-weight="600">Salida</text>
+<text x="56" y="458.6" font-size="16" fill="#F1F3F7">META_CON_SUBMETAS_INICIADAS</text>
+<text x="480.73" y="458.6" font-size="16" fill="#F1F3F7">Ya no es posible regenerar</text>
+<text x="905.45" y="458.6" font-size="16" fill="#F1F3F7">Volver a la meta</text>
+<line x1="41" y1="483" x2="1239" y2="483" stroke="#2A323D" stroke-width="1"/>
+<text x="56" y="518.6" font-size="16" fill="#F1F3F7">INICIO_FUERA_DE_FECHA</text>
+<text x="480.73" y="518.6" font-size="16" fill="#F1F3F7">Podrás iniciarla el 03/11</text>
+<text x="905.45" y="518.6" font-size="16" fill="#F1F3F7">Ver agenda</text>
+<line x1="41" y1="543" x2="1239" y2="543" stroke="#2A323D" stroke-width="1"/>
+<text x="56" y="578.6" font-size="16" fill="#F1F3F7">EVIDENCIA_FUERA_DE_PLAZO</text>
+<text x="480.73" y="578.6" font-size="16" fill="#F1F3F7">La gracia terminó</text>
+<text x="905.45" y="578.6" font-size="16" fill="#F1F3F7">Ver resultado</text>
+<line x1="41" y1="603" x2="1239" y2="603" stroke="#2A323D" stroke-width="1"/>
+<text x="56" y="638.6" font-size="16" fill="#F1F3F7">EVIDENCIA_MAXIMO_ENVIOS</text>
+<text x="480.73" y="638.6" font-size="16" fill="#F1F3F7">Ya usaste tus 2 envíos</text>
+<text x="905.45" y="638.6" font-size="16" fill="#F1F3F7">Ver evaluación</text>
+<line x1="41" y1="663" x2="1239" y2="663" stroke="#2A323D" stroke-width="1"/>
+</g>
+</g>
+</g>
+</svg>

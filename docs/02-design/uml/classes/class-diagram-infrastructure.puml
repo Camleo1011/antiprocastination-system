@@ -1,0 +1,415 @@
+@startuml clases_v0_1_infraestructura
+title FocusStrike - Diagrama de clases v0.1 (3/3): repositorios, puertos, adaptadores y excepciones
+
+' | Versión | Fecha      | Autor              | Cambio     |
+' |---------|------------|--------------------|------------|
+' | 0.1     | 2026-11-11 | Equipo FocusStrike | Línea base |
+'
+' Índice: class-diagram.puml (dominio) | class-diagram-application.puml | class-diagram-infrastructure.puml (este)
+' Reglas (ADR-003): SQL parametrizado, un repositorio por agregado, CALL + SELECT @out en la MISMA conexión,
+' ATOMIC_REQUESTS=False, aislamiento REPEATABLE READ, instantes UTC pasados como p_ahora (no NOW()).
+' Cada repositorio lista en el cuerpo (".. usa ..") los procedimientos (sp_), funciones (fn_), vistas (v_) y tablas del SQL.
+' Cuentas de BD (ADR-014): todos usan fs_app, salvo SeedRepository (fs_seed).
+' Patrones: Repository, Port/Adapter (hexagonal), Strategy (conversores), Decorator (ResilientLLMProvider),
+' Factory (ContentPreparer), Template Method (SqlErrorTranslator), Null Object/Test double (SimulatedProvider, FixedClock).
+
+hide empty members
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam classAttributeIconSize 0
+skinparam class {
+  BackgroundColor #FFFFFF
+  BorderColor #333333
+}
+skinparam class<<repositorio>> {
+  BackgroundColor #E8F1FB
+}
+skinparam class<<puerto>> {
+  BackgroundColor #F5F5F5
+}
+skinparam class<<adaptador>> {
+  BackgroundColor #FFF3CD
+}
+skinparam class<<excepcion>> {
+  BackgroundColor #FDECEA
+}
+
+package "Acceso a datos (fs_app)" {
+  class DbGateway <<adaptador>> {
+    .. ADR-003 reglas 1-6 ..
+    +call(proc: str, args: list, n_out: int): tuple
+    +query(sql: str, params: list): list
+    +execute(sql: str, params: list): int
+    +transaction(): ContextManager
+    +job_lock(name: str): ContextManager
+  }
+  class SqlErrorTranslator <<adaptador>> {
+    .. traduce errores de la BD a errores de dominio ..
+    +translate(error: DatabaseError): DomainError
+    .. Si el mensaje termina en (NNN), se usa NNN ..
+    -by_suffix(message: str): int?
+    -by_text(message: str): DomainError
+    -by_errno(errno: int): DomainError
+  }
+  interface UserRepository <<repositorio>> {
+    .. usa tablas usuario, administrador, cliente; vista v_usuario_completo; sp_cambiar_rol; sp_cambiar_nivel_acceso ..
+    +find_by_email(email): Account?
+    +insert_client(account, client): int
+    +register_failed_attempt(id, now): int
+    +update_profile(id, patch): void
+    .. id_actor = administrador de la sesion ..
+    +change_role(id_actor, id, role, level): void
+    +change_access_level(id_actor, id, level): void
+    +delete(id): list<str>
+  }
+  interface AdulthoodRepository <<repositorio>> {
+    .. usa sp_confirmar_mayoria_edad; tabla cliente (columna fecha_confirmacion_mayoria_edad) ..
+    .. idempotente: solo fija el sello si es NULL ..
+    +confirm(id_client): void
+    +get_confirmation(id_client): datetime?
+  }
+  interface SeedRepository <<repositorio>> {
+    .. usa sp_inicializar_primer_super (cuenta fs_seed) ..
+    +seed_first_super(email, name, hash): str
+  }
+  interface SessionTokenRepository <<repositorio>> {
+    .. usa tabla token_sesion; sp_limpiar_tokens_expirados ..
+    +insert(token_hash, expires_at, id_user): void
+    +is_active(token_hash, now): bool
+    +revoke(token_hash): void
+    +revoke_all(id_user): void
+    +purge_expired(): void
+  }
+  interface RecoveryCodeRepository <<repositorio>> {
+    .. usa tabla codigo_recuperacion; sp_limpiar_codigos_expirados ..
+    +insert(code_hash, id_user, expires_at): void
+    +find_valid(id_user, now): list<RecoveryCode>
+    +mark_used(id): void
+    +purge_expired(): void
+  }
+  interface PushSubscriptionRepository <<repositorio>> {
+    .. usa tabla suscripcion_push ..
+    +upsert(id_user, sub): int
+    +delete(id_user, id): void
+    +list_valid(id_user): list
+    +mark_invalid(id): void
+  }
+  interface ActiveDayRepository <<repositorio>> {
+    .. usa tabla dia_activo; sp_registrar_dia_activo; sp_calendario_actividad ..
+    +register(id_user, local_date, instant, manual): void
+    +calendar(id_user, today): list
+  }
+  interface GoalRepository <<repositorio>> {
+    .. usa tabla meta; vista v_meta_con_submetas; sp_crear_desglose; tabla recomendacion_ia ..
+    +insert(goal): int
+    +find(id_user, id): Goal?
+    +list(id_user, filters): list
+    +update(id, patch): void
+    +delete(id): list<str>
+    +create_breakdown(id_goal, items_json): void
+    +save_recommendations(id_goal, items): void
+  }
+  interface SubgoalRepository <<repositorio>> {
+    .. usa tabla submeta; sp_iniciar_submeta; sp_cerrar_submeta; sp_cerrar_submetas_vencidas ..
+    .. usa sp_cerrar_submeta_no_iniciada; sp_cerrar_submeta_admin; fn_puntaje_provisional ..
+    +find(id_user, id): Subgoal?
+    +list(id_user, filters): list
+    +start(id, utc, local, manual): void
+    +close(id, now): CloseResult
+    +close_expired(now): int
+    +close_unstarted(id, local): bool
+    +close_by_admin(id, id_admin, now): int
+    +candidates_unstarted(utc_date): list
+    +candidates_auto_start(utc_now): list
+    +candidates_for_notifications(since, until): list
+    +provisional_score(id): int
+  }
+  interface PomodoroRepository <<repositorio>> {
+    .. usa tabla sesion_pomodoro ..
+    +insert(session): int
+    +list(id_user, filters): list
+  }
+  interface EvidenceRepository <<repositorio>> {
+    .. usa tabla evidencia; vista v_evidencia_con_evaluacion ..
+    +insert(evidence, at: datetime): int
+    +find(id): Evidence?
+    +list_by_subgoal(id): list
+    +list_paths_for_goal(id_goal): list<str>
+    +list_paths_for_user(id_user): list<str>
+    +exists_path(path): bool
+  }
+  interface EvaluationRepository <<repositorio>> {
+    .. usa tabla evaluacion; vista v_evaluaciones_error_48h; sp_registrar_dictamen ..
+    .. INSERT solo (id_evidencia) y UPDATE solo (estado, fecha_ultimo_error): GRANT por columna ..
+    +insert_pending(id_evidence): int
+    +claim_next(): Evaluation?
+    +register_verdict(id, verdict, justification, now): VerdictResult
+    +mark_error(id): void
+    +reset_to_pending(id): void
+    +list_persistent_errors(): list
+  }
+  interface LlmUsageRepository <<repositorio>> {
+    .. usa tabla uso_llm; sp_metricas_llm ..
+    +insert(usage): int
+    +metrics(since): LlmMetrics
+    +month_cost(month): Decimal
+  }
+  interface AchievementRepository <<repositorio>> {
+    .. usa tablas logro, usuario_logro; sp_otorgar_logro ..
+    +list(id_user): list
+    +grant(id_user, code): bool
+  }
+  interface RankingRepository <<repositorio>> {
+    .. usa vista v_ranking_global; vista v_usuario_completo ..
+    +page(offset, size): list
+    +position_of(id_user): int
+  }
+  interface MetricsRepository <<repositorio>> {
+    .. usa tablas usuario, meta, evaluacion (COUNT) ..
+    +app_counts(): AppMetrics
+  }
+  interface HealthRepository <<repositorio>> {
+    .. usa SELECT 1 ..
+    +ping(): bool
+  }
+}
+
+package "Puerto LLM (ADR-007)" {
+  interface LLMProvider <<puerto>> {
+    +breakdown_goal(request: BreakdownRequest): BreakdownResult
+    +suggest_dates(request: DatesRequest): DatesResult
+    +recommend(request: RecommendRequest): RecommendResult
+    +evaluate_evidence(request: EvaluationRequest): EvaluationResult
+  }
+  class GeminiProvider <<adaptador>> {
+    -api_key: str
+    -model_light: str
+    -model_eval: str
+    -timeout_s: int = 30
+    +breakdown_goal(request): BreakdownResult
+    +suggest_dates(request): DatesResult
+    +recommend(request): RecommendResult
+    +evaluate_evidence(request): EvaluationResult
+    -validate_schema(raw, schema: str): dict
+  }
+  class SimulatedProvider <<adaptador>> {
+    -latency_ms: int
+    -failure_rate: float
+    +breakdown_goal(request): BreakdownResult
+    +suggest_dates(request): DatesResult
+    +recommend(request): RecommendResult
+    +evaluate_evidence(request): EvaluationResult
+  }
+  class ResilientLLMProvider <<adaptador>> {
+    .. Decorator: reintentos, circuito, presupuesto, uso_llm (RF-IA-003 RF-IA-004 RF-IA-009 RNF-018) ..
+    -delegate: LLMProvider
+    -max_retries: int = 2
+    -backoff_s: int[] = [2, 6]
+    -jitter_max: float = 0.25
+    -sync_deadline_s: int = 110
+    -budget_usd: Decimal
+    -breaker: CircuitBreaker
+    +breakdown_goal(request): BreakdownResult
+    +evaluate_evidence(request): EvaluationResult
+    -attempt(op, call): Any
+  }
+  class CircuitBreaker <<adaptador>> {
+    -threshold: int
+    -open_seconds: int = 60
+    +allow(): bool
+    +record(success: bool): void
+  }
+  LLMProvider <|.. GeminiProvider
+  LLMProvider <|.. SimulatedProvider
+  LLMProvider <|.. ResilientLLMProvider
+  ResilientLLMProvider o-- LLMProvider : delegate
+  ResilientLLMProvider *-- CircuitBreaker
+  ResilientLLMProvider ..> LlmUsageRepository : 1 fila por intento
+}
+
+package "Evidencias: almacén y conversión (ADR-008)" {
+  interface EvidenceStore <<puerto>> {
+    +save(id_user: int, content: bytes, ext: str): str
+    +read(relative_path: str): Stream
+    +delete(relative_path: str): bool
+    +list_files(): Iterator<StoredFile>
+  }
+  class DiskEvidenceStore <<adaptador>> {
+    -root: Path
+    -min_orphan_age_s: int = 3600
+    +save(id_user, content, ext): str
+    +read(relative_path): Stream
+    +delete(relative_path): bool
+    +list_files(): Iterator<StoredFile>
+  }
+  class FileSignatureValidator <<adaptador>> {
+    .. RNF-022 ..
+    +detect(content: bytes): MimeType
+    +validate(content: bytes, claimed_ext: str): void
+  }
+  class ContentPreparer <<adaptador>> {
+    .. Factory ..
+    -converters: dict<str, ContentConverter>
+    +prepare(content: bytes, ext: str): PreparedContent
+  }
+  interface ContentConverter <<puerto>> {
+    +convert(content: bytes): PreparedContent
+  }
+  class NativeImageConverter <<adaptador>> {
+    PNG JPEG WEBP HEIC HEIF: elimina EXIF
+  }
+  class GifToPngConverter <<adaptador>> {
+    GIF: primer fotograma a PNG
+  }
+  class PdfPassthroughConverter <<adaptador>> {
+    PDF: nativo, comprueba que abre
+  }
+  class EvidenceSanitizer <<adaptador>> {
+    .. Minimización (RF-IA-005, RF-IA-006, BR-026) ..
+    -max_px: int  ' LLM_IMAGE_MAX_PX
+    +sanitize_image(content: bytes): bytes
+    +neutral_name(ext: str): str
+    sobre la copia enviada; el archivo guardado no cambia
+    PDF: metadatos internos no se eliminan (limite conocido)
+  }
+  class DocxToTextConverter <<adaptador>> {
+    DOCX a Markdown/texto (python-docx)
+  }
+  class XlsxToTextConverter <<adaptador>> {
+    XLSX a Markdown/texto (openpyxl)
+  }
+  class XlsToTextConverter <<adaptador>> {
+    XLS a texto (xlrd)
+  }
+  class DocToTextConverter <<adaptador>> {
+    DOC a texto (LibreOffice o antiword);\nsi no es viable: 415
+  }
+  class PlainTextConverter <<adaptador>> {
+    TXT: nativo, UTF-8
+  }
+  EvidenceStore <|.. DiskEvidenceStore
+  ContentConverter <|.. NativeImageConverter
+  ContentConverter <|.. GifToPngConverter
+  ContentConverter <|.. PdfPassthroughConverter
+  ContentConverter <|.. DocxToTextConverter
+  ContentConverter <|.. XlsxToTextConverter
+  ContentConverter <|.. XlsToTextConverter
+  ContentConverter <|.. DocToTextConverter
+  ContentConverter <|.. PlainTextConverter
+  ContentPreparer o-- ContentConverter
+  NativeImageConverter ..> EvidenceSanitizer : EXIF y resolucion
+  GifToPngConverter ..> EvidenceSanitizer : PNG del 1er fotograma
+  ContentPreparer ..> EvidenceSanitizer : nombre neutro, sin ids del usuario
+  LLMProvider ..> EvidenceSanitizer : recibe solo contenido saneado
+  ContentPreparer ..> FileSignatureValidator
+}
+
+package "Notificaciones, correo y reloj" {
+  interface PushSender <<puerto>> {
+    +send(sub: PushSubscription, payload: PushPayload): PushResult
+  }
+  class WebPushSender <<adaptador>> {
+    -vapid_private_key: str
+    -vapid_subject: str
+    +send(sub, payload): PushResult
+  }
+  interface Mailer <<puerto>> {
+    +send(to: str, subject: str, body: str): void
+  }
+  class SmtpMailer <<adaptador>> {
+    -host: str
+    -port: int
+    +send(to, subject, body): void
+  }
+  interface Clock <<puerto>> {
+    +now_utc(): datetime
+  }
+  class SystemClock <<adaptador>> {
+    +now_utc(): datetime
+  }
+  class FixedClock <<adaptador>> {
+    -instant: datetime
+    +advance(delta): void
+    +now_utc(): datetime
+  }
+  class TimeZoneService <<adaptador>> {
+    .. ADR-011: zoneinfo + tzdata ..
+    +resolve(zone: str): ZoneInfo
+    +local_now(zone: str, now_utc: datetime): datetime
+  }
+  PushSender <|.. WebPushSender
+  Mailer <|.. SmtpMailer
+  Clock <|.. SystemClock
+  Clock <|.. FixedClock
+}
+
+package "Excepciones de dominio -> HTTP" {
+  abstract class DomainError <<excepcion>> {
+    +code: str
+    +http_status: int
+    +message: str
+  }
+  class ValidationError <<excepcion>> {
+    http 422
+  }
+  class AuthenticationError <<excepcion>> {
+    http 401
+  }
+  class PermissionDeniedError <<excepcion>> {
+    http 403
+  }
+  class NotFoundError <<excepcion>> {
+    http 404
+  }
+  class ConflictError <<excepcion>> {
+    http 409
+  }
+  class PayloadTooLargeError <<excepcion>> {
+    http 413
+  }
+  class UnsupportedMediaError <<excepcion>> {
+    http 415
+  }
+  class RateLimitedError <<excepcion>> {
+    http 429 + Retry-After
+  }
+  class AiUnavailableError <<excepcion>> {
+    http 502 / 503 / 504
+  }
+  class ServiceUnavailableError <<excepcion>> {
+    http 503 (BD, almacén)
+  }
+  class InternalInvariantError <<excepcion>> {
+    http 500 (invariante violado; sin detalle al cliente)
+  }
+  DomainError <|-- ValidationError
+  DomainError <|-- AuthenticationError
+  DomainError <|-- PermissionDeniedError
+  DomainError <|-- NotFoundError
+  DomainError <|-- ConflictError
+  DomainError <|-- PayloadTooLargeError
+  DomainError <|-- UnsupportedMediaError
+  DomainError <|-- RateLimitedError
+  DomainError <|-- AiUnavailableError
+  DomainError <|-- ServiceUnavailableError
+  DomainError <|-- InternalInvariantError
+}
+
+DbGateway ..> SqlErrorTranslator
+SqlErrorTranslator ..> DomainError : crea
+UserRepository ..> DbGateway
+AdulthoodRepository ..> DbGateway
+SubgoalRepository ..> DbGateway
+EvaluationRepository ..> DbGateway
+GoalRepository ..> DbGateway
+SeedRepository ..> DbGateway : conexión fs_seed
+note right of DbGateway
+  Todos los repositorios restantes usan DbGateway igual
+  (flechas omitidas por legibilidad).
+end note
+
+legend bottom
+|= Versión |= Fecha |= Autor |= Cambio |
+| 0.1 | 2026-11-11 | Equipo FocusStrike | Línea base |
+endlegend
+@enduml

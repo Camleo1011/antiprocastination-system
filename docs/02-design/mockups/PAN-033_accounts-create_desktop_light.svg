@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="850" viewBox="0 0 1280 850" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" data-pan="PAN-033" data-dispositivo="desktop" data-tema="claro" aria-labelledby="t d">
+<title id="t">PAN-033 — Cuentas: crear (escritorio 1280 px, tema claro)</title>
+<desc id="d">Mockup de alta fidelidad de Cuentas: crear. Ruta /admin/cuentas/nueva; rol moderador+; CU CU-019; EP EP-044. Estado mostrado: sesión super creando un administrador sin elegir nivel: 422 NIVEL_ACCESO_REQUERIDO con mensaje en texto. Colores, tipografía (Inter), espaciado y radios del sistema de diseño (tema claro); texto editable. Crear administradores es exclusivo del super (BR-021, RF-ADM-014). La contraseña inicial sigue la política de RF-AUT-011. Regiones ARIA: navigation, banner, main. Orden de foco con Tab (coincide con el orden visual y del DOM): Enlace de salto «Saltar al contenido principal» (visible solo al recibir el foco). 1 Navegación: Panel; 2 Navegación: Cuentas; 3 Navegación: Evidencias; 4 Navegación: Ranking; 5 Navegación: Métricas; 6 Navegación: Error persistente; 7 Navegación: Métricas del LLM; 8 Menú de cuenta; 9 Botón: ‹ Cuentas; 10 Campo: Nombre; 11 Campo: Correo; 12 Campo: Contraseña inicial; 13 Casilla: Cliente; 14 Casilla: Administrador (solo super); 15 Campo: Nivel de acceso; 16 Botón: Cancelar; 17 Botón: Crear cuenta.</desc>
+<defs><pattern id="rayas-gracia" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#E3E8EF"/><rect width="3" height="6" fill="#8A4B00"/></pattern></defs>
+<rect id="fondo-pagina" width="1280" height="850" fill="#F5F7FA"/>
+<g id="barra-lateral" data-name="Barra lateral de administración" role="navigation">
+<rect x="0" y="0" width="248" height="850" fill="#FFFFFF"/>
+<line x1="248" y1="0" x2="248" y2="850" stroke="#D7DDE8" stroke-width="1"/>
+<g id="logo-16" data-name="Logotipo FocusStrike" data-exempt="logo">
+<rect x="24" y="16" width="32" height="32" rx="8" fill="#4338CA"/>
+<g transform="translate(30.4 22.4) scale(0.8)" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/><path d="M12 12v.1"/></g>
+<text x="66" y="38.3" font-size="18" fill="#1A1D21" font-weight="700">FocusStrike</text>
+</g>
+<g id="nav-17" data-name="Navegación: Panel" data-interactive="link" data-orden-foco="1">
+<rect x="12" y="80" width="224" height="44" fill="none" data-hit="1"/>
+<g transform="translate(24 92) scale(0.83)" fill="none" stroke="#4B5563" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7"/><path d="M6 10v10h12V10"/></g>
+<text x="54" y="107.6" font-size="16" fill="#4B5563" font-weight="600">Panel</text>
+</g>
+<g id="nav-18" data-name="Navegación: Cuentas" data-interactive="link" data-orden-foco="2" aria-current="page">
+<rect x="12" y="128" width="224" height="44" fill="none" data-hit="1"/>
+<rect x="12" y="128" width="224" height="44" rx="8" fill="#EEF0FF"/>
+<g transform="translate(24 140) scale(0.83)" fill="none" stroke="#3730A3" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4a4 4 0 100 8 4 4 0 000-8z"/><path d="M4.5 20a7.5 7.5 0 0115 0"/></g>
+<text x="54" y="155.6" font-size="16" fill="#3730A3" font-weight="700">Cuentas</text>
+</g>
+<g id="nav-19" data-name="Navegación: Evidencias" data-interactive="link" data-orden-foco="3">
+<rect x="12" y="176" width="224" height="44" fill="none" data-hit="1"/>
+<g transform="translate(24 188) scale(0.83)" fill="none" stroke="#4B5563" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/></g>
+<text x="54" y="203.6" font-size="16" fill="#4B5563" font-weight="600">Evidencias</text>
+</g>
+<g id="nav-20" data-name="Navegación: Ranking" data-interactive="link" data-orden-foco="4">
+<rect x="12" y="224" width="224" height="44" fill="none" data-hit="1"/>
+<g transform="translate(24 236) scale(0.83)" fill="none" stroke="#4B5563" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v6a4 4 0 01-8 0z"/><path d="M8 6H4v2a3 3 0 003 3M16 6h4v2a3 3 0 01-3 3"/><path d="M12 14v4M8 20h8"/></g>
+<text x="54" y="251.6" font-size="16" fill="#4B5563" font-weight="600">Ranking</text>
+</g>
+<g id="nav-21" data-name="Navegación: Métricas" data-interactive="link" data-orden-foco="5">
+<rect x="12" y="272" width="224" height="44" fill="none" data-hit="1"/>
+<g transform="translate(24 284) scale(0.83)" fill="none" stroke="#4B5563" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v14H4z"/><path d="M4 10h16M8 3v4M16 3v4"/></g>
+<text x="54" y="299.6" font-size="16" fill="#4B5563" font-weight="600">Métricas</text>
+</g>
+<g id="nav-22" data-name="Navegación: Error persistente" data-interactive="link" data-orden-foco="6">
+<rect x="12" y="320" width="224" height="44" fill="none" data-hit="1"/>
+<g transform="translate(24 332) scale(0.83)" fill="none" stroke="#4B5563" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5L2.8 19.5h18.4z"/><path d="M12 10v4.5"/><path d="M12 17.2v.1"/></g>
+<text x="54" y="347.6" font-size="16" fill="#4B5563" font-weight="600">Error persistente</text>
+</g>
+<g id="nav-23" data-name="Navegación: Métricas del LLM" data-interactive="link" data-orden-foco="7">
+<rect x="12" y="368" width="224" height="44" fill="none" data-hit="1"/>
+<g transform="translate(24 380) scale(0.83)" fill="none" stroke="#4B5563" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></g>
+<text x="54" y="395.6" font-size="16" fill="#4B5563" font-weight="600">Métricas del LLM</text>
+</g>
+</g>
+<g id="cabecera" data-name="Cabecera de administración" role="banner">
+<rect x="249" y="0" width="1031" height="64" fill="#FFFFFF"/>
+<line x1="249" y1="64" x2="1280" y2="64" stroke="#D7DDE8" stroke-width="1"/>
+<text x="280" y="38" font-size="16" fill="#4B5563" font-weight="600">Administración</text>
+<g id="insignia-24" data-name="Insignia: Nivel super">
+<rect x="1068.83" y="18" width="119.17" height="28" rx="14" fill="#EEF0FF"/>
+<g transform="translate(1078.83 24) scale(0.67)" fill="none" stroke="#3730A3" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7.5 3v5.5c0 4.5-3.2 8-7.5 9.5-4.3-1.5-7.5-5-7.5-9.5V6z"/></g>
+<text x="1100.83" y="36.9" font-size="14" fill="#3730A3" font-weight="600">Nivel super</text>
+</g>
+<g id="avatar-25" data-name="Menú de cuenta" data-interactive="button" data-orden-foco="8">
+<rect x="1200" y="10" width="44" height="44" fill="none" data-hit="1"/>
+<circle cx="1222" cy="32" r="18" fill="#4338CA"/>
+<text x="1222" y="37.6" font-size="16" fill="#FFFFFF" font-weight="700" text-anchor="middle">S</text>
+</g>
+</g>
+<g id="contenido-principal" data-name="Contenido principal (main)" role="main">
+<g id="boton-1" data-name="Botón: ‹ Cuentas" data-interactive="link" data-orden-foco="9">
+<rect x="280" y="92" width="119.03" height="44" fill="none" data-hit="1"/>
+<text x="280" y="119.6" font-size="16" fill="#4338CA" font-weight="600">‹ Cuentas</text>
+<line x1="280" y1="122.6" x2="355.87" y2="122.6" stroke="#4338CA" stroke-width="1"/>
+</g>
+<text x="280" y="181.5" font-size="30" fill="#1A1D21" font-weight="700">Crear cuenta</text>
+<g id="alerta-2" data-name="Alerta: La persona declarará que es mayor de 18 " role="status">
+<rect x="280" y="198" width="968" height="45" rx="8" fill="#E6F1FB"/>
+<rect x="280" y="198" width="4" height="45" rx="2" fill="#0B5CAD"/>
+<g transform="translate(296 210) scale(0.83)" fill="none" stroke="#084A8C" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 11v5.5"/><path d="M12 7.6v.1"/></g>
+<text x="328" y="225.4" font-size="14" fill="#1A1D21">La persona declarará que es mayor de 18 años en su primer inicio de sesión. Su zona horaria será America/Bogota hasta entonces.</text>
+</g>
+<g id="region-3" data-name="Nueva cuenta" role="form">
+<g id="campo-4" data-name="Campo: Nombre">
+<text x="280" y="274.4" font-size="14" fill="#1A1D21" font-weight="600">Nombre</text>
+<g id="entrada-5" data-name="Entrada" data-interactive="input" data-orden-foco="10">
+<rect x="280" y="284" width="968" height="44" fill="none" data-hit="1"/>
+<rect x="281" y="285" width="966" height="42" rx="8" fill="#FFFFFF" stroke="#6B7385" stroke-width="1"/>
+<text x="292" y="311.6" font-size="16" fill="#1A1D21">Paula Mejía</text>
+</g>
+</g>
+<g id="campo-6" data-name="Campo: Correo">
+<text x="280" y="359.4" font-size="14" fill="#1A1D21" font-weight="600">Correo</text>
+<g id="entrada-7" data-name="Entrada" data-interactive="input" data-orden-foco="11">
+<rect x="280" y="369" width="968" height="44" fill="none" data-hit="1"/>
+<rect x="281" y="370" width="966" height="42" rx="8" fill="#FFFFFF" stroke="#6B7385" stroke-width="1"/>
+<text x="292" y="396.6" font-size="16" fill="#1A1D21">paula.mejia@correo.com</text>
+</g>
+</g>
+<g id="campo-8" data-name="Campo: Contraseña inicial">
+<text x="280" y="444.4" font-size="14" fill="#1A1D21" font-weight="600">Contraseña inicial</text>
+<g id="entrada-9" data-name="Entrada" data-interactive="input" data-orden-foco="12">
+<rect x="280" y="454" width="968" height="44" fill="none" data-hit="1"/>
+<rect x="281" y="455" width="966" height="42" rx="8" fill="#FFFFFF" stroke="#6B7385" stroke-width="1"/>
+<text x="292" y="481.6" font-size="16" fill="#1A1D21">•••••••••••</text>
+<text x="1236" y="480.9" font-size="14" fill="#4338CA" font-weight="600" text-anchor="end">Mostrar</text>
+</g>
+<text x="280" y="517.4" font-size="14" fill="#4B5563">Mínimo 8 caracteres, con una letra y un número. No se vuelve a mostrar.</text>
+</g>
+<text x="280" y="554.4" font-size="14" fill="#1A1D21" font-weight="600">Rol</text>
+<g id="casilla-10" data-name="Casilla: Cliente" data-interactive="radio" data-orden-foco="13">
+<rect x="280" y="560" width="968" height="44" fill="none" data-hit="1"/>
+<circle cx="292" cy="582" r="11" fill="#FFFFFF" stroke="#6B7385" stroke-width="2"/>
+<text x="316" y="587.6" font-size="16" fill="#1A1D21">Cliente</text>
+</g>
+<g id="casilla-11" data-name="Casilla: Administrador (solo super)" data-interactive="radio" data-orden-foco="14">
+<rect x="280" y="604" width="968" height="44" fill="none" data-hit="1"/>
+<circle cx="292" cy="626" r="11" fill="#FFFFFF" stroke="#6B7385" stroke-width="2"/>
+<circle cx="292" cy="626" r="6" fill="#4338CA"/>
+<text x="316" y="631.6" font-size="16" fill="#1A1D21">Administrador (solo super)</text>
+</g>
+<g id="campo-12" data-name="Campo: Nivel de acceso">
+<text x="280" y="679.4" font-size="14" fill="#1A1D21" font-weight="600">Nivel de acceso</text>
+<g id="entrada-13" data-name="Entrada" data-interactive="input" data-orden-foco="15">
+<rect x="280" y="689" width="968" height="44" fill="none" data-hit="1"/>
+<rect x="281" y="690" width="966" height="42" rx="8" fill="#FFFFFF" stroke="#B3261E" stroke-width="2"/>
+<text x="292" y="716.6" font-size="16" fill="#1A1D21">Elige un nivel</text>
+<line x1="1218" y1="707" x2="1226" y2="715" stroke="#4B5563" stroke-width="2"/>
+<line x1="1226" y1="715" x2="1234" y2="707" stroke="#4B5563" stroke-width="2"/>
+</g>
+<g transform="translate(280 739) scale(0.67)" fill="none" stroke="#8E1D17" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M9 9l6 6M15 9l-6 6"/></g>
+<text x="302" y="752.4" font-size="14" fill="#8E1D17" font-weight="500">El nivel de acceso es obligatorio para administradores</text>
+</g>
+</g>
+<g id="boton-14" data-name="Botón: Cancelar" data-interactive="button" data-orden-foco="16">
+<rect x="280" y="774" width="109.37" height="44" fill="none" data-hit="1"/>
+<rect x="281" y="775" width="107.37" height="42" rx="8" fill="#FFFFFF" stroke="#4338CA" stroke-width="2"/>
+<text x="334.68" y="801.6" font-size="16" fill="#4338CA" font-weight="600" text-anchor="middle">Cancelar</text>
+</g>
+<g id="boton-15" data-name="Botón: Crear cuenta" data-interactive="button" data-orden-foco="17">
+<rect x="401.37" y="774" width="140.74" height="44" fill="none" data-hit="1"/>
+<rect x="401.37" y="774" width="140.74" height="44" rx="8" fill="#4338CA"/>
+<text x="471.74" y="801.6" font-size="16" fill="#FFFFFF" font-weight="600" text-anchor="middle">Crear cuenta</text>
+</g>
+</g>
+</svg>

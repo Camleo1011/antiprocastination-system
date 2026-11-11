@@ -1,0 +1,239 @@
+@startuml domain-model
+title Modelo de Dominio — Focus Strike v0.1 (SRS 0.1, 16 conceptos del negocio)
+
+' | Versión | Fecha      | Autor              | Cambio     |
+' |---------|------------|--------------------|------------|
+' | 0.1     | 2026-11-11 | Equipo FocusStrike | Línea base |
+'
+' Convenciones: vocabulario del negocio, sin PK/FK ni tipos de implementación. /atributo = derivado.
+' No incluye cerrojo_sistema (tabla técnica): no es un concepto del negocio.
+' Cuenta = tabla usuario del esquema. En el SRS "Usuario (cliente)" denomina al actor con rol cliente;
+' por eso el supertipo se llama Cuenta. NO hay herencia de capacidades entre actores: la generalización
+' es de datos y es disjunta y total (un administrador nunca es cliente, BR-013).
+
+hide empty members
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam classAttributeIconSize 0
+skinparam class {
+  BackgroundColor #FFFFFF
+  BorderColor #333333
+}
+skinparam class<<enumeracion>> {
+  BackgroundColor #F1FAEE
+}
+
+abstract class Cuenta {
+  nombre
+  correo
+  contrasena (solo su hash)
+  puntajeAcumulado
+  bloqueoAdministrativo
+  intentosFallidos
+  bloqueadoHasta
+  fechaRegistro
+}
+
+class Administrador {
+  nivelAcceso
+  fechaAsignacion
+}
+
+class Cliente {
+  zonaHoraria
+  notificacionesPush
+  fechaAceptacionIA
+  zonaPendienteDeteccion
+  fechaConfirmacionMayoriaEdad
+  /racha
+  /rachaPerfecta
+}
+
+class SuscripcionPush {
+  endpoint
+  claveP256dh
+  claveAuth
+  fechaCreacion
+  vigente
+}
+
+class Sesion {
+  huellaToken
+  fechaEmision
+  fechaExpiracion
+  revocada
+}
+
+class CodigoRecuperacion {
+  huellaCodigo
+  fechaGeneracion
+  fechaExpiracion
+  usado
+}
+
+class DiaActivo {
+  fecha
+  primerInicioManual
+  totalSubmetasIniciadas
+}
+
+class Meta {
+  nombre
+  descripcion
+  categoria
+  /tipo
+  diasDestinados
+  horasTotales
+  fechaInicio
+  fechaFin
+  horarioInicio
+  horarioFin
+  requiereEvidencia
+  modoInicio
+  modoPlanificacion
+  modoDesglose
+  consejosIA
+  /estado
+  fechaCreacion
+}
+
+class Submeta {
+  nombre
+  fechaProgramada
+  horarioInicio
+  horarioFin
+  /tiempoEstipulado
+  horaInicioReal
+  horaFinReal
+  estado
+  puntajeObtenido
+  descripcionIA
+  cerradaPorAdministrador
+  fechaCierreAdministrativo
+}
+
+class RecomendacionIA {
+  sugerenciaHabito
+  propuestaHorario
+  decision
+  fechaDecision
+}
+
+class SesionPomodoro {
+  fechaHoraInicio
+  duracionMinutos
+  estado
+}
+
+class Evidencia {
+  archivo
+  formato
+  tamano
+  porcentajeTiempoTranscurrido
+  numeroDeEnvio
+  ventana
+  fechaCarga
+}
+
+class Evaluacion {
+  estado
+  dictamen
+  puntosOtorgados
+  justificacion
+  fechaEvaluacion
+  fechaUltimoError
+}
+
+class UsoLLM {
+  fecha
+  operacion
+  tokensConsumidos
+  costo
+  latenciaMs
+  proveedor
+  modelo
+  resultado
+}
+
+class Logro {
+  codigo
+  nombre
+  descripcion
+}
+
+class LogroObtenido {
+  fechaObtencion
+}
+
+enum NivelAcceso <<enumeracion>> {
+  super
+  moderador
+  soporte
+}
+enum Dictamen <<enumeracion>> {
+  excelente
+  incoherente
+  invalida
+}
+enum EstadoTrabajo <<enumeracion>> {
+  pendiente
+  en_curso
+  finalizada
+}
+
+' ---- Cuentas ----
+Cuenta <|-- Administrador
+Cuenta <|-- Cliente
+note on link
+  {disjunta, total}: roles excluyentes.
+  Cambiar de rol solo es posible en cuentas sin datos.
+end note
+Administrador ..> NivelAcceso
+Cuenta "1" -- "0..*" Sesion : abre
+Cuenta "1" -- "0..*" CodigoRecuperacion : solicita
+
+' ---- Cliente ----
+Cliente "1" -- "0..*" SuscripcionPush : registra
+Cliente "1" -- "0..*" DiaActivo : acumula
+Cliente "1" -- "0..*" Meta : planifica
+Cliente "1" -- "0..*" SesionPomodoro : ejecuta
+Cliente "1" -- "0..*" Evidencia : envía
+Cliente "1" -- "0..*" LogroObtenido : obtiene
+Logro "1" -- "0..*" LogroObtenido : se otorga en
+
+' ---- Metas ----
+Meta "1" *-- "1..*" Submeta : se desglosa en
+Meta "1" *-- "0..*" RecomendacionIA : recibe
+Submeta "0..1" -- "0..*" SesionPomodoro : acompaña
+Administrador "0..1" -- "0..*" Submeta : cierra\n(cierre administrativo)
+Submeta ..> EstadoTrabajo
+Meta ..> EstadoTrabajo
+
+' ---- Evidencias ----
+Submeta "1" -- "0..2" Evidencia : acredita
+Evidencia "1" -- "0..1" Evaluacion : es evaluada en
+Evaluacion ..> Dictamen
+
+' ---- Trazabilidad de la IA ----
+Cuenta "0..1" -- "0..*" UsoLLM : origina
+Meta "0..1" -- "0..*" UsoLLM : desglose de
+Evaluacion "0..1" -- "0..*" UsoLLM : llamada de
+
+note bottom of DiaActivo
+  Día activo = el usuario actúa: inicia una submeta a mano o envía una evidencia.
+  La racha y el calendario de 12 meses se derivan de estos días.
+end note
+note bottom of Meta
+  Una meta de 1 día no se desglosa. Multidía: 1..* submetas, una por fecha de trabajo.
+  Máximo 24 h por día. Con rechazo de IA solo hay metas sin evidencia.
+end note
+note bottom of Evaluacion
+  Si el servicio de IA falla, la evaluación queda en Error: no es un dictamen
+  y no consume envío. Puntaje con dos envíos: máximo 90.
+end note
+
+legend bottom
+|= Versión |= Fecha |= Autor |= Cambio |
+| 0.1 | 2026-11-11 | Equipo FocusStrike | Línea base |
+endlegend
+@enduml
