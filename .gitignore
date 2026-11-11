@@ -1,0 +1,60 @@
+# ============================================================================
+# FocusStrike — .gitignore de la raíz
+# El frontend tiene además su propio frontend/.gitignore (node_modules, dist...).
+# ============================================================================
+
+# --- Secretos y configuración local
+.env
+.env.*
+!.env.example
+
+# --- Python / Django (backend) ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+backend/db.sqlite3
+backend/staticfiles/
+
+# --- Node (por si se instala algo fuera de frontend/) ---
+node_modules/
+npm-debug.log*
+
+# --- Evidencias subidas por usuarios y datos locales (pueden ser personales) ---
+backend/media/
+evidence/
+evidences/
+storage/
+
+# --- Copias de seguridad y volcados de base de datos ---
+backups/
+*.dump
+*.sql.gz
+*.sql.bak
+
+# --- Docker: overrides locales ---
+docker-compose.override.yml
+
+# --- Registros ---
+*.log
+logs/
+
+# --- Editores y sistema operativo ---
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# --- Temporales ---
+*.tmp
+*.bak
