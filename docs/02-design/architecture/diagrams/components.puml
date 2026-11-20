@@ -42,11 +42,11 @@ package "Servidor (VPS, Docker Compose)" {
   }
   component "Estáticos de la SPA" as Static
 
-  package "Backend (Python 3.12 + Django LTS + DRF) - mismo código, dos procesos" {
-    component "API (gunicorn, 1-2 réplicas sin estado)" as API {
-      component "api: controladores y DTO" as ApiCtl
+  package "Backend (Node.js LTS + Fastify, JavaScript) - mismo código, dos procesos" {
+    component "API (Fastify, 1-2 réplicas sin estado)" as API {
+      component "api: rutas, handlers y esquemas JSON" as ApiCtl
       component "servicios por módulo\nAUT META AGEN POM EVID PUNT IA RANK PER LOGR ADM NOT" as Svc
-      component "repositorios (SQL + CALL sp_*)" as Repo
+      component "repositorios (mysql2: SQL + CALL sp_*)" as Repo
       component "adaptadores (LLM, almacén, push, correo)" as Adp
       ApiCtl --> Svc
       Svc --> Repo
@@ -95,6 +95,7 @@ Adp --> Gemini : HTTPS (EP-020, EP-021, EP-027)\n30 s por intento, 2 reintentos\
 WRepo --> Gemini : HTTPS evaluación asíncrona (CU-014)
 WRepo --> PushSvc : Web Push VAPID (CU-028)
 Adp --> Smtp : SMTP 587 STARTTLS\ncorreos de recuperación y bloqueo (EP-007, EP-004)
+WRepo ..> Smtp : SMTP 587 STARTTLS\n(mismo adaptador Mailer; sin JOB que lo use)
 PushSvc ..> sw_push : push al dispositivo
 
 Backup --> DB : fs_backup, diario
@@ -113,7 +114,7 @@ end note
 note right of Proxy
   RNF-006: TLS >= 1.2, 301 de HTTP a HTTPS.
   Rutas de IA síncronas (/metas/{id}/desglose-ia, /metas/recomendaciones, /metas/fechas-sugeridas): espera del proxy 130 s
-  (plazo de la operación 110 s < gunicorn 120 s < proxy 130 s < cliente 140 s; ADR-007).
+  (plazo de la operación 110 s < servidor HTTP de Fastify 120 s < proxy 130 s < cliente 140 s; ADR-007).
 end note
 
 legend bottom

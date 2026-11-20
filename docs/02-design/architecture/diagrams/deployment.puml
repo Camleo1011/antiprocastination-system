@@ -43,17 +43,17 @@ node "VPS Linux (~2 vCPU / 4 GB) - NTP activo (chrony), UFW: solo 80 y 443" as V
     }
 
     node "Red 'internal' (interna, sin salida publicada)" as IntNet {
-      node "contenedor api (x1-2)\ngunicorn :8000 (hilos)\nDjango + DRF" as Api {
+      node "contenedor api (x1-2)\nNode.js + Fastify :8000\ncomando: npm run start:api" as Api {
         artifact "Imagen backend\n(mismo código que worker)" as ImgApi
       }
-      node "contenedor worker (x1)\ncomando: manage.py run_worker\nplanificador interno" as Worker {
+      node "contenedor worker (x1)\ncomando: npm run start:worker\nplanificador interno (un solo\nplanificador activo por GET_LOCK)" as Worker {
         artifact "Imagen backend\n(mismo código que api)" as ImgWorker
       }
       node "contenedor mariadb\n11.8 LTS (mín. 10.11)\n:3306 solo red interna\ntime_zone=+00:00" as Db {
         database "db_focus_strike\n17 tablas, triggers, sp_*, vistas" as Schema
       }
       node "job 'init-esquema' (solo despliegue)\ncarga database/schema.sql\ncomo fs_owner y aplica los permisos por columna de fs_app" as Init
-      node "job 'seed-super' (una vez por arranque)\ncuenta fs_seed -> sp_inicializar_primer_super" as Seed
+      node "job 'seed-super' (una vez por arranque)\nnpm run seed:first-super (misma imagen)\ncuenta fs_seed -> sp_inicializar_primer_super" as Seed
       node "job 'backup' (cron diario 02:30 UTC)\ncuenta fs_backup: mariadb-dump\n+ tar de evidencias, cifrado age/gpg" as Backup
     }
 
@@ -97,6 +97,7 @@ Api --> Gemini : HTTPS 443 (salida)
 Worker --> Gemini : HTTPS 443 (salida)
 Worker --> PushSvc : HTTPS 443 (salida)
 Api --> Smtp : SMTP 587 STARTTLS (salida)
+Worker ..> Smtp : SMTP 587 STARTTLS (salida;\nmismo adaptador, sin JOB que lo use)
 Env ..> Api : variables
 Env ..> Worker : variables
 Env ..> Seed : variables
@@ -111,7 +112,7 @@ end note
 note bottom of Proxy
   Cabeceras de seguridad (HSTS, CSP, X-Content-Type-Options), X-Request-Id, límite de cuerpo 26 MB en
   POST /submetas/{id}/evidencias, tiempos de espera: 130 s en las 3 rutas de IA síncronas
-  (desglose-ia, recomendaciones, fechas-sugeridas; plazo de la operación 110 s, gunicorn 120 s, cliente 140 s);
+  (desglose-ia, recomendaciones, fechas-sugeridas; plazo de la operación 110 s, servidor Fastify 120 s, cliente 140 s);
   evidencias: 60 s de respuesta tras recibir el cuerpo y 120 s para leerlo; resto de la API: 60 s.
   Puerto 3306, 8000 y los volúmenes NO se publican.
 end note

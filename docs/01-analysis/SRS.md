@@ -157,7 +157,7 @@ Sugerencia de corte de MVP. No elimina ni renumera ningún requisito, no cambia 
 Focus Strike es un sistema web nuevo e independiente orientado a la productividad personal. Centraliza la intención del usuario y la transforma en métricas verificables mediante el desglose de metas con IA, el control de tiempos de entrega, la evaluación de evidencias con LLM y la gamificación con ranking, racha y logros. El producto se compone de:
 
 - Cliente web (frontend): aplicación responsive en JavaScript con React y TailwindCSS.
-- Backend en la nube: API REST en Python con Django. La persistencia usa MariaDB 10.11 o superior (versión mínima 10.11; producción en 11.8 LTS o 12.3 LTS); el esquema se define por el script SQL con triggers, que es la fuente de verdad, y no por migraciones de Django.
+- Backend en la nube: API REST en Node.js con Fastify (JavaScript). La persistencia usa MariaDB 10.11 o superior (versión mínima 10.11; producción en 11.8 LTS o 12.3 LTS); el esquema se define por el script SQL con triggers, que es la fuente de verdad, y no por migraciones ni por un ORM (el backend accede a MariaDB con SQL directo mediante el controlador mysql2).
 - Integraciones externas: motor LLM (proveedor inicial definido en el documento de decisiones de arquitectura; acceso por interfaz intercambiable), servicio de correo transaccional y servicio de notificaciones push web.
 
 No sustituye a herramientas de productividad de terceros ni se integra con ellas en esta versión.
@@ -198,14 +198,14 @@ No sustituye a herramientas de productividad de terceros ni se integra con ellas
 ## 2.4 Entorno operativo
 
 - Plataforma: aplicación web responsive (React y TailwindCSS) en las dos últimas versiones mayores de Chrome, Firefox, Edge y Safari de escritorio, y en Chrome Android y Safari iOS 16 o superior, desde 320 px de ancho.
-- Infraestructura: backend en la nube (Django, API REST), base de datos MariaDB 10.11 o superior (producción en 11.8 LTS o 12.3 LTS), procesamiento asíncrono para las evaluaciones LLM y planificador para los inicios automáticos.
+- Infraestructura: backend en la nube (Node.js con Fastify, API REST), base de datos MariaDB 10.11 o superior (producción en 11.8 LTS o 12.3 LTS), procesamiento asíncrono para las evaluaciones LLM y planificador para los inicios automáticos.
 - Integraciones: motor LLM externo, servicio de correo transaccional y servicio de notificaciones push web. En Safari iOS las notificaciones push web requieren que la aplicación esté instalada en la pantalla de inicio; es una limitación del navegador.
 - Conectividad: se requiere conexión a internet; no existe modo sin conexión.
 
 
 ## 2.5 Restricciones
 
-- Tecnológicas: backend Python con Django; frontend JavaScript con React y TailwindCSS; base de datos MariaDB 10.11 o superior (versión mínima 10.11; producción en 11.8 LTS o 12.3 LTS); esquema definido por el script SQL; API REST con autenticación JWT; comunicaciones sobre HTTPS.
+- Tecnológicas: backend en Node.js con Fastify (JavaScript); frontend JavaScript con React y TailwindCSS; base de datos MariaDB 10.11 o superior (versión mínima 10.11; producción en 11.8 LTS o 12.3 LTS); esquema definido por el script SQL; API REST con autenticación JWT; comunicaciones sobre HTTPS.
 - Normativa: no existe normativa formal definida; por buena práctica se aplican los principios de protección de datos personales de la Ley 1581 de 2012 (Colombia) **[Supuesto S-32]**, además del cifrado de contraseñas y HTTPS.
 - Presupuesto: sin presupuesto formalizado; el costo de las llamadas al LLM se registra (RF-ADM-007) y se muestra al administrador (RF-ADM-011). El uso con usuarios reales requiere un plan de pago del proveedor de LLM con límite de gasto (IEXT-001, BR-026).
 - Proveedor LLM: el proveedor inicial se define en el documento de decisiones de arquitectura; el contrato de integración es independiente del proveedor (módulo IA, IEXT-001).

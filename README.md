@@ -33,7 +33,7 @@ the achievements and the ranking. An admin panel with access levels manages acco
 ## Planned architecture
 | Layer | Technology |
 |---|---|
-| Backend | Modular monolith: Django + Django REST Framework (API and worker share the same code) |
+| Backend | Modular monolith: Node.js + Fastify (JavaScript); API and worker share the same code |
 | Frontend | React, TypeScript, Vite and Tailwind (PWA) |
 | Database | MariaDB 10.11 or later |
 | AI | Google Gemini behind a swappable interface |
@@ -90,6 +90,6 @@ mariadb -u <owner_account> -p < database/schema.sql
 
 ## Next steps
 1. Publish the API contract and the architecture decisions.
-2. Implement the backend (Django + DRF) from the requirements and the schema.
+2. Implement the backend (Node.js + Fastify) from the requirements and the schema.
 3. Implement the frontend (React + Vite) from the mockups.
 4. Write `seeds.sql` with synthetic data.
