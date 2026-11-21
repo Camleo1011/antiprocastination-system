@@ -237,7 +237,7 @@ note as NotaNorm
   2FN: las únicas claves compuestas (dia_activo, usuario_logro) no tienen atributos que
   dependan de una parte de la clave.
   3FN: catálogos fijos como CHECK (RNF-011), no como tablas; subtipos usuario → administrador / cliente (JOINED).
-  **Desnormalización deliberada** (dependencias derivadas, todas protegidas por trigger/CHECK):
+  **Desnormalización deliberada: 13 en total** (dependencias derivadas, protegidas por trigger, CHECK o validación transaccional del desglose):
   · meta.estado derivado de submeta (BR-029), mantenido por sp_recalcular_estado_meta.
   · meta.tipo derivado de dias_destinados (CHECK chk_meta_tipo_dias).
   · usuario.puntaje_acumulado = Σ submeta.puntaje_obtenido (trigger submeta_au).
@@ -248,6 +248,9 @@ note as NotaNorm
     administrador hasta su primer inicio de sesión (RF-AUT-018).
   · meta.dias_destinados = nº de submetas y meta.tiempo_total = Σ duraciones (sp_validar_suma_desglose al crear el desglose).
   · submeta.cerrada_por_administrador ≡ fecha_cierre_administrativo IS NOT NULL (CHECK que las liga).
+  · evaluacion.puntos_otorgados: derivable de evidencia.intento/ventana y el dictamen (chk_evaluacion_puntos; lo fijan los triggers evaluacion_bi/bu).
+  · usuario.rol: discriminador equivalente a la fila en administrador o cliente (chk_usuario_rol; usuario_bu con sp_cambiar_rol; la defensa real son los privilegios).
+  · submeta.estado: derivación parcial de hora_inicio_real/hora_fin_real (CHECK de pendiente, en_curso y reloj; submeta_bu; finalizada no la exige un CHECK).
   cerrojo_sistema: tabla técnica sin relaciones.
 end note
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="375" height="1298" viewBox="0 0 375 1298" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" data-pan="PAN-007" data-dispositivo="movil" data-tema="claro" aria-labelledby="t d">
 <title id="t">PAN-007 — Agenda (móvil 375 px, tema claro)</title>
-<desc id="d">Mockup de alta fidelidad de Agenda. Ruta /agenda; rol cliente; CU CU-010; EP EP-029, EP-030. Estado mostrado: mes de noviembre de 2026 con la agenda de Ana: submetas por día con franja de color de la meta, ícono de estado y leyenda en texto (móvil: lista por día). Colores, tipografía (Inter), espaciado y radios del sistema de diseño (tema claro); texto editable. Estado de submeta con ícono y texto (BR-031); en la rejilla el texto del estado está en la leyenda y en el aria-label de cada submeta. Rango máximo 93 días (RANGO_AGENDA_EXCEDIDO). Regiones ARIA: banner, navigation, main. Orden de foco con Tab (coincide con el orden visual y del DOM): Enlace de salto «Saltar al contenido principal» (visible solo al recibir el foco). 1 Menú de cuenta; 2 Navegación: Inicio; 3 Navegación: Agenda; 4 Navegación: Metas; 5 Navegación: Ranking; 6 Navegación: Perfil; 7 Selector: Mes: noviembre 2026; 8 Selector: Estado: todos; 9 Selector: Meta: todas; 10 Botón: ‹ Mes anterior; 11 Botón: Hoy; 12 Botón: Mes siguiente ›; 13 Fila: Repasar vocabulario; 14 Fila: Estudiar capítulo 3; 15 Fila: Leer capítulo 2; 16 Fila: Caminar 30 min; 17 Fila: Repasar vocabulario; 18 Fila: Estudiar capítulo 4; 19 Fila: Caminar 30 min.</desc>
+<desc id="d">Mockup de alta fidelidad de Agenda. Ruta /agenda; rol cliente; CU CU-010; EP EP-029, EP-030. Estado mostrado: mes de noviembre de 2026 con la agenda de Ana: submetas por día con franja de color de la meta, ícono de estado y leyenda en texto (móvil: lista por día). Colores, tipografía (Inter), espaciado y radios del sistema de diseño (tema claro); texto editable. Estado de submeta con ícono y texto (BR-031); en la rejilla el texto del estado está en la leyenda y en el aria-label de cada submeta. Rango máximo 93 días (RANGO_AGENDA_EXCEDIDO). Regiones ARIA: banner, navigation, main. Orden de foco con Tab (coincide con el orden visual y del DOM): Enlace de salto «Saltar al contenido principal» (visible solo al recibir el foco). 1 Menú de cuenta; 2 Navegación: Inicio; 3 Navegación: Agenda; 4 Navegación: Metas; 5 Navegación: Ranking; 6 Navegación: Perfil; 7 Selector: Mes: noviembre 2026; 8 Selector: Estado: todos; 9 Selector: Meta: todas; 10 Botón: ‹ Mes anterior; 11 Botón: Hoy; 12 Botón: Mes siguiente ›; 13 Fila: Repasar vocabulario; 14 Fila: Estudiar capítulo 3; 15 Fila: Leer capítulo 2; 16 Fila: Caminar 1 h; 17 Fila: Repasar vocabulario; 18 Fila: Estudiar capítulo 4; 19 Fila: Caminar 1 h.</desc>
 <defs><pattern id="rayas-gracia" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#E3E8EF"/><rect width="3" height="6" fill="#8A4B00"/></pattern></defs>
 <rect id="fondo-pagina" width="375" height="1298" fill="#F5F7FA"/>
 <g id="barra-superior" data-name="Barra superior" role="banner">
@@ -119,11 +119,11 @@
 </g>
 </g>
 <line x1="16" y1="723" x2="359" y2="723" stroke="#D7DDE8" stroke-width="1"/>
-<g id="fila-13" data-name="Fila: Caminar 30 min" data-interactive="link" data-orden-foco="16">
+<g id="fila-13" data-name="Fila: Caminar 1 h" data-interactive="link" data-orden-foco="16">
 <rect x="16" y="723" width="343" height="101" fill="none" data-hit="1"/>
 <rect x="16" y="733" width="4" height="81" rx="2" fill="#A21CAF"/>
-<text x="30" y="750.6" font-size="16" fill="#1A1D21" font-weight="600">Caminar 30 min</text>
-<text x="30" y="772.4" font-size="14" fill="#4B5563">Caminar a diario · 18:00–18:30</text>
+<text x="30" y="750.6" font-size="16" fill="#1A1D21" font-weight="600">Caminar 1 h</text>
+<text x="30" y="772.4" font-size="14" fill="#4B5563">Caminar a diario · 18:00–19:00</text>
 <g id="insignia-14" data-name="Insignia: Pendiente">
 <rect x="30.5" y="786.5" width="88.01" height="27" rx="14" fill="#EBEEF3" stroke="#D7DDE8" stroke-width="1"/>
 <text x="40" y="804.9" font-size="14" fill="#4B5563" font-weight="600">Pendiente</text>
@@ -152,11 +152,11 @@
 </g>
 </g>
 <line x1="16" y1="1072" x2="359" y2="1072" stroke="#D7DDE8" stroke-width="1"/>
-<g id="fila-19" data-name="Fila: Caminar 30 min" data-interactive="link" data-orden-foco="19">
+<g id="fila-19" data-name="Fila: Caminar 1 h" data-interactive="link" data-orden-foco="19">
 <rect x="16" y="1072" width="343" height="101" fill="none" data-hit="1"/>
 <rect x="16" y="1082" width="4" height="81" rx="2" fill="#A21CAF"/>
-<text x="30" y="1099.6" font-size="16" fill="#1A1D21" font-weight="600">Caminar 30 min</text>
-<text x="30" y="1121.4" font-size="14" fill="#4B5563">Caminar a diario · 18:00–18:30</text>
+<text x="30" y="1099.6" font-size="16" fill="#1A1D21" font-weight="600">Caminar 1 h</text>
+<text x="30" y="1121.4" font-size="14" fill="#4B5563">Caminar a diario · 18:00–19:00</text>
 <g id="insignia-20" data-name="Insignia: Pendiente">
 <rect x="30.5" y="1135.5" width="88.01" height="27" rx="14" fill="#EBEEF3" stroke="#D7DDE8" stroke-width="1"/>
 <text x="40" y="1153.9" font-size="14" fill="#4B5563" font-weight="600">Pendiente</text>

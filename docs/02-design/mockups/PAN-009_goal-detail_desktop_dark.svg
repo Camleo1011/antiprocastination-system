@@ -116,10 +116,10 @@
 <rect x="676" y="374" width="4" height="49" rx="2" fill="#A5B4FC"/>
 <text x="690" y="391.6" font-size="16" fill="#F1F3F7" font-weight="600">Límites</text>
 <text x="690" y="413.4" font-size="14" fill="#C3CAD6">30/10/2026 · 09:00–11:00</text>
-<g id="insignia-11" data-name="Insignia: Finalizada · 100 puntos">
-<rect x="999.94" y="384.5" width="208.06" height="28" rx="14" fill="#12301F"/>
-<g transform="translate(1009.94 390.5) scale(0.67)" fill="none" stroke="#86D9A4" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M8 12.5l3 3 5-6"/></g>
-<text x="1031.94" y="403.4" font-size="14" fill="#86D9A4" font-weight="600">Finalizada · 100 puntos</text>
+<g id="insignia-11" data-name="Insignia: Finalizada · 50 puntos">
+<rect x="1008.84" y="384.5" width="199.16" height="28" rx="14" fill="#12301F"/>
+<g transform="translate(1018.84 390.5) scale(0.67)" fill="none" stroke="#86D9A4" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M8 12.5l3 3 5-6"/></g>
+<text x="1040.84" y="403.4" font-size="14" fill="#86D9A4" font-weight="600">Finalizada · 50 puntos</text>
 </g>
 </g>
 <line x1="676" y1="433" x2="1216" y2="433" stroke="#2A323D" stroke-width="1"/>

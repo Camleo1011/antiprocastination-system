@@ -74,27 +74,23 @@
 <text x="40" y="364.3" font-size="18" fill="#1A1D21" font-weight="600">Otros conflictos frecuentes</text>
 <g id="tabla-5" data-name="Conflictos frecuentes" role="table">
 <g id="tarjeta-6" data-name="Tarjeta">
-<rect x="40" y="378" width="1200" height="290" rx="12" fill="#1A1D21" fill-opacity="0.08"/><rect x="40.5" y="377.5" width="1199" height="289" rx="12" fill="#FFFFFF" stroke="#D7DDE8" stroke-width="1"/>
+<rect x="40" y="378" width="1200" height="230" rx="12" fill="#1A1D21" fill-opacity="0.08"/><rect x="40.5" y="377.5" width="1199" height="229" rx="12" fill="#FFFFFF" stroke="#D7DDE8" stroke-width="1"/>
 <rect x="41" y="378" width="1198" height="44" rx="12" fill="#EBEEF3"/>
 <text x="56" y="406" font-size="14" fill="#1A1D21" font-weight="600">Código</text>
 <text x="480.73" y="406" font-size="14" fill="#1A1D21" font-weight="600">Qué pasó</text>
 <text x="905.45" y="406" font-size="14" fill="#1A1D21" font-weight="600">Salida</text>
-<text x="56" y="458.6" font-size="16" fill="#1A1D21">META_CON_SUBMETAS_INICIADAS</text>
-<text x="480.73" y="458.6" font-size="16" fill="#1A1D21">Ya no es posible regenerar</text>
-<text x="905.45" y="458.6" font-size="16" fill="#1A1D21">Volver a la meta</text>
+<text x="56" y="458.6" font-size="16" fill="#1A1D21">INICIO_FUERA_DE_FECHA</text>
+<text x="480.73" y="458.6" font-size="16" fill="#1A1D21">Podrás iniciarla el 03/11</text>
+<text x="905.45" y="458.6" font-size="16" fill="#1A1D21">Ver agenda</text>
 <line x1="41" y1="483" x2="1239" y2="483" stroke="#D7DDE8" stroke-width="1"/>
-<text x="56" y="518.6" font-size="16" fill="#1A1D21">INICIO_FUERA_DE_FECHA</text>
-<text x="480.73" y="518.6" font-size="16" fill="#1A1D21">Podrás iniciarla el 03/11</text>
-<text x="905.45" y="518.6" font-size="16" fill="#1A1D21">Ver agenda</text>
+<text x="56" y="518.6" font-size="16" fill="#1A1D21">EVIDENCIA_FUERA_DE_PLAZO</text>
+<text x="480.73" y="518.6" font-size="16" fill="#1A1D21">La gracia terminó</text>
+<text x="905.45" y="518.6" font-size="16" fill="#1A1D21">Ver resultado</text>
 <line x1="41" y1="543" x2="1239" y2="543" stroke="#D7DDE8" stroke-width="1"/>
-<text x="56" y="578.6" font-size="16" fill="#1A1D21">EVIDENCIA_FUERA_DE_PLAZO</text>
-<text x="480.73" y="578.6" font-size="16" fill="#1A1D21">La gracia terminó</text>
-<text x="905.45" y="578.6" font-size="16" fill="#1A1D21">Ver resultado</text>
+<text x="56" y="578.6" font-size="16" fill="#1A1D21">EVIDENCIA_MAXIMO_ENVIOS</text>
+<text x="480.73" y="578.6" font-size="16" fill="#1A1D21">Ya usaste tus 2 envíos</text>
+<text x="905.45" y="578.6" font-size="16" fill="#1A1D21">Ver evaluación</text>
 <line x1="41" y1="603" x2="1239" y2="603" stroke="#D7DDE8" stroke-width="1"/>
-<text x="56" y="638.6" font-size="16" fill="#1A1D21">EVIDENCIA_MAXIMO_ENVIOS</text>
-<text x="480.73" y="638.6" font-size="16" fill="#1A1D21">Ya usaste tus 2 envíos</text>
-<text x="905.45" y="638.6" font-size="16" fill="#1A1D21">Ver evaluación</text>
-<line x1="41" y1="663" x2="1239" y2="663" stroke="#D7DDE8" stroke-width="1"/>
 </g>
 </g>
 </g>

@@ -73,17 +73,17 @@
 <rect x="48" y="199" width="24" height="24" fill="none" data-hit="1"/>
 <rect x="52" y="203" width="16" height="16" rx="3" fill="#2A323D"/>
 </g>
-<g id="celda-6" data-name="25/08/2026, activo, 2 submetas" data-interactive="cell" aria-label="25/08/2026, activo, 2 submetas">
+<g id="celda-6" data-name="25/08/2026, sin actividad" data-interactive="cell" aria-label="25/08/2026, sin actividad">
 <rect x="48" y="223" width="24" height="24" fill="none" data-hit="1"/>
-<rect x="52" y="227" width="16" height="16" rx="3" fill="#4FBF7B"/>
+<rect x="52" y="227" width="16" height="16" rx="3" fill="#2A323D"/>
 </g>
-<g id="celda-7" data-name="26/08/2026, activo, 3 submetas" data-interactive="cell" aria-label="26/08/2026, activo, 3 submetas">
+<g id="celda-7" data-name="26/08/2026, sin actividad" data-interactive="cell" aria-label="26/08/2026, sin actividad">
 <rect x="48" y="247" width="24" height="24" fill="none" data-hit="1"/>
-<rect x="52" y="251" width="16" height="16" rx="3" fill="#4FBF7B"/>
+<rect x="52" y="251" width="16" height="16" rx="3" fill="#2A323D"/>
 </g>
-<g id="celda-8" data-name="27/08/2026, activo, 1 submeta" data-interactive="cell" aria-label="27/08/2026, activo, 1 submeta">
+<g id="celda-8" data-name="27/08/2026, sin actividad" data-interactive="cell" aria-label="27/08/2026, sin actividad">
 <rect x="48" y="271" width="24" height="24" fill="none" data-hit="1"/>
-<rect x="52" y="275" width="16" height="16" rx="3" fill="#4FBF7B"/>
+<rect x="52" y="275" width="16" height="16" rx="3" fill="#2A323D"/>
 </g>
 <g id="celda-9" data-name="28/08/2026, sin actividad" data-interactive="cell" aria-label="28/08/2026, sin actividad">
 <rect x="48" y="295" width="24" height="24" fill="none" data-hit="1"/>
@@ -101,13 +101,13 @@
 <rect x="72" y="199" width="24" height="24" fill="none" data-hit="1"/>
 <rect x="76" y="203" width="16" height="16" rx="3" fill="#2A323D"/>
 </g>
-<g id="celda-13" data-name="01/09/2026, activo, 1 submeta" data-interactive="cell" aria-label="01/09/2026, activo, 1 submeta">
+<g id="celda-13" data-name="01/09/2026, sin actividad" data-interactive="cell" aria-label="01/09/2026, sin actividad">
 <rect x="72" y="223" width="24" height="24" fill="none" data-hit="1"/>
-<rect x="76" y="227" width="16" height="16" rx="3" fill="#4FBF7B"/>
+<rect x="76" y="227" width="16" height="16" rx="3" fill="#2A323D"/>
 </g>
-<g id="celda-14" data-name="02/09/2026, activo, 2 submetas" data-interactive="cell" aria-label="02/09/2026, activo, 2 submetas">
+<g id="celda-14" data-name="02/09/2026, sin actividad" data-interactive="cell" aria-label="02/09/2026, sin actividad">
 <rect x="72" y="247" width="24" height="24" fill="none" data-hit="1"/>
-<rect x="76" y="251" width="16" height="16" rx="3" fill="#4FBF7B"/>
+<rect x="76" y="251" width="16" height="16" rx="3" fill="#2A323D"/>
 </g>
 <g id="celda-15" data-name="03/09/2026, sin actividad" data-interactive="cell" aria-label="03/09/2026, sin actividad">
 <rect x="72" y="271" width="24" height="24" fill="none" data-hit="1"/>
@@ -121,21 +121,21 @@
 <rect x="72" y="319" width="24" height="24" fill="none" data-hit="1"/>
 <rect x="76" y="323" width="16" height="16" rx="3" fill="#2A323D"/>
 </g>
-<g id="celda-18" data-name="06/09/2026, activo, 1 submeta" data-interactive="cell" aria-label="06/09/2026, activo, 1 submeta">
+<g id="celda-18" data-name="06/09/2026, sin actividad" data-interactive="cell" aria-label="06/09/2026, sin actividad">
 <rect x="72" y="343" width="24" height="24" fill="none" data-hit="1"/>
-<rect x="76" y="347" width="16" height="16" rx="3" fill="#4FBF7B"/>
+<rect x="76" y="347" width="16" height="16" rx="3" fill="#2A323D"/>
 </g>
-<g id="celda-19" data-name="07/09/2026, activo, 2 submetas" data-interactive="cell" aria-label="07/09/2026, activo, 2 submetas">
+<g id="celda-19" data-name="07/09/2026, sin actividad" data-interactive="cell" aria-label="07/09/2026, sin actividad">
 <rect x="96" y="199" width="24" height="24" fill="none" data-hit="1"/>
-<rect x="100" y="203" width="16" height="16" rx="3" fill="#4FBF7B"/>
+<rect x="100" y="203" width="16" height="16" rx="3" fill="#2A323D"/>
 </g>
-<g id="celda-20" data-name="08/09/2026, activo, 3 submetas" data-interactive="cell" aria-label="08/09/2026, activo, 3 submetas">
+<g id="celda-20" data-name="08/09/2026, sin actividad" data-interactive="cell" aria-label="08/09/2026, sin actividad">
 <rect x="96" y="223" width="24" height="24" fill="none" data-hit="1"/>
-<rect x="100" y="227" width="16" height="16" rx="3" fill="#4FBF7B"/>
+<rect x="100" y="227" width="16" height="16" rx="3" fill="#2A323D"/>
 </g>
-<g id="celda-21" data-name="09/09/2026, activo, 1 submeta" data-interactive="cell" aria-label="09/09/2026, activo, 1 submeta">
+<g id="celda-21" data-name="09/09/2026, sin actividad" data-interactive="cell" aria-label="09/09/2026, sin actividad">
 <rect x="96" y="247" width="24" height="24" fill="none" data-hit="1"/>
-<rect x="100" y="251" width="16" height="16" rx="3" fill="#4FBF7B"/>
+<rect x="100" y="251" width="16" height="16" rx="3" fill="#2A323D"/>
 </g>
 <g id="celda-22" data-name="10/09/2026, sin actividad" data-interactive="cell" aria-label="10/09/2026, sin actividad">
 <rect x="96" y="271" width="24" height="24" fill="none" data-hit="1"/>
@@ -153,13 +153,13 @@
 <rect x="96" y="343" width="24" height="24" fill="none" data-hit="1"/>
 <rect x="100" y="347" width="16" height="16" rx="3" fill="#2A323D"/>
 </g>
-<g id="celda-26" data-name="14/09/2026, activo, 1 submeta" data-interactive="cell" aria-label="14/09/2026, activo, 1 submeta">
+<g id="celda-26" data-name="14/09/2026, sin actividad" data-interactive="cell" aria-label="14/09/2026, sin actividad">
 <rect x="120" y="199" width="24" height="24" fill="none" data-hit="1"/>
-<rect x="124" y="203" width="16" height="16" rx="3" fill="#4FBF7B"/>
+<rect x="124" y="203" width="16" height="16" rx="3" fill="#2A323D"/>
 </g>
-<g id="celda-27" data-name="15/09/2026, activo, 2 submetas" data-interactive="cell" aria-label="15/09/2026, activo, 2 submetas">
+<g id="celda-27" data-name="15/09/2026, sin actividad" data-interactive="cell" aria-label="15/09/2026, sin actividad">
 <rect x="120" y="223" width="24" height="24" fill="none" data-hit="1"/>
-<rect x="124" y="227" width="16" height="16" rx="3" fill="#4FBF7B"/>
+<rect x="124" y="227" width="16" height="16" rx="3" fill="#2A323D"/>
 </g>
 <g id="celda-28" data-name="16/09/2026, sin actividad" data-interactive="cell" aria-label="16/09/2026, sin actividad">
 <rect x="120" y="247" width="24" height="24" fill="none" data-hit="1"/>
@@ -181,13 +181,13 @@
 <rect x="120" y="343" width="24" height="24" fill="none" data-hit="1"/>
 <rect x="124" y="347" width="16" height="16" rx="3" fill="#2A323D"/>
 </g>
-<g id="celda-33" data-name="21/09/2026, activo, 3 submetas" data-interactive="cell" aria-label="21/09/2026, activo, 3 submetas">
+<g id="celda-33" data-name="21/09/2026, sin actividad" data-interactive="cell" aria-label="21/09/2026, sin actividad">
 <rect x="144" y="199" width="24" height="24" fill="none" data-hit="1"/>
-<rect x="148" y="203" width="16" height="16" rx="3" fill="#4FBF7B"/>
+<rect x="148" y="203" width="16" height="16" rx="3" fill="#2A323D"/>
 </g>
-<g id="celda-34" data-name="22/09/2026, activo, 1 submeta" data-interactive="cell" aria-label="22/09/2026, activo, 1 submeta">
+<g id="celda-34" data-name="22/09/2026, sin actividad" data-interactive="cell" aria-label="22/09/2026, sin actividad">
 <rect x="144" y="223" width="24" height="24" fill="none" data-hit="1"/>
-<rect x="148" y="227" width="16" height="16" rx="3" fill="#4FBF7B"/>
+<rect x="148" y="227" width="16" height="16" rx="3" fill="#2A323D"/>
 </g>
 <g id="celda-35" data-name="23/09/2026, sin actividad" data-interactive="cell" aria-label="23/09/2026, sin actividad">
 <rect x="144" y="247" width="24" height="24" fill="none" data-hit="1"/>
@@ -209,9 +209,9 @@
 <rect x="144" y="343" width="24" height="24" fill="none" data-hit="1"/>
 <rect x="148" y="347" width="16" height="16" rx="3" fill="#2A323D"/>
 </g>
-<g id="celda-40" data-name="28/09/2026, activo, 2 submetas" data-interactive="cell" aria-label="28/09/2026, activo, 2 submetas">
+<g id="celda-40" data-name="28/09/2026, sin actividad" data-interactive="cell" aria-label="28/09/2026, sin actividad">
 <rect x="168" y="199" width="24" height="24" fill="none" data-hit="1"/>
-<rect x="172" y="203" width="16" height="16" rx="3" fill="#4FBF7B"/>
+<rect x="172" y="203" width="16" height="16" rx="3" fill="#2A323D"/>
 </g>
 <g id="celda-41" data-name="29/09/2026, sin actividad" data-interactive="cell" aria-label="29/09/2026, sin actividad">
 <rect x="168" y="223" width="24" height="24" fill="none" data-hit="1"/>
@@ -229,17 +229,17 @@
 <rect x="168" y="295" width="24" height="24" fill="none" data-hit="1"/>
 <rect x="172" y="299" width="16" height="16" rx="3" fill="#2A323D"/>
 </g>
-<g id="celda-45" data-name="03/10/2026, activo, 2 submetas" data-interactive="cell" aria-label="03/10/2026, activo, 2 submetas">
+<g id="celda-45" data-name="03/10/2026, sin actividad" data-interactive="cell" aria-label="03/10/2026, sin actividad">
 <rect x="168" y="319" width="24" height="24" fill="none" data-hit="1"/>
-<rect x="172" y="323" width="16" height="16" rx="3" fill="#4FBF7B"/>
+<rect x="172" y="323" width="16" height="16" rx="3" fill="#2A323D"/>
 </g>
 <g id="celda-46" data-name="04/10/2026, sin actividad" data-interactive="cell" aria-label="04/10/2026, sin actividad">
 <rect x="168" y="343" width="24" height="24" fill="none" data-hit="1"/>
 <rect x="172" y="347" width="16" height="16" rx="3" fill="#2A323D"/>
 </g>
-<g id="celda-47" data-name="05/10/2026, activo, 1 submeta" data-interactive="cell" aria-label="05/10/2026, activo, 1 submeta">
+<g id="celda-47" data-name="05/10/2026, sin actividad" data-interactive="cell" aria-label="05/10/2026, sin actividad">
 <rect x="192" y="199" width="24" height="24" fill="none" data-hit="1"/>
-<rect x="196" y="203" width="16" height="16" rx="3" fill="#4FBF7B"/>
+<rect x="196" y="203" width="16" height="16" rx="3" fill="#2A323D"/>
 </g>
 <g id="celda-48" data-name="06/10/2026, sin actividad" data-interactive="cell" aria-label="06/10/2026, sin actividad">
 <rect x="192" y="223" width="24" height="24" fill="none" data-hit="1"/>
@@ -257,9 +257,9 @@
 <rect x="192" y="295" width="24" height="24" fill="none" data-hit="1"/>
 <rect x="196" y="299" width="16" height="16" rx="3" fill="#2A323D"/>
 </g>
-<g id="celda-52" data-name="10/10/2026, activo, 1 submeta" data-interactive="cell" aria-label="10/10/2026, activo, 1 submeta">
+<g id="celda-52" data-name="10/10/2026, sin actividad" data-interactive="cell" aria-label="10/10/2026, sin actividad">
 <rect x="192" y="319" width="24" height="24" fill="none" data-hit="1"/>
-<rect x="196" y="323" width="16" height="16" rx="3" fill="#4FBF7B"/>
+<rect x="196" y="323" width="16" height="16" rx="3" fill="#2A323D"/>
 </g>
 <g id="celda-53" data-name="11/10/2026, sin actividad" data-interactive="cell" aria-label="11/10/2026, sin actividad">
 <rect x="192" y="343" width="24" height="24" fill="none" data-hit="1"/>
@@ -281,13 +281,13 @@
 <rect x="216" y="271" width="24" height="24" fill="none" data-hit="1"/>
 <rect x="220" y="275" width="16" height="16" rx="3" fill="#2A323D"/>
 </g>
-<g id="celda-58" data-name="16/10/2026, activo, 2 submetas" data-interactive="cell" aria-label="16/10/2026, activo, 2 submetas">
+<g id="celda-58" data-name="16/10/2026, sin actividad" data-interactive="cell" aria-label="16/10/2026, sin actividad">
 <rect x="216" y="295" width="24" height="24" fill="none" data-hit="1"/>
-<rect x="220" y="299" width="16" height="16" rx="3" fill="#4FBF7B"/>
+<rect x="220" y="299" width="16" height="16" rx="3" fill="#2A323D"/>
 </g>
-<g id="celda-59" data-name="17/10/2026, activo, 3 submetas" data-interactive="cell" aria-label="17/10/2026, activo, 3 submetas">
+<g id="celda-59" data-name="17/10/2026, sin actividad" data-interactive="cell" aria-label="17/10/2026, sin actividad">
 <rect x="216" y="319" width="24" height="24" fill="none" data-hit="1"/>
-<rect x="220" y="323" width="16" height="16" rx="3" fill="#4FBF7B"/>
+<rect x="220" y="323" width="16" height="16" rx="3" fill="#2A323D"/>
 </g>
 <g id="celda-60" data-name="18/10/2026, sin actividad" data-interactive="cell" aria-label="18/10/2026, sin actividad">
 <rect x="216" y="343" width="24" height="24" fill="none" data-hit="1"/>
@@ -297,13 +297,13 @@
 <rect x="240" y="199" width="24" height="24" fill="none" data-hit="1"/>
 <rect x="244" y="203" width="16" height="16" rx="3" fill="#2A323D"/>
 </g>
-<g id="celda-62" data-name="20/10/2026, sin actividad" data-interactive="cell" aria-label="20/10/2026, sin actividad">
+<g id="celda-62" data-name="20/10/2026, activo, 1 submeta" data-interactive="cell" aria-label="20/10/2026, activo, 1 submeta">
 <rect x="240" y="223" width="24" height="24" fill="none" data-hit="1"/>
-<rect x="244" y="227" width="16" height="16" rx="3" fill="#2A323D"/>
+<rect x="244" y="227" width="16" height="16" rx="3" fill="#4FBF7B"/>
 </g>
-<g id="celda-63" data-name="21/10/2026, sin actividad" data-interactive="cell" aria-label="21/10/2026, sin actividad">
+<g id="celda-63" data-name="21/10/2026, activo, 2 submetas" data-interactive="cell" aria-label="21/10/2026, activo, 2 submetas">
 <rect x="240" y="247" width="24" height="24" fill="none" data-hit="1"/>
-<rect x="244" y="251" width="16" height="16" rx="3" fill="#2A323D"/>
+<rect x="244" y="251" width="16" height="16" rx="3" fill="#4FBF7B"/>
 </g>
 <g id="celda-64" data-name="22/10/2026, sin actividad" data-interactive="cell" aria-label="22/10/2026, sin actividad">
 <rect x="240" y="271" width="24" height="24" fill="none" data-hit="1"/>
@@ -313,21 +313,21 @@
 <rect x="240" y="295" width="24" height="24" fill="none" data-hit="1"/>
 <rect x="244" y="299" width="16" height="16" rx="3" fill="#4FBF7B"/>
 </g>
-<g id="celda-66" data-name="24/10/2026, activo, 2 submetas" data-interactive="cell" aria-label="24/10/2026, activo, 2 submetas">
+<g id="celda-66" data-name="24/10/2026, sin actividad" data-interactive="cell" aria-label="24/10/2026, sin actividad">
 <rect x="240" y="319" width="24" height="24" fill="none" data-hit="1"/>
-<rect x="244" y="323" width="16" height="16" rx="3" fill="#4FBF7B"/>
+<rect x="244" y="323" width="16" height="16" rx="3" fill="#2A323D"/>
 </g>
 <g id="celda-67" data-name="25/10/2026, sin actividad" data-interactive="cell" aria-label="25/10/2026, sin actividad">
 <rect x="240" y="343" width="24" height="24" fill="none" data-hit="1"/>
 <rect x="244" y="347" width="16" height="16" rx="3" fill="#2A323D"/>
 </g>
-<g id="celda-68" data-name="26/10/2026, sin actividad" data-interactive="cell" aria-label="26/10/2026, sin actividad">
+<g id="celda-68" data-name="26/10/2026, activo, 2 submetas" data-interactive="cell" aria-label="26/10/2026, activo, 2 submetas">
 <rect x="264" y="199" width="24" height="24" fill="none" data-hit="1"/>
-<rect x="268" y="203" width="16" height="16" rx="3" fill="#2A323D"/>
+<rect x="268" y="203" width="16" height="16" rx="3" fill="#4FBF7B"/>
 </g>
-<g id="celda-69" data-name="27/10/2026, sin actividad" data-interactive="cell" aria-label="27/10/2026, sin actividad">
+<g id="celda-69" data-name="27/10/2026, activo, 3 submetas" data-interactive="cell" aria-label="27/10/2026, activo, 3 submetas">
 <rect x="264" y="223" width="24" height="24" fill="none" data-hit="1"/>
-<rect x="268" y="227" width="16" height="16" rx="3" fill="#2A323D"/>
+<rect x="268" y="227" width="16" height="16" rx="3" fill="#4FBF7B"/>
 </g>
 <g id="celda-70" data-name="28/10/2026, sin actividad" data-interactive="cell" aria-label="28/10/2026, sin actividad">
 <rect x="264" y="247" width="24" height="24" fill="none" data-hit="1"/>

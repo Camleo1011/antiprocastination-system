@@ -76,7 +76,7 @@
 <rect x="280.5" y="198.5" width="475" height="95" rx="12" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
 <g transform="translate(720 210) scale(0.83)" fill="none" stroke="#A5B4FC" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></g>
 <text x="296" y="223.4" font-size="14" fill="#C3CAD6" font-weight="600">Llamadas</text>
-<text x="296" y="260" font-size="30" fill="#F1F3F7" font-weight="700">1.130</text>
+<text x="296" y="260" font-size="30" fill="#F1F3F7" font-weight="700">1.245</text>
 <text x="296" y="279.4" font-size="14" fill="#C3CAD6">desde 01/10/2026</text>
 </g>
 <g id="tarjeta-3" data-name="Tarjeta">

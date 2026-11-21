@@ -2542,7 +2542,7 @@ El campo Resultado obtenido queda en Pendiente de ejecución para todos los caso
   2. Iniciar la segunda.
   3. Completar 7 días activos.
   4. Acumular 1 000 puntos.
-  5. Cerrar una submeta con acierto en el primer envío del periodo inicial, otra con acierto en el segundo envío y otra, en un usuario sin 'Impecable', cuyo primer envío Excelente se recibe en el tiempo de gracia (50 puntos) **[F1f-003]**.
+  5. Cerrar una submeta con acierto en el primer envío del periodo inicial, otra con acierto en el segundo envío y otra, en un usuario sin 'Impecable', cuyo primer envío Excelente se recibe en el tiempo de gracia (50 puntos).
 - **Resultado esperado:** 'Primer paso' se otorga una vez con aviso y notificación push, también al usuario cuya primera submeta se inició sola, cuyo día no queda activo (BR-009); 'Constante' al 7.º día; 'Mil puntos' al alcanzar 1 000; 'Impecable' solo con la submeta de acierto en el primer envío del periodo inicial y no con la de 90 puntos ni con la de gracia (50); no se repiten; los logros no cambian el puntaje; el aviso aparece al consultar los logros desde el último instante visto y no se repite al consultar de nuevo con el instante actualizado (RF-LOGR-004).
 - **Resultado obtenido:** Pendiente de ejecución.
 - **RF Asociado:** RF-LOGR-001, RF-LOGR-002, RF-LOGR-004, RF-NOT-008
