@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recuperar contraseña | FocusStrike</title>
+  <link rel="stylesheet" href="../shared/base.css" />
+  <link rel="stylesheet" href="./recover.css" />
+  <script type="module" src="./recover.js"></script>
+</head>
+
+<body class="recovery-page">
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-mark">
+        <span class="icon icon-target" aria-hidden="true"></span>
+      </span>
+      FocusStrike
+    </div>
+  </header>
+
+  <main class="recovery">
+    <h1>Recuperar contraseña</h1>
+    <p class="description">
+      Te enviaremos un código de 6 dígitos, válido 10 minutos, si el correo
+      está registrado.
+    </p>
+
+    <div role="status">
+      <div class="notice" hidden>
+        <span class="icon icon-success" aria-hidden="true"></span>
+        <p>
+          <strong>Vista previa.</strong> La última solicitud de prueba fue
+          para <strong id="submitted-email"></strong>. No se envió ningún
+          código. El restablecimiento de contraseña aún no está disponible.
+        </p>
+      </div>
+    </div>
+
+    <form method="post">
+      <label for="email">Correo electrónico</label>
+      <input id="email" type="email" autocomplete="email" required pattern="[^@]+@[^@]+\.[^@]+" />
+      <p class="field-error" id="email-error" hidden>
+        <span class="icon icon-error" aria-hidden="true"></span>
+        <span id="email-error-message"></span>
+      </p>
+      <button class="primary-button" type="submit" disabled>
+        Enviar código
+      </button>
+    </form>
+
+    <noscript>
+      <p>Activa JavaScript para probar el formulario.</p>
+    </noscript>
+    <nav class="recovery-links" aria-label="Opciones de recuperación">
+      <a href="../">Volver al inicio</a>
+    </nav>
+  </main>
+</body>
+
+</html>

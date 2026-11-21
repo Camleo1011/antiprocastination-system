@@ -1,0 +1,116 @@
+:root {
+  color-scheme: light;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.5;
+  --page: #f5f7fa;
+  --mobile-page: #fff;
+  --surface: #fff;
+  --text: #1a1d21;
+  --muted: #4b5563;
+  --border: #d7dde8;
+  --field-border: #6b7385;
+  --accent: #4338ca;
+  --on-accent: #fff;
+  --error: #8e1d17;
+  --error-border: #b3261e;
+  --notice-bg: #e8f6ee;
+  --notice-border: #1b7f3b;
+  --notice-icon: #0f5132;
+  --card-shadow: 0 2px 0 rgb(26 29 33 / 8%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --page: #161a20;
+    --mobile-page: #0f1114;
+    --surface: #1c2128;
+    --text: #f1f3f7;
+    --muted: #c3cad6;
+    --border: #2a323d;
+    --field-border: #8d97a8;
+    --accent: #a5b4fc;
+    --on-accent: #1e1b4b;
+    --error: #fca5a5;
+    --error-border: #f87171;
+    --notice-bg: #12301f;
+    --notice-border: #4fbf7b;
+    --notice-icon: #4fbf7b;
+    --card-shadow: none;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--page);
+  color: var(--text);
+}
+
+a,
+.text-link {
+  color: var(--accent);
+  text-underline-offset: 3px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  min-height: 44px;
+  padding: 8px 11px;
+  border: 1px solid var(--field-border);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+input[aria-invalid="true"] {
+  border-color: var(--error-border);
+  box-shadow: inset 0 0 0 1px var(--error-border);
+}
+
+.primary-button {
+  min-height: 44px;
+  padding: 8px 20px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--accent);
+  color: var(--on-accent);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.65;
+  cursor: default;
+}
+
+.landing {
+  max-width: 440px;
+  margin: 56px auto;
+  padding: 0 16px;
+}
