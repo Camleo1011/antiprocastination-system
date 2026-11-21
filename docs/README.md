@@ -11,7 +11,7 @@ Versión 0.1.
 | Modelado | Completa | `02-design/uml/`, `02-design/database/` y `../database/schema.sql` |
 | Planificación | Parcial: diagramas de arquitectura y de clases publicados; contrato de la API y decisiones de arquitectura pendientes de publicar | `02-design/architecture/`, `02-design/uml/classes/`, `03-planning/` |
 | Diseño UI/UX | Mockups completos (54 pantallas); enlace de Figma pendiente | `02-design/mockups/` |
-| Frontend | Pendiente | `../frontend/` |
+| Frontend | En curso: estructura inicial (Vite); sin pantallas implementadas | `../frontend/` |
 | Backend | Pendiente | `../backend/` |
 
 ## Índice
