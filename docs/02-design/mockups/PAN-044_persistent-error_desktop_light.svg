@@ -76,20 +76,20 @@
 <text x="770.75" y="228" font-size="14" fill="#1A1D21" font-weight="600">En Error desde</text>
 <text x="1138.55" y="228" font-size="14" fill="#1A1D21" font-weight="600" text-anchor="end">Horas</text>
 <text x="1162.55" y="228" font-size="14" fill="#1A1D21" font-weight="600">Acciones</text>
-<text x="296" y="284.6" font-size="16" fill="#1A1D21">Luis Prada</text>
-<text x="485.9" y="284.6" font-size="16" fill="#1A1D21">Resolver guía 2</text>
-<text x="770.75" y="284.6" font-size="16" fill="#1A1D21">30/10/2026 16:20</text>
-<text x="1138.55" y="284.6" font-size="16" fill="#1A1D21" text-anchor="end">66 h</text>
+<text x="296" y="284.6" font-size="16" fill="#1A1D21">Marta Ríos</text>
+<text x="485.9" y="284.6" font-size="16" fill="#1A1D21">Leer capítulo 2</text>
+<text x="770.75" y="284.6" font-size="16" fill="#1A1D21">29/10/2026 15:20</text>
+<text x="1138.55" y="284.6" font-size="16" fill="#1A1D21" text-anchor="end">91 h</text>
 <g id="boton-4" data-name="Botón: Elegir" data-interactive="button" data-orden-foco="8">
 <rect x="1162.55" y="257" width="69.45" height="44" fill="none" data-hit="1"/>
 <rect x="1163.55" y="258" width="67.45" height="42" rx="8" fill="#FFFFFF" stroke="#4338CA" stroke-width="2"/>
 <text x="1197.27" y="284.6" font-size="16" fill="#4338CA" font-weight="600" text-anchor="middle">Elegir</text>
 </g>
 <line x1="281" y1="313" x2="1247" y2="313" stroke="#D7DDE8" stroke-width="1"/>
-<text x="296" y="352.6" font-size="16" fill="#1A1D21">Marta Ríos</text>
-<text x="485.9" y="352.6" font-size="16" fill="#1A1D21">Leer capítulo 2</text>
-<text x="770.75" y="352.6" font-size="16" fill="#1A1D21">31/10/2026 09:10</text>
-<text x="1138.55" y="352.6" font-size="16" fill="#1A1D21" text-anchor="end">49 h</text>
+<text x="296" y="352.6" font-size="16" fill="#1A1D21">Luis Prada</text>
+<text x="485.9" y="352.6" font-size="16" fill="#1A1D21">Resolver guía 2</text>
+<text x="770.75" y="352.6" font-size="16" fill="#1A1D21">30/10/2026 16:20</text>
+<text x="1138.55" y="352.6" font-size="16" fill="#1A1D21" text-anchor="end">66 h</text>
 <g id="boton-5" data-name="Botón: Elegir" data-interactive="button" data-orden-foco="9">
 <rect x="1162.55" y="325" width="69.45" height="44" fill="none" data-hit="1"/>
 <rect x="1163.55" y="326" width="67.45" height="42" rx="8" fill="#FFFFFF" stroke="#4338CA" stroke-width="2"/>

@@ -83,10 +83,10 @@
 <rect x="32" y="390" width="4" height="81" rx="2" fill="#4338CA"/>
 <text x="46" y="407.6" font-size="16" fill="#1A1D21" font-weight="600">Límites</text>
 <text x="46" y="429.4" font-size="14" fill="#4B5563">30/10/2026 · 09:00–11:00</text>
-<g id="insignia-8" data-name="Insignia: Finalizada · 100 puntos">
-<rect x="46" y="443" width="208.06" height="28" rx="14" fill="#E8F6EE"/>
+<g id="insignia-8" data-name="Insignia: Finalizada · 50 puntos">
+<rect x="46" y="443" width="199.16" height="28" rx="14" fill="#E8F6EE"/>
 <g transform="translate(56 449) scale(0.67)" fill="none" stroke="#0F5132" stroke-width="2.62" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M8 12.5l3 3 5-6"/></g>
-<text x="78" y="461.9" font-size="14" fill="#0F5132" font-weight="600">Finalizada · 100 puntos</text>
+<text x="78" y="461.9" font-size="14" fill="#0F5132" font-weight="600">Finalizada · 50 puntos</text>
 </g>
 </g>
 <line x1="32" y1="481" x2="343" y2="481" stroke="#D7DDE8" stroke-width="1"/>

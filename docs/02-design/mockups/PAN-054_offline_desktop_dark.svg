@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" data-pan="PAN-054" data-dispositivo="desktop" data-tema="oscuro" aria-labelledby="t d">
 <title id="t">PAN-054 — Sin conexión (escritorio 1280 px, tema oscuro)</title>
-<desc id="d">Mockup de alta fidelidad de Sin conexión. Ruta (estado global); rol todos; CU CU-010, CU-012, CU-011; EP —. Estado mostrado: estado global sin conexión: banner, última agenda conocida con el reloj marcado como posiblemente desfasado y lo que no se puede hacer. Colores, tipografía (Inter), espaciado y radios del sistema de diseño (tema oscuro); texto editable. Los relojes se calculan con la última hora del servidor y se marcan «puede estar desfasado». El cliente reintenta al recuperar la conexión. Regiones ARIA: banner, navigation, main. Orden de foco con Tab (coincide con el orden visual y del DOM): Enlace de salto «Saltar al contenido principal» (visible solo al recibir el foco). 1 Navegación: Inicio; 2 Navegación: Agenda; 3 Navegación: Metas; 4 Navegación: Ranking; 5 Navegación: Perfil; 6 Menú de cuenta; 7 Fila: Estudiar capítulo 3; 8 Fila: Leer capítulo 2; 9 Fila: Caminar 30 min; 10 Botón: Reintentar.</desc>
+<desc id="d">Mockup de alta fidelidad de Sin conexión. Ruta (estado global); rol todos; CU CU-010, CU-012, CU-011; EP —. Estado mostrado: estado global sin conexión: banner, última agenda conocida con el reloj marcado como posiblemente desfasado y lo que no se puede hacer. Colores, tipografía (Inter), espaciado y radios del sistema de diseño (tema oscuro); texto editable. Los relojes se calculan con la última hora del servidor y se marcan «puede estar desfasado». El cliente reintenta al recuperar la conexión. Regiones ARIA: banner, navigation, main. Orden de foco con Tab (coincide con el orden visual y del DOM): Enlace de salto «Saltar al contenido principal» (visible solo al recibir el foco). 1 Navegación: Inicio; 2 Navegación: Agenda; 3 Navegación: Metas; 4 Navegación: Ranking; 5 Navegación: Perfil; 6 Menú de cuenta; 7 Fila: Estudiar capítulo 3; 8 Fila: Leer capítulo 2; 9 Fila: Caminar 1 h; 10 Botón: Reintentar.</desc>
 <defs><pattern id="rayas-gracia" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#2A323D"/><rect width="3" height="6" fill="#F5B93A"/></pattern></defs>
 <rect id="fondo-pagina" width="1280" height="800" fill="#161A20"/>
 <g id="cabecera" data-name="Cabecera" role="banner">
@@ -82,11 +82,11 @@
 </g>
 </g>
 <line x1="64" y1="423" x2="721.6" y2="423" stroke="#2A323D" stroke-width="1"/>
-<g id="fila-7" data-name="Fila: Caminar 30 min" data-interactive="link" data-orden-foco="9">
+<g id="fila-7" data-name="Fila: Caminar 1 h" data-interactive="link" data-orden-foco="9">
 <rect x="64" y="423" width="657.6" height="69" fill="none" data-hit="1"/>
 <rect x="64" y="433" width="4" height="49" rx="2" fill="#F0ABFC"/>
-<text x="78" y="450.6" font-size="16" fill="#F1F3F7" font-weight="600">Caminar 30 min</text>
-<text x="78" y="472.4" font-size="14" fill="#C3CAD6">Caminar a diario · 18:00–18:30</text>
+<text x="78" y="450.6" font-size="16" fill="#F1F3F7" font-weight="600">Caminar 1 h</text>
+<text x="78" y="472.4" font-size="14" fill="#C3CAD6">Caminar a diario · 18:00–19:00</text>
 <g id="insignia-8" data-name="Insignia: Pendiente">
 <rect x="625.09" y="444" width="88.01" height="27" rx="14" fill="#1C2128" stroke="#2A323D" stroke-width="1"/>
 <text x="634.59" y="462.4" font-size="14" fill="#C3CAD6" font-weight="600">Pendiente</text>

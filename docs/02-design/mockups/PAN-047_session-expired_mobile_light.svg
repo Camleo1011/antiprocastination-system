@@ -78,7 +78,7 @@
 <rect x="16" y="445" width="106.33" height="96" rx="12" fill="#1A1D21" fill-opacity="0.08"/><rect x="16.5" y="444.5" width="105.33" height="95" rx="12" fill="#FFFFFF" stroke="#D7DDE8" stroke-width="1"/>
 <g transform="translate(86.33 456) scale(0.83)" fill="none" stroke="#4338CA" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.1 5.9-.8z"/></g>
 <text x="32" y="469.4" font-size="14" fill="#4B5563" font-weight="600">Puntaje</text>
-<text x="32" y="506" font-size="30" fill="#1A1D21" font-weight="700">1.240</text>
+<text x="32" y="506" font-size="30" fill="#1A1D21" font-weight="700">1.150</text>
 </g>
 <g id="tarjeta-6" data-name="Tarjeta">
 <rect x="134.33" y="445" width="106.33" height="96" rx="12" fill="#1A1D21" fill-opacity="0.08"/><rect x="134.83" y="444.5" width="105.33" height="95" rx="12" fill="#FFFFFF" stroke="#D7DDE8" stroke-width="1"/>
@@ -90,7 +90,7 @@
 <rect x="252.67" y="445" width="106.33" height="96" rx="12" fill="#1A1D21" fill-opacity="0.08"/><rect x="253.17" y="444.5" width="105.33" height="95" rx="12" fill="#FFFFFF" stroke="#D7DDE8" stroke-width="1"/>
 <g transform="translate(323 456) scale(0.83)" fill="none" stroke="#4338CA" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v6a4 4 0 01-8 0z"/><path d="M8 6H4v2a3 3 0 003 3M16 6h4v2a3 3 0 01-3 3"/><path d="M12 14v4M8 20h8"/></g>
 <text x="268.67" y="469.4" font-size="14" fill="#4B5563" font-weight="600">Puesto</text>
-<text x="268.67" y="506" font-size="30" fill="#1A1D21" font-weight="700">12</text>
+<text x="268.67" y="506" font-size="30" fill="#1A1D21" font-weight="700">13</text>
 </g>
 <g id="tarjeta-8" data-name="Tarjeta">
 <rect x="16" y="557" width="343" height="578" rx="12" fill="#1A1D21" fill-opacity="0.08"/><rect x="16.5" y="556.5" width="342" height="577" rx="12" fill="#FFFFFF" stroke="#D7DDE8" stroke-width="1"/>
@@ -130,11 +130,11 @@
 </g>
 </g>
 <line x1="32" y1="909" x2="343" y2="909" stroke="#D7DDE8" stroke-width="1"/>
-<g id="fila-15" data-name="Fila: Caminar 30 min" data-interactive="link">
+<g id="fila-15" data-name="Fila: Caminar 1 h" data-interactive="link">
 <rect x="32" y="909" width="311" height="101" fill="none" data-hit="1"/>
 <rect x="32" y="919" width="4" height="81" rx="2" fill="#A21CAF"/>
-<text x="46" y="936.6" font-size="16" fill="#1A1D21" font-weight="600">Caminar 30 min</text>
-<text x="46" y="958.4" font-size="14" fill="#4B5563">Caminar a diario · 18:00–18:30</text>
+<text x="46" y="936.6" font-size="16" fill="#1A1D21" font-weight="600">Caminar 1 h</text>
+<text x="46" y="958.4" font-size="14" fill="#4B5563">Caminar a diario · 18:00–19:00</text>
 <g id="insignia-16" data-name="Insignia: Pendiente">
 <rect x="46.5" y="972.5" width="88.01" height="27" rx="14" fill="#EBEEF3" stroke="#D7DDE8" stroke-width="1"/>
 <text x="56" y="990.9" font-size="14" fill="#4B5563" font-weight="600">Pendiente</text>

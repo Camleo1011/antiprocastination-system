@@ -36,13 +36,13 @@
 <g id="tabla-2" data-name="Evaluaciones en Error persistente" role="table">
 <g id="tarjeta-3" data-name="Tarjeta">
 <rect x="16" y="227" width="343" height="196" rx="12" fill="#1A1D21" fill-opacity="0.08"/><rect x="16.5" y="226.5" width="342" height="195" rx="12" fill="#FFFFFF" stroke="#D7DDE8" stroke-width="1"/>
-<text x="32" y="259.6" font-size="16" fill="#1A1D21" font-weight="700">Luis Prada</text>
+<text x="32" y="259.6" font-size="16" fill="#1A1D21" font-weight="700">Marta Ríos</text>
 <text x="32" y="287.4" font-size="14" fill="#4B5563">Submeta</text>
-<text x="156.4" y="289.6" font-size="16" fill="#1A1D21">Resolver guía 2</text>
+<text x="156.4" y="289.6" font-size="16" fill="#1A1D21">Leer capítulo 2</text>
 <text x="32" y="315.4" font-size="14" fill="#4B5563">En Error desde</text>
-<text x="156.4" y="317.6" font-size="16" fill="#1A1D21">30/10/2026 16:20</text>
+<text x="156.4" y="317.6" font-size="16" fill="#1A1D21">29/10/2026 15:20</text>
 <text x="32" y="343.4" font-size="14" fill="#4B5563">Horas</text>
-<text x="156.4" y="345.6" font-size="16" fill="#1A1D21">66 h</text>
+<text x="156.4" y="345.6" font-size="16" fill="#1A1D21">91 h</text>
 <g id="boton-4" data-name="Botón: Elegir" data-interactive="button" data-orden-foco="2">
 <rect x="32" y="362" width="311" height="44" fill="none" data-hit="1"/>
 <rect x="33" y="363" width="309" height="42" rx="8" fill="#FFFFFF" stroke="#4338CA" stroke-width="2"/>
@@ -51,13 +51,13 @@
 </g>
 <g id="tarjeta-5" data-name="Tarjeta">
 <rect x="16" y="435" width="343" height="196" rx="12" fill="#1A1D21" fill-opacity="0.08"/><rect x="16.5" y="434.5" width="342" height="195" rx="12" fill="#FFFFFF" stroke="#D7DDE8" stroke-width="1"/>
-<text x="32" y="467.6" font-size="16" fill="#1A1D21" font-weight="700">Marta Ríos</text>
+<text x="32" y="467.6" font-size="16" fill="#1A1D21" font-weight="700">Luis Prada</text>
 <text x="32" y="495.4" font-size="14" fill="#4B5563">Submeta</text>
-<text x="156.4" y="497.6" font-size="16" fill="#1A1D21">Leer capítulo 2</text>
+<text x="156.4" y="497.6" font-size="16" fill="#1A1D21">Resolver guía 2</text>
 <text x="32" y="523.4" font-size="14" fill="#4B5563">En Error desde</text>
-<text x="156.4" y="525.6" font-size="16" fill="#1A1D21">31/10/2026 09:10</text>
+<text x="156.4" y="525.6" font-size="16" fill="#1A1D21">30/10/2026 16:20</text>
 <text x="32" y="551.4" font-size="14" fill="#4B5563">Horas</text>
-<text x="156.4" y="553.6" font-size="16" fill="#1A1D21">49 h</text>
+<text x="156.4" y="553.6" font-size="16" fill="#1A1D21">66 h</text>
 <g id="boton-6" data-name="Botón: Elegir" data-interactive="button" data-orden-foco="3">
 <rect x="32" y="570" width="311" height="44" fill="none" data-hit="1"/>
 <rect x="33" y="571" width="309" height="42" rx="8" fill="#FFFFFF" stroke="#4338CA" stroke-width="2"/>
