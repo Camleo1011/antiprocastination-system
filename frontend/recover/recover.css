@@ -1,0 +1,160 @@
+.site-header {
+  display: flex;
+  justify-content: center;
+  padding: 56px 16px 0;
+}
+
+.brand,
+.brand-mark {
+  display: flex;
+  align-items: center;
+}
+
+.brand {
+  gap: 10px;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.brand-mark {
+  width: 32px;
+  height: 32px;
+  justify-content: center;
+  border-radius: 8px;
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.icon {
+  display: block;
+  flex: none;
+  width: 20px;
+  height: 20px;
+  background: currentColor;
+  mask: var(--icon) center / contain no-repeat;
+}
+
+.icon-target {
+  --icon: url("./icons/target.svg");
+}
+
+.icon-success {
+  --icon: url("./icons/success.svg");
+  color: var(--notice-icon);
+}
+
+.icon-error {
+  --icon: url("./icons/error.svg");
+  width: 16px;
+  height: 16px;
+}
+
+.recovery {
+  width: min(440px, calc(100% - 32px));
+  margin: 40px auto;
+  padding: 32px 31px 31px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  box-shadow: var(--card-shadow);
+}
+
+.recovery h1 {
+  margin: 0 0 12px;
+  font-size: 1.875rem;
+  line-height: 1.2;
+}
+
+.description {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+.notice,
+.field-error {
+  display: flex;
+  font-size: 0.875rem;
+}
+
+.notice {
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 16px;
+  padding: 12px;
+  border-inline-start: 4px solid var(--notice-border);
+  border-radius: 8px;
+  background: var(--notice-bg);
+}
+
+.notice p {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.recovery form {
+  margin-top: 24px;
+}
+
+.field-error {
+  align-items: center;
+  gap: 6px;
+  margin: 4px 0 0;
+  color: var(--error);
+  font-weight: 500;
+}
+
+.recovery .primary-button {
+  margin-top: 16px;
+}
+
+.recovery-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.recovery-links a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .recovery-page {
+    background: var(--mobile-page);
+  }
+
+  .site-header {
+    justify-content: flex-start;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .recovery {
+    width: auto;
+    margin: 20px 16px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .recovery h1 {
+    margin-bottom: 8px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
+  .recovery .primary-button {
+    width: 100%;
+  }
+}
