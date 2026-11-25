@@ -1,0 +1,280 @@
+/* =========================================================
+   register.css — PAN-001 Registro
+   Usa las variables de ../shared/base.css (--accent, --muted…),
+   así el tema oscuro funciona solo.
+   Igual que recover.css: estilos de ESCRITORIO primero y
+   @media (max-width: 600px) para MÓVIL.
+   ========================================================= */
+
+/* ---------- Header (mismo diseño que recover) ---------- */
+.site-header {
+  display: flex;                    /* por dentro acomoda al logo con flexbox */
+  justify-content: center;          /* escritorio: logo centrado */
+  padding: 56px 16px 0;
+}
+
+.brand,
+.brand-mark {
+  display: flex;
+  align-items: center;
+}
+
+.brand {
+  gap: 10px;
+  color: var(--text);
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-decoration: none;            /* base.css subraya todos los <a> */
+}
+
+.brand-mark {
+  width: 32px;
+  height: 32px;
+  justify-content: center;
+  border-radius: 8px;
+  background: var(--accent);
+  color: var(--on-accent);          /* el SVG usa currentColor */
+}
+
+/* ---------- Skip link ---------- */
+.skip-link {
+  position: absolute;
+  top: -100px;                      /* fuera de la pantalla… */
+  left: 16px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.skip-link:focus {
+  top: 8px;                         /* …hasta que recibe el foco */
+}
+
+/* ---------- Tarjeta ---------- */
+.register {
+  /* min(): 440px, o el ancho de la pantalla menos 32px si es más chica */
+  width: min(440px, calc(100% - 32px));
+  margin: 40px auto;                /* auto a los lados = centrado */
+  padding: 32px 31px 31px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  box-shadow: var(--card-shadow);
+}
+
+.register h1 {
+  margin: 0 0 12px;
+  font-size: 1.875rem;              /* 30px */
+  line-height: 1.2;
+}
+
+.description,
+.hint {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.875rem;              /* 14px */
+}
+
+/* ---------- Formulario ---------- */
+.register form {
+  /* flex en columna + gap: todos los bloques apilados con el mismo espacio */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+/* base.css le da margin-bottom: 6px a los label, y eso separa label e input */
+.field .hint {
+  margin-top: 6px;
+}
+
+.notice,
+.field-error {
+  display: flex;
+  font-size: 0.875rem;
+}
+
+.notice {
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 16px;
+  padding: 12px;
+  border-inline-start: 4px solid var(--notice-border);
+  border-radius: 8px;
+  background: var(--notice-bg);
+}
+
+.notice p {
+  margin: 0;
+}
+
+.notice-icon,
+.field-error::before {
+  flex: none;
+  background: currentColor;
+}
+
+.notice-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--notice-icon);
+  mask: url("../recover/icons/success.svg") center / contain no-repeat;
+}
+
+.field-error {
+  align-items: center;
+  gap: 6px;
+  margin: 4px 0 0;
+  color: var(--error);
+  font-weight: 500;
+}
+
+.field-error::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  mask: url("../recover/icons/error.svg") center / contain no-repeat;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .field-error:not([hidden]) {
+    animation: field-error-enter 160ms ease-out;
+  }
+
+  @keyframes field-error-enter {
+    from {
+      opacity: 0;
+      transform: translateY(-3px);
+    }
+  }
+}
+
+/* ---------- Contraseña con "Mostrar" dentro del input ---------- */
+.password {
+  position: relative;               /* el botón se ubica respecto a esta caja */
+}
+
+.password input {
+  padding-right: 88px;              /* que el texto no quede debajo del botón */
+}
+
+.password-toggle {
+  position: absolute;               /* sale del flujo y queda encima del input */
+  top: 0;
+  right: 0;
+  height: 44px;
+  padding: 0 12px;
+  border: 0;
+  background: none;
+  color: var(--accent);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ---------- Caja de la declaración 18+ ---------- */
+.age-box {
+  padding: 8px 15px 16px;
+  border: 1px solid var(--field-border);
+  border-radius: 8px;
+  background: var(--page);
+}
+
+.age-box:has(input[aria-invalid="true"]) {
+  border-color: var(--error-border);
+  box-shadow: inset 0 0 0 1px var(--error-border);
+}
+
+.age-box .field-error {
+  margin-inline-start: 36px;
+}
+
+/* casilla y texto en la misma fila (flex en fila es la dirección por defecto) */
+.age-check {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+}
+
+/* base.css pone width:100% y min-height:44px a TODOS los input.
+   La casilla no debe heredar eso, así que lo deshacemos aquí. */
+.age-check input {
+  flex: none;                       /* que no se estire ni se aplaste */
+  width: 24px;
+  min-height: 0;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  accent-color: var(--accent);      /* color de la casilla marcada */
+  cursor: pointer;
+}
+
+/* base.css pone los label en negrita y chicos (para los campos de texto) */
+.age-check label {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.age-note {
+  padding-left: 36px;               /* 24px casilla + 12px gap: alinea con el texto */
+}
+
+/* ---------- Botón y enlace ---------- */
+.register .primary-button {
+  align-self: flex-start;           /* escritorio: mide lo que su texto */
+  margin-top: 1px;
+}
+
+.register-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 4px;
+}
+
+.register-links a {
+  display: inline-flex;             /* el <a> es inline: así acepta min-height */
+  align-items: center;
+  min-height: 44px;                 /* área táctil cómoda */
+  font-weight: 600;
+}
+
+/* =========================================================
+   MÓVIL (hasta 600px): sin tarjeta, header como barra
+   ========================================================= */
+@media (max-width: 600px) {
+  .register-page {
+    background: var(--mobile-page);
+  }
+
+  .site-header {
+    justify-content: flex-start;    /* logo a la izquierda */
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .register {
+    width: auto;
+    margin: 20px 16px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .register h1 {
+    margin-bottom: 8px;
+    font-size: 1.5rem;              /* 24px */
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
+  .register .primary-button {
+    align-self: stretch;            /* móvil: todo el ancho */
+  }
+}
