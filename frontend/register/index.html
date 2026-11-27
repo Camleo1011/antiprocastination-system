@@ -1,91 +1,208 @@
 <!doctype html>
 <html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Crear cuenta | FocusStrike</title>
+		<link
+			rel="stylesheet"
+			href="../shared/base.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="./register.css"
+		/>
+		<script
+			type="module"
+			src="./register.js"
+		></script>
+	</head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Crear cuenta | FocusStrike</title>
-  <link rel="stylesheet" href="../shared/base.css" />
-  <link rel="stylesheet" href="./register.css" />
-  <script type="module" src="./register.js"></script>
-</head>
+	<body class="register-page">
+		<!-- Invisible hasta que recibe el foco con Tab -->
+		<a
+			class="skip-link"
+			href="#main"
+			>Saltar al contenido principal</a
+		>
 
-<body class="register-page">
-  <!-- Invisible hasta que recibe el foco con Tab -->
-  <a class="skip-link" href="#main">Saltar al contenido principal</a>
+		<header class="site-header">
+			<a
+				class="brand"
+				href="../"
+			>
+				<span
+					class="brand-mark"
+					aria-hidden="true"
+				>
+					<svg
+						viewBox="0 0 24 24"
+						width="20"
+						height="20"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2.5"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					>
+						<path d="M12 3a9 9 0 100 18 9 9 0 000-18z" />
+						<path d="M12 8a4 4 0 100 8 4 4 0 000-8z" />
+						<path d="M12 12v.1" />
+					</svg>
+				</span>
+				FocusStrike
+			</a>
+		</header>
 
-  <header class="site-header">
-    <a class="brand" href="../">
-      <span class="brand-mark" aria-hidden="true">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"
-          stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 3a9 9 0 100 18 9 9 0 000-18z" />
-          <path d="M12 8a4 4 0 100 8 4 4 0 000-8z" />
-          <path d="M12 12v.1" />
-        </svg>
-      </span>
-      FocusStrike
-    </a>
-  </header>
+		<main
+			id="main"
+			class="register"
+		>
+			<h1>Crear cuenta</h1>
+			<p class="description">
+				FocusStrike es para personas de 18 años o más.
+			</p>
 
-  <main id="main" class="register">
-    <h1>Crear cuenta</h1>
-    <p class="description">FocusStrike es para personas de 18 años o más.</p>
+			<div role="status">
+				<div
+					class="notice"
+					hidden
+				>
+					<span
+						class="notice-icon"
+						aria-hidden="true"
+					></span>
+					<p>
+						<strong>Vista previa.</strong> Los datos son válidos.
+						Aún no se ha creado ninguna cuenta.
+					</p>
+				</div>
+			</div>
 
-    <div role="status">
-      <div class="notice" hidden>
-        <span class="notice-icon" aria-hidden="true"></span>
-        <p><strong>Vista previa.</strong> Los datos son válidos. Aún no se ha creado ninguna cuenta.</p>
-      </div>
-    </div>
+			<form method="post">
+				<div class="field">
+					<label for="name">Nombre</label>
+					<input
+						id="name"
+						name="user_name"
+						type="text"
+						autocomplete="name"
+						required
+						pattern=".*\S.*"
+					/>
+					<p
+						class="field-error"
+						id="name-error"
+						hidden
+					></p>
+				</div>
 
-    <form method="post">
-      <div class="field">
-        <label for="name">Nombre</label>
-        <input id="name" name="user_name" type="text" autocomplete="name" required pattern=".*\S.*" />
-        <p class="field-error" id="name-error" hidden></p>
-      </div>
+				<div class="field">
+					<label for="mail">Correo electrónico</label>
+					<input
+						id="mail"
+						name="user_mail"
+						type="email"
+						autocomplete="email"
+						required
+						pattern="[^@]+@[^@]+\.[^@]+"
+					/>
+					<p
+						class="field-error"
+						id="mail-error"
+						hidden
+					></p>
+				</div>
 
-      <div class="field">
-        <label for="mail">Correo electrónico</label>
-        <input id="mail" name="user_mail" type="email" autocomplete="email" required pattern="[^@]+@[^@]+\.[^@]+" />
-        <p class="field-error" id="mail-error" hidden></p>
-      </div>
+				<div class="field">
+					<label for="password">Contraseña</label>
+					<div class="password">
+						<input
+							id="password"
+							name="user_password"
+							type="password"
+							autocomplete="new-password"
+							required
+							minlength="8"
+							pattern="(?=.*\p{L})(?=.*[0-9]).{8,}"
+							aria-describedby="password-hint"
+						/>
+						<button
+							class="password-toggle"
+							type="button"
+							aria-controls="password"
+							aria-pressed="false"
+						>
+							Mostrar
+						</button>
+					</div>
+					<p
+						class="field-error"
+						id="password-error"
+						hidden
+					></p>
+					<p
+						class="hint"
+						id="password-hint"
+					>
+						Mínimo 8 caracteres, con una letra y un número
+					</p>
+				</div>
 
-      <div class="field">
-        <label for="password">Contraseña</label>
-        <div class="password">
-          <input id="password" name="user_password" type="password" autocomplete="new-password" required
-            minlength="8" pattern="(?=.*\p{L})(?=.*[0-9]).{8,}" aria-describedby="password-hint" />
-          <button class="password-toggle" type="button" aria-controls="password"
-            aria-pressed="false">Mostrar</button>
-        </div>
-        <p class="field-error" id="password-error" hidden></p>
-        <p class="hint" id="password-hint">Mínimo 8 caracteres, con una letra y un número</p>
-      </div>
+				<p class="hint">
+					Usaremos tu zona horaria: America/Bogota; podrás cambiarla
+					en Preferencias.
+				</p>
 
-      <p class="hint">Usaremos tu zona horaria: America/Bogota; podrás cambiarla en Preferencias.</p>
+				<div class="age-box">
+					<div class="age-check">
+						<input
+							id="age"
+							name="user_validate_age"
+							type="checkbox"
+							required
+							aria-describedby="age-note"
+						/>
+						<label for="age">Declaro ser mayor de 18 años</label>
+					</div>
+					<p
+						class="hint age-note"
+						id="age-note"
+					>
+						Solo guardamos la fecha y hora de tu declaración, nunca
+						tu fecha de nacimiento.
+					</p>
+					<p
+						class="field-error"
+						id="age-error"
+						hidden
+					></p>
+				</div>
 
-      <div class="age-box">
-        <div class="age-check">
-          <input id="age" name="user_validate_age" type="checkbox" required aria-describedby="age-note" />
-          <label for="age">Declaro ser mayor de 18 años</label>
-        </div>
-        <p class="hint age-note" id="age-note">Solo guardamos la fecha y hora de tu declaración, nunca tu fecha de
-          nacimiento.</p>
-        <p class="field-error" id="age-error" hidden></p>
-      </div>
+				<button
+					class="primary-button"
+					type="submit"
+					disabled
+				>
+					Crear cuenta
+				</button>
+			</form>
 
-      <button class="primary-button" type="submit" disabled>Crear cuenta</button>
-    </form>
+			<noscript>
+				<p>Activa JavaScript para probar el formulario.</p>
+			</noscript>
+			<nav
+				class="register-links"
+				aria-label="Otras opciones"
+			>
+				<a href="">¿Ya tienes cuenta? Inicia sesión</a>
 
-    <noscript>
-      <p>Activa JavaScript para probar el formulario.</p>
-    </noscript>
-    <nav class="register-links" aria-label="Otras opciones">
-      <a href="../login/">¿Ya tienes cuenta? Inicia sesión</a>
-    </nav>
-  </main>
-</body>
-
+				<!--pending addition of a route for the login process-->
+				<a href="../">Volver al Inicio</a>
+			</nav>
+		</main>
+	</body>
 </html>
